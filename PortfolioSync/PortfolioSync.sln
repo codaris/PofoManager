@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioSync", "PortfolioSync\PortfolioSync.csproj", "{C9BE3F26-8A55-491A-A44F-94778E363879}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioSync.Common", "PortfolioSync.Common\PortfolioSync.Common.csproj", "{842E7065-2BEF-4395-92D0-7517843A334D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9BE3F26-8A55-491A-A44F-94778E363879}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9BE3F26-8A55-491A-A44F-94778E363879}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9BE3F26-8A55-491A-A44F-94778E363879}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9BE3F26-8A55-491A-A44F-94778E363879}.Release|Any CPU.Build.0 = Release|Any CPU
+		{842E7065-2BEF-4395-92D0-7517843A334D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{842E7065-2BEF-4395-92D0-7517843A334D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{842E7065-2BEF-4395-92D0-7517843A334D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{842E7065-2BEF-4395-92D0-7517843A334D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0798534F-1D99-4316-B243-DD2A85812389}
+	EndGlobalSection
+EndGlobal
