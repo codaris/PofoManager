@@ -55,7 +55,7 @@ namespace PortfolioSync.ViewModels
         /// </summary>
         public bool ShowDebug
         {
-            get => GetProperty(false);
+            get => GetProperty(true);
             set => SetProperty(value);
         }
 

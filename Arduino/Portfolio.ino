@@ -1,6 +1,7 @@
 #include "Portfolio.h"
 #include "Manager.h"
 
+
 namespace Portfolio
 {
     /** @brief The checksum */
@@ -61,6 +62,24 @@ namespace Portfolio
         pinMode(PIN_OUTPUT_DATA, INPUT); 
     }
 
+    bool WaitForLow(uint8_t pin, int timeout) 
+    {
+        unsigned long startTime = millis();
+        while(digitalRead(PIN_INPUT_CLOCK)) {
+            if ((millis() - startTime) > timeout) return false;
+        }
+        return true;
+    }
+
+    bool WaitForHigh(uint8_t pin, int timeout) 
+    {
+        unsigned long startTime = millis();
+        while(!digitalRead(PIN_INPUT_CLOCK)) {
+            if ((millis() - startTime) > timeout) return false;
+        }
+        return true;
+    }
+
     /**
      * @brief   Read a byte from the Portfolio
      * @return  A byte from the input
@@ -108,10 +127,6 @@ namespace Portfolio
      */
     void WaitForServer()
     {
-        /*
-        Wait for Portfolio to enter server mode
-        */
-        digitalWrite(PIN_OUTPUT_CLOCK, HIGH);  
         while (!digitalRead(PIN_INPUT_CLOCK));
         int value = ReadByte();
 
@@ -123,9 +138,6 @@ namespace Portfolio
             while (!digitalRead(PIN_INPUT_CLOCK)); 
             digitalWrite(PIN_OUTPUT_CLOCK, HIGH);
             value = ReadByte();
-            Serial.print(value, 16);
-            Serial.write(" ");
-            Serial.println(value);
         }        
     }
 
@@ -316,9 +328,6 @@ namespace Portfolio
             return;
         }
 
-        // Acknowledge the packet
-        Manager::SendSuccess();
-
         int lenL = ReadByteChecksum();
         int lenH = ReadByteChecksum();
         int length = (lenH << 8) | lenL;
@@ -353,21 +362,5 @@ namespace Portfolio
         WaitForServer();
         SendBlock();
         RetrieveBlock();
-    }
-
-    /**
-     * @brief Send a file
-     */
-    void SendFile()
-    {
-
-    }
-
-    /**
-     * @brief Retreive a file
-     */
-    void RetreiveFile()
-    {
-
     }
 }

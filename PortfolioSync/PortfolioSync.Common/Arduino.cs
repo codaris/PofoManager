@@ -61,7 +61,7 @@ namespace PortfolioSync
         private int commandCount = 0;
 
         /// <summary>The arduino buffer size</summary>
-        private const int BufferSize = 64;
+        private const int BufferSize = 60;
 
         /// <summary>The file header size</summary>
         private const int HeaderSize = 10;
@@ -260,7 +260,7 @@ namespace PortfolioSync
             data.Add(0x00);
             data.Add(0x70);
             data.AddString("C:*.*");
-            data.FillToSize(82);
+            data.Add(0);
 
             using var _ = StartCommandScope();
 
@@ -275,8 +275,25 @@ namespace PortfolioSync
             serialStream.WriteByte(Ascii.SOH);    // Start of packet 
             serialStream.WriteByte((byte)Command.ListFiles);
             await SendBlock(data.ToArray());
-            var response = await ReadFrame();
-            messageTarget.Dump(response);
+            await ReadResponse().ConfigureAwait(false);
+            var response = new MemoryStream(await ReadFrame());
+            var files = new List<string>();
+            int fileCount = response.ReadByte() + (response.ReadByte() << 8);
+            messageTarget.WriteLine($"File count: {fileCount}");
+            var fileName = new StringBuilder();
+            while (true)
+            {
+                int value = response.ReadByte(); 
+                if (value == 0)
+                {
+                    files.Add(fileName.ToString());
+                    fileName.Clear();
+                    continue;
+                }
+                if (value == -1) break;
+                fileName.Append((char)value);
+            }
+            foreach (var file in files) messageTarget.WriteLine(file);
             messageTarget.WriteLine($"Done.");
         }
 

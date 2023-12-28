@@ -48,9 +48,9 @@ namespace Portfolio
      */
     void ListFiles();
 
-    void SendFile();
+    void SendBlock();
 
-    void RetreiveFile();
+    void RetrieveBlock();
 }
 
 #endif

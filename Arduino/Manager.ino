@@ -10,15 +10,16 @@ namespace Manager
         Init = 1,
         Ping = 2,
         ListFiles = 3,
-        SendFile = 4,
-        RetreiveFile = 5,
-        Data = 6
+        SendBlock = 4,
+        RetreiveBlock = 5,
+        WaitForServer = 6,
+        Data = 7
     };
 
     const byte VersionHigh = 1;                  // Version numbers
     const byte VersionLow = 1;                  
     
-    const int BUFFER_SIZE = 64;         // The size of the serial and tape buffers
+    const int BUFFER_SIZE = 60;         // The size of the serial and tape buffers
     byte serialBuffer[BUFFER_SIZE];     // Serial receive buffer
     byte outBuffer[BUFFER_SIZE];        // The output buffer
     int serialBufferCount = 0;          // The number of bytes to read into the serial buffer (no larger than BUFFER_SIZE)
@@ -335,13 +336,16 @@ namespace Manager
                 // Run the load from tape command
                 Portfolio::ListFiles();
                 break;
-            case Command::SendFile:
+            case Command::SendBlock:
                 // Run the save tape command
-                Portfolio::SendFile();
+                Portfolio::SendBlock();
                 break;
-            case Command::RetreiveFile:
+            case Command::RetreiveBlock:
                 // Run the save tape command
-                Portfolio::RetreiveFile();
+                Portfolio::RetrieveBlock();
+                break;
+            case Command::WaitForServer:
+                Portfolio::WaitForServer();
                 break;
             default:
                 // Unknown command error
