@@ -139,6 +139,8 @@ namespace Portfolio
             digitalWrite(PIN_OUTPUT_CLOCK, HIGH);
             value = ReadByte();
         }        
+
+        Manager::SendSuccess();
     }
 
     int SendBlock(const byte data[], const int length)

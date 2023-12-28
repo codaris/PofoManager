@@ -33,11 +33,11 @@ namespace PortfolioSync
         /// Adds the short.
         /// </summary>
         /// <param name="data">The data.</param>
-        /// <param name="size">The size.</param>
-        public static void AddShort(this List<byte> data, int size)
+        /// <param name="value">The size.</param>
+        public static void AddShort(this List<byte> data, int value)
         {
-            data.Add((byte)(size & 0xFF));
-            data.Add((byte)(size >> 8 & 0xFF));
+            data.Add((byte)(value & 0xFF));
+            data.Add((byte)(value >> 8 & 0xFF));
         }
 
         /// <summary>
@@ -50,6 +50,14 @@ namespace PortfolioSync
             data.Add((byte)(size & 0xFF));
             data.Add((byte)(size >> 8 & 0xFF));
             data.Add((byte)(size >> 16 & 0xFF));
+        }
+
+        public static void AddInt(this List<byte> data, int value)
+        {
+            data.Add((byte)(value & 0xFF));
+            data.Add((byte)(value >> 8 & 0xFF));
+            data.Add((byte)(value >> 16 & 0xFF));
+            data.Add((byte)(value >> 24 & 0xFF));
         }
 
         /// <summary>
