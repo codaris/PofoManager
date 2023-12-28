@@ -17,13 +17,11 @@
     </Window.Resources>
     <Grid>
         <DockPanel LastChildFill="True">
-            <Menu DockPanel.Dock="Top" >
+            <Menu DockPanel.Dock="Top" Padding="0,5,0,5">
                 <MenuItem Header="_File">
                     <MenuItem Header="_Send File..." Click="OpenFile_Click" Icon="{StaticResource UploadDocument}" IsEnabled="{Binding IsConnected}" />
                     <MenuItem Header="_Receive File..." Click="RetrieveFile_Click" Icon="{StaticResource DownloadDocument}" IsEnabled="{Binding IsConnected}" />
                     <MenuItem Header="_List Files" Click="ListFiles_Click" IsEnabled="{Binding IsConnected}" />
-                    <Separator />
-                    <MenuItem Header="Select Local Folder..." Click="SelectLocalFolder_Click" Icon="{StaticResource OpenFolderIcon}" />
                     <Separator />
                     <MenuItem Header="E_xit" Click="Exit_Click" />
                 </MenuItem>
@@ -81,7 +79,6 @@
             <StatusBar DockPanel.Dock="Bottom" HorizontalAlignment="Stretch">
                 <StatusBarItem Content="{Binding SelectedSerialPort}" DockPanel.Dock="Left" />
                 <StatusBarItem Content="{Binding Status}" DockPanel.Dock="Left" />
-                <StatusBarItem Content="{Binding LocalDirectoryText}" DockPanel.Dock="Right" Margin="0,0,5,0" MouseLeftButtonDown="SelectLocalFolder_Click" />
                 <StatusBarItem />
             </StatusBar>
             <TextBox x:Name="Log" IsReadOnly="True" IsReadOnlyCaretVisible="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" FontFamily="Consolas" FontSize="14" Background="Black" Foreground="#FF00D866" SelectionBrush="#FFBDD8ED" Text="PortfolioSync 1.0" />

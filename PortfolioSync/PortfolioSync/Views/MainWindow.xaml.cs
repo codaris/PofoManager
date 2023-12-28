@@ -43,8 +43,6 @@ namespace PortfolioSync.Views
             viewModel = new MainViewModel(this);
             DataContext = viewModel;
 
-            // viewModel.Arduino.DiskDrive.DiskDirectory = "C:\\Projects\\Handhelds\\Sharp Pocket\\SharpManager\\Disk";
-
             // Apppend newline after version text
             Log.AppendText("\r\n");
             Log.ScrollToEnd();
@@ -114,23 +112,6 @@ namespace PortfolioSync.Views
             if (retrieveViewModel.Result)
             {
                 await viewModel.Arduino.RetreiveFile(retrieveViewModel.SourcePath, retrieveViewModel.DestinationPath);
-            }
-        }
-
-        /// <summary>
-        /// Handles the Click event of the SelectDiskFolder control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
-        private void SelectLocalFolder_Click(object sender, RoutedEventArgs e)
-        {
-            var dialog = new CommonOpenFileDialog();
-            dialog.IsFolderPicker = true;
-            // dialog.InitialDirectory = viewModel.Arduino.DiskDrive.DiskDirectory;
-            var result = dialog.ShowDialog();
-            if (result == CommonFileDialogResult.Ok)
-            {
-                // viewModel.Arduino.DiskDrive.DiskDirectory = dialog.FileName;
             }
         }
 

@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace PortfolioSync
 {
+    /// <summary>
+    /// DOS utility functions
+    /// </summary>
     internal static class DOS
     {
+        /// <summary>
+        /// Generates a short DOS date.
+        /// </summary>
+        /// <param name="dateTime">The date time.</param>
+        /// <returns>Short int DOS date</returns>
         public static int GenerateDate(DateTime dateTime)
         {
             int year = dateTime.Year - 1980;
@@ -17,6 +25,11 @@ namespace PortfolioSync
             return ((year << 9) | (month << 5) | day);
         }
 
+        /// <summary>
+        /// Generates the short DOS time.
+        /// </summary>
+        /// <param name="dateTime">The date time.</param>
+        /// <returns>Short int DOS time</returns>
         public static int GenerateTime(DateTime dateTime)
         {
             int hour = dateTime.Hour;
@@ -26,6 +39,12 @@ namespace PortfolioSync
             return ((hour << 11) | (minute << 5) | second);
         }
 
+        /// <summary>
+        /// Parses the DOS date and time values.
+        /// </summary>
+        /// <param name="dosDate">The DOS date.</param>
+        /// <param name="dosTime">The DOS time.</param>
+        /// <returns></returns>
         public static DateTime ParseDateTime(int dosDate, int dosTime)
         {
             // Extract date components

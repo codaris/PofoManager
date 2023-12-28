@@ -72,16 +72,6 @@ namespace PortfolioSync
         /// <summary>The low version value</summary>
         private const int VersionLow = 1;
 
-        private enum FileFormat
-        {
-            Basic = 0x70,
-            BasicPassword = 0x71,
-            ExtBasic = 0x72,
-            ExtBasicPassword = 0x73,
-            Data = 0x74,
-            Binary = 0x76
-        }
-
         /// <summary>
         /// Gets a value indicating whether this instance is connected.
         /// </summary>
@@ -113,12 +103,14 @@ namespace PortfolioSync
             serialPort.DtrEnable = false;
             serialPort.Open();
             serialStream = new SerialPortByteStream(serialPort);
-            IsConnected = true;
-            OnPropertyChanged(nameof(IsConnected));
             messageTarget.WriteLine($"Connected to {portName}.");
 
-            // Empty the read buffer
+            // Wait for initialization
             await Initialize();
+
+            // Change connected property
+            IsConnected = true;
+            OnPropertyChanged(nameof(IsConnected));
 
             // Begin the main loop
             _ = Task.Run(async () => { await Mainloop(); });
@@ -287,7 +279,7 @@ namespace PortfolioSync
             // Processing response
             var response = new MemoryStream(await RetreiveBlock());
             var files = new List<string>();
-            int fileCount = response.ReadByte() + (response.ReadByte() << 8);
+            int fileCount = response.ReadShort();
             messageTarget.WriteLine($"File count: {fileCount}");
             var fileName = new StringBuilder();
             while (true)
@@ -307,7 +299,7 @@ namespace PortfolioSync
         }
 
         /// <summary>
-        /// Sends the tape file.
+        /// Sends file to the portfolio
         /// </summary>
         /// <param name="fileStream">The file stream.</param>
         /// <exception cref="System.InvalidOperationException">Cannot send file if not connected</exception>
@@ -386,9 +378,11 @@ namespace PortfolioSync
         }
 
         /// <summary>
-        /// Reads the tape file.
+        /// Retrieves a file from the portfolio
         /// </summary>
-        /// <returns></returns>
+        /// <param name="remoteFilePath">The remote file path.</param>
+        /// <param name="localFilePath">The local file path.</param>
+        /// <returns>True if successfil</returns>
         public async Task<bool> RetreiveFile(string remoteFilePath, string localFilePath)
         {
             if (serialStream == null) throw new ArduinoException("Arduino is not connected");
@@ -586,7 +580,7 @@ namespace PortfolioSync
         }
 
         /// <summary>
-        /// Sends the block.
+        /// Sends a block to the portfolio
         /// </summary>
         /// <param name="data">The data.</param>
         /// <returns></returns>
@@ -604,10 +598,10 @@ namespace PortfolioSync
             serialStream.WriteByte(Ascii.SOH);    // Start of packet 
             serialStream.WriteByte((byte)Command.SendBlock);
             serialStream.WriteWord(length);
-            await ReadResponse().ConfigureAwait(false);     // Wait for acknowledge
+            await ReadResponse().ConfigureAwait(false);     // Wait for header acknowledge
             await SendBuffer(data, length).ConfigureAwait(false);
             await ReadResponse().ConfigureAwait(false);     // Wait for final acknowledge
-            await ReadResponse().ConfigureAwait(false);     // Wait for final acknowledge
+            await ReadResponse().ConfigureAwait(false);     // Wait for final acknowledge TODO why?
         }
 
         /// <summary>
