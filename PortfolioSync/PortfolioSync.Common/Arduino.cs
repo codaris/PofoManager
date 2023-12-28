@@ -9,6 +9,7 @@ using System.IO.Ports;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Net.Sockets;
+using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -250,6 +251,10 @@ namespace PortfolioSync
             }
         }
 
+        /// <summary>
+        /// Lists the files.
+        /// </summary>
+        /// <exception cref="PortfolioSync.ArduinoException">Arduino is not connected</exception>
         public async Task ListFiles()
         {
             if (serialStream == null) throw new ArduinoException("Arduino is not connected");
@@ -384,9 +389,14 @@ namespace PortfolioSync
         /// Reads the tape file.
         /// </summary>
         /// <returns></returns>
-        public async Task<byte[]> RetreiveFile()
+        public async Task<bool> RetreiveFile(string remoteFilePath, string localFilePath)
         {
             if (serialStream == null) throw new ArduinoException("Arduino is not connected");
+
+            messageTarget.WriteLine($"Retrieving '{remoteFilePath}' from Portfolio as '{localFilePath}'");
+
+            using var fileStream = new FileStream(localFilePath, FileMode.OpenOrCreate, FileAccess.Write);
+
             using var _ = StartCommandScope();
 
             // Empty the read buffer
@@ -397,25 +407,53 @@ namespace PortfolioSync
             messageTarget.DebugWriteLine("Synchronizing...");
             if (!await Synchronize().ConfigureAwait(false)) throw new ArduinoException("Unable to start file transfer");
 
-            return new byte[0];
-            /*
-            messageTarget.WriteLine($"Waiting for CSAVE on pocket computer...");
-            serialStream.WriteByte(Ascii.SOH);    // Start of packet 
-            serialStream.WriteByte((byte)Command.RetreiveFile);
-            await ReadResponse().ConfigureAwait(false);
+            // Wait for server
+            messageTarget.DebugWriteLine("Waiting for server...");
+            await WaitForServer();
 
-            try
+            List<byte> data = new List<byte>();
+            data.Add(0x02);                             // Request file
+            data.AddShort(BlockSize);                   // Block size
+            data.AddString(remoteFilePath);
+            data.Add(0);
+
+            messageTarget.DebugWriteLine("Retrieve file command...");
+            await SendBlock(data.ToArray());
+            var response = new MemoryStream(await RetreiveBlock());
+            var result = response.ReadByte();
+            if (result == 0x20)
             {
-                cancellationTokenSource = new();
-                OnPropertyChanged(nameof(CanCancel));
-                return await ReadFrame(cancellationTokenSource.Token).ConfigureAwait(false);
+                messageTarget.DebugWriteLine("File OK");
             }
-            finally
+            else
             {
-                cancellationTokenSource = null;
-                OnPropertyChanged(nameof(CanCancel));
+                messageTarget.DebugWriteLine("Error");
+                messageTarget.Dump(response.ToArray());
+                return false;
             }
-            */
+            int blockSize = response.ReadShort();
+            if (blockSize != BlockSize) throw new ArduinoException($"Block size is {blockSize:N0}");
+            int fileTime = response.ReadShort();
+            int fileDate = response.ReadShort();
+            int remaining = response.ReadInt();
+
+            var buffer = new byte[blockSize];
+            while (true)
+            {
+                var block = await RetreiveBlock();
+                remaining -= block.Length;
+                fileStream.Write(block, 0, block.Length);
+                if (remaining <= 0) break;
+            }
+
+            // Send success
+            data.Clear();
+            data.Add(0x20);                             // Success
+            data.Add(0);
+            data.Add(0x03);
+            await SendBlock(data.ToArray());
+            messageTarget.WriteLine("Success.");
+            return true;
         }
 
         /// <summary>
