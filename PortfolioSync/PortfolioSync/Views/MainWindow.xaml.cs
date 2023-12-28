@@ -92,12 +92,14 @@ namespace PortfolioSync.Views
         private async void OpenFile_Click(object sender, RoutedEventArgs e)
         {
             var openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Tape files (*.tap)|*.tap|All files (*.*)|*.*";
+            openFileDialog.Filter = "All files (*.*)|*.*";
             if (openFileDialog.ShowDialog() == true)
             {
-                Log.AppendText($"Sending file: {openFileDialog.FileName}\r\n");
-                using var fileStream = new FileStream(openFileDialog.FileName, FileMode.Open, FileAccess.Read);
-                await viewModel.Arduino.SendFile(fileStream);
+                var sendViewModel = SendDialog.ShowDialog(this, openFileDialog.FileName);
+                if (sendViewModel.Result)
+                {
+                    await viewModel.Arduino.SendFile(sendViewModel.FilePath, sendViewModel.DestinationPath, sendViewModel.OverwriteFile);
+                }
             }
         }
 
@@ -108,6 +110,9 @@ namespace PortfolioSync.Views
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private async void ReceiveFile_Click(object sender, RoutedEventArgs e)
         {
+
+
+            /*
             // The file data
             byte[] data;
 
@@ -129,7 +134,7 @@ namespace PortfolioSync.Views
                 Log.AppendText($"Saving file: {saveFileDialog.FileName}\r\n");
                 using var fileStream = new FileStream(saveFileDialog.FileName, FileMode.Create, FileAccess.Write);
                 fileStream.Write(data, 0, data.Length);
-            }
+            }*/
         }
 
         /// <summary>

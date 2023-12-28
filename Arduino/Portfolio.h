@@ -2,13 +2,6 @@
 #ifndef __PORTFOLIO_H__
 #define __PORTFOLIO_H__
 
-/** Portfolio pins */
-const int  PIN_INPUT_CLOCK = 2;     // pin sub D25 pin 12 (White -> White)
-const int  PIN_INPUT_DATA = 3;      // pin sub D25 pin 13 (Blue -> Gray)
-const int  PIN_OUTPUT_CLOCK = 4;    // pin sub D25 pin 3 (Yellow -> Purple)
-const int  PIN_OUTPUT_DATA = 5;     // pin sub D25 pin 2 (Green -> Blue)
-
-
 namespace Portfolio
 {
     /**
@@ -22,34 +15,18 @@ namespace Portfolio
     void Disable();
 
     /**
-     * @brief   Read a byte from the Portfolio
-     * @return  A byte from the input
-     */
-    int ReadByte();
-
-    /**
-     * @brief Send a byte to the Portfolio
-     * @param value     The value to send
-     */
-    void SendByte(int value);
-
-    /**
-     * @brief Synchronize
+     * @brief Wait for server
      */
     void WaitForServer();    
 
     /**
-     * @brief Request file list
+     * @brief Sends a block to the portfolio
      */
-    void RequestFileList();
-
-    /**
-     * @brief List the files
-     */
-    void ListFiles();
-
     void SendBlock();
 
+    /**
+     * @brief Retrieves a block from the portfolio
+     */
     void RetrieveBlock();
 }
 

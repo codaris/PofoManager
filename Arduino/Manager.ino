@@ -9,11 +9,9 @@ namespace Manager
     {
         Init = 1,
         Ping = 2,
-        ListFiles = 3,
+        WaitForServer = 3,
         SendBlock = 4,
-        RetreiveBlock = 5,
-        WaitForServer = 6,
-        Data = 7
+        RetreiveBlock = 5
     };
 
     const byte VersionHigh = 1;                  // Version numbers
@@ -172,18 +170,6 @@ namespace Manager
     }
 
     /**
-     * @brief Send the print character
-     * @param value Character to print
-    */
-    void SendDataByte(int data)
-    {
-        if (data == -1) return;
-        Serial.write(Ascii::SOH);
-        Serial.write(Command::Data);
-        Serial.write(data);
-    }
-
-    /**
      * @brief Sends success to the manager
      * @param totalSize The total amount of data to read in BUFFER_SIZE packets
     */
@@ -249,39 +235,6 @@ namespace Manager
     }
 
     /**
-     * @brief Process length-prefixed data packet
-     * @param sendFunction  The function to call with the buffered data
-     * @return True if succesful, false on error
-     */
-    bool ProcessDataFrame(void (*sendFunction)(byte))
-    {
-        // Read the data packet length
-        Result length = WaitReadWord();            // 2 bytes, total length of data
-        if (length.IsError()) {
-            SendFailure(length.AsErrorCode());
-            return false;
-        }
-
-        SendSuccess();  // Acknowledge the header
-
-        InitializeBuffer(length);
-
-        while (true) 
-        {
-            Result data = ReadBufferByte();
-            if (data.IsDone()) break;
-            if (data.IsError()) {
-                SendFailure(data.AsErrorCode());
-                return false;
-            }
-            sendFunction(data);
-        }
-
-        // Completed processing packet
-        return true;
-    }
-
-    /**
      * @brief Sends the initialization header
      */
     void SendInitializeHeader()
@@ -332,9 +285,8 @@ namespace Manager
             case Command::Init:
                 SendInitializeHeader();
                 break;
-            case Command::ListFiles:
-                // Run the load from tape command
-                Portfolio::ListFiles();
+            case Command::WaitForServer:
+                Portfolio::WaitForServer();
                 break;
             case Command::SendBlock:
                 // Run the save tape command
@@ -343,9 +295,6 @@ namespace Manager
             case Command::RetreiveBlock:
                 // Run the save tape command
                 Portfolio::RetrieveBlock();
-                break;
-            case Command::WaitForServer:
-                Portfolio::WaitForServer();
                 break;
             default:
                 // Unknown command error

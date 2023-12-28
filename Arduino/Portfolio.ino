@@ -1,45 +1,18 @@
 #include "Portfolio.h"
 #include "Manager.h"
-
+#include "Result.h"
 
 namespace Portfolio
 {
+    /** Portfolio pins */
+    const int  PIN_INPUT_CLOCK = 2;     // pin sub D25 pin 12 (White -> White)
+    const int  PIN_INPUT_DATA = 3;      // pin sub D25 pin 13 (Blue -> Gray)
+    const int  PIN_OUTPUT_CLOCK = 4;    // pin sub D25 pin 3 (Yellow -> Purple)
+    const int  PIN_OUTPUT_DATA = 5;     // pin sub D25 pin 2 (Green -> Blue)
+
     /** @brief The checksum */
     byte checksum = 0;
-
-    const int PAYLOAD_BUFSIZE = 60000;
-    const int CONTROL_BUFSIZE = 100;
-    const int LIST_BUFSIZE = 2000;
-    const int MAX_FILENAME_LEN = 79;
-
-    unsigned char DirectoryRequestBuffer[82] =
-    { 
-        0x06,         /* Offset 0: Funktion */
-        0x00, 0x70,    /* Offset 2: Puffergroesse = 28672 Byte */
-        'C', ':', '*','.','*', 0
-    };    
-    
-    /**
-     * @brief   Read a byte from the Portfolio and update checksum
-     * @return  A byte from the input
-     */    
-    int ReadByteChecksum() 
-    {
-        int value = ReadByte();
-        checksum += value;
-        return value;        
-    }
-
-    /** 
-     * @brief Send a byte to the Portfolio and update checksum
-     * @param value     The value to send
-     */
-    int SendByteChecksum(int value) 
-    {
-        SendByte(value);
-        checksum -= value; 
-    }
-
+  
     /**
      * @brief Initials the pins for the portfolio
      */
@@ -62,6 +35,13 @@ namespace Portfolio
         pinMode(PIN_OUTPUT_DATA, INPUT); 
     }
 
+    /**
+     * @brief Wait for the specified pin to go low
+     * 
+     * @param pin       The pin to wait on
+     * @param timeout   The timeout amount in milliseconds
+     * @return True if success or false for timeout
+     */
     bool WaitForLow(uint8_t pin, int timeout) 
     {
         unsigned long startTime = millis();
@@ -71,6 +51,13 @@ namespace Portfolio
         return true;
     }
 
+    /**
+     * @brief Wait for the specified pin to go high
+     * 
+     * @param pin       The pin to wait on
+     * @param timeout   The timeout amount in milliseconds
+     * @return True if success or false for timeout
+     */
     bool WaitForHigh(uint8_t pin, int timeout) 
     {
         unsigned long startTime = millis();
@@ -123,6 +110,27 @@ namespace Portfolio
     }
 
     /**
+     * @brief   Read a byte from the Portfolio and update checksum
+     * @return  A byte from the input
+     */    
+    int ReadByteChecksum() 
+    {
+        int value = ReadByte();
+        checksum += value;
+        return value;        
+    }
+
+    /** 
+     * @brief Send a byte to the Portfolio and update checksum
+     * @param value     The value to send
+     */
+    int SendByteChecksum(int value) 
+    {
+        SendByte(value);
+        checksum -= value; 
+    }
+
+    /**
      * @brief Synchronize
      */
     void WaitForServer()
@@ -141,117 +149,6 @@ namespace Portfolio
         }        
 
         Manager::SendSuccess();
-    }
-
-    int SendBlock(const byte data[], const int length)
-    {
-        // Reset checksum
-        checksum = 0;
-
-        if (length == 0) return;
-
-        // Wait for start
-        while (true) {
-            int value = ReadByte();
-            if (value == 0x5A) break;
-            if (value == 0x69) continue;
-            if (value == 0xA5) continue;
-            if (value == 0x96) continue;
-            Serial.println("Cannot start");
-            return -1;
-        }
-
-        delay(50);
-    
-        // Start of block
-        SendByte(0xA5);
-
-        int lenH = length >> 8;     
-        int lenL = length & 255;
-        SendByteChecksum(lenL); 
-        SendByteChecksum(lenH); 
-
-        for (int i = 0; i < length; i++) {
-            SendByteChecksum(data[i]);
-        }
-  
-        SendByte(checksum);
-        int value = ReadByte();
-        if (checksum == value) {
-            Serial.println("Block sent");
-            return 0;
-        } else {
-            Serial.print("Error: ");
-            Serial.print(value, 16);
-            Serial.println();
-            return -1;
-        }
-    }
-
-    int ReadBlockToSerial()
-    {
-        checksum = 0;
-        SendByte(0x5A);     // Z start
-        int value = ReadByte();
-        if (value != 0xA5) {
-            Serial.print("Acknowledge error, received: ");
-            Serial.print(value, 16);
-            Serial.println();
-            return -1;
-        }
-
-        Serial.println("Acknowledge OK");
-        
-        int lenL = ReadByteChecksum();
-        int lenH = ReadByteChecksum();
-        int length = (lenH << 8) | lenL;
-
-        /*
-        if (length > maxLength) {
-            Serial.print("Receive buffer too small: ");
-            Serial.print(length);
-            Serial.print(" > ");
-            Serial.print(maxLength);
-            Serial.println();
-            return -1;
-        }
-        */
-
-        for (int i = 0; i < length; i++) 
-        {
-            int dataByte = ReadByteChecksum();
-            Serial.print(dataByte, 16);
-            Serial.print(" ");
-            if (i % 40 == 0 && i != 0) Serial.println();
-        }
-        Serial.println();
-
-        int ackChecksum = ReadByte();
-
-        if ((byte)(256 - ackChecksum) == checksum) 
-        {
-            Serial.println("Checksum OK");
-        } else {
-            Serial.print("Checksum error: ");
-            Serial.print(256 - ackChecksum, 16);
-            Serial.print(" != ");
-            Serial.print(checksum, 16);
-            Serial.println();
-            return -1;
-        }
-
-        delayMicroseconds(100);
-        SendByte((byte)(256 - checksum));
-        return length;
-    }
-
-    /**
-     * @brief Test request file list
-     */
-    void RequestFileList()
-    {
-        SendBlock(DirectoryRequestBuffer, sizeof(DirectoryRequestBuffer));
-        ReadBlockToSerial();
     }
 
     /**
@@ -281,6 +178,7 @@ namespace Portfolio
             if (value == 0xA5) continue;
             if (value == 0x96) continue;
             Manager::SendFailure(ResultType::Unexpected);
+            return;
         }
 
         // Parsing the header was a success
@@ -354,15 +252,5 @@ namespace Portfolio
 
         delayMicroseconds(100);
         SendByte((byte)(256 - checksum));
-    }
-
-    /**
-     * @brief List the files
-     */
-    void ListFiles()
-    {
-        WaitForServer();
-        SendBlock();
-        RetrieveBlock();
     }
 }

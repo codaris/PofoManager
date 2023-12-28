@@ -37,11 +37,9 @@ namespace PortfolioSync
     {
         Init = 1,
         Ping = 2,
-        ListFiles = 3,
+        WaitForServer = 3,
         SendBlock = 4,
-        RetreiveBlock = 5,
-        WaitForServer = 6,
-        Data = 7
+        RetreiveBlock = 5
     }
 
     public class Arduino : NotifyObject, IDisposable
@@ -309,11 +307,15 @@ namespace PortfolioSync
         /// <param name="fileStream">The file stream.</param>
         /// <exception cref="System.InvalidOperationException">Cannot send file if not connected</exception>
         /// <exception cref="System.Exception">Unable to start file transfer</exception>
-        public async Task SendFile(Stream fileStream)
+        public async Task SendFile(string fileName, string remoteFilePath, bool overwrite)
         {
             if (serialStream == null) throw new ArduinoException("Arduino is not connected");
 
+            using var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
             using var _ = StartCommandScope();
+
+            messageTarget.WriteLine($"Sendng '{fileName}' to Portfolio as '{remoteFilePath}'");
+            if (overwrite) messageTarget.WriteLine("Overwriting file if exists");
 
             // Empty the read buffer
             messageTarget.DebugWriteLine("Clearing stream... ");
@@ -327,14 +329,16 @@ namespace PortfolioSync
             messageTarget.DebugWriteLine("Waiting for server...");
             await WaitForServer();
 
+            var fileLength = (int)fileStream.Length;
+
             List<byte> data = new List<byte>();
             data.Add(0x03);                             // Send file
             data.AddShort(BlockSize);                   // Block size
             data.AddShort(DOS.GenerateTime(DateTime.Now));
             data.AddShort(DOS.GenerateDate(DateTime.Now));
-            data.AddInt((int)fileStream.Length);
-            data.AddString("C:\\TESTFILE.TXT");
-            data.Add(0x00);
+            data.AddInt(fileLength);
+            data.AddString(remoteFilePath);
+            data.Add(0);
 
             messageTarget.DebugWriteLine("Send file command...");
             await SendBlock(data.ToArray());
@@ -343,32 +347,37 @@ namespace PortfolioSync
             if (result == 0x21) messageTarget.DebugWriteLine("File OK");
             if (result == 0x20)
             {
-                messageTarget.DebugWriteLine("File exists, overwriting");
-                data.Clear();
-                data.Add(0x05);
-                data.AddShort(BlockSize); // Block size
-                await SendBlock(data.ToArray());
+                if (overwrite) {
+                    messageTarget.DebugWriteLine("File exists, overwriting");
+                    data.Clear();
+                    data.Add(0x05);
+                    data.AddShort(BlockSize); // Block size
+                    await SendBlock(data.ToArray());
+                } 
+                else
+                {
+                    messageTarget.WriteLine($"File '{remoteFilePath}' already exists.");
+                    data.Clear();
+                    data.Add(0);            // Abort
+                    data.AddShort(0);       // Block size
+                    await SendBlock(data.ToArray());
+                    return;
+                }
             }
 
-            using var memoryStream = new MemoryStream();
-            fileStream.CopyTo(memoryStream);
-            var fileData = memoryStream.ToArray();
-            await SendBlock(fileData);
+            var buffer = new byte[BlockSize];          
+            while (true)
+            {
+                int length = fileStream.Read(buffer, 0, buffer.Length);
+                if (length == 0) break;
+                messageTarget.DebugWriteLine($"Sending block {length} bytes");
+                await SendBlock(buffer, length);
+            }
 
             response = new MemoryStream(await RetreiveBlock());
             result = response.ReadByte();
             if (result == 0x20) messageTarget.WriteLine("Success.");
             else messageTarget.WriteLine("Failure.");
-
-            /*
-            serialStream.WriteByte(Ascii.SOH);    // Start of packet 
-            serialStream.WriteByte((byte)Command.SendFile);
-            serialStream.WriteWord((ushort)fileStream.Length);
-            serialStream.WriteByte(HeaderSize);
-            await ReadResponse().ConfigureAwait(false);
-            await SendBuffer(data).ConfigureAwait(false);
-            messageTarget.WriteLine($"Done.");
-            */
         }
 
         /// <summary>
@@ -463,30 +472,34 @@ namespace PortfolioSync
                 case Command.Ping:
                     serialStream.WriteByte(Ascii.ACK);
                     break;
-                case Command.Data:
-                    var value = await serialStream.TryReadByteAsync(1000).ConfigureAwait(false);
-                    if (!value.HasValue) return;
-                    messageTarget.WriteLine($"Data: {value:X2}");
-                    break;
                 default:
                     return;
             }
         }
 
         /// <summary>
-        /// Sends the disk packet.
+        /// Waits for portfolio server
         /// </summary>
-        /// <param name="response">The data.</param>
         /// <exception cref="PortfolioSync.ArduinoException">Arduino is not connected</exception>
-        private async Task SendResponse(DiskResponse response)
+        private async Task WaitForServer()
         {
             if (serialStream == null) throw new ArduinoException("Arduino is not connected");
-            serialStream.WriteByte(Ascii.SOH);
-            // serialStream.WriteByte((byte)Command.Disk);
-            serialStream.WriteByte(response.Capture ? 0xFF : 0);
-            serialStream.WriteWord(response.Data.Length);
+            serialStream.WriteByte(Ascii.SOH);    // Start of packet 
+            serialStream.WriteByte((byte)Command.WaitForServer);
             await ReadResponse().ConfigureAwait(false);     // Wait for acknowledge
-            await SendBuffer(response.Data).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// Retreives a block from the portfolio
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="PortfolioSync.ArduinoException">Arduino is not connected</exception>
+        private async Task<byte[]> RetreiveBlock()
+        {
+            if (serialStream == null) throw new ArduinoException("Arduino is not connected");
+            serialStream.WriteByte(Ascii.SOH);    // Start of packet 
+            serialStream.WriteByte((byte)Command.RetreiveBlock);
+            return await ReadFrame();
         }
 
         /// <summary>
@@ -530,37 +543,33 @@ namespace PortfolioSync
                 }
                 result.Add(data);
                 messageTarget.Write(".");
-                // messageTarget.Write(" " + data.ToString("X2"));
                 if (result.Count % 80 == 0) messageTarget.WriteLine();
             }
         }
 
-        private async Task SendBlock(byte[] data)
+        /// <summary>
+        /// Sends the block.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <returns></returns>
+        private Task SendBlock(byte[] data) => SendBlock(data, data.Length);
+
+        /// <summary>
+        /// Sends a block to the portfolio
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <param name="length">The length.</param>
+        private async Task SendBlock(byte[] data, int length)
         {
             if (serialStream == null) throw new ArduinoException("Arduino is not connected");
+            if (length > data.Length) throw new ArgumentOutOfRangeException(nameof(length), "Length cannot be larger than buffer size");
             serialStream.WriteByte(Ascii.SOH);    // Start of packet 
             serialStream.WriteByte((byte)Command.SendBlock);
-            serialStream.WriteWord(data.Length);
+            serialStream.WriteWord(length);
             await ReadResponse().ConfigureAwait(false);     // Wait for acknowledge
-            await SendBuffer(data).ConfigureAwait(false);
+            await SendBuffer(data, length).ConfigureAwait(false);
             await ReadResponse().ConfigureAwait(false);     // Wait for final acknowledge
             await ReadResponse().ConfigureAwait(false);     // Wait for final acknowledge
-        }
-
-        private async Task WaitForServer()
-        {
-            if (serialStream == null) throw new ArduinoException("Arduino is not connected");
-            serialStream.WriteByte(Ascii.SOH);    // Start of packet 
-            serialStream.WriteByte((byte)Command.WaitForServer);
-            await ReadResponse().ConfigureAwait(false);     // Wait for acknowledge
-        }
-
-        private async Task<byte[]> RetreiveBlock()
-        {
-            if (serialStream == null) throw new ArduinoException("Arduino is not connected");
-            serialStream.WriteByte(Ascii.SOH);    // Start of packet 
-            serialStream.WriteByte((byte)Command.RetreiveBlock);
-            return await ReadFrame();
         }
 
         /// <summary>
@@ -568,17 +577,22 @@ namespace PortfolioSync
         /// </summary>
         /// <param name="data">The data.</param>
         /// <exception cref="PortfolioSync.ArduinoException">Arduino is not connected</exception>
-        private async Task SendBuffer(byte[] data)
+        private async Task SendBuffer(byte[] data, int length)
         {
             if (serialStream == null) throw new ArduinoException("Arduino is not connected");
             int offset = 0;
             while (true)
             {
-                int size = Math.Min(BufferSize, data.Length - offset);
+                int size = Math.Min(BufferSize, length - offset);
                 if (size == 0) break;
                 messageTarget.DebugWriteLine($"Sending {size} bytes:");
                 messageTarget.Dump(new ArraySegment<byte>(data, offset, size));
-                for (int i = 0; i < size; i++) serialStream.WriteByte(data[offset++]);
+                for (int i = 0; i < size; i++)
+                {
+                    serialStream.WriteByte(data[offset++]);
+                    messageTarget.Write(".");                    
+                }
+                messageTarget.WriteLine();
                 await ReadResponse().ConfigureAwait(false);
             }
         }

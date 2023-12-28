@@ -8,17 +8,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PortfolioSync.Common\PortfolioSync.Common.csproj" />
+    <None Remove="Resources\UploadDocument.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <ProjectReference Include="..\PortfolioSync.Common\PortfolioSync.Common.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="System.IO.Ports" Version="8.0.0" />
     <PackageReference Include="System.Management" Version="8.0.0" />
     <PackageReference Include="WindowsAPICodePack-Shell" Version="1.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\UploadDocument.png" />
   </ItemGroup>
 
 </Project>

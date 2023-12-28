@@ -46,5 +46,36 @@ namespace PortfolioSync
 
             return nameSelector(memberSelector.Body);
         }
+
+        /// <summary>
+        /// Truncates the specified maximum length.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <param name="maxLength">The maximum length.</param>
+        /// <returns></returns>
+        public static string Truncate(this string value, int maxLength)
+        {
+            if (string.IsNullOrEmpty(value)) return value;
+            return value.Length <= maxLength ? value : value[..maxLength];
+        }
+
+        public static bool IsValidFileName(this string fileName)
+        {
+            System.IO.FileInfo? fi = null;
+            try
+            {
+                fi = new System.IO.FileInfo(fileName);
+            }
+            catch (ArgumentException) { }
+            catch (System.IO.PathTooLongException) { }
+            catch (NotSupportedException) { }
+            if (fi is null) return false;
+            if (!System.IO.Path.IsPathRooted(fileName)) return false;
+            foreach (var component in fileName.Split('\\', '.'))
+            {
+                if (component.Length > 8) return false;
+            }
+            return true;
+        }
     }
 }
