@@ -26,8 +26,12 @@ namespace PortfolioSync.ViewModels
         /// </summary>
         public string? SelectedSerialPort
         {
-            get => GetProperty<string?>();
-            set => SetProperty(value);
+            get => GetProperty<string?>(Properties.Settings.Default.SerialPort, nameof(SelectedSerialPort));
+            set
+            {
+                SetProperty(value);
+                Properties.Settings.Default.SerialPort = value;
+            }
         }
 
         /// <summary>

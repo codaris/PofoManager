@@ -69,6 +69,7 @@ namespace PortfolioSync
                 ErrorCode.SyncError => "Synchronization error",
                 ErrorCode.Unexpected => "Unexpected command received",
                 ErrorCode.Overflow => "Buffer overflow occurred",
+                ErrorCode.ChecksumError => "Checksum error occurred",
                 _ => $"Unexpected error code 0x{errorCode:X2}",
             };
         }

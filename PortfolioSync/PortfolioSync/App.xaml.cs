@@ -23,5 +23,16 @@ namespace PortfolioSync
             if (Current?.Dispatcher?.CheckAccess() ?? true) action();
             else await Current.Dispatcher.InvokeAsync(action);
         }
+
+        /// <summary>
+        /// Handles the Exit event of the Application control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="ExitEventArgs"/> instance containing the event data.</param>
+        private void Application_Exit(object sender, ExitEventArgs e)
+        {
+            // Save the settings on exit
+            PortfolioSync.Properties.Settings.Default.Save();
+        }
     }
 }

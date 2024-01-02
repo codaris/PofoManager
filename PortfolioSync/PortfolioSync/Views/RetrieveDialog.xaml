@@ -7,7 +7,7 @@
         xmlns:vm="clr-namespace:PortfolioSync.ViewModels"              
         mc:Ignorable="d"
         d:DataContext="{d:DesignInstance Type=vm:RetreiveViewModel, IsDesignTimeCreatable=False}"
-        Title="Retrieve File from Portfolio" Height="142" Width="532" ResizeMode="NoResize" SizeToContent="Height" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" Icon="/Resources/UploadDocument.png">
+        Title="Retrieve File from Portfolio" Height="178" Width="532" ResizeMode="NoResize" SizeToContent="Height" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" Icon="/Resources/DownloadDocument.png">
     <Grid Margin="5,5,5,5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
@@ -18,15 +18,18 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Label Grid.Column="0" Grid.Row="0" Content="Source Path:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         <TextBox Grid.Column="1" Grid.Row="0" Text="{Binding SourcePath}" VerticalAlignment="Center" CharacterCasing="Upper" />
-        <Label Grid.Column="0" Grid.Row="1" Content="Destination Path:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-        <DockPanel Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Margin="0,0,0,0">
-            <Label Content="{Binding DestinationPath}" VerticalAlignment="Center" DockPanel.Dock="Left" HorizontalAlignment="Stretch" Margin="-3,0,0,0"  />
-            <Button Content="Save As..." DockPanel.Dock="Right" HorizontalAlignment="Right" Height="20" Click="SelectFile_Click" Padding="10,0,10,0" ></Button>
-        </DockPanel>
-        <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+        <Label Grid.Column="0" Grid.Row="1" Content="Destination Path:" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Vertical">
+            <Label Content="{Binding DestinationPath}" Visibility="{Binding DestinationPathVisibility}" Margin="-3,0,0,0" />
+            <Button Content="Select file..."  Height="20" Click="SelectFile_Click" Padding="10,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,3,0,0"></Button>
+        </StackPanel>
+        <ProgressBar Grid.Row="2" Grid.ColumnSpan="2" Height="20" Margin="5,10,5,10" />
+        <TextBlock Grid.Row="2" Grid.ColumnSpan="2" Text="100%" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,0">
             <Button Content="Retrieve" Margin="5,5,5,5" Padding="10,2,10,4" IsDefault="True" Click="Retrieve_Click" />
             <Button Content="Cancel" Margin="5,5,5,5" Padding="10,2,10,4" Click="Cancel_Click" IsCancel="True" />
         </StackPanel>

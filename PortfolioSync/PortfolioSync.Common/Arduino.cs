@@ -28,6 +28,7 @@ namespace PortfolioSync
         Unexpected = 3,
         Overflow = 4,
         SyncError = 5,
+        ChecksumError = 6,
         End = 0xFF
     }
 
@@ -105,8 +106,17 @@ namespace PortfolioSync
             serialStream = new SerialPortByteStream(serialPort);
             messageTarget.WriteLine($"Connected to {portName}.");
 
-            // Wait for initialization
-            await Initialize();
+            try
+            {
+                // Wait for initialization
+                await Initialize();
+            }
+            catch
+            {
+                // If initialize failed then disconnect
+                Disconnect();
+                throw;
+            }
 
             // Change connected property
             IsConnected = true;
@@ -178,7 +188,7 @@ namespace PortfolioSync
             while (serialStream.DataAvailable) await serialStream.ReadByteAsync().ConfigureAwait(false);
 
             // Try synchronizing
-            if (!await Synchronize().ConfigureAwait(false)) messageTarget.WriteLine("Initialize failed.");
+            if (!await Synchronize().ConfigureAwait(false)) throw new DataException("Synchronization failed.");
 
             serialStream.WriteByte(Ascii.SOH);
             serialStream.WriteByte((byte)Command.Init);
@@ -220,7 +230,7 @@ namespace PortfolioSync
 
             // Try synchronizing
             messageTarget.DebugWriteLine("Synchronizing...");
-            if (!await Synchronize().ConfigureAwait(false)) messageTarget.WriteLine("Synchronization failed.");
+            if (!await Synchronize().ConfigureAwait(false)) throw new DataException("Synchronization failed.");
 
             messageTarget.Write("Pinging... ");
             serialStream.WriteByte(Ascii.SOH);
@@ -266,7 +276,7 @@ namespace PortfolioSync
 
             // Try synchronizing
             messageTarget.DebugWriteLine("Synchronizing...");
-            if (!await Synchronize().ConfigureAwait(false)) messageTarget.WriteLine("Synchronization failed.");
+            if (!await Synchronize().ConfigureAwait(false)) throw new DataException("Synchronization failed.");
 
             // Wait for server
             messageTarget.DebugWriteLine("Waiting for server...");
@@ -569,13 +579,10 @@ namespace PortfolioSync
                     case Ascii.CAN:
                         throw new ArduinoException(ErrorCode.Cancelled);
                     case Ascii.ETX:
-                        if (result.Count % 40 != 0) messageTarget.WriteLine();
                         messageTarget.Dump(result);
                         return result.ToArray();
                 }
                 result.Add(data);
-                messageTarget.Write(".");
-                if (result.Count % 80 == 0) messageTarget.WriteLine();
             }
         }
 
@@ -622,9 +629,7 @@ namespace PortfolioSync
                 for (int i = 0; i < size; i++)
                 {
                     serialStream.WriteByte(data[offset++]);
-                    messageTarget.Write(".");                    
                 }
-                messageTarget.WriteLine();
                 await ReadResponse().ConfigureAwait(false);
             }
         }
@@ -646,9 +651,6 @@ namespace PortfolioSync
                 {
                     Disconnect();
                 }
-
-                // TODO: free unmanaged resources (unmanaged objects) and override finalizer
-                // TODO: set large fields to null
                 disposedValue = true;
             }
         }

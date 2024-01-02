@@ -7,7 +7,7 @@
         xmlns:vm="clr-namespace:PortfolioSync.ViewModels"              
         mc:Ignorable="d"
         d:DataContext="{d:DesignInstance Type=vm:SendViewModel, IsDesignTimeCreatable=False}"
-        Title="Send File to Portfolio" Height="142" Width="532" ResizeMode="NoResize" SizeToContent="Height" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" Icon="/Resources/UploadDocument.png">
+        Title="Send File to Portfolio" Height="179" Width="532" ResizeMode="NoResize" SizeToContent="Height" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" Icon="/Resources/UploadDocument.png">
     <Grid Margin="5,5,5,5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
@@ -19,13 +19,16 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Label Grid.Column="0" Grid.Row="0" Content="File to Send:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
         <Label Grid.Column="0" Grid.Row="1" Content="Destination Path:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-        <Label Grid.Column="1" Grid.Row="0" Content="{Binding FilePath}" VerticalAlignment="Center" />
+        <Label Grid.Column="1" Grid.Row="0" Content="{Binding FilePath}" VerticalAlignment="Center" Margin="-3,0,0,0" />
         <TextBox Grid.Column="1" Grid.Row="1" Text="{Binding DestinationPath}" VerticalAlignment="Center" CharacterCasing="Upper" />
         <CheckBox Grid.Column="1" Grid.Row="2" Content="Overwrite if exists" VerticalAlignment="Center" Margin="0,0,0,2" IsChecked="{Binding OverwriteFile, Mode=TwoWay}" />
-        <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+        <ProgressBar Grid.Row="3" Grid.ColumnSpan="2" Height="20" Margin="5,10,5,10" />
+        <TextBlock Grid.Row="3" Grid.ColumnSpan="2" Text="100%" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <StackPanel Grid.Row="4" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
             <Button Content="Send" Margin="5,5,5,5" Padding="10,2,10,4" IsDefault="True" Click="Send_Click" />
             <Button Content="Cancel" Margin="5,5,5,5" Padding="10,2,10,4" Click="Cancel_Click" IsCancel="True" />
         </StackPanel>

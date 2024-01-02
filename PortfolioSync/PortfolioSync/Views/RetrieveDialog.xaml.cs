@@ -23,8 +23,15 @@ namespace PortfolioSync.Views
     /// </summary>
     public partial class RetrieveDialog : Window
     {
+        /// <summary>
+        /// Gets the view model.
+        /// </summary>
         public RetreiveViewModel ViewModel { get; }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="RetrieveDialog"/> class.
+        /// </summary>
+        /// <param name="owner">The owner.</param>
         public RetrieveDialog(Window owner)
         {
             InitializeComponent();
@@ -33,17 +40,32 @@ namespace PortfolioSync.Views
             Owner = owner;  
         }
 
-        private void Cancel_Click(object sender, RoutedEventArgs e)
-        {
-            DialogResult = false;
-        }
-
+        /// <summary>
+        /// Handles the Click event of the Retrieve control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void Retrieve_Click(object sender, RoutedEventArgs e)
         {
             if (!ViewModel.Validate(this)) return;
             DialogResult = true;
         }
 
+        /// <summary>
+        /// Handles the Click event of the Cancel control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
+        }
+
+        /// <summary>
+        /// Handles the Click event of the SelectFile control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void SelectFile_Click(object sender, RoutedEventArgs e)
         {
             var saveFileDialog = new SaveFileDialog();

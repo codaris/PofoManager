@@ -96,7 +96,7 @@ namespace PortfolioSync.Views
                 var sendViewModel = SendDialog.ShowDialog(this, openFileDialog.FileName);
                 if (sendViewModel.Result)
                 {
-                    await viewModel.Arduino.SendFile(sendViewModel.FilePath, sendViewModel.DestinationPath, sendViewModel.OverwriteFile);
+                    await viewModel.Arduino.SendFile(sendViewModel.FilePath, sendViewModel.DestinationPath, sendViewModel.OverwriteFile).ConfigureAwait(false);
                 }
             }
         }
@@ -111,7 +111,7 @@ namespace PortfolioSync.Views
             var retrieveViewModel = RetrieveDialog.ShowDialog(this);
             if (retrieveViewModel.Result)
             {
-                await viewModel.Arduino.RetreiveFile(retrieveViewModel.SourcePath, retrieveViewModel.DestinationPath);
+                await viewModel.Arduino.RetreiveFile(retrieveViewModel.SourcePath, retrieveViewModel.DestinationPath).ConfigureAwait(false);
             }
         }
 
@@ -142,7 +142,7 @@ namespace PortfolioSync.Views
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private async void Connect_Click(object sender, RoutedEventArgs e)
         {
-            await viewModel.Connect();
+            await viewModel.Connect().ConfigureAwait(false);
         }
 
         /// <summary>
@@ -157,7 +157,7 @@ namespace PortfolioSync.Views
 
         private async void Ping_Click(object sender, RoutedEventArgs e)
         {
-            await viewModel.Arduino.Ping();
+            await viewModel.Arduino.Ping().ConfigureAwait(false);
         }
 
         /// <summary>
@@ -190,10 +190,10 @@ namespace PortfolioSync.Views
         /// <param name="message">The message.</param>
         void IMessageTarget.Write(string message)
         {
-            Dispatcher.InvokeAsync(() => {
+            Dispatcher.BeginInvoke(() => {
                 Log.AppendText(message);
                 Log.ScrollToEnd();
-            });
+            }, System.Windows.Threading.DispatcherPriority.ApplicationIdle);
         }
 
         /// <summary>
@@ -204,6 +204,36 @@ namespace PortfolioSync.Views
         private async void ListFiles_Click(object sender, RoutedEventArgs e)
         {
             await viewModel.Arduino.ListFiles();
+        }
+
+        /// <summary>
+        /// Handles the Drop event of the Window control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="DragEventArgs"/> instance containing the event data.</param>
+        private void Window_Drop(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                // Note that you can have more than one file.
+                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+
+                MessageBox.Show(files[0]);
+            }
+        }
+
+        /// <summary>
+        /// Handles the PreviewDragOver event of the Log control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="DragEventArgs"/> instance containing the event data.</param>
+        private void Log_PreviewDragOver(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                e.Effects = DragDropEffects.Copy;
+                e.Handled |= true;
+            }
         }
     }
 }

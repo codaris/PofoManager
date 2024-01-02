@@ -114,7 +114,31 @@ namespace Manager
         if (value == Ascii::CAN) return true;
         if (value == Ascii::ESC) return true;
         return false;
-    }    
+    }  
+
+    /**
+     * @brief Sends failure if result is error
+     * @param result 
+     * @return true if is error
+     */
+    bool Error(Result result)
+    {
+        if (!result.IsError()) return false;
+        SendFailure(result.AsErrorCode());
+        return true;
+    }
+
+    /**
+     * @brief Sends failure if error code is error
+     * @param errorCode 
+     * @return true if is error
+     */
+    bool Error(ResultType errorCode)  
+    {
+        if (errorCode == ResultType::Ok) return false;
+        SendFailure(errorCode);
+        return true;
+    }
 
     /**
      * @brief Sends failure to the manager

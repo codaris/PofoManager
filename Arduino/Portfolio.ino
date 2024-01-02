@@ -10,6 +10,8 @@ namespace Portfolio
     const int  PIN_OUTPUT_CLOCK = 4;    // pin sub D25 pin 3 (Yellow -> Purple)
     const int  PIN_OUTPUT_DATA = 5;     // pin sub D25 pin 2 (Green -> Blue)
 
+    const int TIMEOUT = 1000;           // 2 second timeout
+
     /** @brief The checksum */
     byte checksum = 0;
   
@@ -42,7 +44,7 @@ namespace Portfolio
      * @param timeout   The timeout amount in milliseconds
      * @return True if success or false for timeout
      */
-    bool WaitForLow(uint8_t pin, int timeout) 
+    bool WaitForLow(uint8_t pin, int timeout = TIMEOUT) 
     {
         unsigned long startTime = millis();
         while(digitalRead(PIN_INPUT_CLOCK)) {
@@ -58,7 +60,7 @@ namespace Portfolio
      * @param timeout   The timeout amount in milliseconds
      * @return True if success or false for timeout
      */
-    bool WaitForHigh(uint8_t pin, int timeout) 
+    bool WaitForHigh(uint8_t pin, int timeout = TIMEOUT) 
     {
         unsigned long startTime = millis();
         while(!digitalRead(PIN_INPUT_CLOCK)) {
@@ -71,63 +73,74 @@ namespace Portfolio
      * @brief   Read a byte from the Portfolio
      * @return  A byte from the input
      */
-    int ReadByte()
+    Result ReadByte(int timeout = TIMEOUT)
     {
         int value = 0;
         for (int i = 0; i < 4; i++) {
-            while(digitalRead(PIN_INPUT_CLOCK));                    // Wait clock low
+            if (!WaitForLow(PIN_INPUT_CLOCK, timeout)) goto timeout;
             value = (value << 1) | digitalRead(PIN_INPUT_DATA);     // Get bit
             digitalWrite(PIN_OUTPUT_CLOCK, LOW);                    // Clear clock 
-            while (!digitalRead(PIN_INPUT_CLOCK));                  // Wait clock high
+            if (!WaitForHigh(PIN_INPUT_CLOCK, timeout)) goto timeout;
             value = (value << 1) | digitalRead(PIN_INPUT_DATA);     // Get bit
             digitalWrite(PIN_OUTPUT_CLOCK, HIGH);                   // Set clock
         }
         return value;
+        
+        // If timeout error return timeout
+        timeout:
+        digitalWrite(PIN_OUTPUT_CLOCK, LOW);                    // Clear clock 
+        return ResultType::Timeout;
     }
 
     /**
      * @brief Send a byte to the Portfolio
      * @param value     The value to send
      */
-    void SendByte(int value)
+    ResultType SendByte(int value, int timeout = TIMEOUT)
     {
-        /* Should be usleep(50), but smaller arguments than 1000 result in no delay */
+        // Delay before sending
         delayMicroseconds(50);
-        // delay(1);
 
         for (int i = 0; i < 4; i++) {
             if (value & 0x80) digitalWrite(PIN_OUTPUT_DATA, HIGH);  // B
             else digitalWrite(PIN_OUTPUT_DATA, LOW);  
             digitalWrite(PIN_OUTPUT_CLOCK, LOW);    
             value <<= 1;
-            while(digitalRead(PIN_INPUT_CLOCK));
+            if (!WaitForLow(PIN_INPUT_CLOCK)) goto timeout;
             if (value & 0x80) digitalWrite(PIN_OUTPUT_DATA, HIGH);
             else digitalWrite(PIN_OUTPUT_DATA, LOW);          
             digitalWrite(PIN_OUTPUT_CLOCK, HIGH);    
             value = value << 1;
-            while(!digitalRead(PIN_INPUT_CLOCK));       
+            if (!WaitForHigh(PIN_INPUT_CLOCK)) goto timeout;
         }
+
+        return ResultType::Ok;
+
+        timeout:
+        digitalWrite(PIN_OUTPUT_CLOCK, LOW);    
+        digitalWrite(PIN_OUTPUT_DATA, LOW);          
+        return ResultType::Timeout;
     }
 
     /**
      * @brief   Read a byte from the Portfolio and update checksum
      * @return  A byte from the input
      */    
-    int ReadByteChecksum() 
+    Result ReadByteChecksum(int timeout = TIMEOUT) 
     {
-        int value = ReadByte();
-        checksum += value;
-        return value;        
+        auto value = ReadByte(timeout);
+        if (value.HasValue()) checksum += value.Value();
+        return value;
     }
 
     /** 
      * @brief Send a byte to the Portfolio and update checksum
      * @param value     The value to send
      */
-    int SendByteChecksum(int value) 
+    ResultType SendByteChecksum(int value, int timeout = TIMEOUT) 
     {
-        SendByte(value);
         checksum -= value; 
+        return SendByte(value, timeout);
     }
 
     /**
@@ -135,20 +148,31 @@ namespace Portfolio
      */
     void WaitForServer()
     {
-        while (!digitalRead(PIN_INPUT_CLOCK));
-        int value = ReadByte();
+        // Wait for start byte from Portfolio
+        WaitForHigh(PIN_INPUT_CLOCK, 5000);     // Wait for high
+        auto data = ReadByte(5000);
+        if (Manager::Error(data)) return;
 
-        // synchronization 
-        while (value != 90)   // While != 90
+        // Synchronization 
+        while (data.Value() != 90)   // While != 90
         {
-            while (digitalRead(PIN_INPUT_CLOCK));    
+            if (!WaitForLow(PIN_INPUT_CLOCK)) goto timeout;
             digitalWrite(PIN_OUTPUT_CLOCK, LOW);
-            while (!digitalRead(PIN_INPUT_CLOCK)); 
+            if (!WaitForHigh(PIN_INPUT_CLOCK)) goto timeout;
             digitalWrite(PIN_OUTPUT_CLOCK, HIGH);
-            value = ReadByte();
+            data = ReadByte();
+            if (Manager::Error(data)) return;
         }        
 
+        // Success
         Manager::SendSuccess();
+        return;
+
+        // Timeout error
+        timeout:
+        digitalWrite(PIN_OUTPUT_CLOCK, LOW);
+        Manager::SendFailure(ResultType::Timeout);
+        return;
     }
 
     /**
@@ -158,10 +182,8 @@ namespace Portfolio
     {
         // Read the block information
         Result length = Manager::WaitReadWord();            // 2 bytes, total length of block
-        if (length.IsError()) {
-            Manager::SendFailure(length.AsErrorCode());
-            return;
-        }
+        if (Manager::Error(length)) return;
+
         // Initialize the buffer with the length
         Manager::InitializeBuffer(length);
 
@@ -172,11 +194,12 @@ namespace Portfolio
 
         // Wait for start
         while (true) {
-            int value = ReadByte();
-            if (value == 0x5A) break;
-            if (value == 0x69) continue;
-            if (value == 0xA5) continue;
-            if (value == 0x96) continue;
+            auto data = ReadByte();
+            if (Manager::Error(data)) return;
+            if (data.Value() == 0x5A) break;
+            if (data.Value() == 0x69) continue;
+            if (data.Value() == 0xA5) continue;
+            if (data.Value() == 0x96) continue;
             Manager::SendFailure(ResultType::Unexpected);
             return;
         }
@@ -186,33 +209,33 @@ namespace Portfolio
 
         delay(50);
     
-        // Start of block
-        SendByte(0xA5);
+        // Send start of block
+        if (Manager::Error(SendByte(0xA5))) return;
 
+        // Send block length
         int lenH = length.Value() >> 8;     
         int lenL = length.Value() & 255;
-        SendByteChecksum(lenL); 
-        SendByteChecksum(lenH); 
+        if (Manager::Error(SendByteChecksum(lenL))) return;
+        if (Manager::Error(SendByteChecksum(lenH))) return;
 
+        // Send the data from serial frames
         while (true) 
         {
             auto data = Manager::ReadBufferByte();
             if (data.IsDone()) break;
-            if (data.IsError()) {
-                Manager::SendFailure(data.AsErrorCode());
-                return;
-            }
-
-            SendByteChecksum(data.Value());
+            if (Manager::Error(data)) return;
+            if (Manager::Error(SendByteChecksum(data.Value()))) return;
         }
 
-        SendByte(checksum);
-        int value = ReadByte();
-        if (checksum == value) {
+        if (Manager::Error(SendByte(checksum))) return;
+        auto checkData = ReadByte();
+        if (Manager::Error(checkData)) return;
+
+        if (checksum == checkData.Value()) {
             // Block send was success
             Manager::SendSuccess();                 
         } else {
-            Manager::SendFailure(ResultType::Unexpected);
+            Manager::SendFailure(ResultType::ChecksumError);
         }
     }
 
@@ -221,36 +244,53 @@ namespace Portfolio
      */
     void RetrieveBlock()
     {
+        // Reset checksum
         checksum = 0;
-        SendByte(0x5A);     // Z start
-        if (ReadByte() != 0xA5) {
+
+        // Send retrieve command value
+        if (Manager::Error(SendByte(0x5A))) return;
+
+        // Retreive the start of block value
+        auto startData = ReadByte();
+        if (Manager::Error(startData)) return;
+        if (startData.Value() != 0xA5) {
             Manager::SendFailure(ResultType::Unexpected);
             return;
         }
 
-        int lenL = ReadByteChecksum();
-        int lenH = ReadByteChecksum();
-        int length = (lenH << 8) | lenL;
+        // Get the block length
+        auto lenL = ReadByteChecksum();
+        if (Manager::Error(lenL)) return;
+        auto lenH = ReadByteChecksum();
+        if (Manager::Error(lenH)) return;
+        int length = (lenH.Value() << 8) | lenL.Value();
 
         // Start a frame
         Manager::StartFrame();
 
         for (int i = 0; i < length; i++) 
         {
-            Manager::SendFrameByte(ReadByteChecksum());
+            auto value = ReadByteChecksum();
+            if (Manager::Error(value)) return;
+            Manager::SendFrameByte(value.Value());
         }
 
-        byte blockChecksum = (byte)(256 - ReadByte());
+        // Get the checksum value
+        auto checkSumResult = ReadByte();
+        if (Manager::Error(checkSumResult)) return;
+        byte blockChecksum = (byte)(256 - checkSumResult.Value());
 
+        // If frames match end frame otherwise error
         if (blockChecksum == checksum) 
         {
             Manager::EndFrame();
         } else {
-            Manager::SendFailure(ResultType::Unexpected);
+            Manager::SendFailure(ResultType::ChecksumError);
             return;
         }
 
+        // Send the checksum back
         delayMicroseconds(100);
-        SendByte((byte)(256 - checksum));
+        Manager::Error(SendByte((byte)(256 - checksum)));
     }
 }

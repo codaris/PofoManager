@@ -24,13 +24,27 @@ namespace PortfolioSync.ViewModels
         public string DestinationPath
         {
             get => GetProperty<string>();
-            set => SetProperty(value);
+            set
+            {
+                SetProperty(value);
+                OnPropertyChanged(nameof(DestinationPathVisibility));
+            }
         }
+
+        /// <summary>
+        /// Gets the destination path visibility.
+        /// </summary>
+        public Visibility DestinationPathVisibility => string.IsNullOrWhiteSpace(DestinationPath) ? Visibility.Collapsed : Visibility.Visible;
 
         /// <summary>
         /// Gets or sets a value indicating whether this <see cref="RetreiveViewModel"/> is result.
         /// </summary>
         public bool Result { get; set; }
+
+        public RetreiveViewModel()
+        {
+            
+        }
 
         /// <summary>
         /// Validates the dialog

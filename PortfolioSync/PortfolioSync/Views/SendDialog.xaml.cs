@@ -22,8 +22,16 @@ namespace PortfolioSync.Views
     /// </summary>
     public partial class SendDialog : Window
     {
+        /// <summary>
+        /// The view model
+        /// </summary>
         private SendViewModel viewModel;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SendDialog"/> class.
+        /// </summary>
+        /// <param name="owner">The owner.</param>
+        /// <param name="viewModel">The view model.</param>
         public SendDialog(Window owner, SendViewModel viewModel)
         {
             InitializeComponent();
@@ -32,15 +40,25 @@ namespace PortfolioSync.Views
             Owner = owner;  
         }
 
-        private void Cancel_Click(object sender, RoutedEventArgs e)
-        {
-            DialogResult = false;
-        }
-
+        /// <summary>
+        /// Handles the Click event of the Send control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void Send_Click(object sender, RoutedEventArgs e)
         {
             if (!viewModel.Validate(this)) return;
             DialogResult = true;
+        }
+
+        /// <summary>
+        /// Handles the Click event of the Cancel control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = false;
         }
 
         /// <summary>

@@ -7,7 +7,9 @@
         xmlns:local="clr-namespace:PortfolioSync"
         mc:Ignorable="d"
         Title="PortfolioSync" Height="450" Width="800" 
-        d:DataContext="{d:DesignInstance Type=vm:MainViewModel, IsDesignTimeCreatable=False}" PreviewKeyDown="Window_PreviewKeyDown">
+        d:DataContext="{d:DesignInstance Type=vm:MainViewModel, IsDesignTimeCreatable=False}" 
+        PreviewKeyDown="Window_PreviewKeyDown" Drop="Window_Drop" AllowDrop="True"
+        >
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -81,7 +83,7 @@
                 <StatusBarItem Content="{Binding Status}" DockPanel.Dock="Left" />
                 <StatusBarItem />
             </StatusBar>
-            <TextBox x:Name="Log" IsReadOnly="True" IsReadOnlyCaretVisible="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" FontFamily="Consolas" FontSize="14" Background="Black" Foreground="#FF00D866" SelectionBrush="#FFBDD8ED" Text="PortfolioSync 1.0" />
+            <TextBox x:Name="Log" IsReadOnly="True" IsReadOnlyCaretVisible="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" FontFamily="Consolas" FontSize="14" Background="Black" Foreground="#FF00D866" SelectionBrush="#FFBDD8ED" Text="PortfolioSync 1.0" PreviewDragOver="Log_PreviewDragOver" />
         </DockPanel>
     </Grid>
 </Window>

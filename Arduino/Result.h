@@ -10,6 +10,7 @@ enum ResultType
     Unexpected = 3,
     Overflow = 4,
     SyncError = 5,
+    ChecksumError = 6,
     End = 0xFF
 };
 
