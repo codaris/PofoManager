@@ -193,9 +193,9 @@ namespace PortfolioSync.Views
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
-        private async void ListFiles_Click(object sender, RoutedEventArgs e)
+        private void ListFiles_Click(object sender, RoutedEventArgs e)
         {
-            await viewModel.Arduino.ListFiles();
+            ListDialog.ShowDialog(this, viewModel.Arduino);
         }
 
         /// <summary>

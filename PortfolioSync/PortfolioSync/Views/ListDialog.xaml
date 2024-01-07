@@ -1,0 +1,35 @@
+﻿<Window x:Class="PortfolioSync.Views.ListDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PortfolioSync.Views"
+        xmlns:vm="clr-namespace:PortfolioSync.ViewModels"              
+        mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=vm:ListViewModel, IsDesignTimeCreatable=False}"
+        Title="List Files" Height="300" Width="400" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" 
+        Icon="/Resources/ListView.png"
+        Closing="Window_Closing"        
+    >
+    <Grid Margin="5,5,5,5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Label Grid.Column="0" Grid.Row="0" Content="Remote Path Pattern:" HorizontalAlignment="Right" VerticalAlignment="Center" />
+        <DockPanel Grid.Column="1" Grid.Row="0">
+            <Button Content="Retrieve List" Width="auto" DockPanel.Dock="Right" VerticalAlignment="Center" Margin="5,0,5,0" Padding="10,0,10,0" Click="List_Click" IsDefault="True" IsEnabled="{Binding IsNotRunning}" />
+            <TextBox Text="{Binding RemotePath, UpdateSourceTrigger=PropertyChanged}" CharacterCasing="Upper" VerticalAlignment="Center" IsEnabled="{Binding IsNotRunning}" />
+        </DockPanel>
+        <ListView Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" ItemsSource="{Binding Files}" Margin="5,10,5,10" IsEnabled="{Binding IsNotRunning}" MouseDoubleClick="ListView_MouseDoubleClick" SelectedValue="{Binding SelectedFile}" />
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Retrieve Selected File..." Margin="5,5,5,5" Padding="10,2,10,4" Click="Retrieve_Click" IsEnabled="{Binding CanRetrieveFile}" />
+            <Button Content="Close" Margin="5,5,5,5" Padding="10,2,10,4" Click="Cancel_Click" IsCancel="True" IsEnabled="{Binding IsNotRunning}" />
+        </StackPanel>
+    </Grid>
+</Window>

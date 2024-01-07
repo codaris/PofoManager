@@ -9,6 +9,8 @@
 
   <ItemGroup>
     <None Remove="Resources\DownloadDocument.png" />
+    <None Remove="Resources\ListView.png" />
+    <None Remove="Resources\Sync.png" />
     <None Remove="Resources\UploadDocument.png" />
   </ItemGroup>
 
@@ -24,6 +26,8 @@
 
   <ItemGroup>
     <Resource Include="Resources\DownloadDocument.png" />
+    <Resource Include="Resources\ListView.png" />
+    <Resource Include="Resources\Sync.png" />
     <Resource Include="Resources\UploadDocument.png" />
   </ItemGroup>
 

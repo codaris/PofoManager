@@ -9,6 +9,7 @@
         Title="PortfolioSync" Height="450" Width="800" 
         d:DataContext="{d:DesignInstance Type=vm:MainViewModel, IsDesignTimeCreatable=False}" 
         PreviewKeyDown="Window_PreviewKeyDown" Drop="Window_Drop" AllowDrop="True"
+        Icon="/Resources/Sync.png"  
         >
     <Window.Resources>
         <ResourceDictionary>
@@ -23,7 +24,7 @@
                 <MenuItem Header="_File">
                     <MenuItem Header="_Send File..." Click="OpenFile_Click" Icon="{StaticResource UploadDocument}" IsEnabled="{Binding IsConnected}" />
                     <MenuItem Header="_Receive File..." Click="RetrieveFile_Click" Icon="{StaticResource DownloadDocument}" IsEnabled="{Binding IsConnected}" />
-                    <MenuItem Header="_List Files" Click="ListFiles_Click" IsEnabled="{Binding IsConnected}" />
+                    <MenuItem Header="_List Files..." Click="ListFiles_Click" Icon="{StaticResource ListView}" IsEnabled="{Binding IsConnected}" />
                     <Separator />
                     <MenuItem Header="E_xit" Click="Exit_Click" />
                 </MenuItem>

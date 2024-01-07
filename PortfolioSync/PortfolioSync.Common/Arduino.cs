@@ -257,7 +257,7 @@ namespace PortfolioSync
         /// Lists the files.
         /// </summary>
         /// <exception cref="PortfolioSync.ArduinoException">Arduino is not connected</exception>
-        public async Task ListFiles()
+        public async Task<IEnumerable<string>> ListFiles(string filePattern)
         {
             if (serialStream == null) throw new ArduinoException("Arduino is not connected");
 
@@ -265,7 +265,7 @@ namespace PortfolioSync
             data.Add(0x06);
             data.Add(0x00);
             data.Add(0x70);
-            data.AddString("C:*.*");
+            data.AddString(filePattern);
             data.Add(0);
 
             using var _ = StartCommandScope();
@@ -290,7 +290,7 @@ namespace PortfolioSync
             var response = new MemoryStream(await RetreiveBlock());
             var files = new List<string>();
             int fileCount = response.ReadShort();
-            messageTarget.WriteLine($"File count: {fileCount}");
+            messageTarget.DebugWriteLine($"File count: {fileCount}");
             var fileName = new StringBuilder();
             while (true)
             {
@@ -304,8 +304,9 @@ namespace PortfolioSync
                 if (value == -1) break;
                 fileName.Append((char)value);
             }
-            foreach (var file in files) messageTarget.WriteLine(file);
-            messageTarget.WriteLine($"Done.");
+            foreach (var file in files) messageTarget.DebugWriteLine(file);
+            messageTarget.DebugWriteLine($"Done.");
+            return files;
         }
 
         /// <summary>
@@ -665,21 +666,6 @@ namespace PortfolioSync
             if (cancellationToken.IsCancellationRequested) return;
             await ReadResponse().ConfigureAwait(false);     // Wait for final acknowledge
             await ReadResponse().ConfigureAwait(false);     // Wait for final acknowledge TODO why?
-        }
-
-        /// <summary>
-        /// Sends the cancel.
-        /// </summary>
-        /// <exception cref="PortfolioSync.ArduinoException">Arduino is not connected</exception>
-        private async Task SendCancel()
-        {
-            if (serialStream == null) throw new ArduinoException("Arduino is not connected");
-            serialStream.WriteByte(Ascii.SOH);    // Start of packet 
-            serialStream.WriteByte((byte)Command.SendBlock);
-            serialStream.WriteWord(3);
-            serialStream.WriteByte(0);
-            serialStream.WriteByte(0);
-            serialStream.WriteByte(0);
         }
 
         /// <summary>
