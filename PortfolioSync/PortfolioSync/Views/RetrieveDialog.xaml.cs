@@ -26,17 +26,17 @@ namespace PortfolioSync.Views
         /// <summary>
         /// Gets the view model.
         /// </summary>
-        public RetreiveViewModel ViewModel { get; }
+        private readonly RetrieveViewModel viewModel;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="RetrieveDialog"/> class.
         /// </summary>
         /// <param name="owner">The owner.</param>
-        public RetrieveDialog(Window owner)
+        public RetrieveDialog(Window owner, RetrieveViewModel viewModel)
         {
             InitializeComponent();
-            ViewModel = new RetreiveViewModel();
-            DataContext = ViewModel;
+            this.viewModel = viewModel;
+            DataContext = viewModel;
             Owner = owner;  
         }
 
@@ -45,10 +45,9 @@ namespace PortfolioSync.Views
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
-        private void Retrieve_Click(object sender, RoutedEventArgs e)
+        private async void Retrieve_Click(object sender, RoutedEventArgs e)
         {
-            if (!ViewModel.Validate(this)) return;
-            DialogResult = true;
+            if (await viewModel.RetrieveFile(this)) Close();
         }
 
         /// <summary>
@@ -58,7 +57,8 @@ namespace PortfolioSync.Views
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            DialogResult = false;
+            if (viewModel.IsNotRunning) DialogResult = false;
+            else viewModel.Cancel();
         }
 
         /// <summary>
@@ -72,7 +72,7 @@ namespace PortfolioSync.Views
             saveFileDialog.Filter = "All files (*.*)|*.*";
             if (saveFileDialog.ShowDialog() == true)
             {
-                ViewModel.DestinationPath = saveFileDialog.FileName; 
+                viewModel.DestinationPath = saveFileDialog.FileName; 
             }
         }
 
@@ -82,11 +82,22 @@ namespace PortfolioSync.Views
         /// <param name="owner">The owner.</param>
         /// <param name="filePath">The file path.</param>
         /// <returns></returns>
-        public static RetreiveViewModel ShowDialog(Window owner)
+        public static bool ShowDialog(Window owner, Arduino arduino)
         {
-            var dialog = new RetrieveDialog(owner);
-            dialog.ViewModel.Result = dialog.ShowDialog() ?? false;
-            return dialog.ViewModel;
+            var viewModel = new RetrieveViewModel(arduino);
+            var dialog = new RetrieveDialog(owner, viewModel);
+            return dialog.ShowDialog() ?? false;
+        }
+
+        /// <summary>
+        /// Handles the Closing event of the Window control. 
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.ComponentModel.CancelEventArgs"/> instance containing the event data.</param>
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            // Prevent closing the window if task is running
+            e.Cancel = !viewModel.IsNotRunning;
         }
     }
 }

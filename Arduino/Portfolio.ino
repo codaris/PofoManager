@@ -10,7 +10,7 @@ namespace Portfolio
     const int  PIN_OUTPUT_CLOCK = 4;    // pin sub D25 pin 3 (Yellow -> Purple)
     const int  PIN_OUTPUT_DATA = 5;     // pin sub D25 pin 2 (Green -> Blue)
 
-    const int TIMEOUT = 1000;           // 2 second timeout
+    const int TIMEOUT = 1000;           // 1 second timeout
 
     /** @brief The checksum */
     byte checksum = 0;
@@ -221,7 +221,7 @@ namespace Portfolio
         // Send the data from serial frames
         while (true) 
         {
-            auto data = Manager::ReadBufferByte();
+            auto data = Manager::ReadBufferByte(1000);
             if (data.IsDone()) break;
             if (Manager::Error(data)) return;
             if (Manager::Error(SendByteChecksum(data.Value()))) return;
@@ -251,7 +251,7 @@ namespace Portfolio
         if (Manager::Error(SendByte(0x5A))) return;
 
         // Retreive the start of block value
-        auto startData = ReadByte();
+        auto startData = ReadByte(5000);
         if (Manager::Error(startData)) return;
         if (startData.Value() != 0xA5) {
             Manager::SendFailure(ResultType::Unexpected);
@@ -272,6 +272,7 @@ namespace Portfolio
         {
             auto value = ReadByteChecksum();
             if (Manager::Error(value)) return;
+            if (Manager::ReadCancel()) return;
             Manager::SendFrameByte(value.Value());
         }
 

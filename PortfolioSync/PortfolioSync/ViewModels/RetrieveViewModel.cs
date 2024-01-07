@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,12 +7,16 @@ using System.Windows;
 
 namespace PortfolioSync.ViewModels
 {
-    public class SendViewModel : BaseViewModel, IFileProgress
+    public class RetrieveViewModel : BaseViewModel, IFileProgress
     {
         /// <summary>
-        /// Gets or sets the selected serial port.
+        /// Gets or sets the destination path.
         /// </summary>
-        public string FilePath { get; }
+        public string SourcePath
+        {
+            get => GetProperty<string>();
+            set => SetProperty(value.Trim().ToUpper().Replace('/', '\\'));
+        }
 
         /// <summary>
         /// Gets or sets the destination path.
@@ -21,17 +24,17 @@ namespace PortfolioSync.ViewModels
         public string DestinationPath
         {
             get => GetProperty<string>();
-            set => SetProperty(value.Trim().ToUpper().Replace('/', '\\'));
+            set
+            {
+                SetProperty(value);
+                OnPropertyChanged(nameof(DestinationPathVisibility));
+            }
         }
 
         /// <summary>
-        /// Gets or sets a value indicating whether this <see cref="SendViewModel"/> is overwrite.
+        /// Gets the destination path visibility.
         /// </summary>
-        public bool OverwriteFile
-        {
-            get => GetProperty<bool>(true);
-            set => SetProperty(value);
-        }
+        public Visibility DestinationPathVisibility => string.IsNullOrWhiteSpace(DestinationPath) ? Visibility.Collapsed : Visibility.Visible;
 
         /// <summary>
         /// Gets a value indicating whether the send is not running.
@@ -68,15 +71,12 @@ namespace PortfolioSync.ViewModels
         private int fileProgress = 0;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SendViewModel" /> class.
+        /// Initializes a new instance of the <see cref="RetrieveViewModel"/> class.
         /// </summary>
         /// <param name="arduino">The arduino.</param>
-        /// <param name="filePath">The file path.</param>
-        public SendViewModel(Arduino arduino, string filePath)
+        public RetrieveViewModel(Arduino arduino)
         {
-            this.FilePath = filePath;
             this.arduino = arduino;
-            this.DestinationPath = "C:\\" + Path.GetFileNameWithoutExtension(filePath).ToUpper().Truncate(8) + Path.GetExtension(filePath).ToUpper().Truncate(4);
         }
 
         /// <summary>
@@ -84,22 +84,28 @@ namespace PortfolioSync.ViewModels
         /// </summary>
         /// <param name="owner">The owner.</param>
         /// <returns></returns>
-        public async Task<bool> SendFile(Window owner)
+        public async Task<bool> RetrieveFile(Window owner)
         {
+            if (string.IsNullOrWhiteSpace(SourcePath))
+            {
+                MessageBox.Show(owner, "Source file path must be specified.", "Retrieve File", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
+            if (!SourcePath.IsValidFileName())
+            {
+                MessageBox.Show(owner, "Source file path is not valid.", "Retrieve File", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
             if (string.IsNullOrWhiteSpace(DestinationPath))
             {
-                MessageBox.Show(owner, "Destination file name must be specified.", "Send File", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(owner, "Destination file path must be selected.", "Retrieve File", MessageBoxButton.OK, MessageBoxImage.Error);
                 return false;
             }
-            if (!DestinationPath.IsValidFileName())
-            {
-                MessageBox.Show(owner, "Destination file name is not valid.", "Send File", MessageBoxButton.OK, MessageBoxImage.Error);
-                return false;
-            }
+
             try
             {
                 IsNotRunning = false;
-                await arduino.SendFile(FilePath, DestinationPath, OverwriteFile, this).ConfigureAwait(false);
+                await arduino.RetreiveFile(SourcePath, DestinationPath, this).ConfigureAwait(false);
                 return true;
             }
             finally

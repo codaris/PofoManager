@@ -25,7 +25,7 @@ namespace PortfolioSync.Views
         /// <summary>
         /// The view model
         /// </summary>
-        private SendViewModel viewModel;
+        private readonly SendViewModel viewModel;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SendDialog"/> class.
@@ -45,10 +45,9 @@ namespace PortfolioSync.Views
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
-        private void Send_Click(object sender, RoutedEventArgs e)
+        private async void Send_Click(object sender, RoutedEventArgs e)
         {
-            if (!viewModel.Validate(this)) return;
-            DialogResult = true;
+            if (await viewModel.SendFile(this)) Close();
         }
 
         /// <summary>
@@ -58,7 +57,8 @@ namespace PortfolioSync.Views
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            DialogResult = false;
+            if (viewModel.IsNotRunning) DialogResult = false;
+            else viewModel.Cancel();
         }
 
         /// <summary>
@@ -67,12 +67,22 @@ namespace PortfolioSync.Views
         /// <param name="owner">The owner.</param>
         /// <param name="filePath">The file path.</param>
         /// <returns></returns>
-        public static SendViewModel ShowDialog(Window owner, string filePath)
+        public static bool ShowDialog(Window owner, Arduino arduino, string filePath)
         {
-            var viewModel = new SendViewModel(filePath);
+            var viewModel = new SendViewModel(arduino, filePath);
             var dialog = new SendDialog(owner, viewModel);
-            viewModel.Result = dialog.ShowDialog() ?? false;
-            return viewModel;   
+            return dialog.ShowDialog() ?? false;
+        }
+
+        /// <summary>
+        /// Handles the Closing event of the Window control. 
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="System.ComponentModel.CancelEventArgs"/> instance containing the event data.</param>
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            // Prevent closing the window if task is running
+            e.Cancel = !viewModel.IsNotRunning;
         }
     }
 }

@@ -63,8 +63,6 @@ namespace PortfolioSync.ViewModels
             set => SetProperty(value);
         }
 
-        public string LocalDirectoryText => "Local Directory";
-
         /// <summary>
         /// The message target
         /// </summary>

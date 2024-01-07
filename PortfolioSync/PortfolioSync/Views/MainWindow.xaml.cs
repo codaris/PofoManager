@@ -87,17 +87,13 @@ namespace PortfolioSync.Views
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
-        private async void OpenFile_Click(object sender, RoutedEventArgs e)
+        private void OpenFile_Click(object sender, RoutedEventArgs e)
         {
             var openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "All files (*.*)|*.*";
             if (openFileDialog.ShowDialog() == true)
             {
-                var sendViewModel = SendDialog.ShowDialog(this, openFileDialog.FileName);
-                if (sendViewModel.Result)
-                {
-                    await viewModel.Arduino.SendFile(sendViewModel.FilePath, sendViewModel.DestinationPath, sendViewModel.OverwriteFile).ConfigureAwait(false);
-                }
+                SendDialog.ShowDialog(this, viewModel.Arduino, openFileDialog.FileName); 
             }
         }
 
@@ -106,13 +102,9 @@ namespace PortfolioSync.Views
         /// </summary>
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
-        private async void RetrieveFile_Click(object sender, RoutedEventArgs e)
+        private void RetrieveFile_Click(object sender, RoutedEventArgs e)
         {
-            var retrieveViewModel = RetrieveDialog.ShowDialog(this);
-            if (retrieveViewModel.Result)
-            {
-                await viewModel.Arduino.RetreiveFile(retrieveViewModel.SourcePath, retrieveViewModel.DestinationPath).ConfigureAwait(false);
-            }
+            RetrieveDialog.ShowDialog(this, viewModel.Arduino);
         }
 
         /// <summary>

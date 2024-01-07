@@ -26,6 +26,8 @@ namespace Manager
     int outBufferIndex = 0;             // The next byte to process in the output buffer
     int dataRemaining = 0;              // Number of bytes remaining in incoming frame
 
+    const int TIMEOUT = 1000;           // 1 second timeout
+
     /**
      * @brief Waits for a single byte to become available on the serial interface
      * @return Byte read or error

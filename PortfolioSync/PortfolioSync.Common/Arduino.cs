@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.IO.Pipes;
@@ -169,7 +170,6 @@ namespace PortfolioSync
         /// </summary>
         public void Cancel()
         {
-            serialStream?.WriteByte(Ascii.CAN);
             cancellationTokenSource?.Cancel();
             cancellationTokenSource = null;
             OnPropertyChanged(nameof(CanCancel));
@@ -314,12 +314,14 @@ namespace PortfolioSync
         /// <param name="fileStream">The file stream.</param>
         /// <exception cref="System.InvalidOperationException">Cannot send file if not connected</exception>
         /// <exception cref="System.Exception">Unable to start file transfer</exception>
-        public async Task SendFile(string fileName, string remoteFilePath, bool overwrite)
+        public async Task SendFile(string fileName, string remoteFilePath, bool overwrite, IFileProgress progress)
         {
             if (serialStream == null) throw new ArduinoException("Arduino is not connected");
 
             using var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-            using var _ = StartCommandScope();
+            using var commandScope = StartCommandScope();
+            using var cancelScope = StartCancellationScope();
+            var cancellationToken = cancellationTokenSource?.Token ?? default;
 
             messageTarget.WriteLine($"Sendng '{fileName}' to Portfolio as '{remoteFilePath}'");
             if (overwrite) messageTarget.WriteLine("Overwriting file if exists");
@@ -337,6 +339,7 @@ namespace PortfolioSync
             await WaitForServer();
 
             var fileLength = (int)fileStream.Length;
+            progress.Start(fileLength);
 
             List<byte> data = new List<byte>();
             data.Add(0x03);                             // Send file
@@ -378,7 +381,18 @@ namespace PortfolioSync
                 int length = fileStream.Read(buffer, 0, buffer.Length);
                 if (length == 0) break;
                 messageTarget.DebugWriteLine($"Sending block {length} bytes");
-                await SendBlock(buffer, length);
+                await SendBlock(buffer, length, progress, cancellationToken);
+                if (cancellationToken.IsCancellationRequested)
+                {
+                    messageTarget.WriteLine("Cancelled.  Restart server on Portfolio to try again.");
+                    // Send cancel packet (ineffective because in the middle of sending block)
+                    data.Clear();
+                    data.Add(0);            // Abort
+                    data.AddShort(0);       // Block size
+                    await SendBlock(data.ToArray());
+                    return;
+                }
+
             }
 
             response = new MemoryStream(await RetreiveBlock());
@@ -393,15 +407,16 @@ namespace PortfolioSync
         /// <param name="remoteFilePath">The remote file path.</param>
         /// <param name="localFilePath">The local file path.</param>
         /// <returns>True if successfil</returns>
-        public async Task<bool> RetreiveFile(string remoteFilePath, string localFilePath)
+        public async Task<bool> RetreiveFile(string remoteFilePath, string localFilePath, IFileProgress progress)
         {
             if (serialStream == null) throw new ArduinoException("Arduino is not connected");
 
             messageTarget.WriteLine($"Retrieving '{remoteFilePath}' from Portfolio as '{localFilePath}'");
 
             using var fileStream = new FileStream(localFilePath, FileMode.OpenOrCreate, FileAccess.Write);
-
-            using var _ = StartCommandScope();
+            using var commandScope = StartCommandScope();
+            using var cancelScope = StartCancellationScope();
+            var cancellationToken = cancellationTokenSource?.Token ?? default;
 
             // Empty the read buffer
             messageTarget.DebugWriteLine("Clearing stream... ");
@@ -429,34 +444,55 @@ namespace PortfolioSync
             {
                 messageTarget.DebugWriteLine("File OK");
             }
+            else if (result == 0x21)
+            {
+                messageTarget.WriteLine("File was not found on Portfolio");
+                throw new ArduinoException("File was not found on Portfolio");
+            }
             else
             {
-                messageTarget.DebugWriteLine("Error");
-                messageTarget.Dump(response.ToArray());
-                return false;
+                messageTarget.WriteLine("Error reading file from Portfolio");
+                throw new ArduinoException("Error reading file from Portfolio");
             }
             int blockSize = response.ReadShort();
-            if (blockSize != BlockSize) throw new ArduinoException($"Block size is {blockSize:N0}");
             int fileTime = response.ReadShort();
             int fileDate = response.ReadShort();
             int remaining = response.ReadInt();
 
+            progress.Start(remaining);
+
             var buffer = new byte[blockSize];
             while (true)
             {
-                var block = await RetreiveBlock();
+                var block = await RetreiveBlock(progress, cancellationToken);
                 remaining -= block.Length;
                 fileStream.Write(block, 0, block.Length);
                 if (remaining <= 0) break;
+                if (cancellationToken.IsCancellationRequested) break;
             }
 
             // Send success
             data.Clear();
-            data.Add(0x20);                             // Success
-            data.Add(0);
-            data.Add(0x03);
-            await SendBlock(data.ToArray());
-            messageTarget.WriteLine("Success.");
+            if (cancellationToken.IsCancellationRequested)
+            {
+                // Empty the read buffer
+                messageTarget.DebugWriteLine("Clearing stream... ");
+                Stopwatch stopwatch = new Stopwatch();
+                stopwatch.Start();
+                while (stopwatch.Elapsed < TimeSpan.FromSeconds(1))
+                {
+                    while (serialStream.DataAvailable) await serialStream.ReadByteAsync().ConfigureAwait(false);
+                }
+                messageTarget.WriteLine("Cancelled.  Restart server on Portfolio to try again.");
+            }
+            else
+            {
+                data.Add(0x20);                             // Success
+                data.Add(0);
+                data.Add(0x03);
+                await SendBlock(data.ToArray());
+                messageTarget.WriteLine("Success.");
+            }
             return true;
         }
 
@@ -472,6 +508,18 @@ namespace PortfolioSync
             if (response == Ascii.ACK) return;
             if (response == Ascii.NAK) throw new ArduinoException(await serialStream.ReadByteAsync(1000).ConfigureAwait(false));
             throw new ArduinoException($"Unexpected response received 0x{response:X2}");
+        }
+
+        /// <summary>
+        /// Reads the cancel.
+        /// </summary>
+        private async Task ReadTimeout()
+        {
+            if (serialStream == null) throw new ArduinoException("Arduino is not connected");
+            var response = await serialStream.ReadByteAsync(5000).ConfigureAwait(false);    // Wait for response
+            if (response != Ascii.NAK) throw new ArduinoException($"Unexpected response received 0x{response:X2}");
+            response = await serialStream.ReadByteAsync(1000).ConfigureAwait(false);
+            if (response != (int)ErrorCode.Timeout) throw new ArduinoException($"Unexpected response received 0x{response:X2}");
         }
 
         /// <summary>
@@ -536,19 +584,19 @@ namespace PortfolioSync
         /// </summary>
         /// <returns></returns>
         /// <exception cref="PortfolioSync.ArduinoException">Arduino is not connected</exception>
-        private async Task<byte[]> RetreiveBlock()
+        private async Task<byte[]> RetreiveBlock(IFileProgress? progress = null, CancellationToken cancellationToken = default)
         {
             if (serialStream == null) throw new ArduinoException("Arduino is not connected");
             serialStream.WriteByte(Ascii.SOH);    // Start of packet 
             serialStream.WriteByte((byte)Command.RetreiveBlock);
-            return await ReadFrame();
+            return await ReadFrame(progress, cancellationToken);
         }
 
         /// <summary>
         /// Reads a data frame.
         /// </summary>
         /// <returns>Byte array of data</returns>
-        private async Task<byte[]> ReadFrame(CancellationToken cancellationToken = default)
+        private async Task<byte[]> ReadFrame(IFileProgress? progress, CancellationToken cancellationToken = default)
         {
             if (serialStream == null) throw new ArduinoException("Arduino is not connected");
 
@@ -583,6 +631,13 @@ namespace PortfolioSync
                         return result.ToArray();
                 }
                 result.Add(data);
+                progress?.Increment(1);
+                if (cancellationToken.IsCancellationRequested)
+                {
+                    // Send cancel
+                    for (int i = 0; i < 5; i++) serialStream.WriteByte(Ascii.CAN);
+                    return Array.Empty<byte>();
+                }
             }
         }
 
@@ -591,14 +646,14 @@ namespace PortfolioSync
         /// </summary>
         /// <param name="data">The data.</param>
         /// <returns></returns>
-        private Task SendBlock(byte[] data) => SendBlock(data, data.Length);
+        private Task SendBlock(byte[] data, IFileProgress? progress = null, CancellationToken cancellationToken = default) => SendBlock(data, data.Length, progress, cancellationToken);
 
         /// <summary>
         /// Sends a block to the portfolio
         /// </summary>
         /// <param name="data">The data.</param>
         /// <param name="length">The length.</param>
-        private async Task SendBlock(byte[] data, int length)
+        private async Task SendBlock(byte[] data, int length, IFileProgress? progress = null, CancellationToken cancellationToken = default)
         {
             if (serialStream == null) throw new ArduinoException("Arduino is not connected");
             if (length > data.Length) throw new ArgumentOutOfRangeException(nameof(length), "Length cannot be larger than buffer size");
@@ -606,9 +661,25 @@ namespace PortfolioSync
             serialStream.WriteByte((byte)Command.SendBlock);
             serialStream.WriteWord(length);
             await ReadResponse().ConfigureAwait(false);     // Wait for header acknowledge
-            await SendBuffer(data, length).ConfigureAwait(false);
+            await SendBuffer(data, length, progress, cancellationToken).ConfigureAwait(false);
+            if (cancellationToken.IsCancellationRequested) return;
             await ReadResponse().ConfigureAwait(false);     // Wait for final acknowledge
             await ReadResponse().ConfigureAwait(false);     // Wait for final acknowledge TODO why?
+        }
+
+        /// <summary>
+        /// Sends the cancel.
+        /// </summary>
+        /// <exception cref="PortfolioSync.ArduinoException">Arduino is not connected</exception>
+        private async Task SendCancel()
+        {
+            if (serialStream == null) throw new ArduinoException("Arduino is not connected");
+            serialStream.WriteByte(Ascii.SOH);    // Start of packet 
+            serialStream.WriteByte((byte)Command.SendBlock);
+            serialStream.WriteWord(3);
+            serialStream.WriteByte(0);
+            serialStream.WriteByte(0);
+            serialStream.WriteByte(0);
         }
 
         /// <summary>
@@ -616,7 +687,7 @@ namespace PortfolioSync
         /// </summary>
         /// <param name="data">The data.</param>
         /// <exception cref="PortfolioSync.ArduinoException">Arduino is not connected</exception>
-        private async Task SendBuffer(byte[] data, int length)
+        private async Task SendBuffer(byte[] data, int length, IFileProgress? progress = null, CancellationToken cancellationToken = default)
         {
             if (serialStream == null) throw new ArduinoException("Arduino is not connected");
             int offset = 0;
@@ -631,6 +702,12 @@ namespace PortfolioSync
                     serialStream.WriteByte(data[offset++]);
                 }
                 await ReadResponse().ConfigureAwait(false);
+                progress?.Increment(size);
+                if (cancellationToken.IsCancellationRequested)
+                {
+                    await ReadTimeout();
+                    break;
+                }
             }
         }
 
@@ -672,6 +749,19 @@ namespace PortfolioSync
         {
             commandCount++;
             return new ScopeGuard(() => { if (commandCount > 0) commandCount--; });
+        }
+
+        /// <summary>
+        /// Starts the cancellation scope.
+        /// </summary>
+        internal ScopeGuard StartCancellationScope()
+        {
+            cancellationTokenSource = new CancellationTokenSource();
+            return new ScopeGuard(() =>
+            {
+                cancellationTokenSource = null;
+                OnPropertyChanged(nameof(CanCancel));
+            });
         }
     }
 }
