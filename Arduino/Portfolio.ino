@@ -192,7 +192,7 @@ namespace Portfolio
 
         if (length.Value() == 0) return;
 
-        // Wait for start
+        // Wait for Portfolio sync
         while (true) {
             auto data = ReadByte();
             if (Manager::Error(data)) return;

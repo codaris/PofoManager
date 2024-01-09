@@ -2,6 +2,7 @@
 #ifndef __RESULT_H__
 #define __RESULT_H__
 
+/// @brief Result codes / error codes (sync with app)
 enum ResultType
 {
     Ok = 0,
@@ -14,6 +15,8 @@ enum ResultType
     End = 0xFF
 };
 
+
+/// @brief Result class for read functions -- stores errors as negative values
 class Result
 {
     public:

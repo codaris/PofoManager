@@ -5,6 +5,7 @@
 
 namespace Manager
 {
+    /// @brief Arduino commands (sync with desktop app)
     enum Command
     {
         Init = 1,
@@ -17,7 +18,7 @@ namespace Manager
     const byte VersionHigh = 1;                  // Version numbers
     const byte VersionLow = 1;                  
     
-    const int BUFFER_SIZE = 60;         // The size of the serial and tape buffers
+    const int BUFFER_SIZE = 60;         // The size of the serial buffer (less than 64 otherwise issues occur)
     byte serialBuffer[BUFFER_SIZE];     // Serial receive buffer
     byte outBuffer[BUFFER_SIZE];        // The output buffer
     int serialBufferCount = 0;          // The number of bytes to read into the serial buffer (no larger than BUFFER_SIZE)
@@ -219,29 +220,32 @@ namespace Manager
         unsigned long startTime = millis();
         while (true)
         {
-            // If bytes are available, add to read buffer
-            while (Serial.available() > 0 && serialBufferIndex < serialBufferCount) {
-                serialBuffer[serialBufferIndex++] = Serial.read();
-            }    
+            // If there is still data remaining to read
+            if (dataRemaining > 0) {
+                // If bytes are available, add to read buffer
+                while (Serial.available() > 0 && serialBufferIndex < serialBufferCount) {
+                    serialBuffer[serialBufferIndex++] = Serial.read();
+                }    
 
-            // If the read buffer is full and the write buffer is full
-            // Copy the read buffer into the write buffer and receive another packet
-            if (serialBufferIndex == serialBufferCount && outBufferIndex == outBufferCount) {
-                dataRemaining -= serialBufferCount;
-                memcpy(outBuffer, serialBuffer, serialBufferCount);
-                outBufferCount = serialBufferCount;
-                outBufferIndex = 0;
-                serialBufferCount = min(BUFFER_SIZE, dataRemaining);
-                serialBufferIndex = 0;
-                // Acknowledge the serial buffer
-                SendSuccess();
+                // If the read buffer is full and the write buffer is full
+                // Copy the read buffer into the write buffer and receive another packet
+                if (serialBufferIndex == serialBufferCount && outBufferIndex == outBufferCount) {
+                    dataRemaining -= serialBufferCount;
+                    memcpy(outBuffer, serialBuffer, serialBufferCount);
+                    outBufferCount = serialBufferCount;
+                    outBufferIndex = 0;
+                    serialBufferCount = min(BUFFER_SIZE, dataRemaining);
+                    serialBufferIndex = 0;
+                    // Acknowledge the serial buffer
+                    SendSuccess();
+                }
             }
 
             // If the write buffer contains unsent bytes
             if (outBufferIndex < outBufferCount) {
                 return outBuffer[outBufferIndex++];
             } else {
-                // If write buffer empty and no remaining bytes, leave
+                // If write buffer empty and no remaining bytes then done
                 if (dataRemaining <= 0) return ResultType::End;
             }
 

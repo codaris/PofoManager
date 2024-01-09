@@ -677,7 +677,6 @@ namespace PortfolioSync
             await SendBuffer(data, length, progress, cancellationToken).ConfigureAwait(false);
             if (cancellationToken.IsCancellationRequested) return;
             await ReadResponse().ConfigureAwait(false);     // Wait for final acknowledge
-            await ReadResponse().ConfigureAwait(false);     // Wait for final acknowledge TODO why?
         }
 
         /// <summary>
