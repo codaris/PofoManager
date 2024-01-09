@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace PortfolioSync
 {
+    /// <summary>
+    /// General extensions
+    /// </summary>
     public static class Extensions
     {
         /// <summary>
@@ -40,7 +43,7 @@ namespace PortfolioSync
                     ExpressionType.Convert or ExpressionType.ConvertChecked => nameSelector(((UnaryExpression)e).Operand),
                     ExpressionType.Invoke => nameSelector(((InvocationExpression)e).Expression),
                     ExpressionType.ArrayLength => "Length",
-                    _ => throw new DataException("not a proper member selector"),
+                    _ => throw new Exception("not a proper member selector"),
                 };
             }
 
@@ -59,6 +62,13 @@ namespace PortfolioSync
             return value.Length <= maxLength ? value : value[..maxLength];
         }
 
+        /// <summary>
+        /// Determines whether string is a valid file name.
+        /// </summary>
+        /// <param name="fileName">Name of the file.</param>
+        /// <returns>
+        ///   <c>true</c> if string is a valid file name; otherwise, <c>false</c>.
+        /// </returns>
         public static bool IsValidFileName(this string fileName)
         {
             System.IO.FileInfo? fi = null;

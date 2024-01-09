@@ -268,7 +268,7 @@ namespace Manager
         Serial.write(Ascii::SOH);
         Serial.write(VersionHigh);
         Serial.write(VersionLow);
-        Serial.write(SERIAL_RX_BUFFER_SIZE);
+        Serial.write(BUFFER_SIZE);
         Serial.write(Ascii::STX);
         Serial.write("Portfolio Anduino Driver ");
         Serial.print((int)VersionHigh);

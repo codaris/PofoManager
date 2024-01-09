@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace PortfolioSync
 {
+    /// <summary>
+    /// Target for sending debug information
+    /// </summary>
+    /// <seealso cref="PortfolioSync.IMessageTarget" />
     public interface IDebugTarget : IMessageTarget
     {
         /// <summary>

@@ -23,13 +23,13 @@
         </Grid.RowDefinitions>
         <Label Grid.Column="0" Grid.Row="0" Content="Remote Path Pattern:" HorizontalAlignment="Right" VerticalAlignment="Center" />
         <DockPanel Grid.Column="1" Grid.Row="0">
-            <Button Content="Retrieve List" Width="auto" DockPanel.Dock="Right" VerticalAlignment="Center" Margin="5,0,5,0" Padding="10,0,10,0" Click="List_Click" IsDefault="True" IsEnabled="{Binding IsNotRunning}" />
-            <TextBox Text="{Binding RemotePath, UpdateSourceTrigger=PropertyChanged}" CharacterCasing="Upper" VerticalAlignment="Center" IsEnabled="{Binding IsNotRunning}" />
+            <Button Content="Retrieve List" Width="auto" DockPanel.Dock="Right" VerticalAlignment="Center" Margin="5,0,5,0" Padding="10,0,10,0" Click="List_Click" IsDefault="True" IsEnabled="{Binding IsEnabled}" />
+            <TextBox Text="{Binding RemotePath, UpdateSourceTrigger=PropertyChanged}" CharacterCasing="Upper" VerticalAlignment="Center" IsEnabled="{Binding IsEnabled}" />
         </DockPanel>
-        <ListView Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" ItemsSource="{Binding Files}" Margin="5,10,5,10" IsEnabled="{Binding IsNotRunning}" MouseDoubleClick="ListView_MouseDoubleClick" SelectedValue="{Binding SelectedFile}" />
+        <ListView Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" ItemsSource="{Binding Files}" Margin="5,10,5,10" IsEnabled="{Binding IsEnabled}" MouseDoubleClick="ListView_MouseDoubleClick" SelectedValue="{Binding SelectedFile}" />
         <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
             <Button Content="Retrieve Selected File..." Margin="5,5,5,5" Padding="10,2,10,4" Click="Retrieve_Click" IsEnabled="{Binding CanRetrieveFile}" />
-            <Button Content="Close" Margin="5,5,5,5" Padding="10,2,10,4" Click="Cancel_Click" IsCancel="True" IsEnabled="{Binding IsNotRunning}" />
+            <Button Content="Close" Margin="5,5,5,5" Padding="10,2,10,4" Click="Cancel_Click" IsCancel="True" IsEnabled="{Binding IsEnabled}" />
         </StackPanel>
     </Grid>
 </Window>

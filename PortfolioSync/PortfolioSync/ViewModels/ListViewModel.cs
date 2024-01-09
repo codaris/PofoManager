@@ -7,12 +7,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
+using PortfolioSync.Views;
+
 namespace PortfolioSync.ViewModels
 {
+    /// <summary>
+    /// View model for the list files dialog
+    /// </summary>
+    /// <seealso cref="PortfolioSync.ViewModels.BaseViewModel" />
     public class ListViewModel : BaseViewModel
     {
         /// <summary>
-        /// Gets or sets the destination path.
+        /// Gets or sets the remote path pattern
         /// </summary>
         public string RemotePath
         {
@@ -21,12 +27,12 @@ namespace PortfolioSync.ViewModels
         }
 
         /// <summary>
-        /// Gets the files.
+        /// Gets the file collections
         /// </summary>
         public ObservableCollection<string> Files { get; } = new ObservableCollection<string>();
 
         /// <summary>
-        /// Gets or sets the selected file.
+        /// Gets or sets the currently selected file.
         /// </summary>
         public string? SelectedFile
         {
@@ -35,34 +41,23 @@ namespace PortfolioSync.ViewModels
         }
 
         /// <summary>
-        /// Gets a value indicating whether the send is not running.
+        /// Gets a value indicating whether the form is enabled
         /// </summary>
-        public bool IsNotRunning
+        public bool IsEnabled
         {
             get => GetProperty<bool>(true);
             private set => SetProperty(value);
         }
 
         /// <summary>
-        /// Gets a value indicating whether this instance can retrieve file.
+        /// Gets a value indicating whether this instance can retrieve the selected file.
         /// </summary>
-        public bool CanRetrieveFile => IsNotRunning && SelectedFile != null;
-
-        /// <summary>
-        /// Gets the full path for a file name
-        /// </summary>
-        /// <param name="fileName">Name of the file.</param>
-        /// <returns></returns>
-        public string GetFullPath(string fileName)
-        {
-            string directoryPath = Path.GetDirectoryName(RemotePath) ?? string.Empty;
-            return Path.Combine(directoryPath, fileName);
-        }
+        public bool CanRetrieveFile => IsEnabled && SelectedFile != null;
 
         /// <summary>
         /// The arduino instance
         /// </summary>
-        public Arduino Arduino { get; }
+        private readonly Arduino arduino;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="RetrieveViewModel"/> class.
@@ -70,8 +65,8 @@ namespace PortfolioSync.ViewModels
         /// <param name="arduino">The arduino.</param>
         public ListViewModel(Arduino arduino)
         {
-            this.Arduino = arduino;
-            this.PropagatePropertyChanged(this, t => t.IsNotRunning, t => t.CanRetrieveFile);
+            this.arduino = arduino;
+            this.PropagatePropertyChanged(this, t => t.IsEnabled, t => t.CanRetrieveFile);
             this.PropagatePropertyChanged(this, t => t.SelectedFile!, t => t.CanRetrieveFile);
         }
 
@@ -84,23 +79,36 @@ namespace PortfolioSync.ViewModels
         {
             if (string.IsNullOrWhiteSpace(RemotePath))
             {
-                MessageBox.Show(owner, "Remote path must be specified.", "Retrieve File", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(owner, "Remote path pattern must be specified.", "List Files", MessageBoxButton.OK, MessageBoxImage.Error);
                 return false;
             }
 
             try
             {
-                IsNotRunning = false;
-                var files = await Arduino.ListFiles(RemotePath);
+                IsEnabled = false;
+                var files = await arduino.ListFiles(RemotePath);
                 Files.Clear();
                 foreach (var file in files) Files.Add(file);
                 return true;
             }
             finally
             {
-                IsNotRunning = true;
+                IsEnabled = true;
             }
         }
 
+        /// <summary>
+        /// Opens the retrieve file dialog.
+        /// </summary>
+        /// <param name="owner">The owner.</param>
+        /// <param name="fileName">Name of the file.</param>
+        public void OpenRetrieveFileDialog(Window owner, string? fileName = null)
+        {
+            fileName ??= SelectedFile;
+            if (string.IsNullOrWhiteSpace(fileName)) return;
+            string directoryPath = Path.GetDirectoryName(RemotePath) ?? string.Empty;
+            var fullPath = Path.Combine(directoryPath, fileName);
+            RetrieveDialog.ShowDialog(owner, arduino, fullPath);
+        }
     }
 }

@@ -7,11 +7,37 @@ using System.Threading.Tasks;
 
 namespace PortfolioSync
 {
+    /// <summary>
+    /// Extensions for working with the byte streams
+    /// </summary>
     public static class ByteStreamExtensions
     {
         /// <summary>
+        /// Writes the command byte
+        /// </summary>
+        /// <param name="stream">The stream.</param>
+        /// <param name="command">The command.</param>
+        public static void StartCommand(this IWriteByteStream stream, Command command)
+        {
+            stream.WriteByte(Ascii.SOH);            // Start of header
+            stream.WriteByte((int)command);         // Command byte
+        }
+
+        /// <summary>
+        /// Writes the error code byte
+        /// </summary>
+        /// <param name="stream">The stream.</param>
+        /// <param name="errorCode">The error code.</param>
+        public static void WriteNak(this IWriteByteStream stream, ErrorCode errorCode)
+        {
+            stream.WriteByte(Ascii.NAK);
+            stream.WriteByte((int)errorCode);
+        }
+
+        /// <summary>
         /// Writes the key char
         /// </summary>
+        /// <param name="stream">The stream.</param>
         /// <param name="keyChar">The key character.</param>
         public static void WriteKey(this IWriteByteStream stream, char keyChar)
         {
@@ -21,6 +47,7 @@ namespace PortfolioSync
         /// <summary>
         /// Writes the byte.
         /// </summary>
+        /// <param name="stream">The stream.</param>
         /// <param name="value">The value.</param>
         public static void WriteByte(this IWriteByteStream stream, int value)
         {

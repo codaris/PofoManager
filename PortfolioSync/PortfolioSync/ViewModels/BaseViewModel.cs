@@ -13,6 +13,10 @@ using System.Windows;
 
 namespace PortfolioSync.ViewModels
 {
+    /// <summary>
+    /// Base class for all view models
+    /// </summary>
+    /// <seealso cref="System.ComponentModel.INotifyPropertyChanged" />
     public abstract class BaseViewModel : INotifyPropertyChanged
     {
         /// <summary>

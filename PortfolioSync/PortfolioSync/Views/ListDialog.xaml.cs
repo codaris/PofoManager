@@ -12,7 +12,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
 using PortfolioSync.ViewModels;
 
 namespace PortfolioSync.Views
@@ -57,8 +56,7 @@ namespace PortfolioSync.Views
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void Retrieve_Click(object sender, RoutedEventArgs e)
         {
-            if (viewModel.SelectedFile == null) return;
-            RetrieveDialog.ShowDialog(this, viewModel.Arduino, viewModel.GetFullPath(viewModel.SelectedFile));
+            viewModel.OpenRetrieveFileDialog(this);
         }
 
         /// <summary>
@@ -92,7 +90,7 @@ namespace PortfolioSync.Views
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             // Prevent closing the window if task is running
-            e.Cancel = !viewModel.IsNotRunning;
+            e.Cancel = !viewModel.IsEnabled;
         }
 
         /// <summary>
@@ -102,11 +100,10 @@ namespace PortfolioSync.Views
         /// <param name="e">The <see cref="MouseButtonEventArgs"/> instance containing the event data.</param>
         private void ListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            var item = ((FrameworkElement)e.OriginalSource).DataContext as string;
-            if (item != null)
+            // Open the dialog on double click of item
+            if (((FrameworkElement)e.OriginalSource).DataContext is string item)
             {
-                RetrieveDialog.ShowDialog(this, viewModel.Arduino, viewModel.GetFullPath(item));
-                // MessageBox.Show("Item's Double Click handled!");
+                viewModel.OpenRetrieveFileDialog(this, item);
             }
         }
     }

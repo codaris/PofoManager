@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace PortfolioSync
 {
+    /// <summary>
+    /// Ascii codes
+    /// </summary>
     internal static class Ascii
     {
         public const byte NUL = 0;   // Null char

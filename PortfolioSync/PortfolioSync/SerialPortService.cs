@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace PortfolioSync
 {
+    /// <summary>
+    /// Serial port service
+    /// </summary>
     public static class SerialPortService
     {
         /// <summary>The serial ports</summary>

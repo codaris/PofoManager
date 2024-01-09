@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace PortfolioSync
 {
+    /// <summary>
+    /// Extensions for using a byte list as a transfer buffer to the Portfolio
+    /// </summary>
     public static class ByteListExtensions
     {
         /// <summary>
@@ -14,19 +17,30 @@ namespace PortfolioSync
         /// </summary>
         /// <param name="list">The list.</param>
         /// <param name="value">The value.</param>
-        public static void Add(this List<byte> list, int value)
+        public static void AddByte(this List<byte> list, int value)
         {
             list.Add((byte)value);
         }
 
         /// <summary>
-        /// Adds the string toe the byte list
+        /// Adds a string to the byte list
         /// </summary>
         /// <param name="data">The data.</param>
         /// <param name="value">The value.</param>
         public static void AddString(this List<byte> data, string value)
         {
             foreach (char c in value) data.Add((byte)c);
+        }
+
+        /// <summary>
+        /// Adds a zero-terminated string to the byte list
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <param name="value">The value.</param>
+        public static void AddStringZ(this List<byte> data, string value)
+        {
+            data.AddString(value);
+            data.Add(0);
         }
 
         /// <summary>
@@ -52,73 +66,17 @@ namespace PortfolioSync
             data.Add((byte)(size >> 16 & 0xFF));
         }
 
+        /// <summary>
+        /// Adds an integer to the byte array.  4 bytes long
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <param name="value">The value.</param>
         public static void AddInt(this List<byte> data, int value)
         {
             data.Add((byte)(value & 0xFF));
             data.Add((byte)(value >> 8 & 0xFF));
             data.Add((byte)(value >> 16 & 0xFF));
             data.Add((byte)(value >> 24 & 0xFF));
-        }
-
-        /// <summary>
-        /// Adds the frame.
-        /// </summary>
-        /// <param name="data">The data.</param>
-        public static void AddFrame(this List<byte> data)
-        {
-            // First byte is always zero                
-            data.Insert(0, 0);
-            // Add checksum
-            data.AddChecksum(data);
-        }
-
-        /// <summary>
-        /// Adds the frame.
-        /// </summary>
-        /// <param name="data">The data.</param>
-        public static byte[] ToFrame(this List<byte> data)
-        {
-            data.AddFrame();
-            return data.ToArray();   
-        }
-
-        /// <summary>
-        /// Adds a block of data
-        /// </summary>
-        /// <param name="data">The data.</param>
-        /// <param name="block">The block.</param>
-        public static void AddBlock(this List<byte> data, IEnumerable<byte> block)
-        {
-            data.AddRange(block);
-            data.AddChecksum(block);
-        }
-
-        /// <summary>
-        /// Adds the checksum.
-        /// </summary>
-        /// <param name="data">The data.</param>
-        /// <param name="values">The values.</param>
-        public static void AddChecksum(this List<byte> data, IEnumerable<byte>? values = null)
-        {
-            values ??= data;
-            // Add checksum
-            int checksum = 0;
-            foreach (var value in values) checksum = (checksum + value) & 0xFF;
-            data.Add((byte)checksum);
-        }
-
-        /// <summary>
-        /// Fills to the size.
-        /// </summary>
-        /// <param name="data">The data.</param>
-        /// <param name="size">The size.</param>
-        public static void FillToSize(this List<byte> data, int size)
-        {
-            if (data.Count >= size) return;
-            for (int i = data.Count; i < size; i++)
-            {
-                data.Add(0);
-            }
         }
     }
 }

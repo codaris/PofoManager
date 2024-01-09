@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="PortfolioSync" Height="450" Width="800" 
         d:DataContext="{d:DesignInstance Type=vm:MainViewModel, IsDesignTimeCreatable=False}" 
-        PreviewKeyDown="Window_PreviewKeyDown" Drop="Window_Drop" AllowDrop="True"
+        Drop="Window_Drop" AllowDrop="True"
         Icon="/Resources/Sync.png"  
         >
     <Window.Resources>
@@ -46,7 +46,7 @@
                 <StackPanel Orientation="Horizontal" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}">
                     <TextBlock VerticalAlignment="Center" Margin="5,4,0,4">Serial Port:</TextBlock>
                     <ComboBox Margin="4,4,10,4" ItemsSource="{Binding SerialPorts}" SelectedItem="{Binding SelectedSerialPort, Mode=TwoWay}" />
-                    <Button Margin="4,4,10,4" Click="Connect_Click" Visibility="{Binding IsDisconnected, Converter={StaticResource BooleanToVisibilityConverter}}">
+                    <Button Margin="4,4,10,4" Click="Connect_Click" Visibility="{Binding IsDisconnected, Converter={StaticResource BooleanToVisibilityConverter}}" IsEnabled="{Binding IsConnectEnabled}">
                         <StackPanel Orientation="Horizontal">
                             <ContentControl Content="{StaticResource Connect}" Width="16" Height="16" Margin="0,0,5,0"/>
                             <TextBlock Text="Connect" VerticalAlignment="Center" Margin="0,0,5,2" />
@@ -62,12 +62,6 @@
                         <StackPanel Orientation="Horizontal">
                             <ContentControl Content="{StaticResource Trigger}" Width="16" Height="16" Margin="0,0,5,0"/>
                             <TextBlock Text="Ping" VerticalAlignment="Center" Margin="0,0,5,2" />
-                        </StackPanel>
-                    </Button>
-                    <Button Margin="4,4,10,4" Click="Cancel_Click" Visibility="{Binding CanCancel, Converter={StaticResource BooleanToVisibilityConverter}}">
-                        <StackPanel Orientation="Horizontal">
-                            <ContentControl Content="{StaticResource CancelIcon}" Width="16" Height="16" Margin="0,0,5,0"/>
-                            <TextBlock Text="Cancel Operation" VerticalAlignment="Center" Margin="0,0,5,2" />
                         </StackPanel>
                     </Button>
                     <Button Margin="4,4,10,4" Click="Clear_Click">

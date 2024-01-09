@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace PortfolioSync.ViewModels
 {
+    /// <summary>
+    /// View model extension methods
+    /// </summary>
     public static class Extensions
     {
         /// <summary>
@@ -25,8 +28,7 @@ namespace PortfolioSync.ViewModels
             var localProperties = new List<string>();
             foreach (var localPropertyLambda in localPropertyLambdas)
             {
-                var localPropertyName = localPropertyLambda.GetMemberName();
-                if (localPropertyName == null) throw new ArgumentException($"Member name not found in lambda expression '{localPropertyLambda}'", nameof(localPropertyLambdas));
+                var localPropertyName = localPropertyLambda.GetMemberName() ?? throw new ArgumentException($"Member name not found in lambda expression '{localPropertyLambda}'", nameof(localPropertyLambdas));
                 localProperties.Add(localPropertyName);
             }
             if (propertyName == null) throw new ArgumentException($"Member name not found in lambda expression '{propertyLambda}'", nameof(propertyLambda));

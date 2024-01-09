@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace PortfolioSync
 {
+    /// <summary>
+    /// File transfer progress interface
+    /// </summary>
     public interface IFileProgress
     {
         /// <summary>

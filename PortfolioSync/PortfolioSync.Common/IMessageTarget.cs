@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace PortfolioSync
 {
+    /// <summary>
+    /// Target for console messages
+    /// </summary>
     public interface IMessageTarget
     {
         /// <summary>

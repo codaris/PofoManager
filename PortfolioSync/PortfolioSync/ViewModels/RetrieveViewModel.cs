@@ -7,10 +7,15 @@ using System.Windows;
 
 namespace PortfolioSync.ViewModels
 {
-    public class RetrieveViewModel : BaseViewModel, IFileProgress
+    /// <summary>
+    /// The view model for the retrieve dialog
+    /// </summary>
+    /// <seealso cref="PortfolioSync.ViewModels.BaseViewModel" />
+    /// <seealso cref="PortfolioSync.IFileProgress" />
+    public class RetrieveViewModel : TransferViewModel
     {
         /// <summary>
-        /// Gets or sets the destination path.
+        /// Gets or sets the source file path.
         /// </summary>
         public string SourcePath
         {
@@ -19,7 +24,7 @@ namespace PortfolioSync.ViewModels
         }
 
         /// <summary>
-        /// Gets or sets the destination path.
+        /// Gets or sets the local destination path.
         /// </summary>
         public string DestinationPath
         {
@@ -37,46 +42,20 @@ namespace PortfolioSync.ViewModels
         public Visibility DestinationPathVisibility => string.IsNullOrWhiteSpace(DestinationPath) ? Visibility.Collapsed : Visibility.Visible;
 
         /// <summary>
-        /// Gets a value indicating whether the send is not running.
+        /// Gets a value indicating whether the form is enabled
         /// </summary>
-        public bool IsNotRunning
+        public bool IsEnabled
         {
             get => GetProperty<bool>(true);
             private set => SetProperty(value);
         }
 
         /// <summary>
-        /// Gets the transfer percentage text.
-        /// </summary>
-        public string TransferPercentageText => TransferPercentage.HasValue ? TransferPercentage.Value.ToString("n0") + "%" : string.Empty;
-
-        /// <summary>
-        /// Gets the transfer percentage.
-        /// </summary>
-        public int? TransferPercentage => fileSize == 0 ? null : (int)((double)fileProgress / (double)fileSize * 100);
-
-        /// <summary>
-        /// The arduino instance
-        /// </summary>
-        private readonly Arduino arduino;
-
-        /// <summary>
-        /// The file size
-        /// </summary>
-        private int fileSize = 0;
-
-        /// <summary>
-        /// The file progress
-        /// </summary>
-        private int fileProgress = 0;
-
-        /// <summary>
         /// Initializes a new instance of the <see cref="RetrieveViewModel"/> class.
         /// </summary>
         /// <param name="arduino">The arduino.</param>
-        public RetrieveViewModel(Arduino arduino)
+        public RetrieveViewModel(Arduino arduino) : base(arduino)
         {
-            this.arduino = arduino;
         }
 
         /// <summary>
@@ -104,43 +83,14 @@ namespace PortfolioSync.ViewModels
 
             try
             {
-                IsNotRunning = false;
+                IsEnabled = false;
                 await arduino.RetreiveFile(SourcePath, DestinationPath, this).ConfigureAwait(false);
                 return true;
             }
             finally
             {
-                IsNotRunning = true;
+                IsEnabled = true;
             }
-        }
-
-        /// <summary>
-        /// Cancels the transfer
-        /// </summary>
-        public void Cancel()
-        {
-            arduino.Cancel();
-        }
-
-        /// <summary>
-        /// Starts the transfer progress with the specified total
-        /// </summary>
-        /// <param name="total">The total.</param>
-        void IFileProgress.Start(int total)
-        {
-            this.fileSize = total;
-            this.fileProgress = 0;
-        }
-
-        /// <summary>
-        /// Increments the progress by the specified number of bytes.
-        /// </summary>
-        /// <param name="bytes">The bytes.</param>
-        void IFileProgress.Increment(int bytes)
-        {
-            this.fileProgress += bytes;
-            OnPropertyChanged(nameof(TransferPercentage));
-            OnPropertyChanged(nameof(TransferPercentageText));
         }
     }
 }

@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace PortfolioSync
 {
+    /// <summary>
+    /// Scope guard that calls constructor action when disposed
+    /// </summary>
+    /// <seealso cref="System.IDisposable" />
     internal class ScopeGuard : IDisposable
     {
         private readonly Action _action;

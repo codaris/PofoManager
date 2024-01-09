@@ -151,31 +151,6 @@ namespace PortfolioSync.Views
         {
             await viewModel.Arduino.Ping().ConfigureAwait(false);
         }
-
-        /// <summary>
-        /// Handles the Click event of the Cancel control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
-        private void Cancel_Click(object sender, RoutedEventArgs e)
-        {
-            viewModel.Cancel();
-        }
-
-        /// <summary>
-        /// Handles the PreviewKeyDown event of the Window control.
-        /// </summary>
-        /// <param name="sender">The source of the event.</param>
-        /// <param name="e">The <see cref="KeyEventArgs"/> instance containing the event data.</param>
-        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Escape && viewModel.CanCancel)
-            {
-                viewModel.Cancel();
-                e.Handled = true;
-            }
-        }
-
         /// <summary>
         /// Write the specified message.
         /// </summary>
@@ -205,12 +180,12 @@ namespace PortfolioSync.Views
         /// <param name="e">The <see cref="DragEventArgs"/> instance containing the event data.</param>
         private void Window_Drop(object sender, DragEventArgs e)
         {
+            if (!viewModel.IsConnected) return;
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
             {
                 // Note that you can have more than one file.
                 string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
-
-                MessageBox.Show(files[0]);
+                SendDialog.ShowDialog(this, viewModel.Arduino, files[0]);
             }
         }
 
@@ -221,6 +196,7 @@ namespace PortfolioSync.Views
         /// <param name="e">The <see cref="DragEventArgs"/> instance containing the event data.</param>
         private void Log_PreviewDragOver(object sender, DragEventArgs e)
         {
+            if (!viewModel.IsConnected) return;
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
             {
                 e.Effects = DragDropEffects.Copy;

@@ -57,7 +57,7 @@ namespace PortfolioSync.Views
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            if (viewModel.IsNotRunning) DialogResult = false;
+            if (viewModel.IsEnabled) DialogResult = false;
             else viewModel.Cancel();
         }
 
@@ -82,7 +82,7 @@ namespace PortfolioSync.Views
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             // Prevent closing the window if task is running
-            e.Cancel = !viewModel.IsNotRunning;
+            e.Cancel = !viewModel.IsEnabled;
         }
     }
 }

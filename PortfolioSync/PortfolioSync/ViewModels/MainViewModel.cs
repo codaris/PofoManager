@@ -9,6 +9,11 @@ using System.Threading.Tasks;
 
 namespace PortfolioSync.ViewModels
 {
+    /// <summary>
+    /// View model for the main window
+    /// </summary>
+    /// <seealso cref="PortfolioSync.ViewModels.BaseViewModel" />
+    /// <seealso cref="PortfolioSync.IDebugTarget" />
     public class MainViewModel : BaseViewModel, IDebugTarget
     {
         /// <summary>
@@ -45,9 +50,9 @@ namespace PortfolioSync.ViewModels
         public bool IsDisconnected => !Arduino.IsConnected;
 
         /// <summary>
-        /// Gets a value indicating whether the current operation can be cancelled
+        /// Gets a value indicating whether the connect button is enabled
         /// </summary>
-        public bool CanCancel => Arduino.CanCancel;
+        public bool IsConnectEnabled => !Arduino.IsConnecting;
 
         /// <summary>
         /// Gets the status.
@@ -79,7 +84,7 @@ namespace PortfolioSync.ViewModels
             this.PropagatePropertyChanged(Arduino, a => a.IsConnected, t => t.IsConnected);
             this.PropagatePropertyChanged(Arduino, a => a.IsConnected, t => t.IsDisconnected);
             this.PropagatePropertyChanged(Arduino, a => a.IsConnected, t => t.Status);
-            this.PropagatePropertyChanged(Arduino, a => a.CanCancel, t => t.CanCancel);
+            this.PropagatePropertyChanged(Arduino, a => a.IsConnecting, t => t.IsConnectEnabled);
 
             SerialPortService.PortsChanged += SerialPortService_PortsChanged;
             UpdateSerialPorts(SerialPortService.GetAvailableSerialPorts());
@@ -102,14 +107,6 @@ namespace PortfolioSync.ViewModels
         public void Disconnect()
         {
             Arduino.Disconnect();
-        }
-
-        /// <summary>
-        /// Cancels this instance.
-        /// </summary>
-        public void Cancel()
-        {
-            Arduino.Cancel();
         }
 
         /// <summary>

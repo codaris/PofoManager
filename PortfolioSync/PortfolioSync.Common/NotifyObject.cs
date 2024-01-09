@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace PortfolioSync
 {
+    /// <summary>
+    /// Abstract base class for INotifyProperyChanges supporting classes
+    /// </summary>
+    /// <seealso cref="System.ComponentModel.INotifyPropertyChanged" />
     public abstract class NotifyObject : INotifyPropertyChanged
     {
         /// <summary>
@@ -17,16 +21,16 @@ namespace PortfolioSync
         public event PropertyChangedEventHandler? PropertyChanged;
 
         /// <summary>
-        /// The properties
+        /// The property collection
         /// </summary>
         private readonly Dictionary<string, object> properties = new();
 
         /// <summary>
-        /// Gets the property.
+        /// Gets the property value.
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="name">The name.</param>
-        /// <returns></returns>
+        /// <returns>Property value</returns>
         /// <exception cref="System.ArgumentNullException"></exception>
         protected T GetProperty<T>([CallerMemberName] string? name = null)
         {
@@ -38,12 +42,12 @@ namespace PortfolioSync
         }
 
         /// <summary>
-        /// Gets the property.
+        /// Gets the property value.
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="defaultValue">The default value.</param>
         /// <param name="name">The name.</param>
-        /// <returns></returns>
+        /// <returns>Property value</returns>
         /// <exception cref="ArgumentNullException"></exception>
         protected T GetProperty<T>(T defaultValue, [CallerMemberName] string? name = null)
         {
@@ -53,12 +57,12 @@ namespace PortfolioSync
         }
 
         /// <summary>
-        /// Sets the property.
+        /// Sets the property value.
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="value">The value.</param>
         /// <param name="name">The name.</param>
-        /// <returns></returns>
+        /// <returns>True if property value changed</returns>
         /// <exception cref="System.ArgumentNullException"></exception>
         protected bool SetProperty<T>(T value, [CallerMemberName] string? name = null)
         {
@@ -81,13 +85,13 @@ namespace PortfolioSync
         }
 
         /// <summary>
-        /// Sets the property.
+        /// Sets the property value.
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="value">The value.</param>
         /// <param name="action">The action.</param>
         /// <param name="name">The name.</param>
-        /// <returns></returns>
+        /// <returns>True if property changed</returns>
         protected bool SetProperty<T>(T value, Action action, [CallerMemberName] string? name = null)
         {
             bool result = SetProperty(value, name);

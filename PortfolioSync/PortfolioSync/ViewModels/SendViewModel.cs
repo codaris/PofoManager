@@ -8,12 +8,16 @@ using System.Windows;
 
 namespace PortfolioSync.ViewModels
 {
-    public class SendViewModel : BaseViewModel, IFileProgress
+    /// <summary>
+    /// View model for the send file dialog
+    /// </summary>
+    /// <seealso cref="PortfolioSync.ViewModels.TransferViewModel" />
+    public class SendViewModel : TransferViewModel
     {
         /// <summary>
-        /// Gets or sets the selected serial port.
+        /// Gets the file to send
         /// </summary>
-        public string FilePath { get; }
+        public string SourcePath { get; }
 
         /// <summary>
         /// Gets or sets the destination path.
@@ -25,7 +29,7 @@ namespace PortfolioSync.ViewModels
         }
 
         /// <summary>
-        /// Gets or sets a value indicating whether this <see cref="SendViewModel"/> is overwrite.
+        /// Gets or sets a value indicating whether to overwrite the file on the Portfolio.
         /// </summary>
         public bool OverwriteFile
         {
@@ -36,46 +40,20 @@ namespace PortfolioSync.ViewModels
         /// <summary>
         /// Gets a value indicating whether the send is not running.
         /// </summary>
-        public bool IsNotRunning
+        public bool IsEnabled
         {
             get => GetProperty<bool>(true);
             private set => SetProperty(value);
         }
 
         /// <summary>
-        /// Gets the transfer percentage text.
-        /// </summary>
-        public string TransferPercentageText => TransferPercentage.HasValue ? TransferPercentage.Value.ToString("n0") + "%" : string.Empty;
-
-        /// <summary>
-        /// Gets the transfer percentage.
-        /// </summary>
-        public int? TransferPercentage => fileSize == 0 ? null : (int)((double)fileProgress / (double)fileSize * 100);
-
-        /// <summary>
-        /// The arduino instance
-        /// </summary>
-        private readonly Arduino arduino;
-
-        /// <summary>
-        /// The file size
-        /// </summary>
-        private int fileSize = 0;
-
-        /// <summary>
-        /// The file progress
-        /// </summary>
-        private int fileProgress = 0;
-
-        /// <summary>
         /// Initializes a new instance of the <see cref="SendViewModel" /> class.
         /// </summary>
         /// <param name="arduino">The arduino.</param>
         /// <param name="filePath">The file path.</param>
-        public SendViewModel(Arduino arduino, string filePath)
+        public SendViewModel(Arduino arduino, string filePath) : base(arduino)
         {
-            this.FilePath = filePath;
-            this.arduino = arduino;
+            this.SourcePath = filePath;
             this.DestinationPath = "C:\\" + Path.GetFileNameWithoutExtension(filePath).ToUpper().Truncate(8) + Path.GetExtension(filePath).ToUpper().Truncate(4);
         }
 
@@ -98,43 +76,14 @@ namespace PortfolioSync.ViewModels
             }
             try
             {
-                IsNotRunning = false;
-                await arduino.SendFile(FilePath, DestinationPath, OverwriteFile, this).ConfigureAwait(false);
+                IsEnabled = false;
+                await arduino.SendFile(SourcePath, DestinationPath, OverwriteFile, this).ConfigureAwait(false);
                 return true;
             }
             finally
             {
-                IsNotRunning = true;
+                IsEnabled = true;
             }
-        }
-
-        /// <summary>
-        /// Cancels the transfer
-        /// </summary>
-        public void Cancel()
-        {
-            arduino.Cancel();
-        }
-
-        /// <summary>
-        /// Starts the transfer progress with the specified total
-        /// </summary>
-        /// <param name="total">The total.</param>
-        void IFileProgress.Start(int total)
-        {
-            this.fileSize = total;
-            this.fileProgress = 0;
-        }
-
-        /// <summary>
-        /// Increments the progress by the specified number of bytes.
-        /// </summary>
-        /// <param name="bytes">The bytes.</param>
-        void IFileProgress.Increment(int bytes)
-        {
-            this.fileProgress += bytes;
-            OnPropertyChanged(nameof(TransferPercentage));
-            OnPropertyChanged(nameof(TransferPercentageText));
         }
     }
 }

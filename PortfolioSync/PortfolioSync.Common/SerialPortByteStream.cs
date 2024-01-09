@@ -7,6 +7,11 @@ using System.Threading.Tasks;
 
 namespace PortfolioSync
 {
+    /// <summary>
+    /// Byte stream fo reading and writing to the serial port
+    /// </summary>
+    /// <seealso cref="PortfolioSync.IByteStream" />
+    /// <seealso cref="System.IDisposable" />
     public class SerialPortByteStream : IByteStream, IDisposable
     {
         /// <summary>The serial port to wrap</summary>
