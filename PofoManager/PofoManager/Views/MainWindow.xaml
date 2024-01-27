@@ -1,0 +1,84 @@
+﻿<Window x:Class="PofoManager.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:PofoManager.ViewModels"          
+        xmlns:local="clr-namespace:PofoManager"
+        mc:Ignorable="d"
+        Title="Portfolio Manager" Height="450" Width="800" 
+        d:DataContext="{d:DesignInstance Type=vm:MainViewModel, IsDesignTimeCreatable=False}" 
+        Drop="Window_Drop" AllowDrop="True"
+        Icon="/Resources/Sync.png"  
+        >
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <DockPanel LastChildFill="True">
+            <Menu DockPanel.Dock="Top" Padding="0,5,0,5">
+                <MenuItem Header="_File">
+                    <MenuItem Header="_Send File..." Click="OpenFile_Click" Icon="{StaticResource UploadDocument}" IsEnabled="{Binding IsConnected}" />
+                    <MenuItem Header="_Receive File..." Click="RetrieveFile_Click" Icon="{StaticResource DownloadDocument}" IsEnabled="{Binding IsConnected}" />
+                    <MenuItem Header="_List Files..." Click="ListFiles_Click" Icon="{StaticResource ListView}" IsEnabled="{Binding IsConnected}" />
+                    <Separator />
+                    <MenuItem Header="E_xit" Click="Exit_Click" />
+                </MenuItem>
+                <MenuItem Header="_Edit">
+                    <MenuItem Command="ApplicationCommands.Copy" Icon="{StaticResource CopyIcon}" />
+                    <MenuItem Command="ApplicationCommands.Cut" Icon="{StaticResource CutIcon}" />
+                    <MenuItem Command="ApplicationCommands.Paste" Icon="{StaticResource PasteIcon}" />
+                    <Separator />
+                    <MenuItem Command="ApplicationCommands.Undo" Icon="{StaticResource UndoIcon}" />
+                    <MenuItem Command="ApplicationCommands.Redo" Icon="{StaticResource RedoIcon}" />
+                    <Separator />
+                    <MenuItem Command="ApplicationCommands.SelectAll" Icon="{StaticResource SelectAllIcon}" />
+                </MenuItem>
+            </Menu>
+            <Border DockPanel.Dock="Top" BorderThickness="0,1,0,0">
+                <Border.BorderBrush>
+                    <SolidColorBrush Color="#FFCCCCCC"/>
+                </Border.BorderBrush>
+                <StackPanel Orientation="Horizontal" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}">
+                    <TextBlock VerticalAlignment="Center" Margin="5,4,0,4">Serial Port:</TextBlock>
+                    <ComboBox Margin="4,4,10,4" ItemsSource="{Binding SerialPorts}" SelectedItem="{Binding SelectedSerialPort, Mode=TwoWay}" />
+                    <Button Margin="4,4,10,4" Click="Connect_Click" Visibility="{Binding IsDisconnected, Converter={StaticResource BooleanToVisibilityConverter}}" IsEnabled="{Binding IsConnectEnabled}">
+                        <StackPanel Orientation="Horizontal">
+                            <ContentControl Content="{StaticResource Connect}" Width="16" Height="16" Margin="0,0,5,0"/>
+                            <TextBlock Text="Connect" VerticalAlignment="Center" Margin="0,0,5,2" />
+                        </StackPanel>
+                    </Button>
+                    <Button Margin="4,4,10,4" Click="Disconnect_Click" Visibility="{Binding IsConnected, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        <StackPanel Orientation="Horizontal">
+                            <ContentControl Content="{StaticResource Disconnect}" Width="16" Height="16" Margin="0,0,5,0"/>
+                            <TextBlock Text="Disconnect" VerticalAlignment="Center" Margin="0,0,5,2" />
+                        </StackPanel>
+                    </Button>
+                    <Button Margin="4,4,10,4" Click="Ping_Click" Visibility="{Binding IsConnected, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        <StackPanel Orientation="Horizontal">
+                            <ContentControl Content="{StaticResource Trigger}" Width="16" Height="16" Margin="0,0,5,0"/>
+                            <TextBlock Text="Ping" VerticalAlignment="Center" Margin="0,0,5,2" />
+                        </StackPanel>
+                    </Button>
+                    <Button Margin="4,4,10,4" Click="Clear_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <ContentControl Content="{StaticResource EraserIcon}" Width="16" Height="16" Margin="0,0,5,0"/>
+                            <TextBlock Text="Clear Log" VerticalAlignment="Center" Margin="0,0,5,2" />
+                        </StackPanel>
+                    </Button>
+                    <CheckBox Margin="4,7,4,4" Content="Show Debug Messages" IsChecked="{Binding ShowDebug, Mode=TwoWay}" />
+                </StackPanel>
+            </Border>
+            <StatusBar DockPanel.Dock="Bottom" HorizontalAlignment="Stretch">
+                <StatusBarItem Content="{Binding SelectedSerialPort}" DockPanel.Dock="Left" />
+                <StatusBarItem Content="{Binding Status}" DockPanel.Dock="Left" />
+                <StatusBarItem />
+            </StatusBar>
+            <TextBox x:Name="Log" IsReadOnly="True" IsReadOnlyCaretVisible="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" FontFamily="Consolas" FontSize="14" Background="Black" Foreground="#FF00D866" SelectionBrush="#FFBDD8ED" Text="Portfolio Manager 1.0" PreviewDragOver="Log_PreviewDragOver" />
+        </DockPanel>
+    </Grid>
+</Window>

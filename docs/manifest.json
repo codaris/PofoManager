@@ -1,5 +1,5 @@
 {
-  "source_base_path": "C:/Projects/Handhelds/Atari Portfolio/PortfolioSync/PortfolioSync/Documentation",
+  "source_base_path": "C:/Projects/Handhelds/Atari Portfolio/PofoManager/PofoManager/Documentation",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -12,420 +12,420 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.App.yml",
+      "source_relative_path": "api/PofoManager.App.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.App.html"
+          "relative_path": "api/PofoManager.App.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.Arduino.yml",
+      "source_relative_path": "api/PofoManager.Arduino.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.Arduino.html"
+          "relative_path": "api/PofoManager.Arduino.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.ArduinoException.yml",
+      "source_relative_path": "api/PofoManager.ArduinoException.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.ArduinoException.html"
+          "relative_path": "api/PofoManager.ArduinoException.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.ByteListExtensions.yml",
+      "source_relative_path": "api/PofoManager.ByteListExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.ByteListExtensions.html"
+          "relative_path": "api/PofoManager.ByteListExtensions.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.ByteStreamExtensions.yml",
+      "source_relative_path": "api/PofoManager.ByteStreamExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.ByteStreamExtensions.html"
+          "relative_path": "api/PofoManager.ByteStreamExtensions.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.Command.yml",
+      "source_relative_path": "api/PofoManager.Command.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.Command.html"
+          "relative_path": "api/PofoManager.Command.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.DataException.yml",
+      "source_relative_path": "api/PofoManager.DataException.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.DataException.html"
+          "relative_path": "api/PofoManager.DataException.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.ErrorCode.yml",
+      "source_relative_path": "api/PofoManager.ErrorCode.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.ErrorCode.html"
+          "relative_path": "api/PofoManager.ErrorCode.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.EventType.yml",
+      "source_relative_path": "api/PofoManager.EventType.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.EventType.html"
+          "relative_path": "api/PofoManager.EventType.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.Extensions.yml",
+      "source_relative_path": "api/PofoManager.Extensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.Extensions.html"
+          "relative_path": "api/PofoManager.Extensions.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.Helpers.BooleanToVisibilityConverter.yml",
+      "source_relative_path": "api/PofoManager.Helpers.BooleanToVisibilityConverter.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.Helpers.BooleanToVisibilityConverter.html"
+          "relative_path": "api/PofoManager.Helpers.BooleanToVisibilityConverter.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.Helpers.yml",
+      "source_relative_path": "api/PofoManager.Helpers.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.Helpers.html"
+          "relative_path": "api/PofoManager.Helpers.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.IByteStream.yml",
+      "source_relative_path": "api/PofoManager.IByteStream.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.IByteStream.html"
+          "relative_path": "api/PofoManager.IByteStream.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.IDebugTarget.yml",
+      "source_relative_path": "api/PofoManager.IDebugTarget.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.IDebugTarget.html"
+          "relative_path": "api/PofoManager.IDebugTarget.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.IFileProgress.yml",
+      "source_relative_path": "api/PofoManager.IFileProgress.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.IFileProgress.html"
+          "relative_path": "api/PofoManager.IFileProgress.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.IMessageTarget.yml",
+      "source_relative_path": "api/PofoManager.IMessageTarget.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.IMessageTarget.html"
+          "relative_path": "api/PofoManager.IMessageTarget.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.IReadByteStream.yml",
+      "source_relative_path": "api/PofoManager.IReadByteStream.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.IReadByteStream.html"
+          "relative_path": "api/PofoManager.IReadByteStream.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.IWriteByteStream.yml",
+      "source_relative_path": "api/PofoManager.IWriteByteStream.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.IWriteByteStream.html"
+          "relative_path": "api/PofoManager.IWriteByteStream.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.NotifyObject.yml",
+      "source_relative_path": "api/PofoManager.NotifyObject.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.NotifyObject.html"
+          "relative_path": "api/PofoManager.NotifyObject.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.Portfolio.yml",
+      "source_relative_path": "api/PofoManager.Portfolio.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.Portfolio.html"
+          "relative_path": "api/PofoManager.Portfolio.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.PortfolioCommand.yml",
+      "source_relative_path": "api/PofoManager.PortfolioCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.PortfolioCommand.html"
+          "relative_path": "api/PofoManager.PortfolioCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.PortfolioResponse.yml",
+      "source_relative_path": "api/PofoManager.PortfolioResponse.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.PortfolioResponse.html"
+          "relative_path": "api/PofoManager.PortfolioResponse.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.PortsChangedArgs.yml",
+      "source_relative_path": "api/PofoManager.PortsChangedArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.PortsChangedArgs.html"
+          "relative_path": "api/PofoManager.PortsChangedArgs.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.RelayCommand-1.yml",
+      "source_relative_path": "api/PofoManager.RelayCommand-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.RelayCommand-1.html"
+          "relative_path": "api/PofoManager.RelayCommand-1.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.RelayCommand.yml",
+      "source_relative_path": "api/PofoManager.RelayCommand.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.RelayCommand.html"
+          "relative_path": "api/PofoManager.RelayCommand.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.SerialPortByteStream.yml",
+      "source_relative_path": "api/PofoManager.SerialPortByteStream.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.SerialPortByteStream.html"
+          "relative_path": "api/PofoManager.SerialPortByteStream.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.SerialPortService.yml",
+      "source_relative_path": "api/PofoManager.SerialPortService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.SerialPortService.html"
+          "relative_path": "api/PofoManager.SerialPortService.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.StreamExtensions.yml",
+      "source_relative_path": "api/PofoManager.StreamExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.StreamExtensions.html"
+          "relative_path": "api/PofoManager.StreamExtensions.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.ViewModels.BaseViewModel.yml",
+      "source_relative_path": "api/PofoManager.ViewModels.BaseViewModel.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.ViewModels.BaseViewModel.html"
+          "relative_path": "api/PofoManager.ViewModels.BaseViewModel.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.ViewModels.Extensions.yml",
+      "source_relative_path": "api/PofoManager.ViewModels.Extensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.ViewModels.Extensions.html"
+          "relative_path": "api/PofoManager.ViewModels.Extensions.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.ViewModels.ListViewModel.yml",
+      "source_relative_path": "api/PofoManager.ViewModels.ListViewModel.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.ViewModels.ListViewModel.html"
+          "relative_path": "api/PofoManager.ViewModels.ListViewModel.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.ViewModels.MainViewModel.yml",
+      "source_relative_path": "api/PofoManager.ViewModels.MainViewModel.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.ViewModels.MainViewModel.html"
+          "relative_path": "api/PofoManager.ViewModels.MainViewModel.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.ViewModels.RetrieveViewModel.yml",
+      "source_relative_path": "api/PofoManager.ViewModels.RetrieveViewModel.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.ViewModels.RetrieveViewModel.html"
+          "relative_path": "api/PofoManager.ViewModels.RetrieveViewModel.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.ViewModels.SendViewModel.yml",
+      "source_relative_path": "api/PofoManager.ViewModels.SendViewModel.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.ViewModels.SendViewModel.html"
+          "relative_path": "api/PofoManager.ViewModels.SendViewModel.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.ViewModels.TransferViewModel.yml",
+      "source_relative_path": "api/PofoManager.ViewModels.TransferViewModel.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.ViewModels.TransferViewModel.html"
+          "relative_path": "api/PofoManager.ViewModels.TransferViewModel.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.ViewModels.yml",
+      "source_relative_path": "api/PofoManager.ViewModels.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.ViewModels.html"
+          "relative_path": "api/PofoManager.ViewModels.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.Views.ListDialog.yml",
+      "source_relative_path": "api/PofoManager.Views.ListDialog.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.Views.ListDialog.html"
+          "relative_path": "api/PofoManager.Views.ListDialog.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.Views.MainWindow.yml",
+      "source_relative_path": "api/PofoManager.Views.MainWindow.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.Views.MainWindow.html"
+          "relative_path": "api/PofoManager.Views.MainWindow.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.Views.RetrieveDialog.yml",
+      "source_relative_path": "api/PofoManager.Views.RetrieveDialog.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.Views.RetrieveDialog.html"
+          "relative_path": "api/PofoManager.Views.RetrieveDialog.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.Views.SendDialog.yml",
+      "source_relative_path": "api/PofoManager.Views.SendDialog.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.Views.SendDialog.html"
+          "relative_path": "api/PofoManager.Views.SendDialog.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.Views.yml",
+      "source_relative_path": "api/PofoManager.Views.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.Views.html"
+          "relative_path": "api/PofoManager.Views.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/PortfolioSync.yml",
+      "source_relative_path": "api/PofoManager.yml",
       "output": {
         ".html": {
-          "relative_path": "api/PortfolioSync.html"
+          "relative_path": "api/PofoManager.html"
         }
       },
       "version": ""
