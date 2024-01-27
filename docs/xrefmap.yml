@@ -1,0 +1,2521 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: PortfolioSync
+  name: PortfolioSync
+  href: api/PortfolioSync.html
+  commentId: N:PortfolioSync
+  fullName: PortfolioSync
+  nameWithType: PortfolioSync
+- uid: PortfolioSync.App
+  name: App
+  href: api/PortfolioSync.App.html
+  commentId: T:PortfolioSync.App
+  fullName: PortfolioSync.App
+  nameWithType: App
+- uid: PortfolioSync.App.RunOnUIThread(System.Action)
+  name: RunOnUIThread(Action)
+  href: api/PortfolioSync.App.html#PortfolioSync_App_RunOnUIThread_System_Action_
+  commentId: M:PortfolioSync.App.RunOnUIThread(System.Action)
+  fullName: PortfolioSync.App.RunOnUIThread(System.Action)
+  nameWithType: App.RunOnUIThread(Action)
+- uid: PortfolioSync.App.RunOnUIThread*
+  name: RunOnUIThread
+  href: api/PortfolioSync.App.html#PortfolioSync_App_RunOnUIThread_
+  commentId: Overload:PortfolioSync.App.RunOnUIThread
+  isSpec: "True"
+  fullName: PortfolioSync.App.RunOnUIThread
+  nameWithType: App.RunOnUIThread
+- uid: PortfolioSync.Arduino
+  name: Arduino
+  href: api/PortfolioSync.Arduino.html
+  commentId: T:PortfolioSync.Arduino
+  fullName: PortfolioSync.Arduino
+  nameWithType: Arduino
+- uid: PortfolioSync.Arduino.#ctor(PortfolioSync.IDebugTarget)
+  name: Arduino(IDebugTarget)
+  href: api/PortfolioSync.Arduino.html#PortfolioSync_Arduino__ctor_PortfolioSync_IDebugTarget_
+  commentId: M:PortfolioSync.Arduino.#ctor(PortfolioSync.IDebugTarget)
+  name.vb: New(IDebugTarget)
+  fullName: PortfolioSync.Arduino.Arduino(PortfolioSync.IDebugTarget)
+  fullName.vb: PortfolioSync.Arduino.New(PortfolioSync.IDebugTarget)
+  nameWithType: Arduino.Arduino(IDebugTarget)
+  nameWithType.vb: Arduino.New(IDebugTarget)
+- uid: PortfolioSync.Arduino.#ctor*
+  name: Arduino
+  href: api/PortfolioSync.Arduino.html#PortfolioSync_Arduino__ctor_
+  commentId: Overload:PortfolioSync.Arduino.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: PortfolioSync.Arduino.Arduino
+  fullName.vb: PortfolioSync.Arduino.New
+  nameWithType: Arduino.Arduino
+  nameWithType.vb: Arduino.New
+- uid: PortfolioSync.Arduino.CanCancel
+  name: CanCancel
+  href: api/PortfolioSync.Arduino.html#PortfolioSync_Arduino_CanCancel
+  commentId: P:PortfolioSync.Arduino.CanCancel
+  fullName: PortfolioSync.Arduino.CanCancel
+  nameWithType: Arduino.CanCancel
+- uid: PortfolioSync.Arduino.CanCancel*
+  name: CanCancel
+  href: api/PortfolioSync.Arduino.html#PortfolioSync_Arduino_CanCancel_
+  commentId: Overload:PortfolioSync.Arduino.CanCancel
+  isSpec: "True"
+  fullName: PortfolioSync.Arduino.CanCancel
+  nameWithType: Arduino.CanCancel
+- uid: PortfolioSync.Arduino.Cancel
+  name: Cancel()
+  href: api/PortfolioSync.Arduino.html#PortfolioSync_Arduino_Cancel
+  commentId: M:PortfolioSync.Arduino.Cancel
+  fullName: PortfolioSync.Arduino.Cancel()
+  nameWithType: Arduino.Cancel()
+- uid: PortfolioSync.Arduino.Cancel*
+  name: Cancel
+  href: api/PortfolioSync.Arduino.html#PortfolioSync_Arduino_Cancel_
+  commentId: Overload:PortfolioSync.Arduino.Cancel
+  isSpec: "True"
+  fullName: PortfolioSync.Arduino.Cancel
+  nameWithType: Arduino.Cancel
+- uid: PortfolioSync.Arduino.Connect(System.String)
+  name: Connect(string)
+  href: api/PortfolioSync.Arduino.html#PortfolioSync_Arduino_Connect_System_String_
+  commentId: M:PortfolioSync.Arduino.Connect(System.String)
+  name.vb: Connect(String)
+  fullName: PortfolioSync.Arduino.Connect(string)
+  fullName.vb: PortfolioSync.Arduino.Connect(String)
+  nameWithType: Arduino.Connect(string)
+  nameWithType.vb: Arduino.Connect(String)
+- uid: PortfolioSync.Arduino.Connect*
+  name: Connect
+  href: api/PortfolioSync.Arduino.html#PortfolioSync_Arduino_Connect_
+  commentId: Overload:PortfolioSync.Arduino.Connect
+  isSpec: "True"
+  fullName: PortfolioSync.Arduino.Connect
+  nameWithType: Arduino.Connect
+- uid: PortfolioSync.Arduino.Disconnect
+  name: Disconnect()
+  href: api/PortfolioSync.Arduino.html#PortfolioSync_Arduino_Disconnect
+  commentId: M:PortfolioSync.Arduino.Disconnect
+  fullName: PortfolioSync.Arduino.Disconnect()
+  nameWithType: Arduino.Disconnect()
+- uid: PortfolioSync.Arduino.Disconnect*
+  name: Disconnect
+  href: api/PortfolioSync.Arduino.html#PortfolioSync_Arduino_Disconnect_
+  commentId: Overload:PortfolioSync.Arduino.Disconnect
+  isSpec: "True"
+  fullName: PortfolioSync.Arduino.Disconnect
+  nameWithType: Arduino.Disconnect
+- uid: PortfolioSync.Arduino.Dispose
+  name: Dispose()
+  href: api/PortfolioSync.Arduino.html#PortfolioSync_Arduino_Dispose
+  commentId: M:PortfolioSync.Arduino.Dispose
+  fullName: PortfolioSync.Arduino.Dispose()
+  nameWithType: Arduino.Dispose()
+- uid: PortfolioSync.Arduino.Dispose(System.Boolean)
+  name: Dispose(bool)
+  href: api/PortfolioSync.Arduino.html#PortfolioSync_Arduino_Dispose_System_Boolean_
+  commentId: M:PortfolioSync.Arduino.Dispose(System.Boolean)
+  name.vb: Dispose(Boolean)
+  fullName: PortfolioSync.Arduino.Dispose(bool)
+  fullName.vb: PortfolioSync.Arduino.Dispose(Boolean)
+  nameWithType: Arduino.Dispose(bool)
+  nameWithType.vb: Arduino.Dispose(Boolean)
+- uid: PortfolioSync.Arduino.Dispose*
+  name: Dispose
+  href: api/PortfolioSync.Arduino.html#PortfolioSync_Arduino_Dispose_
+  commentId: Overload:PortfolioSync.Arduino.Dispose
+  isSpec: "True"
+  fullName: PortfolioSync.Arduino.Dispose
+  nameWithType: Arduino.Dispose
+- uid: PortfolioSync.Arduino.IsConnected
+  name: IsConnected
+  href: api/PortfolioSync.Arduino.html#PortfolioSync_Arduino_IsConnected
+  commentId: P:PortfolioSync.Arduino.IsConnected
+  fullName: PortfolioSync.Arduino.IsConnected
+  nameWithType: Arduino.IsConnected
+- uid: PortfolioSync.Arduino.IsConnected*
+  name: IsConnected
+  href: api/PortfolioSync.Arduino.html#PortfolioSync_Arduino_IsConnected_
+  commentId: Overload:PortfolioSync.Arduino.IsConnected
+  isSpec: "True"
+  fullName: PortfolioSync.Arduino.IsConnected
+  nameWithType: Arduino.IsConnected
+- uid: PortfolioSync.Arduino.IsConnecting
+  name: IsConnecting
+  href: api/PortfolioSync.Arduino.html#PortfolioSync_Arduino_IsConnecting
+  commentId: P:PortfolioSync.Arduino.IsConnecting
+  fullName: PortfolioSync.Arduino.IsConnecting
+  nameWithType: Arduino.IsConnecting
+- uid: PortfolioSync.Arduino.IsConnecting*
+  name: IsConnecting
+  href: api/PortfolioSync.Arduino.html#PortfolioSync_Arduino_IsConnecting_
+  commentId: Overload:PortfolioSync.Arduino.IsConnecting
+  isSpec: "True"
+  fullName: PortfolioSync.Arduino.IsConnecting
+  nameWithType: Arduino.IsConnecting
+- uid: PortfolioSync.Arduino.ListFiles(System.String)
+  name: ListFiles(string)
+  href: api/PortfolioSync.Arduino.html#PortfolioSync_Arduino_ListFiles_System_String_
+  commentId: M:PortfolioSync.Arduino.ListFiles(System.String)
+  name.vb: ListFiles(String)
+  fullName: PortfolioSync.Arduino.ListFiles(string)
+  fullName.vb: PortfolioSync.Arduino.ListFiles(String)
+  nameWithType: Arduino.ListFiles(string)
+  nameWithType.vb: Arduino.ListFiles(String)
+- uid: PortfolioSync.Arduino.ListFiles*
+  name: ListFiles
+  href: api/PortfolioSync.Arduino.html#PortfolioSync_Arduino_ListFiles_
+  commentId: Overload:PortfolioSync.Arduino.ListFiles
+  isSpec: "True"
+  fullName: PortfolioSync.Arduino.ListFiles
+  nameWithType: Arduino.ListFiles
+- uid: PortfolioSync.Arduino.Ping
+  name: Ping()
+  href: api/PortfolioSync.Arduino.html#PortfolioSync_Arduino_Ping
+  commentId: M:PortfolioSync.Arduino.Ping
+  fullName: PortfolioSync.Arduino.Ping()
+  nameWithType: Arduino.Ping()
+- uid: PortfolioSync.Arduino.Ping*
+  name: Ping
+  href: api/PortfolioSync.Arduino.html#PortfolioSync_Arduino_Ping_
+  commentId: Overload:PortfolioSync.Arduino.Ping
+  isSpec: "True"
+  fullName: PortfolioSync.Arduino.Ping
+  nameWithType: Arduino.Ping
+- uid: PortfolioSync.Arduino.RetreiveFile(System.String,System.String,PortfolioSync.IFileProgress)
+  name: RetreiveFile(string, string, IFileProgress)
+  href: api/PortfolioSync.Arduino.html#PortfolioSync_Arduino_RetreiveFile_System_String_System_String_PortfolioSync_IFileProgress_
+  commentId: M:PortfolioSync.Arduino.RetreiveFile(System.String,System.String,PortfolioSync.IFileProgress)
+  name.vb: RetreiveFile(String, String, IFileProgress)
+  fullName: PortfolioSync.Arduino.RetreiveFile(string, string, PortfolioSync.IFileProgress)
+  fullName.vb: PortfolioSync.Arduino.RetreiveFile(String, String, PortfolioSync.IFileProgress)
+  nameWithType: Arduino.RetreiveFile(string, string, IFileProgress)
+  nameWithType.vb: Arduino.RetreiveFile(String, String, IFileProgress)
+- uid: PortfolioSync.Arduino.RetreiveFile*
+  name: RetreiveFile
+  href: api/PortfolioSync.Arduino.html#PortfolioSync_Arduino_RetreiveFile_
+  commentId: Overload:PortfolioSync.Arduino.RetreiveFile
+  isSpec: "True"
+  fullName: PortfolioSync.Arduino.RetreiveFile
+  nameWithType: Arduino.RetreiveFile
+- uid: PortfolioSync.Arduino.SendFile(System.String,System.String,System.Boolean,PortfolioSync.IFileProgress)
+  name: SendFile(string, string, bool, IFileProgress)
+  href: api/PortfolioSync.Arduino.html#PortfolioSync_Arduino_SendFile_System_String_System_String_System_Boolean_PortfolioSync_IFileProgress_
+  commentId: M:PortfolioSync.Arduino.SendFile(System.String,System.String,System.Boolean,PortfolioSync.IFileProgress)
+  name.vb: SendFile(String, String, Boolean, IFileProgress)
+  fullName: PortfolioSync.Arduino.SendFile(string, string, bool, PortfolioSync.IFileProgress)
+  fullName.vb: PortfolioSync.Arduino.SendFile(String, String, Boolean, PortfolioSync.IFileProgress)
+  nameWithType: Arduino.SendFile(string, string, bool, IFileProgress)
+  nameWithType.vb: Arduino.SendFile(String, String, Boolean, IFileProgress)
+- uid: PortfolioSync.Arduino.SendFile*
+  name: SendFile
+  href: api/PortfolioSync.Arduino.html#PortfolioSync_Arduino_SendFile_
+  commentId: Overload:PortfolioSync.Arduino.SendFile
+  isSpec: "True"
+  fullName: PortfolioSync.Arduino.SendFile
+  nameWithType: Arduino.SendFile
+- uid: PortfolioSync.ArduinoException
+  name: ArduinoException
+  href: api/PortfolioSync.ArduinoException.html
+  commentId: T:PortfolioSync.ArduinoException
+  fullName: PortfolioSync.ArduinoException
+  nameWithType: ArduinoException
+- uid: PortfolioSync.ArduinoException.#ctor
+  name: ArduinoException()
+  href: api/PortfolioSync.ArduinoException.html#PortfolioSync_ArduinoException__ctor
+  commentId: M:PortfolioSync.ArduinoException.#ctor
+  name.vb: New()
+  fullName: PortfolioSync.ArduinoException.ArduinoException()
+  fullName.vb: PortfolioSync.ArduinoException.New()
+  nameWithType: ArduinoException.ArduinoException()
+  nameWithType.vb: ArduinoException.New()
+- uid: PortfolioSync.ArduinoException.#ctor(PortfolioSync.ErrorCode)
+  name: ArduinoException(ErrorCode)
+  href: api/PortfolioSync.ArduinoException.html#PortfolioSync_ArduinoException__ctor_PortfolioSync_ErrorCode_
+  commentId: M:PortfolioSync.ArduinoException.#ctor(PortfolioSync.ErrorCode)
+  name.vb: New(ErrorCode)
+  fullName: PortfolioSync.ArduinoException.ArduinoException(PortfolioSync.ErrorCode)
+  fullName.vb: PortfolioSync.ArduinoException.New(PortfolioSync.ErrorCode)
+  nameWithType: ArduinoException.ArduinoException(ErrorCode)
+  nameWithType.vb: ArduinoException.New(ErrorCode)
+- uid: PortfolioSync.ArduinoException.#ctor(System.Byte)
+  name: ArduinoException(byte)
+  href: api/PortfolioSync.ArduinoException.html#PortfolioSync_ArduinoException__ctor_System_Byte_
+  commentId: M:PortfolioSync.ArduinoException.#ctor(System.Byte)
+  name.vb: New(Byte)
+  fullName: PortfolioSync.ArduinoException.ArduinoException(byte)
+  fullName.vb: PortfolioSync.ArduinoException.New(Byte)
+  nameWithType: ArduinoException.ArduinoException(byte)
+  nameWithType.vb: ArduinoException.New(Byte)
+- uid: PortfolioSync.ArduinoException.#ctor(System.String)
+  name: ArduinoException(string)
+  href: api/PortfolioSync.ArduinoException.html#PortfolioSync_ArduinoException__ctor_System_String_
+  commentId: M:PortfolioSync.ArduinoException.#ctor(System.String)
+  name.vb: New(String)
+  fullName: PortfolioSync.ArduinoException.ArduinoException(string)
+  fullName.vb: PortfolioSync.ArduinoException.New(String)
+  nameWithType: ArduinoException.ArduinoException(string)
+  nameWithType.vb: ArduinoException.New(String)
+- uid: PortfolioSync.ArduinoException.#ctor(System.String,System.Exception)
+  name: ArduinoException(string, Exception)
+  href: api/PortfolioSync.ArduinoException.html#PortfolioSync_ArduinoException__ctor_System_String_System_Exception_
+  commentId: M:PortfolioSync.ArduinoException.#ctor(System.String,System.Exception)
+  name.vb: New(String, Exception)
+  fullName: PortfolioSync.ArduinoException.ArduinoException(string, System.Exception)
+  fullName.vb: PortfolioSync.ArduinoException.New(String, System.Exception)
+  nameWithType: ArduinoException.ArduinoException(string, Exception)
+  nameWithType.vb: ArduinoException.New(String, Exception)
+- uid: PortfolioSync.ArduinoException.#ctor*
+  name: ArduinoException
+  href: api/PortfolioSync.ArduinoException.html#PortfolioSync_ArduinoException__ctor_
+  commentId: Overload:PortfolioSync.ArduinoException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: PortfolioSync.ArduinoException.ArduinoException
+  fullName.vb: PortfolioSync.ArduinoException.New
+  nameWithType: ArduinoException.ArduinoException
+  nameWithType.vb: ArduinoException.New
+- uid: PortfolioSync.ArduinoException.ErrorCode
+  name: ErrorCode
+  href: api/PortfolioSync.ArduinoException.html#PortfolioSync_ArduinoException_ErrorCode
+  commentId: P:PortfolioSync.ArduinoException.ErrorCode
+  fullName: PortfolioSync.ArduinoException.ErrorCode
+  nameWithType: ArduinoException.ErrorCode
+- uid: PortfolioSync.ArduinoException.ErrorCode*
+  name: ErrorCode
+  href: api/PortfolioSync.ArduinoException.html#PortfolioSync_ArduinoException_ErrorCode_
+  commentId: Overload:PortfolioSync.ArduinoException.ErrorCode
+  isSpec: "True"
+  fullName: PortfolioSync.ArduinoException.ErrorCode
+  nameWithType: ArduinoException.ErrorCode
+- uid: PortfolioSync.ArduinoException.Timeout
+  name: Timeout()
+  href: api/PortfolioSync.ArduinoException.html#PortfolioSync_ArduinoException_Timeout
+  commentId: M:PortfolioSync.ArduinoException.Timeout
+  fullName: PortfolioSync.ArduinoException.Timeout()
+  nameWithType: ArduinoException.Timeout()
+- uid: PortfolioSync.ArduinoException.Timeout*
+  name: Timeout
+  href: api/PortfolioSync.ArduinoException.html#PortfolioSync_ArduinoException_Timeout_
+  commentId: Overload:PortfolioSync.ArduinoException.Timeout
+  isSpec: "True"
+  fullName: PortfolioSync.ArduinoException.Timeout
+  nameWithType: ArduinoException.Timeout
+- uid: PortfolioSync.ByteListExtensions
+  name: ByteListExtensions
+  href: api/PortfolioSync.ByteListExtensions.html
+  commentId: T:PortfolioSync.ByteListExtensions
+  fullName: PortfolioSync.ByteListExtensions
+  nameWithType: ByteListExtensions
+- uid: PortfolioSync.ByteListExtensions.AddByte(System.Collections.Generic.List{System.Byte},System.Int32)
+  name: AddByte(List<byte>, int)
+  href: api/PortfolioSync.ByteListExtensions.html#PortfolioSync_ByteListExtensions_AddByte_System_Collections_Generic_List_System_Byte__System_Int32_
+  commentId: M:PortfolioSync.ByteListExtensions.AddByte(System.Collections.Generic.List{System.Byte},System.Int32)
+  name.vb: AddByte(List(Of Byte), Integer)
+  fullName: PortfolioSync.ByteListExtensions.AddByte(System.Collections.Generic.List<byte>, int)
+  fullName.vb: PortfolioSync.ByteListExtensions.AddByte(System.Collections.Generic.List(Of Byte), Integer)
+  nameWithType: ByteListExtensions.AddByte(List<byte>, int)
+  nameWithType.vb: ByteListExtensions.AddByte(List(Of Byte), Integer)
+- uid: PortfolioSync.ByteListExtensions.AddByte*
+  name: AddByte
+  href: api/PortfolioSync.ByteListExtensions.html#PortfolioSync_ByteListExtensions_AddByte_
+  commentId: Overload:PortfolioSync.ByteListExtensions.AddByte
+  isSpec: "True"
+  fullName: PortfolioSync.ByteListExtensions.AddByte
+  nameWithType: ByteListExtensions.AddByte
+- uid: PortfolioSync.ByteListExtensions.AddInt(System.Collections.Generic.List{System.Byte},System.Int32)
+  name: AddInt(List<byte>, int)
+  href: api/PortfolioSync.ByteListExtensions.html#PortfolioSync_ByteListExtensions_AddInt_System_Collections_Generic_List_System_Byte__System_Int32_
+  commentId: M:PortfolioSync.ByteListExtensions.AddInt(System.Collections.Generic.List{System.Byte},System.Int32)
+  name.vb: AddInt(List(Of Byte), Integer)
+  fullName: PortfolioSync.ByteListExtensions.AddInt(System.Collections.Generic.List<byte>, int)
+  fullName.vb: PortfolioSync.ByteListExtensions.AddInt(System.Collections.Generic.List(Of Byte), Integer)
+  nameWithType: ByteListExtensions.AddInt(List<byte>, int)
+  nameWithType.vb: ByteListExtensions.AddInt(List(Of Byte), Integer)
+- uid: PortfolioSync.ByteListExtensions.AddInt*
+  name: AddInt
+  href: api/PortfolioSync.ByteListExtensions.html#PortfolioSync_ByteListExtensions_AddInt_
+  commentId: Overload:PortfolioSync.ByteListExtensions.AddInt
+  isSpec: "True"
+  fullName: PortfolioSync.ByteListExtensions.AddInt
+  nameWithType: ByteListExtensions.AddInt
+- uid: PortfolioSync.ByteListExtensions.AddShort(System.Collections.Generic.List{System.Byte},System.Int32)
+  name: AddShort(List<byte>, int)
+  href: api/PortfolioSync.ByteListExtensions.html#PortfolioSync_ByteListExtensions_AddShort_System_Collections_Generic_List_System_Byte__System_Int32_
+  commentId: M:PortfolioSync.ByteListExtensions.AddShort(System.Collections.Generic.List{System.Byte},System.Int32)
+  name.vb: AddShort(List(Of Byte), Integer)
+  fullName: PortfolioSync.ByteListExtensions.AddShort(System.Collections.Generic.List<byte>, int)
+  fullName.vb: PortfolioSync.ByteListExtensions.AddShort(System.Collections.Generic.List(Of Byte), Integer)
+  nameWithType: ByteListExtensions.AddShort(List<byte>, int)
+  nameWithType.vb: ByteListExtensions.AddShort(List(Of Byte), Integer)
+- uid: PortfolioSync.ByteListExtensions.AddShort*
+  name: AddShort
+  href: api/PortfolioSync.ByteListExtensions.html#PortfolioSync_ByteListExtensions_AddShort_
+  commentId: Overload:PortfolioSync.ByteListExtensions.AddShort
+  isSpec: "True"
+  fullName: PortfolioSync.ByteListExtensions.AddShort
+  nameWithType: ByteListExtensions.AddShort
+- uid: PortfolioSync.ByteListExtensions.AddSize(System.Collections.Generic.List{System.Byte},System.Int32)
+  name: AddSize(List<byte>, int)
+  href: api/PortfolioSync.ByteListExtensions.html#PortfolioSync_ByteListExtensions_AddSize_System_Collections_Generic_List_System_Byte__System_Int32_
+  commentId: M:PortfolioSync.ByteListExtensions.AddSize(System.Collections.Generic.List{System.Byte},System.Int32)
+  name.vb: AddSize(List(Of Byte), Integer)
+  fullName: PortfolioSync.ByteListExtensions.AddSize(System.Collections.Generic.List<byte>, int)
+  fullName.vb: PortfolioSync.ByteListExtensions.AddSize(System.Collections.Generic.List(Of Byte), Integer)
+  nameWithType: ByteListExtensions.AddSize(List<byte>, int)
+  nameWithType.vb: ByteListExtensions.AddSize(List(Of Byte), Integer)
+- uid: PortfolioSync.ByteListExtensions.AddSize*
+  name: AddSize
+  href: api/PortfolioSync.ByteListExtensions.html#PortfolioSync_ByteListExtensions_AddSize_
+  commentId: Overload:PortfolioSync.ByteListExtensions.AddSize
+  isSpec: "True"
+  fullName: PortfolioSync.ByteListExtensions.AddSize
+  nameWithType: ByteListExtensions.AddSize
+- uid: PortfolioSync.ByteListExtensions.AddString(System.Collections.Generic.List{System.Byte},System.String)
+  name: AddString(List<byte>, string)
+  href: api/PortfolioSync.ByteListExtensions.html#PortfolioSync_ByteListExtensions_AddString_System_Collections_Generic_List_System_Byte__System_String_
+  commentId: M:PortfolioSync.ByteListExtensions.AddString(System.Collections.Generic.List{System.Byte},System.String)
+  name.vb: AddString(List(Of Byte), String)
+  fullName: PortfolioSync.ByteListExtensions.AddString(System.Collections.Generic.List<byte>, string)
+  fullName.vb: PortfolioSync.ByteListExtensions.AddString(System.Collections.Generic.List(Of Byte), String)
+  nameWithType: ByteListExtensions.AddString(List<byte>, string)
+  nameWithType.vb: ByteListExtensions.AddString(List(Of Byte), String)
+- uid: PortfolioSync.ByteListExtensions.AddString*
+  name: AddString
+  href: api/PortfolioSync.ByteListExtensions.html#PortfolioSync_ByteListExtensions_AddString_
+  commentId: Overload:PortfolioSync.ByteListExtensions.AddString
+  isSpec: "True"
+  fullName: PortfolioSync.ByteListExtensions.AddString
+  nameWithType: ByteListExtensions.AddString
+- uid: PortfolioSync.ByteListExtensions.AddStringZ(System.Collections.Generic.List{System.Byte},System.String)
+  name: AddStringZ(List<byte>, string)
+  href: api/PortfolioSync.ByteListExtensions.html#PortfolioSync_ByteListExtensions_AddStringZ_System_Collections_Generic_List_System_Byte__System_String_
+  commentId: M:PortfolioSync.ByteListExtensions.AddStringZ(System.Collections.Generic.List{System.Byte},System.String)
+  name.vb: AddStringZ(List(Of Byte), String)
+  fullName: PortfolioSync.ByteListExtensions.AddStringZ(System.Collections.Generic.List<byte>, string)
+  fullName.vb: PortfolioSync.ByteListExtensions.AddStringZ(System.Collections.Generic.List(Of Byte), String)
+  nameWithType: ByteListExtensions.AddStringZ(List<byte>, string)
+  nameWithType.vb: ByteListExtensions.AddStringZ(List(Of Byte), String)
+- uid: PortfolioSync.ByteListExtensions.AddStringZ*
+  name: AddStringZ
+  href: api/PortfolioSync.ByteListExtensions.html#PortfolioSync_ByteListExtensions_AddStringZ_
+  commentId: Overload:PortfolioSync.ByteListExtensions.AddStringZ
+  isSpec: "True"
+  fullName: PortfolioSync.ByteListExtensions.AddStringZ
+  nameWithType: ByteListExtensions.AddStringZ
+- uid: PortfolioSync.ByteStreamExtensions
+  name: ByteStreamExtensions
+  href: api/PortfolioSync.ByteStreamExtensions.html
+  commentId: T:PortfolioSync.ByteStreamExtensions
+  fullName: PortfolioSync.ByteStreamExtensions
+  nameWithType: ByteStreamExtensions
+- uid: PortfolioSync.ByteStreamExtensions.ExpectByteAsync(PortfolioSync.IReadByteStream,System.Byte)
+  name: ExpectByteAsync(IReadByteStream, byte)
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_ExpectByteAsync_PortfolioSync_IReadByteStream_System_Byte_
+  commentId: M:PortfolioSync.ByteStreamExtensions.ExpectByteAsync(PortfolioSync.IReadByteStream,System.Byte)
+  name.vb: ExpectByteAsync(IReadByteStream, Byte)
+  fullName: PortfolioSync.ByteStreamExtensions.ExpectByteAsync(PortfolioSync.IReadByteStream, byte)
+  fullName.vb: PortfolioSync.ByteStreamExtensions.ExpectByteAsync(PortfolioSync.IReadByteStream, Byte)
+  nameWithType: ByteStreamExtensions.ExpectByteAsync(IReadByteStream, byte)
+  nameWithType.vb: ByteStreamExtensions.ExpectByteAsync(IReadByteStream, Byte)
+- uid: PortfolioSync.ByteStreamExtensions.ExpectByteAsync(PortfolioSync.IReadByteStream,System.Byte,System.Int32)
+  name: ExpectByteAsync(IReadByteStream, byte, int)
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_ExpectByteAsync_PortfolioSync_IReadByteStream_System_Byte_System_Int32_
+  commentId: M:PortfolioSync.ByteStreamExtensions.ExpectByteAsync(PortfolioSync.IReadByteStream,System.Byte,System.Int32)
+  name.vb: ExpectByteAsync(IReadByteStream, Byte, Integer)
+  fullName: PortfolioSync.ByteStreamExtensions.ExpectByteAsync(PortfolioSync.IReadByteStream, byte, int)
+  fullName.vb: PortfolioSync.ByteStreamExtensions.ExpectByteAsync(PortfolioSync.IReadByteStream, Byte, Integer)
+  nameWithType: ByteStreamExtensions.ExpectByteAsync(IReadByteStream, byte, int)
+  nameWithType.vb: ByteStreamExtensions.ExpectByteAsync(IReadByteStream, Byte, Integer)
+- uid: PortfolioSync.ByteStreamExtensions.ExpectByteAsync(PortfolioSync.IReadByteStream,System.Byte,System.Int32,System.String)
+  name: ExpectByteAsync(IReadByteStream, byte, int, string)
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_ExpectByteAsync_PortfolioSync_IReadByteStream_System_Byte_System_Int32_System_String_
+  commentId: M:PortfolioSync.ByteStreamExtensions.ExpectByteAsync(PortfolioSync.IReadByteStream,System.Byte,System.Int32,System.String)
+  name.vb: ExpectByteAsync(IReadByteStream, Byte, Integer, String)
+  fullName: PortfolioSync.ByteStreamExtensions.ExpectByteAsync(PortfolioSync.IReadByteStream, byte, int, string)
+  fullName.vb: PortfolioSync.ByteStreamExtensions.ExpectByteAsync(PortfolioSync.IReadByteStream, Byte, Integer, String)
+  nameWithType: ByteStreamExtensions.ExpectByteAsync(IReadByteStream, byte, int, string)
+  nameWithType.vb: ByteStreamExtensions.ExpectByteAsync(IReadByteStream, Byte, Integer, String)
+- uid: PortfolioSync.ByteStreamExtensions.ExpectByteAsync(PortfolioSync.IReadByteStream,System.Byte,System.String)
+  name: ExpectByteAsync(IReadByteStream, byte, string)
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_ExpectByteAsync_PortfolioSync_IReadByteStream_System_Byte_System_String_
+  commentId: M:PortfolioSync.ByteStreamExtensions.ExpectByteAsync(PortfolioSync.IReadByteStream,System.Byte,System.String)
+  name.vb: ExpectByteAsync(IReadByteStream, Byte, String)
+  fullName: PortfolioSync.ByteStreamExtensions.ExpectByteAsync(PortfolioSync.IReadByteStream, byte, string)
+  fullName.vb: PortfolioSync.ByteStreamExtensions.ExpectByteAsync(PortfolioSync.IReadByteStream, Byte, String)
+  nameWithType: ByteStreamExtensions.ExpectByteAsync(IReadByteStream, byte, string)
+  nameWithType.vb: ByteStreamExtensions.ExpectByteAsync(IReadByteStream, Byte, String)
+- uid: PortfolioSync.ByteStreamExtensions.ExpectByteAsync*
+  name: ExpectByteAsync
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_ExpectByteAsync_
+  commentId: Overload:PortfolioSync.ByteStreamExtensions.ExpectByteAsync
+  isSpec: "True"
+  fullName: PortfolioSync.ByteStreamExtensions.ExpectByteAsync
+  nameWithType: ByteStreamExtensions.ExpectByteAsync
+- uid: PortfolioSync.ByteStreamExtensions.ReadByte(PortfolioSync.IReadByteStream)
+  name: ReadByte(IReadByteStream)
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_ReadByte_PortfolioSync_IReadByteStream_
+  commentId: M:PortfolioSync.ByteStreamExtensions.ReadByte(PortfolioSync.IReadByteStream)
+  fullName: PortfolioSync.ByteStreamExtensions.ReadByte(PortfolioSync.IReadByteStream)
+  nameWithType: ByteStreamExtensions.ReadByte(IReadByteStream)
+- uid: PortfolioSync.ByteStreamExtensions.ReadByte(PortfolioSync.IReadByteStream,System.Int32,System.Threading.CancellationToken)
+  name: ReadByte(IReadByteStream, int, CancellationToken)
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_ReadByte_PortfolioSync_IReadByteStream_System_Int32_System_Threading_CancellationToken_
+  commentId: M:PortfolioSync.ByteStreamExtensions.ReadByte(PortfolioSync.IReadByteStream,System.Int32,System.Threading.CancellationToken)
+  name.vb: ReadByte(IReadByteStream, Integer, CancellationToken)
+  fullName: PortfolioSync.ByteStreamExtensions.ReadByte(PortfolioSync.IReadByteStream, int, System.Threading.CancellationToken)
+  fullName.vb: PortfolioSync.ByteStreamExtensions.ReadByte(PortfolioSync.IReadByteStream, Integer, System.Threading.CancellationToken)
+  nameWithType: ByteStreamExtensions.ReadByte(IReadByteStream, int, CancellationToken)
+  nameWithType.vb: ByteStreamExtensions.ReadByte(IReadByteStream, Integer, CancellationToken)
+- uid: PortfolioSync.ByteStreamExtensions.ReadByte(PortfolioSync.IReadByteStream,System.Threading.CancellationToken)
+  name: ReadByte(IReadByteStream, CancellationToken)
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_ReadByte_PortfolioSync_IReadByteStream_System_Threading_CancellationToken_
+  commentId: M:PortfolioSync.ByteStreamExtensions.ReadByte(PortfolioSync.IReadByteStream,System.Threading.CancellationToken)
+  fullName: PortfolioSync.ByteStreamExtensions.ReadByte(PortfolioSync.IReadByteStream, System.Threading.CancellationToken)
+  nameWithType: ByteStreamExtensions.ReadByte(IReadByteStream, CancellationToken)
+- uid: PortfolioSync.ByteStreamExtensions.ReadByte*
+  name: ReadByte
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_ReadByte_
+  commentId: Overload:PortfolioSync.ByteStreamExtensions.ReadByte
+  isSpec: "True"
+  fullName: PortfolioSync.ByteStreamExtensions.ReadByte
+  nameWithType: ByteStreamExtensions.ReadByte
+- uid: PortfolioSync.ByteStreamExtensions.ReadByteAsync(PortfolioSync.IReadByteStream)
+  name: ReadByteAsync(IReadByteStream)
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_ReadByteAsync_PortfolioSync_IReadByteStream_
+  commentId: M:PortfolioSync.ByteStreamExtensions.ReadByteAsync(PortfolioSync.IReadByteStream)
+  fullName: PortfolioSync.ByteStreamExtensions.ReadByteAsync(PortfolioSync.IReadByteStream)
+  nameWithType: ByteStreamExtensions.ReadByteAsync(IReadByteStream)
+- uid: PortfolioSync.ByteStreamExtensions.ReadByteAsync(PortfolioSync.IReadByteStream,System.Int32)
+  name: ReadByteAsync(IReadByteStream, int)
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_ReadByteAsync_PortfolioSync_IReadByteStream_System_Int32_
+  commentId: M:PortfolioSync.ByteStreamExtensions.ReadByteAsync(PortfolioSync.IReadByteStream,System.Int32)
+  name.vb: ReadByteAsync(IReadByteStream, Integer)
+  fullName: PortfolioSync.ByteStreamExtensions.ReadByteAsync(PortfolioSync.IReadByteStream, int)
+  fullName.vb: PortfolioSync.ByteStreamExtensions.ReadByteAsync(PortfolioSync.IReadByteStream, Integer)
+  nameWithType: ByteStreamExtensions.ReadByteAsync(IReadByteStream, int)
+  nameWithType.vb: ByteStreamExtensions.ReadByteAsync(IReadByteStream, Integer)
+- uid: PortfolioSync.ByteStreamExtensions.ReadByteAsync(PortfolioSync.IReadByteStream,System.Int32,System.Threading.CancellationToken)
+  name: ReadByteAsync(IReadByteStream, int, CancellationToken)
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_ReadByteAsync_PortfolioSync_IReadByteStream_System_Int32_System_Threading_CancellationToken_
+  commentId: M:PortfolioSync.ByteStreamExtensions.ReadByteAsync(PortfolioSync.IReadByteStream,System.Int32,System.Threading.CancellationToken)
+  name.vb: ReadByteAsync(IReadByteStream, Integer, CancellationToken)
+  fullName: PortfolioSync.ByteStreamExtensions.ReadByteAsync(PortfolioSync.IReadByteStream, int, System.Threading.CancellationToken)
+  fullName.vb: PortfolioSync.ByteStreamExtensions.ReadByteAsync(PortfolioSync.IReadByteStream, Integer, System.Threading.CancellationToken)
+  nameWithType: ByteStreamExtensions.ReadByteAsync(IReadByteStream, int, CancellationToken)
+  nameWithType.vb: ByteStreamExtensions.ReadByteAsync(IReadByteStream, Integer, CancellationToken)
+- uid: PortfolioSync.ByteStreamExtensions.ReadByteAsync*
+  name: ReadByteAsync
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_ReadByteAsync_
+  commentId: Overload:PortfolioSync.ByteStreamExtensions.ReadByteAsync
+  isSpec: "True"
+  fullName: PortfolioSync.ByteStreamExtensions.ReadByteAsync
+  nameWithType: ByteStreamExtensions.ReadByteAsync
+- uid: PortfolioSync.ByteStreamExtensions.ReadWordAsync(PortfolioSync.IReadByteStream,System.Threading.CancellationToken)
+  name: ReadWordAsync(IReadByteStream, CancellationToken)
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_ReadWordAsync_PortfolioSync_IReadByteStream_System_Threading_CancellationToken_
+  commentId: M:PortfolioSync.ByteStreamExtensions.ReadWordAsync(PortfolioSync.IReadByteStream,System.Threading.CancellationToken)
+  fullName: PortfolioSync.ByteStreamExtensions.ReadWordAsync(PortfolioSync.IReadByteStream, System.Threading.CancellationToken)
+  nameWithType: ByteStreamExtensions.ReadWordAsync(IReadByteStream, CancellationToken)
+- uid: PortfolioSync.ByteStreamExtensions.ReadWordAsync*
+  name: ReadWordAsync
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_ReadWordAsync_
+  commentId: Overload:PortfolioSync.ByteStreamExtensions.ReadWordAsync
+  isSpec: "True"
+  fullName: PortfolioSync.ByteStreamExtensions.ReadWordAsync
+  nameWithType: ByteStreamExtensions.ReadWordAsync
+- uid: PortfolioSync.ByteStreamExtensions.StartCommand(PortfolioSync.IWriteByteStream,PortfolioSync.Command)
+  name: StartCommand(IWriteByteStream, Command)
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_StartCommand_PortfolioSync_IWriteByteStream_PortfolioSync_Command_
+  commentId: M:PortfolioSync.ByteStreamExtensions.StartCommand(PortfolioSync.IWriteByteStream,PortfolioSync.Command)
+  fullName: PortfolioSync.ByteStreamExtensions.StartCommand(PortfolioSync.IWriteByteStream, PortfolioSync.Command)
+  nameWithType: ByteStreamExtensions.StartCommand(IWriteByteStream, Command)
+- uid: PortfolioSync.ByteStreamExtensions.StartCommand*
+  name: StartCommand
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_StartCommand_
+  commentId: Overload:PortfolioSync.ByteStreamExtensions.StartCommand
+  isSpec: "True"
+  fullName: PortfolioSync.ByteStreamExtensions.StartCommand
+  nameWithType: ByteStreamExtensions.StartCommand
+- uid: PortfolioSync.ByteStreamExtensions.SwapNibbles(System.Byte)
+  name: SwapNibbles(byte)
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_SwapNibbles_System_Byte_
+  commentId: M:PortfolioSync.ByteStreamExtensions.SwapNibbles(System.Byte)
+  name.vb: SwapNibbles(Byte)
+  fullName: PortfolioSync.ByteStreamExtensions.SwapNibbles(byte)
+  fullName.vb: PortfolioSync.ByteStreamExtensions.SwapNibbles(Byte)
+  nameWithType: ByteStreamExtensions.SwapNibbles(byte)
+  nameWithType.vb: ByteStreamExtensions.SwapNibbles(Byte)
+- uid: PortfolioSync.ByteStreamExtensions.SwapNibbles*
+  name: SwapNibbles
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_SwapNibbles_
+  commentId: Overload:PortfolioSync.ByteStreamExtensions.SwapNibbles
+  isSpec: "True"
+  fullName: PortfolioSync.ByteStreamExtensions.SwapNibbles
+  nameWithType: ByteStreamExtensions.SwapNibbles
+- uid: PortfolioSync.ByteStreamExtensions.TryReadByte(PortfolioSync.IReadByteStream,System.Int32,System.Threading.CancellationToken)
+  name: TryReadByte(IReadByteStream, int, CancellationToken)
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_TryReadByte_PortfolioSync_IReadByteStream_System_Int32_System_Threading_CancellationToken_
+  commentId: M:PortfolioSync.ByteStreamExtensions.TryReadByte(PortfolioSync.IReadByteStream,System.Int32,System.Threading.CancellationToken)
+  name.vb: TryReadByte(IReadByteStream, Integer, CancellationToken)
+  fullName: PortfolioSync.ByteStreamExtensions.TryReadByte(PortfolioSync.IReadByteStream, int, System.Threading.CancellationToken)
+  fullName.vb: PortfolioSync.ByteStreamExtensions.TryReadByte(PortfolioSync.IReadByteStream, Integer, System.Threading.CancellationToken)
+  nameWithType: ByteStreamExtensions.TryReadByte(IReadByteStream, int, CancellationToken)
+  nameWithType.vb: ByteStreamExtensions.TryReadByte(IReadByteStream, Integer, CancellationToken)
+- uid: PortfolioSync.ByteStreamExtensions.TryReadByte*
+  name: TryReadByte
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_TryReadByte_
+  commentId: Overload:PortfolioSync.ByteStreamExtensions.TryReadByte
+  isSpec: "True"
+  fullName: PortfolioSync.ByteStreamExtensions.TryReadByte
+  nameWithType: ByteStreamExtensions.TryReadByte
+- uid: PortfolioSync.ByteStreamExtensions.TryReadByteAsync(PortfolioSync.IReadByteStream,System.Int32)
+  name: TryReadByteAsync(IReadByteStream, int)
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_TryReadByteAsync_PortfolioSync_IReadByteStream_System_Int32_
+  commentId: M:PortfolioSync.ByteStreamExtensions.TryReadByteAsync(PortfolioSync.IReadByteStream,System.Int32)
+  name.vb: TryReadByteAsync(IReadByteStream, Integer)
+  fullName: PortfolioSync.ByteStreamExtensions.TryReadByteAsync(PortfolioSync.IReadByteStream, int)
+  fullName.vb: PortfolioSync.ByteStreamExtensions.TryReadByteAsync(PortfolioSync.IReadByteStream, Integer)
+  nameWithType: ByteStreamExtensions.TryReadByteAsync(IReadByteStream, int)
+  nameWithType.vb: ByteStreamExtensions.TryReadByteAsync(IReadByteStream, Integer)
+- uid: PortfolioSync.ByteStreamExtensions.TryReadByteAsync(PortfolioSync.IReadByteStream,System.Int32,System.Threading.CancellationToken)
+  name: TryReadByteAsync(IReadByteStream, int, CancellationToken)
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_TryReadByteAsync_PortfolioSync_IReadByteStream_System_Int32_System_Threading_CancellationToken_
+  commentId: M:PortfolioSync.ByteStreamExtensions.TryReadByteAsync(PortfolioSync.IReadByteStream,System.Int32,System.Threading.CancellationToken)
+  name.vb: TryReadByteAsync(IReadByteStream, Integer, CancellationToken)
+  fullName: PortfolioSync.ByteStreamExtensions.TryReadByteAsync(PortfolioSync.IReadByteStream, int, System.Threading.CancellationToken)
+  fullName.vb: PortfolioSync.ByteStreamExtensions.TryReadByteAsync(PortfolioSync.IReadByteStream, Integer, System.Threading.CancellationToken)
+  nameWithType: ByteStreamExtensions.TryReadByteAsync(IReadByteStream, int, CancellationToken)
+  nameWithType.vb: ByteStreamExtensions.TryReadByteAsync(IReadByteStream, Integer, CancellationToken)
+- uid: PortfolioSync.ByteStreamExtensions.TryReadByteAsync*
+  name: TryReadByteAsync
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_TryReadByteAsync_
+  commentId: Overload:PortfolioSync.ByteStreamExtensions.TryReadByteAsync
+  isSpec: "True"
+  fullName: PortfolioSync.ByteStreamExtensions.TryReadByteAsync
+  nameWithType: ByteStreamExtensions.TryReadByteAsync
+- uid: PortfolioSync.ByteStreamExtensions.WriteByte(PortfolioSync.IWriteByteStream,System.Int32)
+  name: WriteByte(IWriteByteStream, int)
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_WriteByte_PortfolioSync_IWriteByteStream_System_Int32_
+  commentId: M:PortfolioSync.ByteStreamExtensions.WriteByte(PortfolioSync.IWriteByteStream,System.Int32)
+  name.vb: WriteByte(IWriteByteStream, Integer)
+  fullName: PortfolioSync.ByteStreamExtensions.WriteByte(PortfolioSync.IWriteByteStream, int)
+  fullName.vb: PortfolioSync.ByteStreamExtensions.WriteByte(PortfolioSync.IWriteByteStream, Integer)
+  nameWithType: ByteStreamExtensions.WriteByte(IWriteByteStream, int)
+  nameWithType.vb: ByteStreamExtensions.WriteByte(IWriteByteStream, Integer)
+- uid: PortfolioSync.ByteStreamExtensions.WriteByte*
+  name: WriteByte
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_WriteByte_
+  commentId: Overload:PortfolioSync.ByteStreamExtensions.WriteByte
+  isSpec: "True"
+  fullName: PortfolioSync.ByteStreamExtensions.WriteByte
+  nameWithType: ByteStreamExtensions.WriteByte
+- uid: PortfolioSync.ByteStreamExtensions.WriteKey(PortfolioSync.IWriteByteStream,System.Char)
+  name: WriteKey(IWriteByteStream, char)
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_WriteKey_PortfolioSync_IWriteByteStream_System_Char_
+  commentId: M:PortfolioSync.ByteStreamExtensions.WriteKey(PortfolioSync.IWriteByteStream,System.Char)
+  name.vb: WriteKey(IWriteByteStream, Char)
+  fullName: PortfolioSync.ByteStreamExtensions.WriteKey(PortfolioSync.IWriteByteStream, char)
+  fullName.vb: PortfolioSync.ByteStreamExtensions.WriteKey(PortfolioSync.IWriteByteStream, Char)
+  nameWithType: ByteStreamExtensions.WriteKey(IWriteByteStream, char)
+  nameWithType.vb: ByteStreamExtensions.WriteKey(IWriteByteStream, Char)
+- uid: PortfolioSync.ByteStreamExtensions.WriteKey*
+  name: WriteKey
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_WriteKey_
+  commentId: Overload:PortfolioSync.ByteStreamExtensions.WriteKey
+  isSpec: "True"
+  fullName: PortfolioSync.ByteStreamExtensions.WriteKey
+  nameWithType: ByteStreamExtensions.WriteKey
+- uid: PortfolioSync.ByteStreamExtensions.WriteNak(PortfolioSync.IWriteByteStream,PortfolioSync.ErrorCode)
+  name: WriteNak(IWriteByteStream, ErrorCode)
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_WriteNak_PortfolioSync_IWriteByteStream_PortfolioSync_ErrorCode_
+  commentId: M:PortfolioSync.ByteStreamExtensions.WriteNak(PortfolioSync.IWriteByteStream,PortfolioSync.ErrorCode)
+  fullName: PortfolioSync.ByteStreamExtensions.WriteNak(PortfolioSync.IWriteByteStream, PortfolioSync.ErrorCode)
+  nameWithType: ByteStreamExtensions.WriteNak(IWriteByteStream, ErrorCode)
+- uid: PortfolioSync.ByteStreamExtensions.WriteNak*
+  name: WriteNak
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_WriteNak_
+  commentId: Overload:PortfolioSync.ByteStreamExtensions.WriteNak
+  isSpec: "True"
+  fullName: PortfolioSync.ByteStreamExtensions.WriteNak
+  nameWithType: ByteStreamExtensions.WriteNak
+- uid: PortfolioSync.ByteStreamExtensions.WriteWord(PortfolioSync.IWriteByteStream,System.Int32)
+  name: WriteWord(IWriteByteStream, int)
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_WriteWord_PortfolioSync_IWriteByteStream_System_Int32_
+  commentId: M:PortfolioSync.ByteStreamExtensions.WriteWord(PortfolioSync.IWriteByteStream,System.Int32)
+  name.vb: WriteWord(IWriteByteStream, Integer)
+  fullName: PortfolioSync.ByteStreamExtensions.WriteWord(PortfolioSync.IWriteByteStream, int)
+  fullName.vb: PortfolioSync.ByteStreamExtensions.WriteWord(PortfolioSync.IWriteByteStream, Integer)
+  nameWithType: ByteStreamExtensions.WriteWord(IWriteByteStream, int)
+  nameWithType.vb: ByteStreamExtensions.WriteWord(IWriteByteStream, Integer)
+- uid: PortfolioSync.ByteStreamExtensions.WriteWord*
+  name: WriteWord
+  href: api/PortfolioSync.ByteStreamExtensions.html#PortfolioSync_ByteStreamExtensions_WriteWord_
+  commentId: Overload:PortfolioSync.ByteStreamExtensions.WriteWord
+  isSpec: "True"
+  fullName: PortfolioSync.ByteStreamExtensions.WriteWord
+  nameWithType: ByteStreamExtensions.WriteWord
+- uid: PortfolioSync.Command
+  name: Command
+  href: api/PortfolioSync.Command.html
+  commentId: T:PortfolioSync.Command
+  fullName: PortfolioSync.Command
+  nameWithType: Command
+- uid: PortfolioSync.Command.Init
+  name: Init
+  href: api/PortfolioSync.Command.html#PortfolioSync_Command_Init
+  commentId: F:PortfolioSync.Command.Init
+  fullName: PortfolioSync.Command.Init
+  nameWithType: Command.Init
+- uid: PortfolioSync.Command.Ping
+  name: Ping
+  href: api/PortfolioSync.Command.html#PortfolioSync_Command_Ping
+  commentId: F:PortfolioSync.Command.Ping
+  fullName: PortfolioSync.Command.Ping
+  nameWithType: Command.Ping
+- uid: PortfolioSync.Command.RetreiveBlock
+  name: RetreiveBlock
+  href: api/PortfolioSync.Command.html#PortfolioSync_Command_RetreiveBlock
+  commentId: F:PortfolioSync.Command.RetreiveBlock
+  fullName: PortfolioSync.Command.RetreiveBlock
+  nameWithType: Command.RetreiveBlock
+- uid: PortfolioSync.Command.SendBlock
+  name: SendBlock
+  href: api/PortfolioSync.Command.html#PortfolioSync_Command_SendBlock
+  commentId: F:PortfolioSync.Command.SendBlock
+  fullName: PortfolioSync.Command.SendBlock
+  nameWithType: Command.SendBlock
+- uid: PortfolioSync.Command.WaitForServer
+  name: WaitForServer
+  href: api/PortfolioSync.Command.html#PortfolioSync_Command_WaitForServer
+  commentId: F:PortfolioSync.Command.WaitForServer
+  fullName: PortfolioSync.Command.WaitForServer
+  nameWithType: Command.WaitForServer
+- uid: PortfolioSync.DataException
+  name: DataException
+  href: api/PortfolioSync.DataException.html
+  commentId: T:PortfolioSync.DataException
+  fullName: PortfolioSync.DataException
+  nameWithType: DataException
+- uid: PortfolioSync.DataException.#ctor(System.String)
+  name: DataException(string)
+  href: api/PortfolioSync.DataException.html#PortfolioSync_DataException__ctor_System_String_
+  commentId: M:PortfolioSync.DataException.#ctor(System.String)
+  name.vb: New(String)
+  fullName: PortfolioSync.DataException.DataException(string)
+  fullName.vb: PortfolioSync.DataException.New(String)
+  nameWithType: DataException.DataException(string)
+  nameWithType.vb: DataException.New(String)
+- uid: PortfolioSync.DataException.#ctor(System.String,System.Exception)
+  name: DataException(string, Exception)
+  href: api/PortfolioSync.DataException.html#PortfolioSync_DataException__ctor_System_String_System_Exception_
+  commentId: M:PortfolioSync.DataException.#ctor(System.String,System.Exception)
+  name.vb: New(String, Exception)
+  fullName: PortfolioSync.DataException.DataException(string, System.Exception)
+  fullName.vb: PortfolioSync.DataException.New(String, System.Exception)
+  nameWithType: DataException.DataException(string, Exception)
+  nameWithType.vb: DataException.New(String, Exception)
+- uid: PortfolioSync.DataException.#ctor*
+  name: DataException
+  href: api/PortfolioSync.DataException.html#PortfolioSync_DataException__ctor_
+  commentId: Overload:PortfolioSync.DataException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: PortfolioSync.DataException.DataException
+  fullName.vb: PortfolioSync.DataException.New
+  nameWithType: DataException.DataException
+  nameWithType.vb: DataException.New
+- uid: PortfolioSync.DataException.Expect(System.Byte,System.Byte)
+  name: Expect(byte, byte)
+  href: api/PortfolioSync.DataException.html#PortfolioSync_DataException_Expect_System_Byte_System_Byte_
+  commentId: M:PortfolioSync.DataException.Expect(System.Byte,System.Byte)
+  name.vb: Expect(Byte, Byte)
+  fullName: PortfolioSync.DataException.Expect(byte, byte)
+  fullName.vb: PortfolioSync.DataException.Expect(Byte, Byte)
+  nameWithType: DataException.Expect(byte, byte)
+  nameWithType.vb: DataException.Expect(Byte, Byte)
+- uid: PortfolioSync.DataException.Expect(System.Byte,System.Byte,System.String)
+  name: Expect(byte, byte, string)
+  href: api/PortfolioSync.DataException.html#PortfolioSync_DataException_Expect_System_Byte_System_Byte_System_String_
+  commentId: M:PortfolioSync.DataException.Expect(System.Byte,System.Byte,System.String)
+  name.vb: Expect(Byte, Byte, String)
+  fullName: PortfolioSync.DataException.Expect(byte, byte, string)
+  fullName.vb: PortfolioSync.DataException.Expect(Byte, Byte, String)
+  nameWithType: DataException.Expect(byte, byte, string)
+  nameWithType.vb: DataException.Expect(Byte, Byte, String)
+- uid: PortfolioSync.DataException.Expect*
+  name: Expect
+  href: api/PortfolioSync.DataException.html#PortfolioSync_DataException_Expect_
+  commentId: Overload:PortfolioSync.DataException.Expect
+  isSpec: "True"
+  fullName: PortfolioSync.DataException.Expect
+  nameWithType: DataException.Expect
+- uid: PortfolioSync.ErrorCode
+  name: ErrorCode
+  href: api/PortfolioSync.ErrorCode.html
+  commentId: T:PortfolioSync.ErrorCode
+  fullName: PortfolioSync.ErrorCode
+  nameWithType: ErrorCode
+- uid: PortfolioSync.ErrorCode.Cancelled
+  name: Cancelled
+  href: api/PortfolioSync.ErrorCode.html#PortfolioSync_ErrorCode_Cancelled
+  commentId: F:PortfolioSync.ErrorCode.Cancelled
+  fullName: PortfolioSync.ErrorCode.Cancelled
+  nameWithType: ErrorCode.Cancelled
+- uid: PortfolioSync.ErrorCode.ChecksumError
+  name: ChecksumError
+  href: api/PortfolioSync.ErrorCode.html#PortfolioSync_ErrorCode_ChecksumError
+  commentId: F:PortfolioSync.ErrorCode.ChecksumError
+  fullName: PortfolioSync.ErrorCode.ChecksumError
+  nameWithType: ErrorCode.ChecksumError
+- uid: PortfolioSync.ErrorCode.End
+  name: End
+  href: api/PortfolioSync.ErrorCode.html#PortfolioSync_ErrorCode_End
+  commentId: F:PortfolioSync.ErrorCode.End
+  fullName: PortfolioSync.ErrorCode.End
+  nameWithType: ErrorCode.End
+- uid: PortfolioSync.ErrorCode.Ok
+  name: Ok
+  href: api/PortfolioSync.ErrorCode.html#PortfolioSync_ErrorCode_Ok
+  commentId: F:PortfolioSync.ErrorCode.Ok
+  fullName: PortfolioSync.ErrorCode.Ok
+  nameWithType: ErrorCode.Ok
+- uid: PortfolioSync.ErrorCode.Overflow
+  name: Overflow
+  href: api/PortfolioSync.ErrorCode.html#PortfolioSync_ErrorCode_Overflow
+  commentId: F:PortfolioSync.ErrorCode.Overflow
+  fullName: PortfolioSync.ErrorCode.Overflow
+  nameWithType: ErrorCode.Overflow
+- uid: PortfolioSync.ErrorCode.SyncError
+  name: SyncError
+  href: api/PortfolioSync.ErrorCode.html#PortfolioSync_ErrorCode_SyncError
+  commentId: F:PortfolioSync.ErrorCode.SyncError
+  fullName: PortfolioSync.ErrorCode.SyncError
+  nameWithType: ErrorCode.SyncError
+- uid: PortfolioSync.ErrorCode.Timeout
+  name: Timeout
+  href: api/PortfolioSync.ErrorCode.html#PortfolioSync_ErrorCode_Timeout
+  commentId: F:PortfolioSync.ErrorCode.Timeout
+  fullName: PortfolioSync.ErrorCode.Timeout
+  nameWithType: ErrorCode.Timeout
+- uid: PortfolioSync.ErrorCode.Unexpected
+  name: Unexpected
+  href: api/PortfolioSync.ErrorCode.html#PortfolioSync_ErrorCode_Unexpected
+  commentId: F:PortfolioSync.ErrorCode.Unexpected
+  fullName: PortfolioSync.ErrorCode.Unexpected
+  nameWithType: ErrorCode.Unexpected
+- uid: PortfolioSync.EventType
+  name: EventType
+  href: api/PortfolioSync.EventType.html
+  commentId: T:PortfolioSync.EventType
+  fullName: PortfolioSync.EventType
+  nameWithType: EventType
+- uid: PortfolioSync.EventType.Insertion
+  name: Insertion
+  href: api/PortfolioSync.EventType.html#PortfolioSync_EventType_Insertion
+  commentId: F:PortfolioSync.EventType.Insertion
+  fullName: PortfolioSync.EventType.Insertion
+  nameWithType: EventType.Insertion
+- uid: PortfolioSync.EventType.Removal
+  name: Removal
+  href: api/PortfolioSync.EventType.html#PortfolioSync_EventType_Removal
+  commentId: F:PortfolioSync.EventType.Removal
+  fullName: PortfolioSync.EventType.Removal
+  nameWithType: EventType.Removal
+- uid: PortfolioSync.Extensions
+  name: Extensions
+  href: api/PortfolioSync.Extensions.html
+  commentId: T:PortfolioSync.Extensions
+  fullName: PortfolioSync.Extensions
+  nameWithType: Extensions
+- uid: PortfolioSync.Extensions.GetMemberName(System.Linq.Expressions.LambdaExpression)
+  name: GetMemberName(LambdaExpression)
+  href: api/PortfolioSync.Extensions.html#PortfolioSync_Extensions_GetMemberName_System_Linq_Expressions_LambdaExpression_
+  commentId: M:PortfolioSync.Extensions.GetMemberName(System.Linq.Expressions.LambdaExpression)
+  fullName: PortfolioSync.Extensions.GetMemberName(System.Linq.Expressions.LambdaExpression)
+  nameWithType: Extensions.GetMemberName(LambdaExpression)
+- uid: PortfolioSync.Extensions.GetMemberName*
+  name: GetMemberName
+  href: api/PortfolioSync.Extensions.html#PortfolioSync_Extensions_GetMemberName_
+  commentId: Overload:PortfolioSync.Extensions.GetMemberName
+  isSpec: "True"
+  fullName: PortfolioSync.Extensions.GetMemberName
+  nameWithType: Extensions.GetMemberName
+- uid: PortfolioSync.Extensions.IsValidFileName(System.String)
+  name: IsValidFileName(string)
+  href: api/PortfolioSync.Extensions.html#PortfolioSync_Extensions_IsValidFileName_System_String_
+  commentId: M:PortfolioSync.Extensions.IsValidFileName(System.String)
+  name.vb: IsValidFileName(String)
+  fullName: PortfolioSync.Extensions.IsValidFileName(string)
+  fullName.vb: PortfolioSync.Extensions.IsValidFileName(String)
+  nameWithType: Extensions.IsValidFileName(string)
+  nameWithType.vb: Extensions.IsValidFileName(String)
+- uid: PortfolioSync.Extensions.IsValidFileName*
+  name: IsValidFileName
+  href: api/PortfolioSync.Extensions.html#PortfolioSync_Extensions_IsValidFileName_
+  commentId: Overload:PortfolioSync.Extensions.IsValidFileName
+  isSpec: "True"
+  fullName: PortfolioSync.Extensions.IsValidFileName
+  nameWithType: Extensions.IsValidFileName
+- uid: PortfolioSync.Extensions.Raise*
+  name: Raise
+  href: api/PortfolioSync.Extensions.html#PortfolioSync_Extensions_Raise_
+  commentId: Overload:PortfolioSync.Extensions.Raise
+  isSpec: "True"
+  fullName: PortfolioSync.Extensions.Raise
+  nameWithType: Extensions.Raise
+- uid: PortfolioSync.Extensions.Raise``1(System.EventHandler{``0},System.Object,``0)
+  name: Raise<T>(EventHandler<T>, object?, T)
+  href: api/PortfolioSync.Extensions.html#PortfolioSync_Extensions_Raise__1_System_EventHandler___0__System_Object___0_
+  commentId: M:PortfolioSync.Extensions.Raise``1(System.EventHandler{``0},System.Object,``0)
+  name.vb: Raise(Of T)(EventHandler(Of T), Object, T)
+  fullName: PortfolioSync.Extensions.Raise<T>(System.EventHandler<T>, object?, T)
+  fullName.vb: PortfolioSync.Extensions.Raise(Of T)(System.EventHandler(Of T), Object, T)
+  nameWithType: Extensions.Raise<T>(EventHandler<T>, object?, T)
+  nameWithType.vb: Extensions.Raise(Of T)(EventHandler(Of T), Object, T)
+- uid: PortfolioSync.Extensions.Truncate(System.String,System.Int32)
+  name: Truncate(string, int)
+  href: api/PortfolioSync.Extensions.html#PortfolioSync_Extensions_Truncate_System_String_System_Int32_
+  commentId: M:PortfolioSync.Extensions.Truncate(System.String,System.Int32)
+  name.vb: Truncate(String, Integer)
+  fullName: PortfolioSync.Extensions.Truncate(string, int)
+  fullName.vb: PortfolioSync.Extensions.Truncate(String, Integer)
+  nameWithType: Extensions.Truncate(string, int)
+  nameWithType.vb: Extensions.Truncate(String, Integer)
+- uid: PortfolioSync.Extensions.Truncate*
+  name: Truncate
+  href: api/PortfolioSync.Extensions.html#PortfolioSync_Extensions_Truncate_
+  commentId: Overload:PortfolioSync.Extensions.Truncate
+  isSpec: "True"
+  fullName: PortfolioSync.Extensions.Truncate
+  nameWithType: Extensions.Truncate
+- uid: PortfolioSync.Helpers
+  name: PortfolioSync.Helpers
+  href: api/PortfolioSync.Helpers.html
+  commentId: N:PortfolioSync.Helpers
+  fullName: PortfolioSync.Helpers
+  nameWithType: PortfolioSync.Helpers
+- uid: PortfolioSync.Helpers.BooleanToVisibilityConverter
+  name: BooleanToVisibilityConverter
+  href: api/PortfolioSync.Helpers.BooleanToVisibilityConverter.html
+  commentId: T:PortfolioSync.Helpers.BooleanToVisibilityConverter
+  fullName: PortfolioSync.Helpers.BooleanToVisibilityConverter
+  nameWithType: BooleanToVisibilityConverter
+- uid: PortfolioSync.Helpers.BooleanToVisibilityConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)
+  name: Convert(object, Type, object, CultureInfo)
+  href: api/PortfolioSync.Helpers.BooleanToVisibilityConverter.html#PortfolioSync_Helpers_BooleanToVisibilityConverter_Convert_System_Object_System_Type_System_Object_System_Globalization_CultureInfo_
+  commentId: M:PortfolioSync.Helpers.BooleanToVisibilityConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)
+  name.vb: Convert(Object, Type, Object, CultureInfo)
+  fullName: PortfolioSync.Helpers.BooleanToVisibilityConverter.Convert(object, System.Type, object, System.Globalization.CultureInfo)
+  fullName.vb: PortfolioSync.Helpers.BooleanToVisibilityConverter.Convert(Object, System.Type, Object, System.Globalization.CultureInfo)
+  nameWithType: BooleanToVisibilityConverter.Convert(object, Type, object, CultureInfo)
+  nameWithType.vb: BooleanToVisibilityConverter.Convert(Object, Type, Object, CultureInfo)
+- uid: PortfolioSync.Helpers.BooleanToVisibilityConverter.Convert*
+  name: Convert
+  href: api/PortfolioSync.Helpers.BooleanToVisibilityConverter.html#PortfolioSync_Helpers_BooleanToVisibilityConverter_Convert_
+  commentId: Overload:PortfolioSync.Helpers.BooleanToVisibilityConverter.Convert
+  isSpec: "True"
+  fullName: PortfolioSync.Helpers.BooleanToVisibilityConverter.Convert
+  nameWithType: BooleanToVisibilityConverter.Convert
+- uid: PortfolioSync.Helpers.BooleanToVisibilityConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)
+  name: ConvertBack(object, Type, object, CultureInfo)
+  href: api/PortfolioSync.Helpers.BooleanToVisibilityConverter.html#PortfolioSync_Helpers_BooleanToVisibilityConverter_ConvertBack_System_Object_System_Type_System_Object_System_Globalization_CultureInfo_
+  commentId: M:PortfolioSync.Helpers.BooleanToVisibilityConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)
+  name.vb: ConvertBack(Object, Type, Object, CultureInfo)
+  fullName: PortfolioSync.Helpers.BooleanToVisibilityConverter.ConvertBack(object, System.Type, object, System.Globalization.CultureInfo)
+  fullName.vb: PortfolioSync.Helpers.BooleanToVisibilityConverter.ConvertBack(Object, System.Type, Object, System.Globalization.CultureInfo)
+  nameWithType: BooleanToVisibilityConverter.ConvertBack(object, Type, object, CultureInfo)
+  nameWithType.vb: BooleanToVisibilityConverter.ConvertBack(Object, Type, Object, CultureInfo)
+- uid: PortfolioSync.Helpers.BooleanToVisibilityConverter.ConvertBack*
+  name: ConvertBack
+  href: api/PortfolioSync.Helpers.BooleanToVisibilityConverter.html#PortfolioSync_Helpers_BooleanToVisibilityConverter_ConvertBack_
+  commentId: Overload:PortfolioSync.Helpers.BooleanToVisibilityConverter.ConvertBack
+  isSpec: "True"
+  fullName: PortfolioSync.Helpers.BooleanToVisibilityConverter.ConvertBack
+  nameWithType: BooleanToVisibilityConverter.ConvertBack
+- uid: PortfolioSync.Helpers.BooleanToVisibilityConverter.FalseValue
+  name: FalseValue
+  href: api/PortfolioSync.Helpers.BooleanToVisibilityConverter.html#PortfolioSync_Helpers_BooleanToVisibilityConverter_FalseValue
+  commentId: P:PortfolioSync.Helpers.BooleanToVisibilityConverter.FalseValue
+  fullName: PortfolioSync.Helpers.BooleanToVisibilityConverter.FalseValue
+  nameWithType: BooleanToVisibilityConverter.FalseValue
+- uid: PortfolioSync.Helpers.BooleanToVisibilityConverter.FalseValue*
+  name: FalseValue
+  href: api/PortfolioSync.Helpers.BooleanToVisibilityConverter.html#PortfolioSync_Helpers_BooleanToVisibilityConverter_FalseValue_
+  commentId: Overload:PortfolioSync.Helpers.BooleanToVisibilityConverter.FalseValue
+  isSpec: "True"
+  fullName: PortfolioSync.Helpers.BooleanToVisibilityConverter.FalseValue
+  nameWithType: BooleanToVisibilityConverter.FalseValue
+- uid: PortfolioSync.Helpers.BooleanToVisibilityConverter.TrueValue
+  name: TrueValue
+  href: api/PortfolioSync.Helpers.BooleanToVisibilityConverter.html#PortfolioSync_Helpers_BooleanToVisibilityConverter_TrueValue
+  commentId: P:PortfolioSync.Helpers.BooleanToVisibilityConverter.TrueValue
+  fullName: PortfolioSync.Helpers.BooleanToVisibilityConverter.TrueValue
+  nameWithType: BooleanToVisibilityConverter.TrueValue
+- uid: PortfolioSync.Helpers.BooleanToVisibilityConverter.TrueValue*
+  name: TrueValue
+  href: api/PortfolioSync.Helpers.BooleanToVisibilityConverter.html#PortfolioSync_Helpers_BooleanToVisibilityConverter_TrueValue_
+  commentId: Overload:PortfolioSync.Helpers.BooleanToVisibilityConverter.TrueValue
+  isSpec: "True"
+  fullName: PortfolioSync.Helpers.BooleanToVisibilityConverter.TrueValue
+  nameWithType: BooleanToVisibilityConverter.TrueValue
+- uid: PortfolioSync.IByteStream
+  name: IByteStream
+  href: api/PortfolioSync.IByteStream.html
+  commentId: T:PortfolioSync.IByteStream
+  fullName: PortfolioSync.IByteStream
+  nameWithType: IByteStream
+- uid: PortfolioSync.IDebugTarget
+  name: IDebugTarget
+  href: api/PortfolioSync.IDebugTarget.html
+  commentId: T:PortfolioSync.IDebugTarget
+  fullName: PortfolioSync.IDebugTarget
+  nameWithType: IDebugTarget
+- uid: PortfolioSync.IDebugTarget.DebugWrite(System.String)
+  name: DebugWrite(string)
+  href: api/PortfolioSync.IDebugTarget.html#PortfolioSync_IDebugTarget_DebugWrite_System_String_
+  commentId: M:PortfolioSync.IDebugTarget.DebugWrite(System.String)
+  name.vb: DebugWrite(String)
+  fullName: PortfolioSync.IDebugTarget.DebugWrite(string)
+  fullName.vb: PortfolioSync.IDebugTarget.DebugWrite(String)
+  nameWithType: IDebugTarget.DebugWrite(string)
+  nameWithType.vb: IDebugTarget.DebugWrite(String)
+- uid: PortfolioSync.IDebugTarget.DebugWrite*
+  name: DebugWrite
+  href: api/PortfolioSync.IDebugTarget.html#PortfolioSync_IDebugTarget_DebugWrite_
+  commentId: Overload:PortfolioSync.IDebugTarget.DebugWrite
+  isSpec: "True"
+  fullName: PortfolioSync.IDebugTarget.DebugWrite
+  nameWithType: IDebugTarget.DebugWrite
+- uid: PortfolioSync.IDebugTarget.DebugWriteLine
+  name: DebugWriteLine()
+  href: api/PortfolioSync.IDebugTarget.html#PortfolioSync_IDebugTarget_DebugWriteLine
+  commentId: M:PortfolioSync.IDebugTarget.DebugWriteLine
+  fullName: PortfolioSync.IDebugTarget.DebugWriteLine()
+  nameWithType: IDebugTarget.DebugWriteLine()
+- uid: PortfolioSync.IDebugTarget.DebugWriteLine(System.String)
+  name: DebugWriteLine(string)
+  href: api/PortfolioSync.IDebugTarget.html#PortfolioSync_IDebugTarget_DebugWriteLine_System_String_
+  commentId: M:PortfolioSync.IDebugTarget.DebugWriteLine(System.String)
+  name.vb: DebugWriteLine(String)
+  fullName: PortfolioSync.IDebugTarget.DebugWriteLine(string)
+  fullName.vb: PortfolioSync.IDebugTarget.DebugWriteLine(String)
+  nameWithType: IDebugTarget.DebugWriteLine(string)
+  nameWithType.vb: IDebugTarget.DebugWriteLine(String)
+- uid: PortfolioSync.IDebugTarget.DebugWriteLine*
+  name: DebugWriteLine
+  href: api/PortfolioSync.IDebugTarget.html#PortfolioSync_IDebugTarget_DebugWriteLine_
+  commentId: Overload:PortfolioSync.IDebugTarget.DebugWriteLine
+  isSpec: "True"
+  fullName: PortfolioSync.IDebugTarget.DebugWriteLine
+  nameWithType: IDebugTarget.DebugWriteLine
+- uid: PortfolioSync.IDebugTarget.Dump(System.Collections.Generic.IEnumerable{System.Byte})
+  name: Dump(IEnumerable<byte>)
+  href: api/PortfolioSync.IDebugTarget.html#PortfolioSync_IDebugTarget_Dump_System_Collections_Generic_IEnumerable_System_Byte__
+  commentId: M:PortfolioSync.IDebugTarget.Dump(System.Collections.Generic.IEnumerable{System.Byte})
+  name.vb: Dump(IEnumerable(Of Byte))
+  fullName: PortfolioSync.IDebugTarget.Dump(System.Collections.Generic.IEnumerable<byte>)
+  fullName.vb: PortfolioSync.IDebugTarget.Dump(System.Collections.Generic.IEnumerable(Of Byte))
+  nameWithType: IDebugTarget.Dump(IEnumerable<byte>)
+  nameWithType.vb: IDebugTarget.Dump(IEnumerable(Of Byte))
+- uid: PortfolioSync.IDebugTarget.Dump*
+  name: Dump
+  href: api/PortfolioSync.IDebugTarget.html#PortfolioSync_IDebugTarget_Dump_
+  commentId: Overload:PortfolioSync.IDebugTarget.Dump
+  isSpec: "True"
+  fullName: PortfolioSync.IDebugTarget.Dump
+  nameWithType: IDebugTarget.Dump
+- uid: PortfolioSync.IFileProgress
+  name: IFileProgress
+  href: api/PortfolioSync.IFileProgress.html
+  commentId: T:PortfolioSync.IFileProgress
+  fullName: PortfolioSync.IFileProgress
+  nameWithType: IFileProgress
+- uid: PortfolioSync.IFileProgress.Increment(System.Int32)
+  name: Increment(int)
+  href: api/PortfolioSync.IFileProgress.html#PortfolioSync_IFileProgress_Increment_System_Int32_
+  commentId: M:PortfolioSync.IFileProgress.Increment(System.Int32)
+  name.vb: Increment(Integer)
+  fullName: PortfolioSync.IFileProgress.Increment(int)
+  fullName.vb: PortfolioSync.IFileProgress.Increment(Integer)
+  nameWithType: IFileProgress.Increment(int)
+  nameWithType.vb: IFileProgress.Increment(Integer)
+- uid: PortfolioSync.IFileProgress.Increment*
+  name: Increment
+  href: api/PortfolioSync.IFileProgress.html#PortfolioSync_IFileProgress_Increment_
+  commentId: Overload:PortfolioSync.IFileProgress.Increment
+  isSpec: "True"
+  fullName: PortfolioSync.IFileProgress.Increment
+  nameWithType: IFileProgress.Increment
+- uid: PortfolioSync.IFileProgress.Start(System.Int32)
+  name: Start(int)
+  href: api/PortfolioSync.IFileProgress.html#PortfolioSync_IFileProgress_Start_System_Int32_
+  commentId: M:PortfolioSync.IFileProgress.Start(System.Int32)
+  name.vb: Start(Integer)
+  fullName: PortfolioSync.IFileProgress.Start(int)
+  fullName.vb: PortfolioSync.IFileProgress.Start(Integer)
+  nameWithType: IFileProgress.Start(int)
+  nameWithType.vb: IFileProgress.Start(Integer)
+- uid: PortfolioSync.IFileProgress.Start*
+  name: Start
+  href: api/PortfolioSync.IFileProgress.html#PortfolioSync_IFileProgress_Start_
+  commentId: Overload:PortfolioSync.IFileProgress.Start
+  isSpec: "True"
+  fullName: PortfolioSync.IFileProgress.Start
+  nameWithType: IFileProgress.Start
+- uid: PortfolioSync.IMessageTarget
+  name: IMessageTarget
+  href: api/PortfolioSync.IMessageTarget.html
+  commentId: T:PortfolioSync.IMessageTarget
+  fullName: PortfolioSync.IMessageTarget
+  nameWithType: IMessageTarget
+- uid: PortfolioSync.IMessageTarget.Write(System.String)
+  name: Write(string)
+  href: api/PortfolioSync.IMessageTarget.html#PortfolioSync_IMessageTarget_Write_System_String_
+  commentId: M:PortfolioSync.IMessageTarget.Write(System.String)
+  name.vb: Write(String)
+  fullName: PortfolioSync.IMessageTarget.Write(string)
+  fullName.vb: PortfolioSync.IMessageTarget.Write(String)
+  nameWithType: IMessageTarget.Write(string)
+  nameWithType.vb: IMessageTarget.Write(String)
+- uid: PortfolioSync.IMessageTarget.Write*
+  name: Write
+  href: api/PortfolioSync.IMessageTarget.html#PortfolioSync_IMessageTarget_Write_
+  commentId: Overload:PortfolioSync.IMessageTarget.Write
+  isSpec: "True"
+  fullName: PortfolioSync.IMessageTarget.Write
+  nameWithType: IMessageTarget.Write
+- uid: PortfolioSync.IMessageTarget.WriteLine
+  name: WriteLine()
+  href: api/PortfolioSync.IMessageTarget.html#PortfolioSync_IMessageTarget_WriteLine
+  commentId: M:PortfolioSync.IMessageTarget.WriteLine
+  fullName: PortfolioSync.IMessageTarget.WriteLine()
+  nameWithType: IMessageTarget.WriteLine()
+- uid: PortfolioSync.IMessageTarget.WriteLine(System.String)
+  name: WriteLine(string)
+  href: api/PortfolioSync.IMessageTarget.html#PortfolioSync_IMessageTarget_WriteLine_System_String_
+  commentId: M:PortfolioSync.IMessageTarget.WriteLine(System.String)
+  name.vb: WriteLine(String)
+  fullName: PortfolioSync.IMessageTarget.WriteLine(string)
+  fullName.vb: PortfolioSync.IMessageTarget.WriteLine(String)
+  nameWithType: IMessageTarget.WriteLine(string)
+  nameWithType.vb: IMessageTarget.WriteLine(String)
+- uid: PortfolioSync.IMessageTarget.WriteLine*
+  name: WriteLine
+  href: api/PortfolioSync.IMessageTarget.html#PortfolioSync_IMessageTarget_WriteLine_
+  commentId: Overload:PortfolioSync.IMessageTarget.WriteLine
+  isSpec: "True"
+  fullName: PortfolioSync.IMessageTarget.WriteLine
+  nameWithType: IMessageTarget.WriteLine
+- uid: PortfolioSync.IReadByteStream
+  name: IReadByteStream
+  href: api/PortfolioSync.IReadByteStream.html
+  commentId: T:PortfolioSync.IReadByteStream
+  fullName: PortfolioSync.IReadByteStream
+  nameWithType: IReadByteStream
+- uid: PortfolioSync.IReadByteStream.DataAvailable
+  name: DataAvailable
+  href: api/PortfolioSync.IReadByteStream.html#PortfolioSync_IReadByteStream_DataAvailable
+  commentId: P:PortfolioSync.IReadByteStream.DataAvailable
+  fullName: PortfolioSync.IReadByteStream.DataAvailable
+  nameWithType: IReadByteStream.DataAvailable
+- uid: PortfolioSync.IReadByteStream.DataAvailable*
+  name: DataAvailable
+  href: api/PortfolioSync.IReadByteStream.html#PortfolioSync_IReadByteStream_DataAvailable_
+  commentId: Overload:PortfolioSync.IReadByteStream.DataAvailable
+  isSpec: "True"
+  fullName: PortfolioSync.IReadByteStream.DataAvailable
+  nameWithType: IReadByteStream.DataAvailable
+- uid: PortfolioSync.IReadByteStream.ReadByteAsync(System.Threading.CancellationToken)
+  name: ReadByteAsync(CancellationToken)
+  href: api/PortfolioSync.IReadByteStream.html#PortfolioSync_IReadByteStream_ReadByteAsync_System_Threading_CancellationToken_
+  commentId: M:PortfolioSync.IReadByteStream.ReadByteAsync(System.Threading.CancellationToken)
+  fullName: PortfolioSync.IReadByteStream.ReadByteAsync(System.Threading.CancellationToken)
+  nameWithType: IReadByteStream.ReadByteAsync(CancellationToken)
+- uid: PortfolioSync.IReadByteStream.ReadByteAsync*
+  name: ReadByteAsync
+  href: api/PortfolioSync.IReadByteStream.html#PortfolioSync_IReadByteStream_ReadByteAsync_
+  commentId: Overload:PortfolioSync.IReadByteStream.ReadByteAsync
+  isSpec: "True"
+  fullName: PortfolioSync.IReadByteStream.ReadByteAsync
+  nameWithType: IReadByteStream.ReadByteAsync
+- uid: PortfolioSync.IWriteByteStream
+  name: IWriteByteStream
+  href: api/PortfolioSync.IWriteByteStream.html
+  commentId: T:PortfolioSync.IWriteByteStream
+  fullName: PortfolioSync.IWriteByteStream
+  nameWithType: IWriteByteStream
+- uid: PortfolioSync.IWriteByteStream.WriteByte(System.Byte)
+  name: WriteByte(byte)
+  href: api/PortfolioSync.IWriteByteStream.html#PortfolioSync_IWriteByteStream_WriteByte_System_Byte_
+  commentId: M:PortfolioSync.IWriteByteStream.WriteByte(System.Byte)
+  name.vb: WriteByte(Byte)
+  fullName: PortfolioSync.IWriteByteStream.WriteByte(byte)
+  fullName.vb: PortfolioSync.IWriteByteStream.WriteByte(Byte)
+  nameWithType: IWriteByteStream.WriteByte(byte)
+  nameWithType.vb: IWriteByteStream.WriteByte(Byte)
+- uid: PortfolioSync.IWriteByteStream.WriteByte*
+  name: WriteByte
+  href: api/PortfolioSync.IWriteByteStream.html#PortfolioSync_IWriteByteStream_WriteByte_
+  commentId: Overload:PortfolioSync.IWriteByteStream.WriteByte
+  isSpec: "True"
+  fullName: PortfolioSync.IWriteByteStream.WriteByte
+  nameWithType: IWriteByteStream.WriteByte
+- uid: PortfolioSync.NotifyObject
+  name: NotifyObject
+  href: api/PortfolioSync.NotifyObject.html
+  commentId: T:PortfolioSync.NotifyObject
+  fullName: PortfolioSync.NotifyObject
+  nameWithType: NotifyObject
+- uid: PortfolioSync.NotifyObject.GetProperty*
+  name: GetProperty
+  href: api/PortfolioSync.NotifyObject.html#PortfolioSync_NotifyObject_GetProperty_
+  commentId: Overload:PortfolioSync.NotifyObject.GetProperty
+  isSpec: "True"
+  fullName: PortfolioSync.NotifyObject.GetProperty
+  nameWithType: NotifyObject.GetProperty
+- uid: PortfolioSync.NotifyObject.GetProperty``1(System.String)
+  name: GetProperty<T>(string?)
+  href: api/PortfolioSync.NotifyObject.html#PortfolioSync_NotifyObject_GetProperty__1_System_String_
+  commentId: M:PortfolioSync.NotifyObject.GetProperty``1(System.String)
+  name.vb: GetProperty(Of T)(String)
+  fullName: PortfolioSync.NotifyObject.GetProperty<T>(string?)
+  fullName.vb: PortfolioSync.NotifyObject.GetProperty(Of T)(String)
+  nameWithType: NotifyObject.GetProperty<T>(string?)
+  nameWithType.vb: NotifyObject.GetProperty(Of T)(String)
+- uid: PortfolioSync.NotifyObject.GetProperty``1(``0,System.String)
+  name: GetProperty<T>(T, string?)
+  href: api/PortfolioSync.NotifyObject.html#PortfolioSync_NotifyObject_GetProperty__1___0_System_String_
+  commentId: M:PortfolioSync.NotifyObject.GetProperty``1(``0,System.String)
+  name.vb: GetProperty(Of T)(T, String)
+  fullName: PortfolioSync.NotifyObject.GetProperty<T>(T, string?)
+  fullName.vb: PortfolioSync.NotifyObject.GetProperty(Of T)(T, String)
+  nameWithType: NotifyObject.GetProperty<T>(T, string?)
+  nameWithType.vb: NotifyObject.GetProperty(Of T)(T, String)
+- uid: PortfolioSync.NotifyObject.OnPropertyChanged(System.String)
+  name: OnPropertyChanged(string?)
+  href: api/PortfolioSync.NotifyObject.html#PortfolioSync_NotifyObject_OnPropertyChanged_System_String_
+  commentId: M:PortfolioSync.NotifyObject.OnPropertyChanged(System.String)
+  name.vb: OnPropertyChanged(String)
+  fullName: PortfolioSync.NotifyObject.OnPropertyChanged(string?)
+  fullName.vb: PortfolioSync.NotifyObject.OnPropertyChanged(String)
+  nameWithType: NotifyObject.OnPropertyChanged(string?)
+  nameWithType.vb: NotifyObject.OnPropertyChanged(String)
+- uid: PortfolioSync.NotifyObject.OnPropertyChanged*
+  name: OnPropertyChanged
+  href: api/PortfolioSync.NotifyObject.html#PortfolioSync_NotifyObject_OnPropertyChanged_
+  commentId: Overload:PortfolioSync.NotifyObject.OnPropertyChanged
+  isSpec: "True"
+  fullName: PortfolioSync.NotifyObject.OnPropertyChanged
+  nameWithType: NotifyObject.OnPropertyChanged
+- uid: PortfolioSync.NotifyObject.PropertyChanged
+  name: PropertyChanged
+  href: api/PortfolioSync.NotifyObject.html#PortfolioSync_NotifyObject_PropertyChanged
+  commentId: E:PortfolioSync.NotifyObject.PropertyChanged
+  fullName: PortfolioSync.NotifyObject.PropertyChanged
+  nameWithType: NotifyObject.PropertyChanged
+- uid: PortfolioSync.NotifyObject.SetProperty*
+  name: SetProperty
+  href: api/PortfolioSync.NotifyObject.html#PortfolioSync_NotifyObject_SetProperty_
+  commentId: Overload:PortfolioSync.NotifyObject.SetProperty
+  isSpec: "True"
+  fullName: PortfolioSync.NotifyObject.SetProperty
+  nameWithType: NotifyObject.SetProperty
+- uid: PortfolioSync.NotifyObject.SetProperty``1(``0,System.Action,System.String)
+  name: SetProperty<T>(T, Action, string?)
+  href: api/PortfolioSync.NotifyObject.html#PortfolioSync_NotifyObject_SetProperty__1___0_System_Action_System_String_
+  commentId: M:PortfolioSync.NotifyObject.SetProperty``1(``0,System.Action,System.String)
+  name.vb: SetProperty(Of T)(T, Action, String)
+  fullName: PortfolioSync.NotifyObject.SetProperty<T>(T, System.Action, string?)
+  fullName.vb: PortfolioSync.NotifyObject.SetProperty(Of T)(T, System.Action, String)
+  nameWithType: NotifyObject.SetProperty<T>(T, Action, string?)
+  nameWithType.vb: NotifyObject.SetProperty(Of T)(T, Action, String)
+- uid: PortfolioSync.NotifyObject.SetProperty``1(``0,System.String)
+  name: SetProperty<T>(T, string?)
+  href: api/PortfolioSync.NotifyObject.html#PortfolioSync_NotifyObject_SetProperty__1___0_System_String_
+  commentId: M:PortfolioSync.NotifyObject.SetProperty``1(``0,System.String)
+  name.vb: SetProperty(Of T)(T, String)
+  fullName: PortfolioSync.NotifyObject.SetProperty<T>(T, string?)
+  fullName.vb: PortfolioSync.NotifyObject.SetProperty(Of T)(T, String)
+  nameWithType: NotifyObject.SetProperty<T>(T, string?)
+  nameWithType.vb: NotifyObject.SetProperty(Of T)(T, String)
+- uid: PortfolioSync.NotifyObject.SetProperty``1(``0@,``0,System.String)
+  name: SetProperty<T>(ref T, T, string?)
+  href: api/PortfolioSync.NotifyObject.html#PortfolioSync_NotifyObject_SetProperty__1___0____0_System_String_
+  commentId: M:PortfolioSync.NotifyObject.SetProperty``1(``0@,``0,System.String)
+  name.vb: SetProperty(Of T)(T, T, String)
+  fullName: PortfolioSync.NotifyObject.SetProperty<T>(ref T, T, string?)
+  fullName.vb: PortfolioSync.NotifyObject.SetProperty(Of T)(T, T, String)
+  nameWithType: NotifyObject.SetProperty<T>(ref T, T, string?)
+  nameWithType.vb: NotifyObject.SetProperty(Of T)(T, T, String)
+- uid: PortfolioSync.Portfolio
+  name: Portfolio
+  href: api/PortfolioSync.Portfolio.html
+  commentId: T:PortfolioSync.Portfolio
+  fullName: PortfolioSync.Portfolio
+  nameWithType: Portfolio
+- uid: PortfolioSync.Portfolio.AddCommand(System.Collections.Generic.List{System.Byte},PortfolioSync.PortfolioCommand)
+  name: AddCommand(List<byte>, PortfolioCommand)
+  href: api/PortfolioSync.Portfolio.html#PortfolioSync_Portfolio_AddCommand_System_Collections_Generic_List_System_Byte__PortfolioSync_PortfolioCommand_
+  commentId: M:PortfolioSync.Portfolio.AddCommand(System.Collections.Generic.List{System.Byte},PortfolioSync.PortfolioCommand)
+  name.vb: AddCommand(List(Of Byte), PortfolioCommand)
+  fullName: PortfolioSync.Portfolio.AddCommand(System.Collections.Generic.List<byte>, PortfolioSync.PortfolioCommand)
+  fullName.vb: PortfolioSync.Portfolio.AddCommand(System.Collections.Generic.List(Of Byte), PortfolioSync.PortfolioCommand)
+  nameWithType: Portfolio.AddCommand(List<byte>, PortfolioCommand)
+  nameWithType.vb: Portfolio.AddCommand(List(Of Byte), PortfolioCommand)
+- uid: PortfolioSync.Portfolio.AddCommand*
+  name: AddCommand
+  href: api/PortfolioSync.Portfolio.html#PortfolioSync_Portfolio_AddCommand_
+  commentId: Overload:PortfolioSync.Portfolio.AddCommand
+  isSpec: "True"
+  fullName: PortfolioSync.Portfolio.AddCommand
+  nameWithType: Portfolio.AddCommand
+- uid: PortfolioSync.Portfolio.MaxBlockSize
+  name: MaxBlockSize
+  href: api/PortfolioSync.Portfolio.html#PortfolioSync_Portfolio_MaxBlockSize
+  commentId: F:PortfolioSync.Portfolio.MaxBlockSize
+  fullName: PortfolioSync.Portfolio.MaxBlockSize
+  nameWithType: Portfolio.MaxBlockSize
+- uid: PortfolioSync.Portfolio.ReadResponse(System.IO.Stream)
+  name: ReadResponse(Stream)
+  href: api/PortfolioSync.Portfolio.html#PortfolioSync_Portfolio_ReadResponse_System_IO_Stream_
+  commentId: M:PortfolioSync.Portfolio.ReadResponse(System.IO.Stream)
+  fullName: PortfolioSync.Portfolio.ReadResponse(System.IO.Stream)
+  nameWithType: Portfolio.ReadResponse(Stream)
+- uid: PortfolioSync.Portfolio.ReadResponse*
+  name: ReadResponse
+  href: api/PortfolioSync.Portfolio.html#PortfolioSync_Portfolio_ReadResponse_
+  commentId: Overload:PortfolioSync.Portfolio.ReadResponse
+  isSpec: "True"
+  fullName: PortfolioSync.Portfolio.ReadResponse
+  nameWithType: Portfolio.ReadResponse
+- uid: PortfolioSync.PortfolioCommand
+  name: PortfolioCommand
+  href: api/PortfolioSync.PortfolioCommand.html
+  commentId: T:PortfolioSync.PortfolioCommand
+  fullName: PortfolioSync.PortfolioCommand
+  nameWithType: PortfolioCommand
+- uid: PortfolioSync.PortfolioCommand.Abort
+  name: Abort
+  href: api/PortfolioSync.PortfolioCommand.html#PortfolioSync_PortfolioCommand_Abort
+  commentId: F:PortfolioSync.PortfolioCommand.Abort
+  fullName: PortfolioSync.PortfolioCommand.Abort
+  nameWithType: PortfolioCommand.Abort
+- uid: PortfolioSync.PortfolioCommand.FileList
+  name: FileList
+  href: api/PortfolioSync.PortfolioCommand.html#PortfolioSync_PortfolioCommand_FileList
+  commentId: F:PortfolioSync.PortfolioCommand.FileList
+  fullName: PortfolioSync.PortfolioCommand.FileList
+  nameWithType: PortfolioCommand.FileList
+- uid: PortfolioSync.PortfolioCommand.Overwrite
+  name: Overwrite
+  href: api/PortfolioSync.PortfolioCommand.html#PortfolioSync_PortfolioCommand_Overwrite
+  commentId: F:PortfolioSync.PortfolioCommand.Overwrite
+  fullName: PortfolioSync.PortfolioCommand.Overwrite
+  nameWithType: PortfolioCommand.Overwrite
+- uid: PortfolioSync.PortfolioCommand.RetrieveFile
+  name: RetrieveFile
+  href: api/PortfolioSync.PortfolioCommand.html#PortfolioSync_PortfolioCommand_RetrieveFile
+  commentId: F:PortfolioSync.PortfolioCommand.RetrieveFile
+  fullName: PortfolioSync.PortfolioCommand.RetrieveFile
+  nameWithType: PortfolioCommand.RetrieveFile
+- uid: PortfolioSync.PortfolioCommand.SendFile
+  name: SendFile
+  href: api/PortfolioSync.PortfolioCommand.html#PortfolioSync_PortfolioCommand_SendFile
+  commentId: F:PortfolioSync.PortfolioCommand.SendFile
+  fullName: PortfolioSync.PortfolioCommand.SendFile
+  nameWithType: PortfolioCommand.SendFile
+- uid: PortfolioSync.PortfolioCommand.Success
+  name: Success
+  href: api/PortfolioSync.PortfolioCommand.html#PortfolioSync_PortfolioCommand_Success
+  commentId: F:PortfolioSync.PortfolioCommand.Success
+  fullName: PortfolioSync.PortfolioCommand.Success
+  nameWithType: PortfolioCommand.Success
+- uid: PortfolioSync.PortfolioResponse
+  name: PortfolioResponse
+  href: api/PortfolioSync.PortfolioResponse.html
+  commentId: T:PortfolioSync.PortfolioResponse
+  fullName: PortfolioSync.PortfolioResponse
+  nameWithType: PortfolioResponse
+- uid: PortfolioSync.PortfolioResponse.FileExists
+  name: FileExists
+  href: api/PortfolioSync.PortfolioResponse.html#PortfolioSync_PortfolioResponse_FileExists
+  commentId: F:PortfolioSync.PortfolioResponse.FileExists
+  fullName: PortfolioSync.PortfolioResponse.FileExists
+  nameWithType: PortfolioResponse.FileExists
+- uid: PortfolioSync.PortfolioResponse.FileNotFound
+  name: FileNotFound
+  href: api/PortfolioSync.PortfolioResponse.html#PortfolioSync_PortfolioResponse_FileNotFound
+  commentId: F:PortfolioSync.PortfolioResponse.FileNotFound
+  fullName: PortfolioSync.PortfolioResponse.FileNotFound
+  nameWithType: PortfolioResponse.FileNotFound
+- uid: PortfolioSync.PortsChangedArgs
+  name: PortsChangedArgs
+  href: api/PortfolioSync.PortsChangedArgs.html
+  commentId: T:PortfolioSync.PortsChangedArgs
+  fullName: PortfolioSync.PortsChangedArgs
+  nameWithType: PortsChangedArgs
+- uid: PortfolioSync.PortsChangedArgs.#ctor(PortfolioSync.EventType,System.String[])
+  name: PortsChangedArgs(EventType, string[])
+  href: api/PortfolioSync.PortsChangedArgs.html#PortfolioSync_PortsChangedArgs__ctor_PortfolioSync_EventType_System_String___
+  commentId: M:PortfolioSync.PortsChangedArgs.#ctor(PortfolioSync.EventType,System.String[])
+  name.vb: New(EventType, String())
+  fullName: PortfolioSync.PortsChangedArgs.PortsChangedArgs(PortfolioSync.EventType, string[])
+  fullName.vb: PortfolioSync.PortsChangedArgs.New(PortfolioSync.EventType, String())
+  nameWithType: PortsChangedArgs.PortsChangedArgs(EventType, string[])
+  nameWithType.vb: PortsChangedArgs.New(EventType, String())
+- uid: PortfolioSync.PortsChangedArgs.#ctor*
+  name: PortsChangedArgs
+  href: api/PortfolioSync.PortsChangedArgs.html#PortfolioSync_PortsChangedArgs__ctor_
+  commentId: Overload:PortfolioSync.PortsChangedArgs.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: PortfolioSync.PortsChangedArgs.PortsChangedArgs
+  fullName.vb: PortfolioSync.PortsChangedArgs.New
+  nameWithType: PortsChangedArgs.PortsChangedArgs
+  nameWithType.vb: PortsChangedArgs.New
+- uid: PortfolioSync.PortsChangedArgs.EventType
+  name: EventType
+  href: api/PortfolioSync.PortsChangedArgs.html#PortfolioSync_PortsChangedArgs_EventType
+  commentId: P:PortfolioSync.PortsChangedArgs.EventType
+  fullName: PortfolioSync.PortsChangedArgs.EventType
+  nameWithType: PortsChangedArgs.EventType
+- uid: PortfolioSync.PortsChangedArgs.EventType*
+  name: EventType
+  href: api/PortfolioSync.PortsChangedArgs.html#PortfolioSync_PortsChangedArgs_EventType_
+  commentId: Overload:PortfolioSync.PortsChangedArgs.EventType
+  isSpec: "True"
+  fullName: PortfolioSync.PortsChangedArgs.EventType
+  nameWithType: PortsChangedArgs.EventType
+- uid: PortfolioSync.PortsChangedArgs.SerialPorts
+  name: SerialPorts
+  href: api/PortfolioSync.PortsChangedArgs.html#PortfolioSync_PortsChangedArgs_SerialPorts
+  commentId: P:PortfolioSync.PortsChangedArgs.SerialPorts
+  fullName: PortfolioSync.PortsChangedArgs.SerialPorts
+  nameWithType: PortsChangedArgs.SerialPorts
+- uid: PortfolioSync.PortsChangedArgs.SerialPorts*
+  name: SerialPorts
+  href: api/PortfolioSync.PortsChangedArgs.html#PortfolioSync_PortsChangedArgs_SerialPorts_
+  commentId: Overload:PortfolioSync.PortsChangedArgs.SerialPorts
+  isSpec: "True"
+  fullName: PortfolioSync.PortsChangedArgs.SerialPorts
+  nameWithType: PortsChangedArgs.SerialPorts
+- uid: PortfolioSync.RelayCommand
+  name: RelayCommand
+  href: api/PortfolioSync.RelayCommand.html
+  commentId: T:PortfolioSync.RelayCommand
+  fullName: PortfolioSync.RelayCommand
+  nameWithType: RelayCommand
+- uid: PortfolioSync.RelayCommand.#ctor(System.Action)
+  name: RelayCommand(Action)
+  href: api/PortfolioSync.RelayCommand.html#PortfolioSync_RelayCommand__ctor_System_Action_
+  commentId: M:PortfolioSync.RelayCommand.#ctor(System.Action)
+  name.vb: New(Action)
+  fullName: PortfolioSync.RelayCommand.RelayCommand(System.Action)
+  fullName.vb: PortfolioSync.RelayCommand.New(System.Action)
+  nameWithType: RelayCommand.RelayCommand(Action)
+  nameWithType.vb: RelayCommand.New(Action)
+- uid: PortfolioSync.RelayCommand.#ctor(System.Action,System.Func{System.Boolean})
+  name: RelayCommand(Action, Func<bool>?)
+  href: api/PortfolioSync.RelayCommand.html#PortfolioSync_RelayCommand__ctor_System_Action_System_Func_System_Boolean__
+  commentId: M:PortfolioSync.RelayCommand.#ctor(System.Action,System.Func{System.Boolean})
+  name.vb: New(Action, Func(Of Boolean))
+  fullName: PortfolioSync.RelayCommand.RelayCommand(System.Action, System.Func<bool>?)
+  fullName.vb: PortfolioSync.RelayCommand.New(System.Action, System.Func(Of Boolean))
+  nameWithType: RelayCommand.RelayCommand(Action, Func<bool>?)
+  nameWithType.vb: RelayCommand.New(Action, Func(Of Boolean))
+- uid: PortfolioSync.RelayCommand.#ctor*
+  name: RelayCommand
+  href: api/PortfolioSync.RelayCommand.html#PortfolioSync_RelayCommand__ctor_
+  commentId: Overload:PortfolioSync.RelayCommand.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: PortfolioSync.RelayCommand.RelayCommand
+  fullName.vb: PortfolioSync.RelayCommand.New
+  nameWithType: RelayCommand.RelayCommand
+  nameWithType.vb: RelayCommand.New
+- uid: PortfolioSync.RelayCommand.CanExecute(System.Object)
+  name: CanExecute(object?)
+  href: api/PortfolioSync.RelayCommand.html#PortfolioSync_RelayCommand_CanExecute_System_Object_
+  commentId: M:PortfolioSync.RelayCommand.CanExecute(System.Object)
+  name.vb: CanExecute(Object)
+  fullName: PortfolioSync.RelayCommand.CanExecute(object?)
+  fullName.vb: PortfolioSync.RelayCommand.CanExecute(Object)
+  nameWithType: RelayCommand.CanExecute(object?)
+  nameWithType.vb: RelayCommand.CanExecute(Object)
+- uid: PortfolioSync.RelayCommand.CanExecute*
+  name: CanExecute
+  href: api/PortfolioSync.RelayCommand.html#PortfolioSync_RelayCommand_CanExecute_
+  commentId: Overload:PortfolioSync.RelayCommand.CanExecute
+  isSpec: "True"
+  fullName: PortfolioSync.RelayCommand.CanExecute
+  nameWithType: RelayCommand.CanExecute
+- uid: PortfolioSync.RelayCommand.CanExecuteChanged
+  name: CanExecuteChanged
+  href: api/PortfolioSync.RelayCommand.html#PortfolioSync_RelayCommand_CanExecuteChanged
+  commentId: E:PortfolioSync.RelayCommand.CanExecuteChanged
+  fullName: PortfolioSync.RelayCommand.CanExecuteChanged
+  nameWithType: RelayCommand.CanExecuteChanged
+- uid: PortfolioSync.RelayCommand.Execute(System.Object)
+  name: Execute(object?)
+  href: api/PortfolioSync.RelayCommand.html#PortfolioSync_RelayCommand_Execute_System_Object_
+  commentId: M:PortfolioSync.RelayCommand.Execute(System.Object)
+  name.vb: Execute(Object)
+  fullName: PortfolioSync.RelayCommand.Execute(object?)
+  fullName.vb: PortfolioSync.RelayCommand.Execute(Object)
+  nameWithType: RelayCommand.Execute(object?)
+  nameWithType.vb: RelayCommand.Execute(Object)
+- uid: PortfolioSync.RelayCommand.Execute*
+  name: Execute
+  href: api/PortfolioSync.RelayCommand.html#PortfolioSync_RelayCommand_Execute_
+  commentId: Overload:PortfolioSync.RelayCommand.Execute
+  isSpec: "True"
+  fullName: PortfolioSync.RelayCommand.Execute
+  nameWithType: RelayCommand.Execute
+- uid: PortfolioSync.RelayCommand`1
+  name: RelayCommand<T>
+  href: api/PortfolioSync.RelayCommand-1.html
+  commentId: T:PortfolioSync.RelayCommand`1
+  name.vb: RelayCommand(Of T)
+  fullName: PortfolioSync.RelayCommand<T>
+  fullName.vb: PortfolioSync.RelayCommand(Of T)
+  nameWithType: RelayCommand<T>
+  nameWithType.vb: RelayCommand(Of T)
+- uid: PortfolioSync.RelayCommand`1.#ctor(System.Action{`0})
+  name: RelayCommand(Action<T>)
+  href: api/PortfolioSync.RelayCommand-1.html#PortfolioSync_RelayCommand_1__ctor_System_Action__0__
+  commentId: M:PortfolioSync.RelayCommand`1.#ctor(System.Action{`0})
+  name.vb: New(Action(Of T))
+  fullName: PortfolioSync.RelayCommand<T>.RelayCommand(System.Action<T>)
+  fullName.vb: PortfolioSync.RelayCommand(Of T).New(System.Action(Of T))
+  nameWithType: RelayCommand<T>.RelayCommand(Action<T>)
+  nameWithType.vb: RelayCommand(Of T).New(Action(Of T))
+- uid: PortfolioSync.RelayCommand`1.#ctor(System.Action{`0},System.Predicate{`0})
+  name: RelayCommand(Action<T>, Predicate<T>?)
+  href: api/PortfolioSync.RelayCommand-1.html#PortfolioSync_RelayCommand_1__ctor_System_Action__0__System_Predicate__0__
+  commentId: M:PortfolioSync.RelayCommand`1.#ctor(System.Action{`0},System.Predicate{`0})
+  name.vb: New(Action(Of T), Predicate(Of T))
+  fullName: PortfolioSync.RelayCommand<T>.RelayCommand(System.Action<T>, System.Predicate<T>?)
+  fullName.vb: PortfolioSync.RelayCommand(Of T).New(System.Action(Of T), System.Predicate(Of T))
+  nameWithType: RelayCommand<T>.RelayCommand(Action<T>, Predicate<T>?)
+  nameWithType.vb: RelayCommand(Of T).New(Action(Of T), Predicate(Of T))
+- uid: PortfolioSync.RelayCommand`1.#ctor*
+  name: RelayCommand
+  href: api/PortfolioSync.RelayCommand-1.html#PortfolioSync_RelayCommand_1__ctor_
+  commentId: Overload:PortfolioSync.RelayCommand`1.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: PortfolioSync.RelayCommand<T>.RelayCommand
+  fullName.vb: PortfolioSync.RelayCommand(Of T).New
+  nameWithType: RelayCommand<T>.RelayCommand
+  nameWithType.vb: RelayCommand(Of T).New
+- uid: PortfolioSync.RelayCommand`1.CanExecute(System.Object)
+  name: CanExecute(object?)
+  href: api/PortfolioSync.RelayCommand-1.html#PortfolioSync_RelayCommand_1_CanExecute_System_Object_
+  commentId: M:PortfolioSync.RelayCommand`1.CanExecute(System.Object)
+  name.vb: CanExecute(Object)
+  fullName: PortfolioSync.RelayCommand<T>.CanExecute(object?)
+  fullName.vb: PortfolioSync.RelayCommand(Of T).CanExecute(Object)
+  nameWithType: RelayCommand<T>.CanExecute(object?)
+  nameWithType.vb: RelayCommand(Of T).CanExecute(Object)
+- uid: PortfolioSync.RelayCommand`1.CanExecute*
+  name: CanExecute
+  href: api/PortfolioSync.RelayCommand-1.html#PortfolioSync_RelayCommand_1_CanExecute_
+  commentId: Overload:PortfolioSync.RelayCommand`1.CanExecute
+  isSpec: "True"
+  fullName: PortfolioSync.RelayCommand<T>.CanExecute
+  fullName.vb: PortfolioSync.RelayCommand(Of T).CanExecute
+  nameWithType: RelayCommand<T>.CanExecute
+  nameWithType.vb: RelayCommand(Of T).CanExecute
+- uid: PortfolioSync.RelayCommand`1.CanExecuteChanged
+  name: CanExecuteChanged
+  href: api/PortfolioSync.RelayCommand-1.html#PortfolioSync_RelayCommand_1_CanExecuteChanged
+  commentId: E:PortfolioSync.RelayCommand`1.CanExecuteChanged
+  fullName: PortfolioSync.RelayCommand<T>.CanExecuteChanged
+  fullName.vb: PortfolioSync.RelayCommand(Of T).CanExecuteChanged
+  nameWithType: RelayCommand<T>.CanExecuteChanged
+  nameWithType.vb: RelayCommand(Of T).CanExecuteChanged
+- uid: PortfolioSync.RelayCommand`1.Execute(System.Object)
+  name: Execute(object?)
+  href: api/PortfolioSync.RelayCommand-1.html#PortfolioSync_RelayCommand_1_Execute_System_Object_
+  commentId: M:PortfolioSync.RelayCommand`1.Execute(System.Object)
+  name.vb: Execute(Object)
+  fullName: PortfolioSync.RelayCommand<T>.Execute(object?)
+  fullName.vb: PortfolioSync.RelayCommand(Of T).Execute(Object)
+  nameWithType: RelayCommand<T>.Execute(object?)
+  nameWithType.vb: RelayCommand(Of T).Execute(Object)
+- uid: PortfolioSync.RelayCommand`1.Execute*
+  name: Execute
+  href: api/PortfolioSync.RelayCommand-1.html#PortfolioSync_RelayCommand_1_Execute_
+  commentId: Overload:PortfolioSync.RelayCommand`1.Execute
+  isSpec: "True"
+  fullName: PortfolioSync.RelayCommand<T>.Execute
+  fullName.vb: PortfolioSync.RelayCommand(Of T).Execute
+  nameWithType: RelayCommand<T>.Execute
+  nameWithType.vb: RelayCommand(Of T).Execute
+- uid: PortfolioSync.SerialPortByteStream
+  name: SerialPortByteStream
+  href: api/PortfolioSync.SerialPortByteStream.html
+  commentId: T:PortfolioSync.SerialPortByteStream
+  fullName: PortfolioSync.SerialPortByteStream
+  nameWithType: SerialPortByteStream
+- uid: PortfolioSync.SerialPortByteStream.#ctor(System.IO.Ports.SerialPort)
+  name: SerialPortByteStream(SerialPort)
+  href: api/PortfolioSync.SerialPortByteStream.html#PortfolioSync_SerialPortByteStream__ctor_System_IO_Ports_SerialPort_
+  commentId: M:PortfolioSync.SerialPortByteStream.#ctor(System.IO.Ports.SerialPort)
+  name.vb: New(SerialPort)
+  fullName: PortfolioSync.SerialPortByteStream.SerialPortByteStream(System.IO.Ports.SerialPort)
+  fullName.vb: PortfolioSync.SerialPortByteStream.New(System.IO.Ports.SerialPort)
+  nameWithType: SerialPortByteStream.SerialPortByteStream(SerialPort)
+  nameWithType.vb: SerialPortByteStream.New(SerialPort)
+- uid: PortfolioSync.SerialPortByteStream.#ctor*
+  name: SerialPortByteStream
+  href: api/PortfolioSync.SerialPortByteStream.html#PortfolioSync_SerialPortByteStream__ctor_
+  commentId: Overload:PortfolioSync.SerialPortByteStream.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: PortfolioSync.SerialPortByteStream.SerialPortByteStream
+  fullName.vb: PortfolioSync.SerialPortByteStream.New
+  nameWithType: SerialPortByteStream.SerialPortByteStream
+  nameWithType.vb: SerialPortByteStream.New
+- uid: PortfolioSync.SerialPortByteStream.DataAvailable
+  name: DataAvailable
+  href: api/PortfolioSync.SerialPortByteStream.html#PortfolioSync_SerialPortByteStream_DataAvailable
+  commentId: P:PortfolioSync.SerialPortByteStream.DataAvailable
+  fullName: PortfolioSync.SerialPortByteStream.DataAvailable
+  nameWithType: SerialPortByteStream.DataAvailable
+- uid: PortfolioSync.SerialPortByteStream.DataAvailable*
+  name: DataAvailable
+  href: api/PortfolioSync.SerialPortByteStream.html#PortfolioSync_SerialPortByteStream_DataAvailable_
+  commentId: Overload:PortfolioSync.SerialPortByteStream.DataAvailable
+  isSpec: "True"
+  fullName: PortfolioSync.SerialPortByteStream.DataAvailable
+  nameWithType: SerialPortByteStream.DataAvailable
+- uid: PortfolioSync.SerialPortByteStream.Dispose
+  name: Dispose()
+  href: api/PortfolioSync.SerialPortByteStream.html#PortfolioSync_SerialPortByteStream_Dispose
+  commentId: M:PortfolioSync.SerialPortByteStream.Dispose
+  fullName: PortfolioSync.SerialPortByteStream.Dispose()
+  nameWithType: SerialPortByteStream.Dispose()
+- uid: PortfolioSync.SerialPortByteStream.Dispose(System.Boolean)
+  name: Dispose(bool)
+  href: api/PortfolioSync.SerialPortByteStream.html#PortfolioSync_SerialPortByteStream_Dispose_System_Boolean_
+  commentId: M:PortfolioSync.SerialPortByteStream.Dispose(System.Boolean)
+  name.vb: Dispose(Boolean)
+  fullName: PortfolioSync.SerialPortByteStream.Dispose(bool)
+  fullName.vb: PortfolioSync.SerialPortByteStream.Dispose(Boolean)
+  nameWithType: SerialPortByteStream.Dispose(bool)
+  nameWithType.vb: SerialPortByteStream.Dispose(Boolean)
+- uid: PortfolioSync.SerialPortByteStream.Dispose*
+  name: Dispose
+  href: api/PortfolioSync.SerialPortByteStream.html#PortfolioSync_SerialPortByteStream_Dispose_
+  commentId: Overload:PortfolioSync.SerialPortByteStream.Dispose
+  isSpec: "True"
+  fullName: PortfolioSync.SerialPortByteStream.Dispose
+  nameWithType: SerialPortByteStream.Dispose
+- uid: PortfolioSync.SerialPortByteStream.ReadByteAsync(System.Threading.CancellationToken)
+  name: ReadByteAsync(CancellationToken)
+  href: api/PortfolioSync.SerialPortByteStream.html#PortfolioSync_SerialPortByteStream_ReadByteAsync_System_Threading_CancellationToken_
+  commentId: M:PortfolioSync.SerialPortByteStream.ReadByteAsync(System.Threading.CancellationToken)
+  fullName: PortfolioSync.SerialPortByteStream.ReadByteAsync(System.Threading.CancellationToken)
+  nameWithType: SerialPortByteStream.ReadByteAsync(CancellationToken)
+- uid: PortfolioSync.SerialPortByteStream.ReadByteAsync*
+  name: ReadByteAsync
+  href: api/PortfolioSync.SerialPortByteStream.html#PortfolioSync_SerialPortByteStream_ReadByteAsync_
+  commentId: Overload:PortfolioSync.SerialPortByteStream.ReadByteAsync
+  isSpec: "True"
+  fullName: PortfolioSync.SerialPortByteStream.ReadByteAsync
+  nameWithType: SerialPortByteStream.ReadByteAsync
+- uid: PortfolioSync.SerialPortByteStream.WriteByte(System.Byte)
+  name: WriteByte(byte)
+  href: api/PortfolioSync.SerialPortByteStream.html#PortfolioSync_SerialPortByteStream_WriteByte_System_Byte_
+  commentId: M:PortfolioSync.SerialPortByteStream.WriteByte(System.Byte)
+  name.vb: WriteByte(Byte)
+  fullName: PortfolioSync.SerialPortByteStream.WriteByte(byte)
+  fullName.vb: PortfolioSync.SerialPortByteStream.WriteByte(Byte)
+  nameWithType: SerialPortByteStream.WriteByte(byte)
+  nameWithType.vb: SerialPortByteStream.WriteByte(Byte)
+- uid: PortfolioSync.SerialPortByteStream.WriteByte*
+  name: WriteByte
+  href: api/PortfolioSync.SerialPortByteStream.html#PortfolioSync_SerialPortByteStream_WriteByte_
+  commentId: Overload:PortfolioSync.SerialPortByteStream.WriteByte
+  isSpec: "True"
+  fullName: PortfolioSync.SerialPortByteStream.WriteByte
+  nameWithType: SerialPortByteStream.WriteByte
+- uid: PortfolioSync.SerialPortService
+  name: SerialPortService
+  href: api/PortfolioSync.SerialPortService.html
+  commentId: T:PortfolioSync.SerialPortService
+  fullName: PortfolioSync.SerialPortService
+  nameWithType: SerialPortService
+- uid: PortfolioSync.SerialPortService.CleanUp
+  name: CleanUp()
+  href: api/PortfolioSync.SerialPortService.html#PortfolioSync_SerialPortService_CleanUp
+  commentId: M:PortfolioSync.SerialPortService.CleanUp
+  fullName: PortfolioSync.SerialPortService.CleanUp()
+  nameWithType: SerialPortService.CleanUp()
+- uid: PortfolioSync.SerialPortService.CleanUp*
+  name: CleanUp
+  href: api/PortfolioSync.SerialPortService.html#PortfolioSync_SerialPortService_CleanUp_
+  commentId: Overload:PortfolioSync.SerialPortService.CleanUp
+  isSpec: "True"
+  fullName: PortfolioSync.SerialPortService.CleanUp
+  nameWithType: SerialPortService.CleanUp
+- uid: PortfolioSync.SerialPortService.GetAvailableSerialPorts
+  name: GetAvailableSerialPorts()
+  href: api/PortfolioSync.SerialPortService.html#PortfolioSync_SerialPortService_GetAvailableSerialPorts
+  commentId: M:PortfolioSync.SerialPortService.GetAvailableSerialPorts
+  fullName: PortfolioSync.SerialPortService.GetAvailableSerialPorts()
+  nameWithType: SerialPortService.GetAvailableSerialPorts()
+- uid: PortfolioSync.SerialPortService.GetAvailableSerialPorts*
+  name: GetAvailableSerialPorts
+  href: api/PortfolioSync.SerialPortService.html#PortfolioSync_SerialPortService_GetAvailableSerialPorts_
+  commentId: Overload:PortfolioSync.SerialPortService.GetAvailableSerialPorts
+  isSpec: "True"
+  fullName: PortfolioSync.SerialPortService.GetAvailableSerialPorts
+  nameWithType: SerialPortService.GetAvailableSerialPorts
+- uid: PortfolioSync.SerialPortService.PortsChanged
+  name: PortsChanged
+  href: api/PortfolioSync.SerialPortService.html#PortfolioSync_SerialPortService_PortsChanged
+  commentId: E:PortfolioSync.SerialPortService.PortsChanged
+  fullName: PortfolioSync.SerialPortService.PortsChanged
+  nameWithType: SerialPortService.PortsChanged
+- uid: PortfolioSync.StreamExtensions
+  name: StreamExtensions
+  href: api/PortfolioSync.StreamExtensions.html
+  commentId: T:PortfolioSync.StreamExtensions
+  fullName: PortfolioSync.StreamExtensions
+  nameWithType: StreamExtensions
+- uid: PortfolioSync.StreamExtensions.ReadInt(System.IO.Stream)
+  name: ReadInt(Stream)
+  href: api/PortfolioSync.StreamExtensions.html#PortfolioSync_StreamExtensions_ReadInt_System_IO_Stream_
+  commentId: M:PortfolioSync.StreamExtensions.ReadInt(System.IO.Stream)
+  fullName: PortfolioSync.StreamExtensions.ReadInt(System.IO.Stream)
+  nameWithType: StreamExtensions.ReadInt(Stream)
+- uid: PortfolioSync.StreamExtensions.ReadInt*
+  name: ReadInt
+  href: api/PortfolioSync.StreamExtensions.html#PortfolioSync_StreamExtensions_ReadInt_
+  commentId: Overload:PortfolioSync.StreamExtensions.ReadInt
+  isSpec: "True"
+  fullName: PortfolioSync.StreamExtensions.ReadInt
+  nameWithType: StreamExtensions.ReadInt
+- uid: PortfolioSync.StreamExtensions.ReadShort(System.IO.Stream)
+  name: ReadShort(Stream)
+  href: api/PortfolioSync.StreamExtensions.html#PortfolioSync_StreamExtensions_ReadShort_System_IO_Stream_
+  commentId: M:PortfolioSync.StreamExtensions.ReadShort(System.IO.Stream)
+  fullName: PortfolioSync.StreamExtensions.ReadShort(System.IO.Stream)
+  nameWithType: StreamExtensions.ReadShort(Stream)
+- uid: PortfolioSync.StreamExtensions.ReadShort*
+  name: ReadShort
+  href: api/PortfolioSync.StreamExtensions.html#PortfolioSync_StreamExtensions_ReadShort_
+  commentId: Overload:PortfolioSync.StreamExtensions.ReadShort
+  isSpec: "True"
+  fullName: PortfolioSync.StreamExtensions.ReadShort
+  nameWithType: StreamExtensions.ReadShort
+- uid: PortfolioSync.ViewModels
+  name: PortfolioSync.ViewModels
+  href: api/PortfolioSync.ViewModels.html
+  commentId: N:PortfolioSync.ViewModels
+  fullName: PortfolioSync.ViewModels
+  nameWithType: PortfolioSync.ViewModels
+- uid: PortfolioSync.ViewModels.BaseViewModel
+  name: BaseViewModel
+  href: api/PortfolioSync.ViewModels.BaseViewModel.html
+  commentId: T:PortfolioSync.ViewModels.BaseViewModel
+  fullName: PortfolioSync.ViewModels.BaseViewModel
+  nameWithType: BaseViewModel
+- uid: PortfolioSync.ViewModels.BaseViewModel.GetProperty*
+  name: GetProperty
+  href: api/PortfolioSync.ViewModels.BaseViewModel.html#PortfolioSync_ViewModels_BaseViewModel_GetProperty_
+  commentId: Overload:PortfolioSync.ViewModels.BaseViewModel.GetProperty
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.BaseViewModel.GetProperty
+  nameWithType: BaseViewModel.GetProperty
+- uid: PortfolioSync.ViewModels.BaseViewModel.GetProperty``1(System.String)
+  name: GetProperty<T>(string?)
+  href: api/PortfolioSync.ViewModels.BaseViewModel.html#PortfolioSync_ViewModels_BaseViewModel_GetProperty__1_System_String_
+  commentId: M:PortfolioSync.ViewModels.BaseViewModel.GetProperty``1(System.String)
+  name.vb: GetProperty(Of T)(String)
+  fullName: PortfolioSync.ViewModels.BaseViewModel.GetProperty<T>(string?)
+  fullName.vb: PortfolioSync.ViewModels.BaseViewModel.GetProperty(Of T)(String)
+  nameWithType: BaseViewModel.GetProperty<T>(string?)
+  nameWithType.vb: BaseViewModel.GetProperty(Of T)(String)
+- uid: PortfolioSync.ViewModels.BaseViewModel.GetProperty``1(``0,System.String)
+  name: GetProperty<T>(T, string?)
+  href: api/PortfolioSync.ViewModels.BaseViewModel.html#PortfolioSync_ViewModels_BaseViewModel_GetProperty__1___0_System_String_
+  commentId: M:PortfolioSync.ViewModels.BaseViewModel.GetProperty``1(``0,System.String)
+  name.vb: GetProperty(Of T)(T, String)
+  fullName: PortfolioSync.ViewModels.BaseViewModel.GetProperty<T>(T, string?)
+  fullName.vb: PortfolioSync.ViewModels.BaseViewModel.GetProperty(Of T)(T, String)
+  nameWithType: BaseViewModel.GetProperty<T>(T, string?)
+  nameWithType.vb: BaseViewModel.GetProperty(Of T)(T, String)
+- uid: PortfolioSync.ViewModels.BaseViewModel.OnPropertyChanged(System.String)
+  name: OnPropertyChanged(string?)
+  href: api/PortfolioSync.ViewModels.BaseViewModel.html#PortfolioSync_ViewModels_BaseViewModel_OnPropertyChanged_System_String_
+  commentId: M:PortfolioSync.ViewModels.BaseViewModel.OnPropertyChanged(System.String)
+  name.vb: OnPropertyChanged(String)
+  fullName: PortfolioSync.ViewModels.BaseViewModel.OnPropertyChanged(string?)
+  fullName.vb: PortfolioSync.ViewModels.BaseViewModel.OnPropertyChanged(String)
+  nameWithType: BaseViewModel.OnPropertyChanged(string?)
+  nameWithType.vb: BaseViewModel.OnPropertyChanged(String)
+- uid: PortfolioSync.ViewModels.BaseViewModel.OnPropertyChanged*
+  name: OnPropertyChanged
+  href: api/PortfolioSync.ViewModels.BaseViewModel.html#PortfolioSync_ViewModels_BaseViewModel_OnPropertyChanged_
+  commentId: Overload:PortfolioSync.ViewModels.BaseViewModel.OnPropertyChanged
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.BaseViewModel.OnPropertyChanged
+  nameWithType: BaseViewModel.OnPropertyChanged
+- uid: PortfolioSync.ViewModels.BaseViewModel.PropagatePropertyChanged(System.ComponentModel.INotifyPropertyChanged,System.String,System.String[])
+  name: PropagatePropertyChanged(INotifyPropertyChanged, string, params string[])
+  href: api/PortfolioSync.ViewModels.BaseViewModel.html#PortfolioSync_ViewModels_BaseViewModel_PropagatePropertyChanged_System_ComponentModel_INotifyPropertyChanged_System_String_System_String___
+  commentId: M:PortfolioSync.ViewModels.BaseViewModel.PropagatePropertyChanged(System.ComponentModel.INotifyPropertyChanged,System.String,System.String[])
+  name.vb: PropagatePropertyChanged(INotifyPropertyChanged, String, ParamArray String())
+  fullName: PortfolioSync.ViewModels.BaseViewModel.PropagatePropertyChanged(System.ComponentModel.INotifyPropertyChanged, string, params string[])
+  fullName.vb: PortfolioSync.ViewModels.BaseViewModel.PropagatePropertyChanged(System.ComponentModel.INotifyPropertyChanged, String, ParamArray String())
+  nameWithType: BaseViewModel.PropagatePropertyChanged(INotifyPropertyChanged, string, params string[])
+  nameWithType.vb: BaseViewModel.PropagatePropertyChanged(INotifyPropertyChanged, String, ParamArray String())
+- uid: PortfolioSync.ViewModels.BaseViewModel.PropagatePropertyChanged*
+  name: PropagatePropertyChanged
+  href: api/PortfolioSync.ViewModels.BaseViewModel.html#PortfolioSync_ViewModels_BaseViewModel_PropagatePropertyChanged_
+  commentId: Overload:PortfolioSync.ViewModels.BaseViewModel.PropagatePropertyChanged
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.BaseViewModel.PropagatePropertyChanged
+  nameWithType: BaseViewModel.PropagatePropertyChanged
+- uid: PortfolioSync.ViewModels.BaseViewModel.PropertyChanged
+  name: PropertyChanged
+  href: api/PortfolioSync.ViewModels.BaseViewModel.html#PortfolioSync_ViewModels_BaseViewModel_PropertyChanged
+  commentId: E:PortfolioSync.ViewModels.BaseViewModel.PropertyChanged
+  fullName: PortfolioSync.ViewModels.BaseViewModel.PropertyChanged
+  nameWithType: BaseViewModel.PropertyChanged
+- uid: PortfolioSync.ViewModels.BaseViewModel.SetProperty*
+  name: SetProperty
+  href: api/PortfolioSync.ViewModels.BaseViewModel.html#PortfolioSync_ViewModels_BaseViewModel_SetProperty_
+  commentId: Overload:PortfolioSync.ViewModels.BaseViewModel.SetProperty
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.BaseViewModel.SetProperty
+  nameWithType: BaseViewModel.SetProperty
+- uid: PortfolioSync.ViewModels.BaseViewModel.SetProperty``1(``0,System.Action,System.String)
+  name: SetProperty<T>(T, Action, string?)
+  href: api/PortfolioSync.ViewModels.BaseViewModel.html#PortfolioSync_ViewModels_BaseViewModel_SetProperty__1___0_System_Action_System_String_
+  commentId: M:PortfolioSync.ViewModels.BaseViewModel.SetProperty``1(``0,System.Action,System.String)
+  name.vb: SetProperty(Of T)(T, Action, String)
+  fullName: PortfolioSync.ViewModels.BaseViewModel.SetProperty<T>(T, System.Action, string?)
+  fullName.vb: PortfolioSync.ViewModels.BaseViewModel.SetProperty(Of T)(T, System.Action, String)
+  nameWithType: BaseViewModel.SetProperty<T>(T, Action, string?)
+  nameWithType.vb: BaseViewModel.SetProperty(Of T)(T, Action, String)
+- uid: PortfolioSync.ViewModels.BaseViewModel.SetProperty``1(``0,System.String)
+  name: SetProperty<T>(T, string?)
+  href: api/PortfolioSync.ViewModels.BaseViewModel.html#PortfolioSync_ViewModels_BaseViewModel_SetProperty__1___0_System_String_
+  commentId: M:PortfolioSync.ViewModels.BaseViewModel.SetProperty``1(``0,System.String)
+  name.vb: SetProperty(Of T)(T, String)
+  fullName: PortfolioSync.ViewModels.BaseViewModel.SetProperty<T>(T, string?)
+  fullName.vb: PortfolioSync.ViewModels.BaseViewModel.SetProperty(Of T)(T, String)
+  nameWithType: BaseViewModel.SetProperty<T>(T, string?)
+  nameWithType.vb: BaseViewModel.SetProperty(Of T)(T, String)
+- uid: PortfolioSync.ViewModels.BaseViewModel.SetProperty``1(``0@,``0,System.String)
+  name: SetProperty<T>(ref T, T, string?)
+  href: api/PortfolioSync.ViewModels.BaseViewModel.html#PortfolioSync_ViewModels_BaseViewModel_SetProperty__1___0____0_System_String_
+  commentId: M:PortfolioSync.ViewModels.BaseViewModel.SetProperty``1(``0@,``0,System.String)
+  name.vb: SetProperty(Of T)(T, T, String)
+  fullName: PortfolioSync.ViewModels.BaseViewModel.SetProperty<T>(ref T, T, string?)
+  fullName.vb: PortfolioSync.ViewModels.BaseViewModel.SetProperty(Of T)(T, T, String)
+  nameWithType: BaseViewModel.SetProperty<T>(ref T, T, string?)
+  nameWithType.vb: BaseViewModel.SetProperty(Of T)(T, T, String)
+- uid: PortfolioSync.ViewModels.Extensions
+  name: Extensions
+  href: api/PortfolioSync.ViewModels.Extensions.html
+  commentId: T:PortfolioSync.ViewModels.Extensions
+  fullName: PortfolioSync.ViewModels.Extensions
+  nameWithType: Extensions
+- uid: PortfolioSync.ViewModels.Extensions.PropagatePropertyChanged*
+  name: PropagatePropertyChanged
+  href: api/PortfolioSync.ViewModels.Extensions.html#PortfolioSync_ViewModels_Extensions_PropagatePropertyChanged_
+  commentId: Overload:PortfolioSync.ViewModels.Extensions.PropagatePropertyChanged
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.Extensions.PropagatePropertyChanged
+  nameWithType: Extensions.PropagatePropertyChanged
+- uid: PortfolioSync.ViewModels.Extensions.PropagatePropertyChanged``2(``1,``0,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Linq.Expressions.Expression{System.Func{``1,System.Object}}[])
+  name: PropagatePropertyChanged<TSource, TDestination>(TDestination, TSource, Expression<Func<TSource, object>>, params Expression<Func<TDestination, object>>[])
+  href: api/PortfolioSync.ViewModels.Extensions.html#PortfolioSync_ViewModels_Extensions_PropagatePropertyChanged__2___1___0_System_Linq_Expressions_Expression_System_Func___0_System_Object___System_Linq_Expressions_Expression_System_Func___1_System_Object_____
+  commentId: M:PortfolioSync.ViewModels.Extensions.PropagatePropertyChanged``2(``1,``0,System.Linq.Expressions.Expression{System.Func{``0,System.Object}},System.Linq.Expressions.Expression{System.Func{``1,System.Object}}[])
+  name.vb: PropagatePropertyChanged(Of TSource, TDestination)(TDestination, TSource, Expression(Of Func(Of TSource, Object)), ParamArray Expression(Of Func(Of TDestination, Object))())
+  fullName: PortfolioSync.ViewModels.Extensions.PropagatePropertyChanged<TSource, TDestination>(TDestination, TSource, System.Linq.Expressions.Expression<System.Func<TSource, object>>, params System.Linq.Expressions.Expression<System.Func<TDestination, object>>[])
+  fullName.vb: PortfolioSync.ViewModels.Extensions.PropagatePropertyChanged(Of TSource, TDestination)(TDestination, TSource, System.Linq.Expressions.Expression(Of System.Func(Of TSource, Object)), ParamArray System.Linq.Expressions.Expression(Of System.Func(Of TDestination, Object))())
+  nameWithType: Extensions.PropagatePropertyChanged<TSource, TDestination>(TDestination, TSource, Expression<Func<TSource, object>>, params Expression<Func<TDestination, object>>[])
+  nameWithType.vb: Extensions.PropagatePropertyChanged(Of TSource, TDestination)(TDestination, TSource, Expression(Of Func(Of TSource, Object)), ParamArray Expression(Of Func(Of TDestination, Object))())
+- uid: PortfolioSync.ViewModels.ListViewModel
+  name: ListViewModel
+  href: api/PortfolioSync.ViewModels.ListViewModel.html
+  commentId: T:PortfolioSync.ViewModels.ListViewModel
+  fullName: PortfolioSync.ViewModels.ListViewModel
+  nameWithType: ListViewModel
+- uid: PortfolioSync.ViewModels.ListViewModel.#ctor(PortfolioSync.Arduino)
+  name: ListViewModel(Arduino)
+  href: api/PortfolioSync.ViewModels.ListViewModel.html#PortfolioSync_ViewModels_ListViewModel__ctor_PortfolioSync_Arduino_
+  commentId: M:PortfolioSync.ViewModels.ListViewModel.#ctor(PortfolioSync.Arduino)
+  name.vb: New(Arduino)
+  fullName: PortfolioSync.ViewModels.ListViewModel.ListViewModel(PortfolioSync.Arduino)
+  fullName.vb: PortfolioSync.ViewModels.ListViewModel.New(PortfolioSync.Arduino)
+  nameWithType: ListViewModel.ListViewModel(Arduino)
+  nameWithType.vb: ListViewModel.New(Arduino)
+- uid: PortfolioSync.ViewModels.ListViewModel.#ctor*
+  name: ListViewModel
+  href: api/PortfolioSync.ViewModels.ListViewModel.html#PortfolioSync_ViewModels_ListViewModel__ctor_
+  commentId: Overload:PortfolioSync.ViewModels.ListViewModel.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: PortfolioSync.ViewModels.ListViewModel.ListViewModel
+  fullName.vb: PortfolioSync.ViewModels.ListViewModel.New
+  nameWithType: ListViewModel.ListViewModel
+  nameWithType.vb: ListViewModel.New
+- uid: PortfolioSync.ViewModels.ListViewModel.CanRetrieveFile
+  name: CanRetrieveFile
+  href: api/PortfolioSync.ViewModels.ListViewModel.html#PortfolioSync_ViewModels_ListViewModel_CanRetrieveFile
+  commentId: P:PortfolioSync.ViewModels.ListViewModel.CanRetrieveFile
+  fullName: PortfolioSync.ViewModels.ListViewModel.CanRetrieveFile
+  nameWithType: ListViewModel.CanRetrieveFile
+- uid: PortfolioSync.ViewModels.ListViewModel.CanRetrieveFile*
+  name: CanRetrieveFile
+  href: api/PortfolioSync.ViewModels.ListViewModel.html#PortfolioSync_ViewModels_ListViewModel_CanRetrieveFile_
+  commentId: Overload:PortfolioSync.ViewModels.ListViewModel.CanRetrieveFile
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.ListViewModel.CanRetrieveFile
+  nameWithType: ListViewModel.CanRetrieveFile
+- uid: PortfolioSync.ViewModels.ListViewModel.Files
+  name: Files
+  href: api/PortfolioSync.ViewModels.ListViewModel.html#PortfolioSync_ViewModels_ListViewModel_Files
+  commentId: P:PortfolioSync.ViewModels.ListViewModel.Files
+  fullName: PortfolioSync.ViewModels.ListViewModel.Files
+  nameWithType: ListViewModel.Files
+- uid: PortfolioSync.ViewModels.ListViewModel.Files*
+  name: Files
+  href: api/PortfolioSync.ViewModels.ListViewModel.html#PortfolioSync_ViewModels_ListViewModel_Files_
+  commentId: Overload:PortfolioSync.ViewModels.ListViewModel.Files
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.ListViewModel.Files
+  nameWithType: ListViewModel.Files
+- uid: PortfolioSync.ViewModels.ListViewModel.IsEnabled
+  name: IsEnabled
+  href: api/PortfolioSync.ViewModels.ListViewModel.html#PortfolioSync_ViewModels_ListViewModel_IsEnabled
+  commentId: P:PortfolioSync.ViewModels.ListViewModel.IsEnabled
+  fullName: PortfolioSync.ViewModels.ListViewModel.IsEnabled
+  nameWithType: ListViewModel.IsEnabled
+- uid: PortfolioSync.ViewModels.ListViewModel.IsEnabled*
+  name: IsEnabled
+  href: api/PortfolioSync.ViewModels.ListViewModel.html#PortfolioSync_ViewModels_ListViewModel_IsEnabled_
+  commentId: Overload:PortfolioSync.ViewModels.ListViewModel.IsEnabled
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.ListViewModel.IsEnabled
+  nameWithType: ListViewModel.IsEnabled
+- uid: PortfolioSync.ViewModels.ListViewModel.OpenRetrieveFileDialog(System.Windows.Window,System.String)
+  name: OpenRetrieveFileDialog(Window, string?)
+  href: api/PortfolioSync.ViewModels.ListViewModel.html#PortfolioSync_ViewModels_ListViewModel_OpenRetrieveFileDialog_System_Windows_Window_System_String_
+  commentId: M:PortfolioSync.ViewModels.ListViewModel.OpenRetrieveFileDialog(System.Windows.Window,System.String)
+  name.vb: OpenRetrieveFileDialog(Window, String)
+  fullName: PortfolioSync.ViewModels.ListViewModel.OpenRetrieveFileDialog(System.Windows.Window, string?)
+  fullName.vb: PortfolioSync.ViewModels.ListViewModel.OpenRetrieveFileDialog(System.Windows.Window, String)
+  nameWithType: ListViewModel.OpenRetrieveFileDialog(Window, string?)
+  nameWithType.vb: ListViewModel.OpenRetrieveFileDialog(Window, String)
+- uid: PortfolioSync.ViewModels.ListViewModel.OpenRetrieveFileDialog*
+  name: OpenRetrieveFileDialog
+  href: api/PortfolioSync.ViewModels.ListViewModel.html#PortfolioSync_ViewModels_ListViewModel_OpenRetrieveFileDialog_
+  commentId: Overload:PortfolioSync.ViewModels.ListViewModel.OpenRetrieveFileDialog
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.ListViewModel.OpenRetrieveFileDialog
+  nameWithType: ListViewModel.OpenRetrieveFileDialog
+- uid: PortfolioSync.ViewModels.ListViewModel.RemotePath
+  name: RemotePath
+  href: api/PortfolioSync.ViewModels.ListViewModel.html#PortfolioSync_ViewModels_ListViewModel_RemotePath
+  commentId: P:PortfolioSync.ViewModels.ListViewModel.RemotePath
+  fullName: PortfolioSync.ViewModels.ListViewModel.RemotePath
+  nameWithType: ListViewModel.RemotePath
+- uid: PortfolioSync.ViewModels.ListViewModel.RemotePath*
+  name: RemotePath
+  href: api/PortfolioSync.ViewModels.ListViewModel.html#PortfolioSync_ViewModels_ListViewModel_RemotePath_
+  commentId: Overload:PortfolioSync.ViewModels.ListViewModel.RemotePath
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.ListViewModel.RemotePath
+  nameWithType: ListViewModel.RemotePath
+- uid: PortfolioSync.ViewModels.ListViewModel.RetrieveFileList(System.Windows.Window)
+  name: RetrieveFileList(Window)
+  href: api/PortfolioSync.ViewModels.ListViewModel.html#PortfolioSync_ViewModels_ListViewModel_RetrieveFileList_System_Windows_Window_
+  commentId: M:PortfolioSync.ViewModels.ListViewModel.RetrieveFileList(System.Windows.Window)
+  fullName: PortfolioSync.ViewModels.ListViewModel.RetrieveFileList(System.Windows.Window)
+  nameWithType: ListViewModel.RetrieveFileList(Window)
+- uid: PortfolioSync.ViewModels.ListViewModel.RetrieveFileList*
+  name: RetrieveFileList
+  href: api/PortfolioSync.ViewModels.ListViewModel.html#PortfolioSync_ViewModels_ListViewModel_RetrieveFileList_
+  commentId: Overload:PortfolioSync.ViewModels.ListViewModel.RetrieveFileList
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.ListViewModel.RetrieveFileList
+  nameWithType: ListViewModel.RetrieveFileList
+- uid: PortfolioSync.ViewModels.ListViewModel.SelectedFile
+  name: SelectedFile
+  href: api/PortfolioSync.ViewModels.ListViewModel.html#PortfolioSync_ViewModels_ListViewModel_SelectedFile
+  commentId: P:PortfolioSync.ViewModels.ListViewModel.SelectedFile
+  fullName: PortfolioSync.ViewModels.ListViewModel.SelectedFile
+  nameWithType: ListViewModel.SelectedFile
+- uid: PortfolioSync.ViewModels.ListViewModel.SelectedFile*
+  name: SelectedFile
+  href: api/PortfolioSync.ViewModels.ListViewModel.html#PortfolioSync_ViewModels_ListViewModel_SelectedFile_
+  commentId: Overload:PortfolioSync.ViewModels.ListViewModel.SelectedFile
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.ListViewModel.SelectedFile
+  nameWithType: ListViewModel.SelectedFile
+- uid: PortfolioSync.ViewModels.MainViewModel
+  name: MainViewModel
+  href: api/PortfolioSync.ViewModels.MainViewModel.html
+  commentId: T:PortfolioSync.ViewModels.MainViewModel
+  fullName: PortfolioSync.ViewModels.MainViewModel
+  nameWithType: MainViewModel
+- uid: PortfolioSync.ViewModels.MainViewModel.#ctor(PortfolioSync.IMessageTarget)
+  name: MainViewModel(IMessageTarget)
+  href: api/PortfolioSync.ViewModels.MainViewModel.html#PortfolioSync_ViewModels_MainViewModel__ctor_PortfolioSync_IMessageTarget_
+  commentId: M:PortfolioSync.ViewModels.MainViewModel.#ctor(PortfolioSync.IMessageTarget)
+  name.vb: New(IMessageTarget)
+  fullName: PortfolioSync.ViewModels.MainViewModel.MainViewModel(PortfolioSync.IMessageTarget)
+  fullName.vb: PortfolioSync.ViewModels.MainViewModel.New(PortfolioSync.IMessageTarget)
+  nameWithType: MainViewModel.MainViewModel(IMessageTarget)
+  nameWithType.vb: MainViewModel.New(IMessageTarget)
+- uid: PortfolioSync.ViewModels.MainViewModel.#ctor*
+  name: MainViewModel
+  href: api/PortfolioSync.ViewModels.MainViewModel.html#PortfolioSync_ViewModels_MainViewModel__ctor_
+  commentId: Overload:PortfolioSync.ViewModels.MainViewModel.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: PortfolioSync.ViewModels.MainViewModel.MainViewModel
+  fullName.vb: PortfolioSync.ViewModels.MainViewModel.New
+  nameWithType: MainViewModel.MainViewModel
+  nameWithType.vb: MainViewModel.New
+- uid: PortfolioSync.ViewModels.MainViewModel.Arduino
+  name: Arduino
+  href: api/PortfolioSync.ViewModels.MainViewModel.html#PortfolioSync_ViewModels_MainViewModel_Arduino
+  commentId: P:PortfolioSync.ViewModels.MainViewModel.Arduino
+  fullName: PortfolioSync.ViewModels.MainViewModel.Arduino
+  nameWithType: MainViewModel.Arduino
+- uid: PortfolioSync.ViewModels.MainViewModel.Arduino*
+  name: Arduino
+  href: api/PortfolioSync.ViewModels.MainViewModel.html#PortfolioSync_ViewModels_MainViewModel_Arduino_
+  commentId: Overload:PortfolioSync.ViewModels.MainViewModel.Arduino
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.MainViewModel.Arduino
+  nameWithType: MainViewModel.Arduino
+- uid: PortfolioSync.ViewModels.MainViewModel.Connect
+  name: Connect()
+  href: api/PortfolioSync.ViewModels.MainViewModel.html#PortfolioSync_ViewModels_MainViewModel_Connect
+  commentId: M:PortfolioSync.ViewModels.MainViewModel.Connect
+  fullName: PortfolioSync.ViewModels.MainViewModel.Connect()
+  nameWithType: MainViewModel.Connect()
+- uid: PortfolioSync.ViewModels.MainViewModel.Connect*
+  name: Connect
+  href: api/PortfolioSync.ViewModels.MainViewModel.html#PortfolioSync_ViewModels_MainViewModel_Connect_
+  commentId: Overload:PortfolioSync.ViewModels.MainViewModel.Connect
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.MainViewModel.Connect
+  nameWithType: MainViewModel.Connect
+- uid: PortfolioSync.ViewModels.MainViewModel.Disconnect
+  name: Disconnect()
+  href: api/PortfolioSync.ViewModels.MainViewModel.html#PortfolioSync_ViewModels_MainViewModel_Disconnect
+  commentId: M:PortfolioSync.ViewModels.MainViewModel.Disconnect
+  fullName: PortfolioSync.ViewModels.MainViewModel.Disconnect()
+  nameWithType: MainViewModel.Disconnect()
+- uid: PortfolioSync.ViewModels.MainViewModel.Disconnect*
+  name: Disconnect
+  href: api/PortfolioSync.ViewModels.MainViewModel.html#PortfolioSync_ViewModels_MainViewModel_Disconnect_
+  commentId: Overload:PortfolioSync.ViewModels.MainViewModel.Disconnect
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.MainViewModel.Disconnect
+  nameWithType: MainViewModel.Disconnect
+- uid: PortfolioSync.ViewModels.MainViewModel.IsConnectEnabled
+  name: IsConnectEnabled
+  href: api/PortfolioSync.ViewModels.MainViewModel.html#PortfolioSync_ViewModels_MainViewModel_IsConnectEnabled
+  commentId: P:PortfolioSync.ViewModels.MainViewModel.IsConnectEnabled
+  fullName: PortfolioSync.ViewModels.MainViewModel.IsConnectEnabled
+  nameWithType: MainViewModel.IsConnectEnabled
+- uid: PortfolioSync.ViewModels.MainViewModel.IsConnectEnabled*
+  name: IsConnectEnabled
+  href: api/PortfolioSync.ViewModels.MainViewModel.html#PortfolioSync_ViewModels_MainViewModel_IsConnectEnabled_
+  commentId: Overload:PortfolioSync.ViewModels.MainViewModel.IsConnectEnabled
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.MainViewModel.IsConnectEnabled
+  nameWithType: MainViewModel.IsConnectEnabled
+- uid: PortfolioSync.ViewModels.MainViewModel.IsConnected
+  name: IsConnected
+  href: api/PortfolioSync.ViewModels.MainViewModel.html#PortfolioSync_ViewModels_MainViewModel_IsConnected
+  commentId: P:PortfolioSync.ViewModels.MainViewModel.IsConnected
+  fullName: PortfolioSync.ViewModels.MainViewModel.IsConnected
+  nameWithType: MainViewModel.IsConnected
+- uid: PortfolioSync.ViewModels.MainViewModel.IsConnected*
+  name: IsConnected
+  href: api/PortfolioSync.ViewModels.MainViewModel.html#PortfolioSync_ViewModels_MainViewModel_IsConnected_
+  commentId: Overload:PortfolioSync.ViewModels.MainViewModel.IsConnected
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.MainViewModel.IsConnected
+  nameWithType: MainViewModel.IsConnected
+- uid: PortfolioSync.ViewModels.MainViewModel.IsDisconnected
+  name: IsDisconnected
+  href: api/PortfolioSync.ViewModels.MainViewModel.html#PortfolioSync_ViewModels_MainViewModel_IsDisconnected
+  commentId: P:PortfolioSync.ViewModels.MainViewModel.IsDisconnected
+  fullName: PortfolioSync.ViewModels.MainViewModel.IsDisconnected
+  nameWithType: MainViewModel.IsDisconnected
+- uid: PortfolioSync.ViewModels.MainViewModel.IsDisconnected*
+  name: IsDisconnected
+  href: api/PortfolioSync.ViewModels.MainViewModel.html#PortfolioSync_ViewModels_MainViewModel_IsDisconnected_
+  commentId: Overload:PortfolioSync.ViewModels.MainViewModel.IsDisconnected
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.MainViewModel.IsDisconnected
+  nameWithType: MainViewModel.IsDisconnected
+- uid: PortfolioSync.ViewModels.MainViewModel.SelectedSerialPort
+  name: SelectedSerialPort
+  href: api/PortfolioSync.ViewModels.MainViewModel.html#PortfolioSync_ViewModels_MainViewModel_SelectedSerialPort
+  commentId: P:PortfolioSync.ViewModels.MainViewModel.SelectedSerialPort
+  fullName: PortfolioSync.ViewModels.MainViewModel.SelectedSerialPort
+  nameWithType: MainViewModel.SelectedSerialPort
+- uid: PortfolioSync.ViewModels.MainViewModel.SelectedSerialPort*
+  name: SelectedSerialPort
+  href: api/PortfolioSync.ViewModels.MainViewModel.html#PortfolioSync_ViewModels_MainViewModel_SelectedSerialPort_
+  commentId: Overload:PortfolioSync.ViewModels.MainViewModel.SelectedSerialPort
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.MainViewModel.SelectedSerialPort
+  nameWithType: MainViewModel.SelectedSerialPort
+- uid: PortfolioSync.ViewModels.MainViewModel.SerialPorts
+  name: SerialPorts
+  href: api/PortfolioSync.ViewModels.MainViewModel.html#PortfolioSync_ViewModels_MainViewModel_SerialPorts
+  commentId: P:PortfolioSync.ViewModels.MainViewModel.SerialPorts
+  fullName: PortfolioSync.ViewModels.MainViewModel.SerialPorts
+  nameWithType: MainViewModel.SerialPorts
+- uid: PortfolioSync.ViewModels.MainViewModel.SerialPorts*
+  name: SerialPorts
+  href: api/PortfolioSync.ViewModels.MainViewModel.html#PortfolioSync_ViewModels_MainViewModel_SerialPorts_
+  commentId: Overload:PortfolioSync.ViewModels.MainViewModel.SerialPorts
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.MainViewModel.SerialPorts
+  nameWithType: MainViewModel.SerialPorts
+- uid: PortfolioSync.ViewModels.MainViewModel.ShowDebug
+  name: ShowDebug
+  href: api/PortfolioSync.ViewModels.MainViewModel.html#PortfolioSync_ViewModels_MainViewModel_ShowDebug
+  commentId: P:PortfolioSync.ViewModels.MainViewModel.ShowDebug
+  fullName: PortfolioSync.ViewModels.MainViewModel.ShowDebug
+  nameWithType: MainViewModel.ShowDebug
+- uid: PortfolioSync.ViewModels.MainViewModel.ShowDebug*
+  name: ShowDebug
+  href: api/PortfolioSync.ViewModels.MainViewModel.html#PortfolioSync_ViewModels_MainViewModel_ShowDebug_
+  commentId: Overload:PortfolioSync.ViewModels.MainViewModel.ShowDebug
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.MainViewModel.ShowDebug
+  nameWithType: MainViewModel.ShowDebug
+- uid: PortfolioSync.ViewModels.MainViewModel.Status
+  name: Status
+  href: api/PortfolioSync.ViewModels.MainViewModel.html#PortfolioSync_ViewModels_MainViewModel_Status
+  commentId: P:PortfolioSync.ViewModels.MainViewModel.Status
+  fullName: PortfolioSync.ViewModels.MainViewModel.Status
+  nameWithType: MainViewModel.Status
+- uid: PortfolioSync.ViewModels.MainViewModel.Status*
+  name: Status
+  href: api/PortfolioSync.ViewModels.MainViewModel.html#PortfolioSync_ViewModels_MainViewModel_Status_
+  commentId: Overload:PortfolioSync.ViewModels.MainViewModel.Status
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.MainViewModel.Status
+  nameWithType: MainViewModel.Status
+- uid: PortfolioSync.ViewModels.RetrieveViewModel
+  name: RetrieveViewModel
+  href: api/PortfolioSync.ViewModels.RetrieveViewModel.html
+  commentId: T:PortfolioSync.ViewModels.RetrieveViewModel
+  fullName: PortfolioSync.ViewModels.RetrieveViewModel
+  nameWithType: RetrieveViewModel
+- uid: PortfolioSync.ViewModels.RetrieveViewModel.#ctor(PortfolioSync.Arduino)
+  name: RetrieveViewModel(Arduino)
+  href: api/PortfolioSync.ViewModels.RetrieveViewModel.html#PortfolioSync_ViewModels_RetrieveViewModel__ctor_PortfolioSync_Arduino_
+  commentId: M:PortfolioSync.ViewModels.RetrieveViewModel.#ctor(PortfolioSync.Arduino)
+  name.vb: New(Arduino)
+  fullName: PortfolioSync.ViewModels.RetrieveViewModel.RetrieveViewModel(PortfolioSync.Arduino)
+  fullName.vb: PortfolioSync.ViewModels.RetrieveViewModel.New(PortfolioSync.Arduino)
+  nameWithType: RetrieveViewModel.RetrieveViewModel(Arduino)
+  nameWithType.vb: RetrieveViewModel.New(Arduino)
+- uid: PortfolioSync.ViewModels.RetrieveViewModel.#ctor*
+  name: RetrieveViewModel
+  href: api/PortfolioSync.ViewModels.RetrieveViewModel.html#PortfolioSync_ViewModels_RetrieveViewModel__ctor_
+  commentId: Overload:PortfolioSync.ViewModels.RetrieveViewModel.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: PortfolioSync.ViewModels.RetrieveViewModel.RetrieveViewModel
+  fullName.vb: PortfolioSync.ViewModels.RetrieveViewModel.New
+  nameWithType: RetrieveViewModel.RetrieveViewModel
+  nameWithType.vb: RetrieveViewModel.New
+- uid: PortfolioSync.ViewModels.RetrieveViewModel.DestinationPath
+  name: DestinationPath
+  href: api/PortfolioSync.ViewModels.RetrieveViewModel.html#PortfolioSync_ViewModels_RetrieveViewModel_DestinationPath
+  commentId: P:PortfolioSync.ViewModels.RetrieveViewModel.DestinationPath
+  fullName: PortfolioSync.ViewModels.RetrieveViewModel.DestinationPath
+  nameWithType: RetrieveViewModel.DestinationPath
+- uid: PortfolioSync.ViewModels.RetrieveViewModel.DestinationPath*
+  name: DestinationPath
+  href: api/PortfolioSync.ViewModels.RetrieveViewModel.html#PortfolioSync_ViewModels_RetrieveViewModel_DestinationPath_
+  commentId: Overload:PortfolioSync.ViewModels.RetrieveViewModel.DestinationPath
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.RetrieveViewModel.DestinationPath
+  nameWithType: RetrieveViewModel.DestinationPath
+- uid: PortfolioSync.ViewModels.RetrieveViewModel.DestinationPathVisibility
+  name: DestinationPathVisibility
+  href: api/PortfolioSync.ViewModels.RetrieveViewModel.html#PortfolioSync_ViewModels_RetrieveViewModel_DestinationPathVisibility
+  commentId: P:PortfolioSync.ViewModels.RetrieveViewModel.DestinationPathVisibility
+  fullName: PortfolioSync.ViewModels.RetrieveViewModel.DestinationPathVisibility
+  nameWithType: RetrieveViewModel.DestinationPathVisibility
+- uid: PortfolioSync.ViewModels.RetrieveViewModel.DestinationPathVisibility*
+  name: DestinationPathVisibility
+  href: api/PortfolioSync.ViewModels.RetrieveViewModel.html#PortfolioSync_ViewModels_RetrieveViewModel_DestinationPathVisibility_
+  commentId: Overload:PortfolioSync.ViewModels.RetrieveViewModel.DestinationPathVisibility
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.RetrieveViewModel.DestinationPathVisibility
+  nameWithType: RetrieveViewModel.DestinationPathVisibility
+- uid: PortfolioSync.ViewModels.RetrieveViewModel.IsEnabled
+  name: IsEnabled
+  href: api/PortfolioSync.ViewModels.RetrieveViewModel.html#PortfolioSync_ViewModels_RetrieveViewModel_IsEnabled
+  commentId: P:PortfolioSync.ViewModels.RetrieveViewModel.IsEnabled
+  fullName: PortfolioSync.ViewModels.RetrieveViewModel.IsEnabled
+  nameWithType: RetrieveViewModel.IsEnabled
+- uid: PortfolioSync.ViewModels.RetrieveViewModel.IsEnabled*
+  name: IsEnabled
+  href: api/PortfolioSync.ViewModels.RetrieveViewModel.html#PortfolioSync_ViewModels_RetrieveViewModel_IsEnabled_
+  commentId: Overload:PortfolioSync.ViewModels.RetrieveViewModel.IsEnabled
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.RetrieveViewModel.IsEnabled
+  nameWithType: RetrieveViewModel.IsEnabled
+- uid: PortfolioSync.ViewModels.RetrieveViewModel.RetrieveFile(System.Windows.Window)
+  name: RetrieveFile(Window)
+  href: api/PortfolioSync.ViewModels.RetrieveViewModel.html#PortfolioSync_ViewModels_RetrieveViewModel_RetrieveFile_System_Windows_Window_
+  commentId: M:PortfolioSync.ViewModels.RetrieveViewModel.RetrieveFile(System.Windows.Window)
+  fullName: PortfolioSync.ViewModels.RetrieveViewModel.RetrieveFile(System.Windows.Window)
+  nameWithType: RetrieveViewModel.RetrieveFile(Window)
+- uid: PortfolioSync.ViewModels.RetrieveViewModel.RetrieveFile*
+  name: RetrieveFile
+  href: api/PortfolioSync.ViewModels.RetrieveViewModel.html#PortfolioSync_ViewModels_RetrieveViewModel_RetrieveFile_
+  commentId: Overload:PortfolioSync.ViewModels.RetrieveViewModel.RetrieveFile
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.RetrieveViewModel.RetrieveFile
+  nameWithType: RetrieveViewModel.RetrieveFile
+- uid: PortfolioSync.ViewModels.RetrieveViewModel.SourcePath
+  name: SourcePath
+  href: api/PortfolioSync.ViewModels.RetrieveViewModel.html#PortfolioSync_ViewModels_RetrieveViewModel_SourcePath
+  commentId: P:PortfolioSync.ViewModels.RetrieveViewModel.SourcePath
+  fullName: PortfolioSync.ViewModels.RetrieveViewModel.SourcePath
+  nameWithType: RetrieveViewModel.SourcePath
+- uid: PortfolioSync.ViewModels.RetrieveViewModel.SourcePath*
+  name: SourcePath
+  href: api/PortfolioSync.ViewModels.RetrieveViewModel.html#PortfolioSync_ViewModels_RetrieveViewModel_SourcePath_
+  commentId: Overload:PortfolioSync.ViewModels.RetrieveViewModel.SourcePath
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.RetrieveViewModel.SourcePath
+  nameWithType: RetrieveViewModel.SourcePath
+- uid: PortfolioSync.ViewModels.SendViewModel
+  name: SendViewModel
+  href: api/PortfolioSync.ViewModels.SendViewModel.html
+  commentId: T:PortfolioSync.ViewModels.SendViewModel
+  fullName: PortfolioSync.ViewModels.SendViewModel
+  nameWithType: SendViewModel
+- uid: PortfolioSync.ViewModels.SendViewModel.#ctor(PortfolioSync.Arduino,System.String)
+  name: SendViewModel(Arduino, string)
+  href: api/PortfolioSync.ViewModels.SendViewModel.html#PortfolioSync_ViewModels_SendViewModel__ctor_PortfolioSync_Arduino_System_String_
+  commentId: M:PortfolioSync.ViewModels.SendViewModel.#ctor(PortfolioSync.Arduino,System.String)
+  name.vb: New(Arduino, String)
+  fullName: PortfolioSync.ViewModels.SendViewModel.SendViewModel(PortfolioSync.Arduino, string)
+  fullName.vb: PortfolioSync.ViewModels.SendViewModel.New(PortfolioSync.Arduino, String)
+  nameWithType: SendViewModel.SendViewModel(Arduino, string)
+  nameWithType.vb: SendViewModel.New(Arduino, String)
+- uid: PortfolioSync.ViewModels.SendViewModel.#ctor*
+  name: SendViewModel
+  href: api/PortfolioSync.ViewModels.SendViewModel.html#PortfolioSync_ViewModels_SendViewModel__ctor_
+  commentId: Overload:PortfolioSync.ViewModels.SendViewModel.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: PortfolioSync.ViewModels.SendViewModel.SendViewModel
+  fullName.vb: PortfolioSync.ViewModels.SendViewModel.New
+  nameWithType: SendViewModel.SendViewModel
+  nameWithType.vb: SendViewModel.New
+- uid: PortfolioSync.ViewModels.SendViewModel.DestinationPath
+  name: DestinationPath
+  href: api/PortfolioSync.ViewModels.SendViewModel.html#PortfolioSync_ViewModels_SendViewModel_DestinationPath
+  commentId: P:PortfolioSync.ViewModels.SendViewModel.DestinationPath
+  fullName: PortfolioSync.ViewModels.SendViewModel.DestinationPath
+  nameWithType: SendViewModel.DestinationPath
+- uid: PortfolioSync.ViewModels.SendViewModel.DestinationPath*
+  name: DestinationPath
+  href: api/PortfolioSync.ViewModels.SendViewModel.html#PortfolioSync_ViewModels_SendViewModel_DestinationPath_
+  commentId: Overload:PortfolioSync.ViewModels.SendViewModel.DestinationPath
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.SendViewModel.DestinationPath
+  nameWithType: SendViewModel.DestinationPath
+- uid: PortfolioSync.ViewModels.SendViewModel.IsEnabled
+  name: IsEnabled
+  href: api/PortfolioSync.ViewModels.SendViewModel.html#PortfolioSync_ViewModels_SendViewModel_IsEnabled
+  commentId: P:PortfolioSync.ViewModels.SendViewModel.IsEnabled
+  fullName: PortfolioSync.ViewModels.SendViewModel.IsEnabled
+  nameWithType: SendViewModel.IsEnabled
+- uid: PortfolioSync.ViewModels.SendViewModel.IsEnabled*
+  name: IsEnabled
+  href: api/PortfolioSync.ViewModels.SendViewModel.html#PortfolioSync_ViewModels_SendViewModel_IsEnabled_
+  commentId: Overload:PortfolioSync.ViewModels.SendViewModel.IsEnabled
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.SendViewModel.IsEnabled
+  nameWithType: SendViewModel.IsEnabled
+- uid: PortfolioSync.ViewModels.SendViewModel.OverwriteFile
+  name: OverwriteFile
+  href: api/PortfolioSync.ViewModels.SendViewModel.html#PortfolioSync_ViewModels_SendViewModel_OverwriteFile
+  commentId: P:PortfolioSync.ViewModels.SendViewModel.OverwriteFile
+  fullName: PortfolioSync.ViewModels.SendViewModel.OverwriteFile
+  nameWithType: SendViewModel.OverwriteFile
+- uid: PortfolioSync.ViewModels.SendViewModel.OverwriteFile*
+  name: OverwriteFile
+  href: api/PortfolioSync.ViewModels.SendViewModel.html#PortfolioSync_ViewModels_SendViewModel_OverwriteFile_
+  commentId: Overload:PortfolioSync.ViewModels.SendViewModel.OverwriteFile
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.SendViewModel.OverwriteFile
+  nameWithType: SendViewModel.OverwriteFile
+- uid: PortfolioSync.ViewModels.SendViewModel.SendFile(System.Windows.Window)
+  name: SendFile(Window)
+  href: api/PortfolioSync.ViewModels.SendViewModel.html#PortfolioSync_ViewModels_SendViewModel_SendFile_System_Windows_Window_
+  commentId: M:PortfolioSync.ViewModels.SendViewModel.SendFile(System.Windows.Window)
+  fullName: PortfolioSync.ViewModels.SendViewModel.SendFile(System.Windows.Window)
+  nameWithType: SendViewModel.SendFile(Window)
+- uid: PortfolioSync.ViewModels.SendViewModel.SendFile*
+  name: SendFile
+  href: api/PortfolioSync.ViewModels.SendViewModel.html#PortfolioSync_ViewModels_SendViewModel_SendFile_
+  commentId: Overload:PortfolioSync.ViewModels.SendViewModel.SendFile
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.SendViewModel.SendFile
+  nameWithType: SendViewModel.SendFile
+- uid: PortfolioSync.ViewModels.SendViewModel.SourcePath
+  name: SourcePath
+  href: api/PortfolioSync.ViewModels.SendViewModel.html#PortfolioSync_ViewModels_SendViewModel_SourcePath
+  commentId: P:PortfolioSync.ViewModels.SendViewModel.SourcePath
+  fullName: PortfolioSync.ViewModels.SendViewModel.SourcePath
+  nameWithType: SendViewModel.SourcePath
+- uid: PortfolioSync.ViewModels.SendViewModel.SourcePath*
+  name: SourcePath
+  href: api/PortfolioSync.ViewModels.SendViewModel.html#PortfolioSync_ViewModels_SendViewModel_SourcePath_
+  commentId: Overload:PortfolioSync.ViewModels.SendViewModel.SourcePath
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.SendViewModel.SourcePath
+  nameWithType: SendViewModel.SourcePath
+- uid: PortfolioSync.ViewModels.TransferViewModel
+  name: TransferViewModel
+  href: api/PortfolioSync.ViewModels.TransferViewModel.html
+  commentId: T:PortfolioSync.ViewModels.TransferViewModel
+  fullName: PortfolioSync.ViewModels.TransferViewModel
+  nameWithType: TransferViewModel
+- uid: PortfolioSync.ViewModels.TransferViewModel.#ctor(PortfolioSync.Arduino)
+  name: TransferViewModel(Arduino)
+  href: api/PortfolioSync.ViewModels.TransferViewModel.html#PortfolioSync_ViewModels_TransferViewModel__ctor_PortfolioSync_Arduino_
+  commentId: M:PortfolioSync.ViewModels.TransferViewModel.#ctor(PortfolioSync.Arduino)
+  name.vb: New(Arduino)
+  fullName: PortfolioSync.ViewModels.TransferViewModel.TransferViewModel(PortfolioSync.Arduino)
+  fullName.vb: PortfolioSync.ViewModels.TransferViewModel.New(PortfolioSync.Arduino)
+  nameWithType: TransferViewModel.TransferViewModel(Arduino)
+  nameWithType.vb: TransferViewModel.New(Arduino)
+- uid: PortfolioSync.ViewModels.TransferViewModel.#ctor*
+  name: TransferViewModel
+  href: api/PortfolioSync.ViewModels.TransferViewModel.html#PortfolioSync_ViewModels_TransferViewModel__ctor_
+  commentId: Overload:PortfolioSync.ViewModels.TransferViewModel.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: PortfolioSync.ViewModels.TransferViewModel.TransferViewModel
+  fullName.vb: PortfolioSync.ViewModels.TransferViewModel.New
+  nameWithType: TransferViewModel.TransferViewModel
+  nameWithType.vb: TransferViewModel.New
+- uid: PortfolioSync.ViewModels.TransferViewModel.Cancel
+  name: Cancel()
+  href: api/PortfolioSync.ViewModels.TransferViewModel.html#PortfolioSync_ViewModels_TransferViewModel_Cancel
+  commentId: M:PortfolioSync.ViewModels.TransferViewModel.Cancel
+  fullName: PortfolioSync.ViewModels.TransferViewModel.Cancel()
+  nameWithType: TransferViewModel.Cancel()
+- uid: PortfolioSync.ViewModels.TransferViewModel.Cancel*
+  name: Cancel
+  href: api/PortfolioSync.ViewModels.TransferViewModel.html#PortfolioSync_ViewModels_TransferViewModel_Cancel_
+  commentId: Overload:PortfolioSync.ViewModels.TransferViewModel.Cancel
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.TransferViewModel.Cancel
+  nameWithType: TransferViewModel.Cancel
+- uid: PortfolioSync.ViewModels.TransferViewModel.TransferPercentage
+  name: TransferPercentage
+  href: api/PortfolioSync.ViewModels.TransferViewModel.html#PortfolioSync_ViewModels_TransferViewModel_TransferPercentage
+  commentId: P:PortfolioSync.ViewModels.TransferViewModel.TransferPercentage
+  fullName: PortfolioSync.ViewModels.TransferViewModel.TransferPercentage
+  nameWithType: TransferViewModel.TransferPercentage
+- uid: PortfolioSync.ViewModels.TransferViewModel.TransferPercentage*
+  name: TransferPercentage
+  href: api/PortfolioSync.ViewModels.TransferViewModel.html#PortfolioSync_ViewModels_TransferViewModel_TransferPercentage_
+  commentId: Overload:PortfolioSync.ViewModels.TransferViewModel.TransferPercentage
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.TransferViewModel.TransferPercentage
+  nameWithType: TransferViewModel.TransferPercentage
+- uid: PortfolioSync.ViewModels.TransferViewModel.TransferPercentageText
+  name: TransferPercentageText
+  href: api/PortfolioSync.ViewModels.TransferViewModel.html#PortfolioSync_ViewModels_TransferViewModel_TransferPercentageText
+  commentId: P:PortfolioSync.ViewModels.TransferViewModel.TransferPercentageText
+  fullName: PortfolioSync.ViewModels.TransferViewModel.TransferPercentageText
+  nameWithType: TransferViewModel.TransferPercentageText
+- uid: PortfolioSync.ViewModels.TransferViewModel.TransferPercentageText*
+  name: TransferPercentageText
+  href: api/PortfolioSync.ViewModels.TransferViewModel.html#PortfolioSync_ViewModels_TransferViewModel_TransferPercentageText_
+  commentId: Overload:PortfolioSync.ViewModels.TransferViewModel.TransferPercentageText
+  isSpec: "True"
+  fullName: PortfolioSync.ViewModels.TransferViewModel.TransferPercentageText
+  nameWithType: TransferViewModel.TransferPercentageText
+- uid: PortfolioSync.ViewModels.TransferViewModel.arduino
+  name: arduino
+  href: api/PortfolioSync.ViewModels.TransferViewModel.html#PortfolioSync_ViewModels_TransferViewModel_arduino
+  commentId: F:PortfolioSync.ViewModels.TransferViewModel.arduino
+  fullName: PortfolioSync.ViewModels.TransferViewModel.arduino
+  nameWithType: TransferViewModel.arduino
+- uid: PortfolioSync.Views
+  name: PortfolioSync.Views
+  href: api/PortfolioSync.Views.html
+  commentId: N:PortfolioSync.Views
+  fullName: PortfolioSync.Views
+  nameWithType: PortfolioSync.Views
+- uid: PortfolioSync.Views.ListDialog
+  name: ListDialog
+  href: api/PortfolioSync.Views.ListDialog.html
+  commentId: T:PortfolioSync.Views.ListDialog
+  fullName: PortfolioSync.Views.ListDialog
+  nameWithType: ListDialog
+- uid: PortfolioSync.Views.ListDialog.#ctor(System.Windows.Window,PortfolioSync.ViewModels.ListViewModel)
+  name: ListDialog(Window, ListViewModel)
+  href: api/PortfolioSync.Views.ListDialog.html#PortfolioSync_Views_ListDialog__ctor_System_Windows_Window_PortfolioSync_ViewModels_ListViewModel_
+  commentId: M:PortfolioSync.Views.ListDialog.#ctor(System.Windows.Window,PortfolioSync.ViewModels.ListViewModel)
+  name.vb: New(Window, ListViewModel)
+  fullName: PortfolioSync.Views.ListDialog.ListDialog(System.Windows.Window, PortfolioSync.ViewModels.ListViewModel)
+  fullName.vb: PortfolioSync.Views.ListDialog.New(System.Windows.Window, PortfolioSync.ViewModels.ListViewModel)
+  nameWithType: ListDialog.ListDialog(Window, ListViewModel)
+  nameWithType.vb: ListDialog.New(Window, ListViewModel)
+- uid: PortfolioSync.Views.ListDialog.#ctor*
+  name: ListDialog
+  href: api/PortfolioSync.Views.ListDialog.html#PortfolioSync_Views_ListDialog__ctor_
+  commentId: Overload:PortfolioSync.Views.ListDialog.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: PortfolioSync.Views.ListDialog.ListDialog
+  fullName.vb: PortfolioSync.Views.ListDialog.New
+  nameWithType: ListDialog.ListDialog
+  nameWithType.vb: ListDialog.New
+- uid: PortfolioSync.Views.ListDialog.ShowDialog(System.Windows.Window,PortfolioSync.Arduino)
+  name: ShowDialog(Window, Arduino)
+  href: api/PortfolioSync.Views.ListDialog.html#PortfolioSync_Views_ListDialog_ShowDialog_System_Windows_Window_PortfolioSync_Arduino_
+  commentId: M:PortfolioSync.Views.ListDialog.ShowDialog(System.Windows.Window,PortfolioSync.Arduino)
+  fullName: PortfolioSync.Views.ListDialog.ShowDialog(System.Windows.Window, PortfolioSync.Arduino)
+  nameWithType: ListDialog.ShowDialog(Window, Arduino)
+- uid: PortfolioSync.Views.ListDialog.ShowDialog*
+  name: ShowDialog
+  href: api/PortfolioSync.Views.ListDialog.html#PortfolioSync_Views_ListDialog_ShowDialog_
+  commentId: Overload:PortfolioSync.Views.ListDialog.ShowDialog
+  isSpec: "True"
+  fullName: PortfolioSync.Views.ListDialog.ShowDialog
+  nameWithType: ListDialog.ShowDialog
+- uid: PortfolioSync.Views.MainWindow
+  name: MainWindow
+  href: api/PortfolioSync.Views.MainWindow.html
+  commentId: T:PortfolioSync.Views.MainWindow
+  fullName: PortfolioSync.Views.MainWindow
+  nameWithType: MainWindow
+- uid: PortfolioSync.Views.MainWindow.#ctor
+  name: MainWindow()
+  href: api/PortfolioSync.Views.MainWindow.html#PortfolioSync_Views_MainWindow__ctor
+  commentId: M:PortfolioSync.Views.MainWindow.#ctor
+  name.vb: New()
+  fullName: PortfolioSync.Views.MainWindow.MainWindow()
+  fullName.vb: PortfolioSync.Views.MainWindow.New()
+  nameWithType: MainWindow.MainWindow()
+  nameWithType.vb: MainWindow.New()
+- uid: PortfolioSync.Views.MainWindow.#ctor*
+  name: MainWindow
+  href: api/PortfolioSync.Views.MainWindow.html#PortfolioSync_Views_MainWindow__ctor_
+  commentId: Overload:PortfolioSync.Views.MainWindow.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: PortfolioSync.Views.MainWindow.MainWindow
+  fullName.vb: PortfolioSync.Views.MainWindow.New
+  nameWithType: MainWindow.MainWindow
+  nameWithType.vb: MainWindow.New
+- uid: PortfolioSync.Views.RetrieveDialog
+  name: RetrieveDialog
+  href: api/PortfolioSync.Views.RetrieveDialog.html
+  commentId: T:PortfolioSync.Views.RetrieveDialog
+  fullName: PortfolioSync.Views.RetrieveDialog
+  nameWithType: RetrieveDialog
+- uid: PortfolioSync.Views.RetrieveDialog.#ctor(System.Windows.Window,PortfolioSync.ViewModels.RetrieveViewModel)
+  name: RetrieveDialog(Window, RetrieveViewModel)
+  href: api/PortfolioSync.Views.RetrieveDialog.html#PortfolioSync_Views_RetrieveDialog__ctor_System_Windows_Window_PortfolioSync_ViewModels_RetrieveViewModel_
+  commentId: M:PortfolioSync.Views.RetrieveDialog.#ctor(System.Windows.Window,PortfolioSync.ViewModels.RetrieveViewModel)
+  name.vb: New(Window, RetrieveViewModel)
+  fullName: PortfolioSync.Views.RetrieveDialog.RetrieveDialog(System.Windows.Window, PortfolioSync.ViewModels.RetrieveViewModel)
+  fullName.vb: PortfolioSync.Views.RetrieveDialog.New(System.Windows.Window, PortfolioSync.ViewModels.RetrieveViewModel)
+  nameWithType: RetrieveDialog.RetrieveDialog(Window, RetrieveViewModel)
+  nameWithType.vb: RetrieveDialog.New(Window, RetrieveViewModel)
+- uid: PortfolioSync.Views.RetrieveDialog.#ctor*
+  name: RetrieveDialog
+  href: api/PortfolioSync.Views.RetrieveDialog.html#PortfolioSync_Views_RetrieveDialog__ctor_
+  commentId: Overload:PortfolioSync.Views.RetrieveDialog.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: PortfolioSync.Views.RetrieveDialog.RetrieveDialog
+  fullName.vb: PortfolioSync.Views.RetrieveDialog.New
+  nameWithType: RetrieveDialog.RetrieveDialog
+  nameWithType.vb: RetrieveDialog.New
+- uid: PortfolioSync.Views.RetrieveDialog.ShowDialog(System.Windows.Window,PortfolioSync.Arduino,System.String)
+  name: ShowDialog(Window, Arduino, string?)
+  href: api/PortfolioSync.Views.RetrieveDialog.html#PortfolioSync_Views_RetrieveDialog_ShowDialog_System_Windows_Window_PortfolioSync_Arduino_System_String_
+  commentId: M:PortfolioSync.Views.RetrieveDialog.ShowDialog(System.Windows.Window,PortfolioSync.Arduino,System.String)
+  name.vb: ShowDialog(Window, Arduino, String)
+  fullName: PortfolioSync.Views.RetrieveDialog.ShowDialog(System.Windows.Window, PortfolioSync.Arduino, string?)
+  fullName.vb: PortfolioSync.Views.RetrieveDialog.ShowDialog(System.Windows.Window, PortfolioSync.Arduino, String)
+  nameWithType: RetrieveDialog.ShowDialog(Window, Arduino, string?)
+  nameWithType.vb: RetrieveDialog.ShowDialog(Window, Arduino, String)
+- uid: PortfolioSync.Views.RetrieveDialog.ShowDialog*
+  name: ShowDialog
+  href: api/PortfolioSync.Views.RetrieveDialog.html#PortfolioSync_Views_RetrieveDialog_ShowDialog_
+  commentId: Overload:PortfolioSync.Views.RetrieveDialog.ShowDialog
+  isSpec: "True"
+  fullName: PortfolioSync.Views.RetrieveDialog.ShowDialog
+  nameWithType: RetrieveDialog.ShowDialog
+- uid: PortfolioSync.Views.SendDialog
+  name: SendDialog
+  href: api/PortfolioSync.Views.SendDialog.html
+  commentId: T:PortfolioSync.Views.SendDialog
+  fullName: PortfolioSync.Views.SendDialog
+  nameWithType: SendDialog
+- uid: PortfolioSync.Views.SendDialog.#ctor(System.Windows.Window,PortfolioSync.ViewModels.SendViewModel)
+  name: SendDialog(Window, SendViewModel)
+  href: api/PortfolioSync.Views.SendDialog.html#PortfolioSync_Views_SendDialog__ctor_System_Windows_Window_PortfolioSync_ViewModels_SendViewModel_
+  commentId: M:PortfolioSync.Views.SendDialog.#ctor(System.Windows.Window,PortfolioSync.ViewModels.SendViewModel)
+  name.vb: New(Window, SendViewModel)
+  fullName: PortfolioSync.Views.SendDialog.SendDialog(System.Windows.Window, PortfolioSync.ViewModels.SendViewModel)
+  fullName.vb: PortfolioSync.Views.SendDialog.New(System.Windows.Window, PortfolioSync.ViewModels.SendViewModel)
+  nameWithType: SendDialog.SendDialog(Window, SendViewModel)
+  nameWithType.vb: SendDialog.New(Window, SendViewModel)
+- uid: PortfolioSync.Views.SendDialog.#ctor*
+  name: SendDialog
+  href: api/PortfolioSync.Views.SendDialog.html#PortfolioSync_Views_SendDialog__ctor_
+  commentId: Overload:PortfolioSync.Views.SendDialog.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: PortfolioSync.Views.SendDialog.SendDialog
+  fullName.vb: PortfolioSync.Views.SendDialog.New
+  nameWithType: SendDialog.SendDialog
+  nameWithType.vb: SendDialog.New
+- uid: PortfolioSync.Views.SendDialog.ShowDialog(System.Windows.Window,PortfolioSync.Arduino,System.String)
+  name: ShowDialog(Window, Arduino, string)
+  href: api/PortfolioSync.Views.SendDialog.html#PortfolioSync_Views_SendDialog_ShowDialog_System_Windows_Window_PortfolioSync_Arduino_System_String_
+  commentId: M:PortfolioSync.Views.SendDialog.ShowDialog(System.Windows.Window,PortfolioSync.Arduino,System.String)
+  name.vb: ShowDialog(Window, Arduino, String)
+  fullName: PortfolioSync.Views.SendDialog.ShowDialog(System.Windows.Window, PortfolioSync.Arduino, string)
+  fullName.vb: PortfolioSync.Views.SendDialog.ShowDialog(System.Windows.Window, PortfolioSync.Arduino, String)
+  nameWithType: SendDialog.ShowDialog(Window, Arduino, string)
+  nameWithType.vb: SendDialog.ShowDialog(Window, Arduino, String)
+- uid: PortfolioSync.Views.SendDialog.ShowDialog*
+  name: ShowDialog
+  href: api/PortfolioSync.Views.SendDialog.html#PortfolioSync_Views_SendDialog_ShowDialog_
+  commentId: Overload:PortfolioSync.Views.SendDialog.ShowDialog
+  isSpec: "True"
+  fullName: PortfolioSync.Views.SendDialog.ShowDialog
+  nameWithType: SendDialog.ShowDialog

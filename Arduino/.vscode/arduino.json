@@ -1,5 +1,5 @@
 {
-    "configuration": "cpu=atmega328old",
+    "configuration": "cpu=atmega328",
     "board": "arduino:avr:nano",
     "port": "COM7",
     "sketch": "Arduino.ino",

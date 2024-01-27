@@ -4,11 +4,23 @@
 
 namespace Portfolio
 {
+    /** DB25 to Arduino pin mapping */
+    const int PIN_DB25_2 = 2;
+    const int PIN_DB25_3 = 3;
+    const int PIN_DB25_4 = 4;
+    const int PIN_DB25_5 = 5;
+    const int PIN_DB25_6 = 6;
+    const int PIN_DB25_12 = 7;
+    const int PIN_DB25_13 = 8;
+    const int PIN_DB25_15 = 9;
+    const int PIN_DB25_11 = 10;
+    const int PIN_DB25_10 = 11;
+
     /** Portfolio pins */
-    const int  PIN_INPUT_CLOCK = 2;     // pin sub D25 pin 12 (White -> White)
-    const int  PIN_INPUT_DATA = 3;      // pin sub D25 pin 13 (Blue -> Gray)
-    const int  PIN_OUTPUT_CLOCK = 4;    // pin sub D25 pin 3 (Yellow -> Purple)
-    const int  PIN_OUTPUT_DATA = 5;     // pin sub D25 pin 2 (Green -> Blue)
+    const int  PIN_INPUT_CLOCK = PIN_DB25_12;       // pin sub D25 pin 12 (White -> White)
+    const int  PIN_INPUT_DATA = PIN_DB25_13;        // pin sub D25 pin 13 (Blue -> Gray)
+    const int  PIN_OUTPUT_CLOCK = PIN_DB25_3;       // pin sub D25 pin 3 (Yellow -> Purple)
+    const int  PIN_OUTPUT_DATA = PIN_DB25_2;        // pin sub D25 pin 2 (Green -> Blue)
 
     const int TIMEOUT = 1000;           // 1 second timeout
 
