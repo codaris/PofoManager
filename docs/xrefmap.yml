@@ -2374,6 +2374,31 @@ references:
   commentId: N:PofoManager.Views
   fullName: PofoManager.Views
   nameWithType: PofoManager.Views
+- uid: PofoManager.Views.About
+  name: About
+  href: api/PofoManager.Views.About.html
+  commentId: T:PofoManager.Views.About
+  fullName: PofoManager.Views.About
+  nameWithType: About
+- uid: PofoManager.Views.About.#ctor
+  name: About()
+  href: api/PofoManager.Views.About.html#PofoManager_Views_About__ctor
+  commentId: M:PofoManager.Views.About.#ctor
+  name.vb: New()
+  fullName: PofoManager.Views.About.About()
+  fullName.vb: PofoManager.Views.About.New()
+  nameWithType: About.About()
+  nameWithType.vb: About.New()
+- uid: PofoManager.Views.About.#ctor*
+  name: About
+  href: api/PofoManager.Views.About.html#PofoManager_Views_About__ctor_
+  commentId: Overload:PofoManager.Views.About.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: PofoManager.Views.About.About
+  fullName.vb: PofoManager.Views.About.New
+  nameWithType: About.About
+  nameWithType.vb: About.New
 - uid: PofoManager.Views.ListDialog
   name: ListDialog
   href: api/PofoManager.Views.ListDialog.html
@@ -2519,3 +2544,22 @@ references:
   isSpec: "True"
   fullName: PofoManager.Views.SendDialog.ShowDialog
   nameWithType: SendDialog.ShowDialog
+- uid: PofoManager.WpfExtensions
+  name: WpfExtensions
+  href: api/PofoManager.WpfExtensions.html
+  commentId: T:PofoManager.WpfExtensions
+  fullName: PofoManager.WpfExtensions
+  nameWithType: WpfExtensions
+- uid: PofoManager.WpfExtensions.RemoveIcon(System.Windows.Window)
+  name: RemoveIcon(Window)
+  href: api/PofoManager.WpfExtensions.html#PofoManager_WpfExtensions_RemoveIcon_System_Windows_Window_
+  commentId: M:PofoManager.WpfExtensions.RemoveIcon(System.Windows.Window)
+  fullName: PofoManager.WpfExtensions.RemoveIcon(System.Windows.Window)
+  nameWithType: WpfExtensions.RemoveIcon(Window)
+- uid: PofoManager.WpfExtensions.RemoveIcon*
+  name: RemoveIcon
+  href: api/PofoManager.WpfExtensions.html#PofoManager_WpfExtensions_RemoveIcon_
+  commentId: Overload:PofoManager.WpfExtensions.RemoveIcon
+  isSpec: "True"
+  fullName: PofoManager.WpfExtensions.RemoveIcon
+  nameWithType: WpfExtensions.RemoveIcon

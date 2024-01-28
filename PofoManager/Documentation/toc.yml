@@ -1,4 +1,7 @@
-- name: Docs
-  href: docs/
-- name: API
+- name: Home
+  href: /
+  homepage: index.md
+- name: API Documentation
   href: api/
+- name: File Transfer Protocol
+  href: protocol.md

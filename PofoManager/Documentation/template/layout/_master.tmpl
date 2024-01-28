@@ -14,7 +14,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="{{#title}}{{title}}{{/title}}{{^title}}{{>partials/title}}{{/title}} {{#_appTitle}}| {{_appTitle}} {{/_appTitle}}">
       {{#_description}}<meta name="description" content="{{_description}}">{{/_description}}
-      <link rel="icon" href="{{_rel}}{{{_appFaviconPath}}}{{^_appFaviconPath}}favicon.ico{{/_appFaviconPath}}">
+      <link rel="icon" href="{{_rel}}images/PofoManagerIcon.png">
       <link rel="stylesheet" href="{{_rel}}public/docfx.min.css">
       <link rel="stylesheet" href="{{_rel}}public/main.css">
       <meta name="docfx:navrel" content="{{_navRel}}">
@@ -36,6 +36,9 @@
       <meta name="loc:changeTheme" content="{{__global.changeTheme}}">
       <meta name="loc:copy" content="{{__global.copy}}">
       <meta name="loc:downloadPdf" content="{{__global.downloadPdf}}">
+      <style>
+        .table { width: auto !important; }
+      </style>
     {{/redirect_url}}
   </head>
 

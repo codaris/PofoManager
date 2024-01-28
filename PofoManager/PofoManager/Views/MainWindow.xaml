@@ -9,7 +9,7 @@
         Title="Portfolio Manager" Height="450" Width="800" 
         d:DataContext="{d:DesignInstance Type=vm:MainViewModel, IsDesignTimeCreatable=False}" 
         Drop="Window_Drop" AllowDrop="True"
-        Icon="/Resources/Sync.png"  
+        Icon="/Resources/PofoManagerIcon.png"  
         >
     <Window.Resources>
         <ResourceDictionary>
@@ -37,6 +37,9 @@
                     <MenuItem Command="ApplicationCommands.Redo" Icon="{StaticResource RedoIcon}" />
                     <Separator />
                     <MenuItem Command="ApplicationCommands.SelectAll" Icon="{StaticResource SelectAllIcon}" />
+                </MenuItem>
+                <MenuItem Header="_Help">
+                    <MenuItem Header="About..." Click="About_Click" />
                 </MenuItem>
             </Menu>
             <Border DockPanel.Dock="Top" BorderThickness="0,1,0,0">

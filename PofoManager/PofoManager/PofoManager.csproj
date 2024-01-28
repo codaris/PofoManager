@@ -10,8 +10,14 @@
   <ItemGroup>
     <None Remove="Resources\DownloadDocument.png" />
     <None Remove="Resources\ListView.png" />
+    <None Remove="Resources\PofoManagerBanner.png" />
+    <None Remove="Resources\PofoManagerIcon.png" />
     <None Remove="Resources\Sync.png" />
     <None Remove="Resources\UploadDocument.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\PofoManagerIcon.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,6 +33,7 @@
   <ItemGroup>
     <Resource Include="Resources\DownloadDocument.png" />
     <Resource Include="Resources\ListView.png" />
+    <Resource Include="Resources\PofoManagerBanner.png" />
     <Resource Include="Resources\Sync.png" />
     <Resource Include="Resources\UploadDocument.png" />
   </ItemGroup>

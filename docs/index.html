@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Main | Portfolio Manager ">
       
-      <link rel="icon" href="favicon.ico">
+      <link rel="icon" href="images/PofoManagerIcon.png">
       <link rel="stylesheet" href="public/docfx.min.css">
       <link rel="stylesheet" href="public/main.css">
       <meta name="docfx:navrel" content="toc.html">
@@ -28,6 +28,9 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+      <style>
+        .table { width: auto !important; }
+      </style>
   </head>
 
   <script type="module" src="./public/docfx.min.js"></script>
@@ -86,15 +89,81 @@
 
 
 <p><img src="images/PofoManagerBanner.png" alt=""></p>
-<p><strong>Portfolio Manager</strong> is an application for interfacing an Atari Portfolio vintage portable computer with your desktop PC.<br>
-It works together with an Arduino to provide connect the Portfolio parallel interface adapter to a USB port on your computer.<br>
-It supports the internal file transfer protocol of the Portfolio.</p>
-<h1 id="portfolio-manager">Portfolio Manager.</h1>
-<p>Refer to <a href="http://daringfireball.net/projects/markdown/">Markdown</a> for how to write markdown files.</p>
-<h2 id="quick-start-notes">Quick Start Notes:</h2>
-<ol>
-<li>Add images to the <em>images</em> folder if the file is referencing an image.</li>
-</ol>
+<p><strong>Portfolio Manager</strong> is an application for interfacing an <a href="https://en.wikipedia.org/wiki/Atari_Portfolio">Atari Portfolio</a> vintage portable computer with your desktop PC.  It works together with an <a href="https://store.arduino.cc/pages/nano-family">Arduino</a> to connect the Portfolio Parallel Interface Adapter to a USB port on your computer.  With this hardware, Portfolio Manger supports the internal file transfer protocol of the Portfolio.</p>
+<h2 id="requirements">Requirements</h2>
+<p>To use this software you will need the following:</p>
+<ul>
+<li>An Atari Portfolio</li>
+<li>An Atari Parallel Interface Adapter</li>
+<li>An Arduino (Arduino Nano)</li>
+<li>A DB25 breakout board</li>
+</ul>
+<h2 id="arduino-connection-diagram">Arduino Connection Diagram</h2>
+<p><img src="images/PofoMangerNanoConnect.png" alt=""></p>
+<p>For compatibiltiy with the Atari Portfolio file transfer server it is only necessary to connect to pins 2, 3, 12, 13, and 25 on the DB25 connector.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Arduino Pin</th>
+<th style="text-align: center;">DB25 Pin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;"><strong>2</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"><strong>3</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;"><strong>12</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;"><strong>13</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">15</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">11</td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">GND</td>
+<td style="text-align: center;"><strong>25</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="features">Features</h2>
+<p>Support for all built-in Portfolio file transfer server features:</p>
+<ul>
+<li>Sending files to Portfolio</li>
+<li>Receiving files from Portfolio</li>
+<li>Listing directors on the Portfolio</li>
+</ul>
+<h2 id="getting-help">Getting Help</h2>
+<p>You can get help with this application by using the <a href="https://github.com/codaris/PofoManager/issues">Issues</a> tab in this project.</p>
 
 </article>
 

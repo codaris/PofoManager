@@ -372,6 +372,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/PofoManager.Views.About.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PofoManager.Views.About.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/PofoManager.Views.ListDialog.yml",
       "output": {
         ".html": {
@@ -422,6 +432,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/PofoManager.WpfExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PofoManager.WpfExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/PofoManager.yml",
       "output": {
         ".html": {
@@ -455,10 +475,50 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/PofoManagerIcon.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/PofoManagerIcon.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/PofoManagerLogo.png",
       "output": {
         "resource": {
           "relative_path": "images/PofoManagerLogo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/PofoMangerNanoConnect.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/PofoMangerNanoConnect.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/PofoPinout.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/PofoPinout.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/PofoTransfer.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/PofoTransfer.png"
         }
       },
       "version": ""
@@ -469,6 +529,16 @@
       "output": {
         ".html": {
           "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "protocol.md",
+      "output": {
+        ".html": {
+          "relative_path": "protocol.html"
         }
       },
       "version": ""
