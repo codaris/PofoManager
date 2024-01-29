@@ -93,7 +93,7 @@
 <p>The Atari Portfolio contains an built-in data transfer program that can be started from the setup menu and allows for data exchange with a PC.  This requires the parallel port module for the Portfolio and a straight-through male-to-male parallel cable to connect them (no cross overs).  Only pins 2, 3, 12, 13, and ground are necessary for the communication.  If you cross the transmit and receive lines then two Portfolios can communicate directly with each other.</p>
 <p><img src="images/PofoPinout.png" alt=""></p>
 <p>The PC side requires software that can communicate with the Portfolio via the parallel port.  Software called <code>FT.COM</code> was provided on floppy disk that came with the parallel port module.  However, this software only works under DOS as it requires direct access to the parallel port.  For modern computers, a different solution is required.</p>
-<p>Although the connection to a PC is made through the parallel port, the Portfolio only makes use of 4 of the lines.  This is because older PC parallel ports were unidirectional.  They were designed to send data to a printer with only a few control signals going back to the PC.  In order for the Portfolio to send data to a PC it uses two of those control signal lines: Paper End (<code>Pin 12</code>) and Select (<code>Pin 13</code>).  Communication from the PC to the Portfolio uses the lowest 2 data output lines (<code>Pin 2</code> and <code>Pin 3</code>).</p>
+<p>Although the connection to a PC is made through the parallel port, the Portfolio only makes use of 4 of the lines; this is because older PC parallel ports were unidirectional.  They were designed to send data to a printer with only a few control signals going back to the PC.  In order for the Portfolio to send data to a PC it uses two of those control signal lines: Paper End (<code>Pin 12</code>) and Select (<code>Pin 13</code>).  Communication from the PC to the Portfolio uses the lowest 2 data output lines (<code>Pin 2</code> and <code>Pin 3</code>).</p>
 <h2 id="transfer-of-a-byte">Transfer of a Byte</h2>
 <p>The data is clocked out one bit at a time.  From the perspective of the PC, <code>Pin 12</code> is the input clock and <code>Pin 13</code> is the input data.  <code>Pin 3</code> is the output clock and <code>Pin 2</code> is the output data.</p>
 <p>A byte is transferred serially, starting with the highest-value bit. The data line controlled by the transmitter is switched to low level (0V) for a zero bit and for a one-bit to high level (5V). The other data line is unused and remains at low level. The clock lines are initially both at high levels. For each of the eight bits, the transfer can be divided into four steps. The diagram below shows the level curve for the active data line and the two clock lines when the byte value is <code>117</code>. Since both falling and rising flanks of the clock lines are used for signaling, the clock lines per byte take the low state four times.</p>
@@ -118,12 +118,12 @@ While (value != 0x5A):
     Set OUTPUT_CLOCK to HIGH
     Read byte into value
 </code></pre>
-<p>A value of 0x5A indicates that the Portfolio file server is listening.</p>
+<p>A value of <code>0x5A</code> indicates that the Portfolio file server is listening.</p>
 <h2 id="data-blocks">Data Blocks</h2>
 <p>All data sending and receiving of data are done in blocks.  The Portfolio has a BIOS functions that any application can use to send and receive data this way.  These functions are used by the built in File Transfer Server.</p>
 <h3 id="sending-a-block">Sending a Block</h3>
-<p>To send a block if must first wait for the Portfolio to send a 0x5A byte.  While idle in Server mode the Portfolio will continuously send a stream of bytes: 0x5A, 0x69, 0xA5, 0x96.  If you receive any other bytes then the server is not idle.</p>
-<p>A block starts with 0xA5, followed by 16bit length, the data, and a checksum.  The receiver will send the checksum back to indicate a successful transmission:</p>
+<p>To send a block if must first wait for the Portfolio to send a <code>0x5A</code> byte.  While idle in Server mode the Portfolio will continuously send a stream of bytes: <code>0x5A</code>, <code>0x69</code>, <code>0xA5</code>, <code>0x96</code>.  If you receive any other bytes then the server is not idle.</p>
+<p>A block starts with <code>0xA5</code>, followed by 16bit length, the data, and a checksum.  The receiver will send the checksum back to indicate a successful transmission:</p>
 <table>
 <thead>
 <tr>
@@ -185,11 +185,11 @@ While (value != 0x5A):
 </tr>
 </tbody>
 </table>
-<p>To calculate the checksum, excluding the start of block indicator (0xA5) subtract all the data bytes and length bytes from 0 using unsigned 8-bit subtraction.</p>
+<p>To calculate the checksum, excluding the start of block indicator (<code>0xA5</code>) subtract all the data bytes and length bytes from <code>0</code> using unsigned 8-bit subtraction.</p>
 <h3 id="receiving-a-block">Receiving a Block</h3>
-<p>Receiving a block is simply the reverse of sending the block.  Send the value 0x5A to indicate that you want to receive a block from the Portfolio.  You will receive the 0xA5 to indicate the start of the block and the rest of the data as per the above.  You must send back the checksum to indicate that the block was successfully received.</p>
+<p>Receiving a block is simply the reverse of sending the block.  Send the value <code>0x5A</code> to indicate that you want to receive a block from the Portfolio.  You will receive the <code>0xA5</code> to indicate the start of the block and the rest of the data as per the above.  You must send back the checksum to indicate that the block was successfully received.</p>
 <h2 id="control-protocol">Control Protocol</h2>
-<p>Files can be sent and received from the Portfolio, and directories listed, using the control protocol.  Each control protocol request is sent as blocks and responses returned as blocks.  Below is a list of control protocol requests and responses send as blocks.  Each request includes a buffer size; the Portfolio uses a default/maximum buffer size of 28,672 (0x7000) bytes but it may request a smaller buffer if there is unsufficient memory.  Responses should adhere to the buffer size requested.</p>
+<p>Files can be sent and received from the Portfolio, and directories listed, using the control protocol.  Each control protocol request is sent as blocks and responses returned as blocks.  Below is a list of control protocol requests and responses send as blocks.  Each request includes a buffer size; the Portfolio uses a default/maximum buffer size of 28,672 (<code>0x7000</code>) bytes but it may request a smaller buffer if there is unsufficient memory.  Responses should adhere to the buffer size requested.</p>
 <h3 id="request-directory-listing">Request Directory Listing</h3>
 <p>The simplest feature is to request directory listing to a specific search path. The corresponding command sequence consists of a function code, the maximum receive buffer size, and the search pattern long up to 79 characters. If the search pattern is shorter than 79 characters, it must be terminated with a zero byte and the rest of the 82-byte data block must be added.</p>
 <table>
@@ -448,7 +448,7 @@ While (value != 0x5A):
 </tr>
 </tbody>
 </table>
-<p>The transfer of the file data in one or more data blocks follows directly afterwards. The number of data blocks required depends on the file size and the buffer size of the portfolio. The buffer size, in turn, depends on the Portfolio's memory and is typically about 28,672 bytes (0x7000).</p>
+<p>The transfer of the file data in one or more data blocks follows directly afterwards. The number of data blocks required depends on the file size and the buffer size of the portfolio. The buffer size, in turn, depends on the Portfolio's memory and is typically about 28,672 bytes (<code>0x7000</code>).</p>
 <p>If all data blocks were received, the recipient completes the communication by the following data block:</p>
 <table>
 <thead>

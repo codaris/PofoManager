@@ -97,7 +97,21 @@
 <li>An Atari Parallel Interface Adapter</li>
 <li>An Arduino (Arduino Nano)</li>
 <li>A DB25 breakout board</li>
+<li>A PC running Windows</li>
 </ul>
+<h2 id="features">Features</h2>
+<p>Support for all built-in Portfolio file transfer server features:</p>
+<ul>
+<li>Sending files to Portfolio</li>
+<li>Receiving files from Portfolio</li>
+<li>Listing files on the Portfolio</li>
+</ul>
+<h2 id="building-the-project">Building the Project</h2>
+<p>This project consists of two parts, the <strong>Arduino Firmware</strong> that drives the connections to the Portfolio over the parallel port and the <strong>PofoManager</strong> desktop application that communicates with the Arduino over USB.</p>
+<h4 id="building-the-arduino-firmware">Building the Arduino Firmware</h4>
+<p>The Arduino firmware is located in the <a href="https://github.com/codaris/PofoManager/tree/main/Arduino">Arduino</a> directory of the project.  This can be built with the <a href="https://www.arduino.cc/en/software">Arduino IDE</a> and installed directly onto an Arduino.  For this project, I've chosen an Arduino Nano but most models of Arduino should work without issue.  You can edit the <a href="https://github.com/codaris/PofoManager/blob/main/Arduino/Portfolio.ino">Porfolio.ino</a> file to change the pin mapping if necessary.</p>
+<h4 id="building-pofomanager">Building PofoManager</h4>
+<p>The desktop component is written in C# for .NET 6.0.  It can be compiled by the community (free) edition of <a href="https://visualstudio.microsoft.com/vs/community/">Visual Studio 2022</a>.  Simply open the main solution file in the <a href="https://github.com/codaris/PofoManager/tree/main/PofoManager">PofoManager</a> directory of the project and select <code>Build Solution</code>.</p>
 <h2 id="arduino-connection-diagram">Arduino Connection Diagram</h2>
 <p><img src="images/PofoMangerNanoConnect.png" alt=""></p>
 <p>For compatibiltiy with the Atari Portfolio file transfer server it is only necessary to connect to pins 2, 3, 12, 13, and 25 on the DB25 connector.</p>
@@ -155,13 +169,6 @@
 </tr>
 </tbody>
 </table>
-<h2 id="features">Features</h2>
-<p>Support for all built-in Portfolio file transfer server features:</p>
-<ul>
-<li>Sending files to Portfolio</li>
-<li>Receiving files from Portfolio</li>
-<li>Listing directors on the Portfolio</li>
-</ul>
 <h2 id="getting-help">Getting Help</h2>
 <p>You can get help with this application by using the <a href="https://github.com/codaris/PofoManager/issues">Issues</a> tab in this project.</p>
 
