@@ -37,23 +37,23 @@ The desktop component is written in C# for .NET 6.0.  It can be compiled by the 
 
 For compatibiltiy with the Atari Portfolio file transfer server it is only necessary to connect to pins 2, 3, 12, 13, and 25 on the DB25 connector.
 
-| Arduino Pin | DB25 Pin | 
-|:-----------:|:--------:|
-|      2      |  **2**   |
-|      3      |  **3**   |
-|      4      |    4     |
-|      5      |    5     |
-|      6      |    6     |
-|      7      |  **12**  |
-|      8      |  **13**  |
-|      9      |    15    |
-|      10     |    11    |
-|      11     |    10    |
-|      GND    |  **25**  | 
+| Arduino Pin | DB25 Pin | Server-Mode Usage |
+|:-----------:|:--------:|-------------------|
+|      2      |  **2**   | Output Data       |
+|      3      |  **3**   | Output Clock      |
+|      4      |    4     |                   |
+|      5      |    5     |                   |
+|      6      |    6     |                   |
+|      7      |  **12**  | Input Clock       |
+|      8      |  **13**  | Input Data        |
+|      9      |    15    |                   |
+|      10     |    11    |                   |
+|      11     |    10    |                   |
+|      GND    |  **25**  | Electrical Ground |
 
 ## Documentation
 
-Internal documentation for the projet is available by clicking the link below:
+Internal documentation for the project is available by clicking the link below:
 
 * [Portfolio Manager Documentation](https://codaris.github.io/PofoManager/)
 
