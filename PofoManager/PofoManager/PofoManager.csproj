@@ -13,6 +13,7 @@
     <None Remove="Resources\PofoManagerBanner.png" />
     <None Remove="Resources\PofoManagerIcon.png" />
     <None Remove="Resources\Sync.png" />
+    <None Remove="Resources\Upload.png" />
     <None Remove="Resources\UploadDocument.png" />
   </ItemGroup>
 
@@ -35,6 +36,7 @@
     <Resource Include="Resources\ListView.png" />
     <Resource Include="Resources\PofoManagerBanner.png" />
     <Resource Include="Resources\Sync.png" />
+    <Resource Include="Resources\Upload.png" />
     <Resource Include="Resources\UploadDocument.png" />
   </ItemGroup>
 

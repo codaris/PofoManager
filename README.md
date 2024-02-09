@@ -19,6 +19,8 @@ Support for all built-in Portfolio file transfer server features:
 * Receiving files from Portfolio
 * Listing files on the Portfolio
 
+PofoManager also supports uploading pre-compiled firmware to a number of different Arduino models.
+
 ## Building the Project
 
 This project consists of two parts, the **Arduino Firmware** that drives the connections to the Portfolio over the parallel port and the **PofoManager** desktop application that communicates with the Arduino over USB. 

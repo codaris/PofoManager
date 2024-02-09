@@ -147,10 +147,16 @@ namespace PofoManager.Views
             viewModel.Disconnect();
         }
 
+        /// <summary>
+        /// Handles the Click event of the Ping control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private async void Ping_Click(object sender, RoutedEventArgs e)
         {
             await viewModel.Arduino.Ping().ConfigureAwait(false);
         }
+
         /// <summary>
         /// Write the specified message.
         /// </summary>
@@ -214,6 +220,16 @@ namespace PofoManager.Views
             var about = new About();
             about.Owner = this;
             about.ShowDialog();
+        }
+
+        /// <summary>
+        /// Handles the Click event of the UploadFirmware control.
+        /// </summary>
+        /// <param name="sender">The source of the event.</param>
+        /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
+        private void UploadFirmware_Click(object sender, RoutedEventArgs e)
+        {
+            UploadFirmware.ShowDialog(this, viewModel);
         }
     }
 }
