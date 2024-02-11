@@ -20,11 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="ArduinoUploaderCore" Version="4.0.0" />
     <PackageReference Include="System.IO.Ports" Version="8.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Common\ArdunioSketchUploader\Source\ArduinoUploader\ArduinoUploader.csproj" />
   </ItemGroup>
 
 </Project>
