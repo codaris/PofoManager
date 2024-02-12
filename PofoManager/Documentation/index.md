@@ -31,7 +31,7 @@ PofoManager also supports uploading pre-compiled firmware to a number of differe
 
 You can download the latest release installer from here:
 
-* [https://github.com/codaris/PofoManager/releases/download/v1.0.0/PofoManager.msi](PofoManager v1.0.0)
+* [PofoManager v1.0.1](https://github.com/codaris/PofoManager/releases/download/v1.0.1/PofoManager.msi)
 
 Download the above file and open it to install PofoManager on your computer.
 

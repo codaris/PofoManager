@@ -183,7 +183,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:PofoManager"
         "ProductCode" = "8:{BFCA85E3-54A1-45F3-B0F9-7FE881EBC270}"
-        "PackageCode" = "8:{9FCE9081-B20C-4E13-958C-A57204F7C874}"
+        "PackageCode" = "8:{4D4619E8-84F5-44E0-B96D-D13BCEAE1C53}"
         "UpgradeCode" = "8:{92DEC4EE-11BD-4DC2-9FC3-F94EB09120C3}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -732,7 +732,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_9D99614958764AE1AC1E917C107B0068"
             {
-            "SourcePath" = "8:..\\PofoManager\\obj\\Release\\net6.0-windows\\apphost.exe"
+            "SourcePath" = "8:..\\PofoManager\\obj\\Debug\\net6.0-windows\\apphost.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_110BB550A57441AF8AA04D9B62F7DBD8"
