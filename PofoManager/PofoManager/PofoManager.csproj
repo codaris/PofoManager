@@ -5,6 +5,8 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <StartupObject>PofoManager.App</StartupObject>
+    <ApplicationIcon>PofoManagerAppIcon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,6 +17,10 @@
     <None Remove="Resources\Sync.png" />
     <None Remove="Resources\Upload.png" />
     <None Remove="Resources\UploadDocument.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="PofoManagerAppIcon.ico" />
   </ItemGroup>
 
   <ItemGroup>

@@ -302,6 +302,54 @@ references:
   isSpec: "True"
   fullName: PofoManager.ArduinoException.Timeout
   nameWithType: ArduinoException.Timeout
+- uid: PofoManager.ArduinoHardware
+  name: ArduinoHardware
+  href: api/PofoManager.ArduinoHardware.html
+  commentId: T:PofoManager.ArduinoHardware
+  fullName: PofoManager.ArduinoHardware
+  nameWithType: ArduinoHardware
+- uid: PofoManager.ArduinoHardware.Models
+  name: Models
+  href: api/PofoManager.ArduinoHardware.html#PofoManager_ArduinoHardware_Models
+  commentId: P:PofoManager.ArduinoHardware.Models
+  fullName: PofoManager.ArduinoHardware.Models
+  nameWithType: ArduinoHardware.Models
+- uid: PofoManager.ArduinoHardware.Models*
+  name: Models
+  href: api/PofoManager.ArduinoHardware.html#PofoManager_ArduinoHardware_Models_
+  commentId: Overload:PofoManager.ArduinoHardware.Models
+  isSpec: "True"
+  fullName: PofoManager.ArduinoHardware.Models
+  nameWithType: ArduinoHardware.Models
+- uid: PofoManager.ArduinoHardware.Name
+  name: Name
+  href: api/PofoManager.ArduinoHardware.html#PofoManager_ArduinoHardware_Name
+  commentId: P:PofoManager.ArduinoHardware.Name
+  fullName: PofoManager.ArduinoHardware.Name
+  nameWithType: ArduinoHardware.Name
+- uid: PofoManager.ArduinoHardware.Name*
+  name: Name
+  href: api/PofoManager.ArduinoHardware.html#PofoManager_ArduinoHardware_Name_
+  commentId: Overload:PofoManager.ArduinoHardware.Name
+  isSpec: "True"
+  fullName: PofoManager.ArduinoHardware.Name
+  nameWithType: ArduinoHardware.Name
+- uid: PofoManager.ArduinoHardware.UploadFirmware(System.String,PofoManager.IDebugTarget,System.IProgress{System.Double})
+  name: UploadFirmware(string, IDebugTarget, IProgress<double>)
+  href: api/PofoManager.ArduinoHardware.html#PofoManager_ArduinoHardware_UploadFirmware_System_String_PofoManager_IDebugTarget_System_IProgress_System_Double__
+  commentId: M:PofoManager.ArduinoHardware.UploadFirmware(System.String,PofoManager.IDebugTarget,System.IProgress{System.Double})
+  name.vb: UploadFirmware(String, IDebugTarget, IProgress(Of Double))
+  fullName: PofoManager.ArduinoHardware.UploadFirmware(string, PofoManager.IDebugTarget, System.IProgress<double>)
+  fullName.vb: PofoManager.ArduinoHardware.UploadFirmware(String, PofoManager.IDebugTarget, System.IProgress(Of Double))
+  nameWithType: ArduinoHardware.UploadFirmware(string, IDebugTarget, IProgress<double>)
+  nameWithType.vb: ArduinoHardware.UploadFirmware(String, IDebugTarget, IProgress(Of Double))
+- uid: PofoManager.ArduinoHardware.UploadFirmware*
+  name: UploadFirmware
+  href: api/PofoManager.ArduinoHardware.html#PofoManager_ArduinoHardware_UploadFirmware_
+  commentId: Overload:PofoManager.ArduinoHardware.UploadFirmware
+  isSpec: "True"
+  fullName: PofoManager.ArduinoHardware.UploadFirmware
+  nameWithType: ArduinoHardware.UploadFirmware
 - uid: PofoManager.ByteListExtensions
   name: ByteListExtensions
   href: api/PofoManager.ByteListExtensions.html
@@ -2368,6 +2416,148 @@ references:
   commentId: F:PofoManager.ViewModels.TransferViewModel.arduino
   fullName: PofoManager.ViewModels.TransferViewModel.arduino
   nameWithType: TransferViewModel.arduino
+- uid: PofoManager.ViewModels.UploadFirmwareViewModel
+  name: UploadFirmwareViewModel
+  href: api/PofoManager.ViewModels.UploadFirmwareViewModel.html
+  commentId: T:PofoManager.ViewModels.UploadFirmwareViewModel
+  fullName: PofoManager.ViewModels.UploadFirmwareViewModel
+  nameWithType: UploadFirmwareViewModel
+- uid: PofoManager.ViewModels.UploadFirmwareViewModel.#ctor(PofoManager.IDebugTarget)
+  name: UploadFirmwareViewModel(IDebugTarget)
+  href: api/PofoManager.ViewModels.UploadFirmwareViewModel.html#PofoManager_ViewModels_UploadFirmwareViewModel__ctor_PofoManager_IDebugTarget_
+  commentId: M:PofoManager.ViewModels.UploadFirmwareViewModel.#ctor(PofoManager.IDebugTarget)
+  name.vb: New(IDebugTarget)
+  fullName: PofoManager.ViewModels.UploadFirmwareViewModel.UploadFirmwareViewModel(PofoManager.IDebugTarget)
+  fullName.vb: PofoManager.ViewModels.UploadFirmwareViewModel.New(PofoManager.IDebugTarget)
+  nameWithType: UploadFirmwareViewModel.UploadFirmwareViewModel(IDebugTarget)
+  nameWithType.vb: UploadFirmwareViewModel.New(IDebugTarget)
+- uid: PofoManager.ViewModels.UploadFirmwareViewModel.#ctor*
+  name: UploadFirmwareViewModel
+  href: api/PofoManager.ViewModels.UploadFirmwareViewModel.html#PofoManager_ViewModels_UploadFirmwareViewModel__ctor_
+  commentId: Overload:PofoManager.ViewModels.UploadFirmwareViewModel.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: PofoManager.ViewModels.UploadFirmwareViewModel.UploadFirmwareViewModel
+  fullName.vb: PofoManager.ViewModels.UploadFirmwareViewModel.New
+  nameWithType: UploadFirmwareViewModel.UploadFirmwareViewModel
+  nameWithType.vb: UploadFirmwareViewModel.New
+- uid: PofoManager.ViewModels.UploadFirmwareViewModel.ArduinoModels
+  name: ArduinoModels
+  href: api/PofoManager.ViewModels.UploadFirmwareViewModel.html#PofoManager_ViewModels_UploadFirmwareViewModel_ArduinoModels
+  commentId: P:PofoManager.ViewModels.UploadFirmwareViewModel.ArduinoModels
+  fullName: PofoManager.ViewModels.UploadFirmwareViewModel.ArduinoModels
+  nameWithType: UploadFirmwareViewModel.ArduinoModels
+- uid: PofoManager.ViewModels.UploadFirmwareViewModel.ArduinoModels*
+  name: ArduinoModels
+  href: api/PofoManager.ViewModels.UploadFirmwareViewModel.html#PofoManager_ViewModels_UploadFirmwareViewModel_ArduinoModels_
+  commentId: Overload:PofoManager.ViewModels.UploadFirmwareViewModel.ArduinoModels
+  isSpec: "True"
+  fullName: PofoManager.ViewModels.UploadFirmwareViewModel.ArduinoModels
+  nameWithType: UploadFirmwareViewModel.ArduinoModels
+- uid: PofoManager.ViewModels.UploadFirmwareViewModel.Close
+  name: Close()
+  href: api/PofoManager.ViewModels.UploadFirmwareViewModel.html#PofoManager_ViewModels_UploadFirmwareViewModel_Close
+  commentId: M:PofoManager.ViewModels.UploadFirmwareViewModel.Close
+  fullName: PofoManager.ViewModels.UploadFirmwareViewModel.Close()
+  nameWithType: UploadFirmwareViewModel.Close()
+- uid: PofoManager.ViewModels.UploadFirmwareViewModel.Close*
+  name: Close
+  href: api/PofoManager.ViewModels.UploadFirmwareViewModel.html#PofoManager_ViewModels_UploadFirmwareViewModel_Close_
+  commentId: Overload:PofoManager.ViewModels.UploadFirmwareViewModel.Close
+  isSpec: "True"
+  fullName: PofoManager.ViewModels.UploadFirmwareViewModel.Close
+  nameWithType: UploadFirmwareViewModel.Close
+- uid: PofoManager.ViewModels.UploadFirmwareViewModel.IsEnabled
+  name: IsEnabled
+  href: api/PofoManager.ViewModels.UploadFirmwareViewModel.html#PofoManager_ViewModels_UploadFirmwareViewModel_IsEnabled
+  commentId: P:PofoManager.ViewModels.UploadFirmwareViewModel.IsEnabled
+  fullName: PofoManager.ViewModels.UploadFirmwareViewModel.IsEnabled
+  nameWithType: UploadFirmwareViewModel.IsEnabled
+- uid: PofoManager.ViewModels.UploadFirmwareViewModel.IsEnabled*
+  name: IsEnabled
+  href: api/PofoManager.ViewModels.UploadFirmwareViewModel.html#PofoManager_ViewModels_UploadFirmwareViewModel_IsEnabled_
+  commentId: Overload:PofoManager.ViewModels.UploadFirmwareViewModel.IsEnabled
+  isSpec: "True"
+  fullName: PofoManager.ViewModels.UploadFirmwareViewModel.IsEnabled
+  nameWithType: UploadFirmwareViewModel.IsEnabled
+- uid: PofoManager.ViewModels.UploadFirmwareViewModel.SelectedArduinoModel
+  name: SelectedArduinoModel
+  href: api/PofoManager.ViewModels.UploadFirmwareViewModel.html#PofoManager_ViewModels_UploadFirmwareViewModel_SelectedArduinoModel
+  commentId: P:PofoManager.ViewModels.UploadFirmwareViewModel.SelectedArduinoModel
+  fullName: PofoManager.ViewModels.UploadFirmwareViewModel.SelectedArduinoModel
+  nameWithType: UploadFirmwareViewModel.SelectedArduinoModel
+- uid: PofoManager.ViewModels.UploadFirmwareViewModel.SelectedArduinoModel*
+  name: SelectedArduinoModel
+  href: api/PofoManager.ViewModels.UploadFirmwareViewModel.html#PofoManager_ViewModels_UploadFirmwareViewModel_SelectedArduinoModel_
+  commentId: Overload:PofoManager.ViewModels.UploadFirmwareViewModel.SelectedArduinoModel
+  isSpec: "True"
+  fullName: PofoManager.ViewModels.UploadFirmwareViewModel.SelectedArduinoModel
+  nameWithType: UploadFirmwareViewModel.SelectedArduinoModel
+- uid: PofoManager.ViewModels.UploadFirmwareViewModel.SelectedSerialPort
+  name: SelectedSerialPort
+  href: api/PofoManager.ViewModels.UploadFirmwareViewModel.html#PofoManager_ViewModels_UploadFirmwareViewModel_SelectedSerialPort
+  commentId: P:PofoManager.ViewModels.UploadFirmwareViewModel.SelectedSerialPort
+  fullName: PofoManager.ViewModels.UploadFirmwareViewModel.SelectedSerialPort
+  nameWithType: UploadFirmwareViewModel.SelectedSerialPort
+- uid: PofoManager.ViewModels.UploadFirmwareViewModel.SelectedSerialPort*
+  name: SelectedSerialPort
+  href: api/PofoManager.ViewModels.UploadFirmwareViewModel.html#PofoManager_ViewModels_UploadFirmwareViewModel_SelectedSerialPort_
+  commentId: Overload:PofoManager.ViewModels.UploadFirmwareViewModel.SelectedSerialPort
+  isSpec: "True"
+  fullName: PofoManager.ViewModels.UploadFirmwareViewModel.SelectedSerialPort
+  nameWithType: UploadFirmwareViewModel.SelectedSerialPort
+- uid: PofoManager.ViewModels.UploadFirmwareViewModel.SerialPorts
+  name: SerialPorts
+  href: api/PofoManager.ViewModels.UploadFirmwareViewModel.html#PofoManager_ViewModels_UploadFirmwareViewModel_SerialPorts
+  commentId: P:PofoManager.ViewModels.UploadFirmwareViewModel.SerialPorts
+  fullName: PofoManager.ViewModels.UploadFirmwareViewModel.SerialPorts
+  nameWithType: UploadFirmwareViewModel.SerialPorts
+- uid: PofoManager.ViewModels.UploadFirmwareViewModel.SerialPorts*
+  name: SerialPorts
+  href: api/PofoManager.ViewModels.UploadFirmwareViewModel.html#PofoManager_ViewModels_UploadFirmwareViewModel_SerialPorts_
+  commentId: Overload:PofoManager.ViewModels.UploadFirmwareViewModel.SerialPorts
+  isSpec: "True"
+  fullName: PofoManager.ViewModels.UploadFirmwareViewModel.SerialPorts
+  nameWithType: UploadFirmwareViewModel.SerialPorts
+- uid: PofoManager.ViewModels.UploadFirmwareViewModel.TransferPercentage
+  name: TransferPercentage
+  href: api/PofoManager.ViewModels.UploadFirmwareViewModel.html#PofoManager_ViewModels_UploadFirmwareViewModel_TransferPercentage
+  commentId: P:PofoManager.ViewModels.UploadFirmwareViewModel.TransferPercentage
+  fullName: PofoManager.ViewModels.UploadFirmwareViewModel.TransferPercentage
+  nameWithType: UploadFirmwareViewModel.TransferPercentage
+- uid: PofoManager.ViewModels.UploadFirmwareViewModel.TransferPercentage*
+  name: TransferPercentage
+  href: api/PofoManager.ViewModels.UploadFirmwareViewModel.html#PofoManager_ViewModels_UploadFirmwareViewModel_TransferPercentage_
+  commentId: Overload:PofoManager.ViewModels.UploadFirmwareViewModel.TransferPercentage
+  isSpec: "True"
+  fullName: PofoManager.ViewModels.UploadFirmwareViewModel.TransferPercentage
+  nameWithType: UploadFirmwareViewModel.TransferPercentage
+- uid: PofoManager.ViewModels.UploadFirmwareViewModel.TransferPercentageText
+  name: TransferPercentageText
+  href: api/PofoManager.ViewModels.UploadFirmwareViewModel.html#PofoManager_ViewModels_UploadFirmwareViewModel_TransferPercentageText
+  commentId: P:PofoManager.ViewModels.UploadFirmwareViewModel.TransferPercentageText
+  fullName: PofoManager.ViewModels.UploadFirmwareViewModel.TransferPercentageText
+  nameWithType: UploadFirmwareViewModel.TransferPercentageText
+- uid: PofoManager.ViewModels.UploadFirmwareViewModel.TransferPercentageText*
+  name: TransferPercentageText
+  href: api/PofoManager.ViewModels.UploadFirmwareViewModel.html#PofoManager_ViewModels_UploadFirmwareViewModel_TransferPercentageText_
+  commentId: Overload:PofoManager.ViewModels.UploadFirmwareViewModel.TransferPercentageText
+  isSpec: "True"
+  fullName: PofoManager.ViewModels.UploadFirmwareViewModel.TransferPercentageText
+  nameWithType: UploadFirmwareViewModel.TransferPercentageText
+- uid: PofoManager.ViewModels.UploadFirmwareViewModel.Upload(System.Windows.Window)
+  name: Upload(Window)
+  href: api/PofoManager.ViewModels.UploadFirmwareViewModel.html#PofoManager_ViewModels_UploadFirmwareViewModel_Upload_System_Windows_Window_
+  commentId: M:PofoManager.ViewModels.UploadFirmwareViewModel.Upload(System.Windows.Window)
+  fullName: PofoManager.ViewModels.UploadFirmwareViewModel.Upload(System.Windows.Window)
+  nameWithType: UploadFirmwareViewModel.Upload(Window)
+- uid: PofoManager.ViewModels.UploadFirmwareViewModel.Upload*
+  name: Upload
+  href: api/PofoManager.ViewModels.UploadFirmwareViewModel.html#PofoManager_ViewModels_UploadFirmwareViewModel_Upload_
+  commentId: Overload:PofoManager.ViewModels.UploadFirmwareViewModel.Upload
+  isSpec: "True"
+  fullName: PofoManager.ViewModels.UploadFirmwareViewModel.Upload
+  nameWithType: UploadFirmwareViewModel.Upload
 - uid: PofoManager.Views
   name: PofoManager.Views
   href: api/PofoManager.Views.html
@@ -2544,6 +2734,44 @@ references:
   isSpec: "True"
   fullName: PofoManager.Views.SendDialog.ShowDialog
   nameWithType: SendDialog.ShowDialog
+- uid: PofoManager.Views.UploadFirmware
+  name: UploadFirmware
+  href: api/PofoManager.Views.UploadFirmware.html
+  commentId: T:PofoManager.Views.UploadFirmware
+  fullName: PofoManager.Views.UploadFirmware
+  nameWithType: UploadFirmware
+- uid: PofoManager.Views.UploadFirmware.#ctor(System.Windows.Window,PofoManager.ViewModels.UploadFirmwareViewModel)
+  name: UploadFirmware(Window, UploadFirmwareViewModel)
+  href: api/PofoManager.Views.UploadFirmware.html#PofoManager_Views_UploadFirmware__ctor_System_Windows_Window_PofoManager_ViewModels_UploadFirmwareViewModel_
+  commentId: M:PofoManager.Views.UploadFirmware.#ctor(System.Windows.Window,PofoManager.ViewModels.UploadFirmwareViewModel)
+  name.vb: New(Window, UploadFirmwareViewModel)
+  fullName: PofoManager.Views.UploadFirmware.UploadFirmware(System.Windows.Window, PofoManager.ViewModels.UploadFirmwareViewModel)
+  fullName.vb: PofoManager.Views.UploadFirmware.New(System.Windows.Window, PofoManager.ViewModels.UploadFirmwareViewModel)
+  nameWithType: UploadFirmware.UploadFirmware(Window, UploadFirmwareViewModel)
+  nameWithType.vb: UploadFirmware.New(Window, UploadFirmwareViewModel)
+- uid: PofoManager.Views.UploadFirmware.#ctor*
+  name: UploadFirmware
+  href: api/PofoManager.Views.UploadFirmware.html#PofoManager_Views_UploadFirmware__ctor_
+  commentId: Overload:PofoManager.Views.UploadFirmware.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: PofoManager.Views.UploadFirmware.UploadFirmware
+  fullName.vb: PofoManager.Views.UploadFirmware.New
+  nameWithType: UploadFirmware.UploadFirmware
+  nameWithType.vb: UploadFirmware.New
+- uid: PofoManager.Views.UploadFirmware.ShowDialog(System.Windows.Window,PofoManager.IDebugTarget)
+  name: ShowDialog(Window, IDebugTarget)
+  href: api/PofoManager.Views.UploadFirmware.html#PofoManager_Views_UploadFirmware_ShowDialog_System_Windows_Window_PofoManager_IDebugTarget_
+  commentId: M:PofoManager.Views.UploadFirmware.ShowDialog(System.Windows.Window,PofoManager.IDebugTarget)
+  fullName: PofoManager.Views.UploadFirmware.ShowDialog(System.Windows.Window, PofoManager.IDebugTarget)
+  nameWithType: UploadFirmware.ShowDialog(Window, IDebugTarget)
+- uid: PofoManager.Views.UploadFirmware.ShowDialog*
+  name: ShowDialog
+  href: api/PofoManager.Views.UploadFirmware.html#PofoManager_Views_UploadFirmware_ShowDialog_
+  commentId: Overload:PofoManager.Views.UploadFirmware.ShowDialog
+  isSpec: "True"
+  fullName: PofoManager.Views.UploadFirmware.ShowDialog
+  nameWithType: UploadFirmware.ShowDialog
 - uid: PofoManager.WpfExtensions
   name: WpfExtensions
   href: api/PofoManager.WpfExtensions.html

@@ -71,11 +71,11 @@ namespace PofoManager
         {
             arduinoHardwareList.Add(new ArduinoHardware("Nano R3", ArduinoModel.NanoR3, "NanoR3.hex"));
             arduinoHardwareList.Add(new ArduinoHardware("Nano R3 (Old Bootloader)", ArduinoModel.NanoR3Old, "NanoR3.hex"));
-            //arduinoHardwareList.Add(new ArduinoHardware("Nano R2", ArduinoModel.NanoR2, "NanoR2.hex"));
-            //arduinoHardwareList.Add(new ArduinoHardware("Leonardo", ArduinoModel.Leonardo, "Leonardo.hex"));
-            //arduinoHardwareList.Add(new ArduinoHardware("Micro", ArduinoModel.Micro, "Micro.hex"));
-            //arduinoHardwareList.Add(new ArduinoHardware("Mega 2560", ArduinoModel.Mega2560, "Mega2560.hex"));
-            //arduinoHardwareList.Add(new ArduinoHardware("Mega 1284", ArduinoModel.Mega1284, "Mega1284.hex"));
+            arduinoHardwareList.Add(new ArduinoHardware("Nano R2", ArduinoModel.NanoR2, "NanoR2.hex"));
+            arduinoHardwareList.Add(new ArduinoHardware("Mega 2560", ArduinoModel.Mega2560, "Mega2560.hex"));
+            arduinoHardwareList.Add(new ArduinoHardware("Mega 1284", ArduinoModel.Mega1284, "Mega1284.hex"));
+            arduinoHardwareList.Add(new ArduinoHardware("Leonardo", ArduinoModel.Leonardo, "Leonardo.hex"));
+            arduinoHardwareList.Add(new ArduinoHardware("Micro", ArduinoModel.Micro, "Micro.hex"));
         }
 
         /// <summary>

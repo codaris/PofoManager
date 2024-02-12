@@ -42,6 +42,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/PofoManager.ArduinoHardware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PofoManager.ArduinoHardware.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/PofoManager.ByteListExtensions.yml",
       "output": {
         ".html": {
@@ -362,6 +372,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/PofoManager.ViewModels.UploadFirmwareViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PofoManager.ViewModels.UploadFirmwareViewModel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/PofoManager.ViewModels.yml",
       "output": {
         ".html": {
@@ -416,6 +436,16 @@
       "output": {
         ".html": {
           "relative_path": "api/PofoManager.Views.SendDialog.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/PofoManager.Views.UploadFirmware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/PofoManager.Views.UploadFirmware.html"
         }
       },
       "version": ""

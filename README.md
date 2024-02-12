@@ -62,3 +62,8 @@ Internal documentation for the project is available by clicking the link below:
 ## Getting Help
 
 You can get help with this application by using the [Issues](https://github.com/codaris/PofoManager/issues) tab in this project.
+
+## Acknowledgements
+
+* [Transfolio](https://github.com/skudi/transfolio) by Klaus Peichl
+* [PofoDuino](https://github.com/peterstark-code/PofoDuino_Lite) 
