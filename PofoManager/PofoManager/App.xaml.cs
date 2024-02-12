@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -23,6 +24,11 @@ namespace PofoManager
             if (Current?.Dispatcher?.CheckAccess() ?? true) action();
             else await Current.Dispatcher.InvokeAsync(action);
         }
+
+        /// <summary>
+        /// Gets the version.
+        /// </summary>
+        public static Version Version => Assembly.GetExecutingAssembly().GetName().Version!;
 
         /// <summary>
         /// Handles the Exit event of the Application control.

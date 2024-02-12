@@ -44,7 +44,7 @@ namespace PofoManager.Views
             DataContext = viewModel;
 
             // Apppend newline after version text
-            Log.AppendText("\r\n");
+            Log.AppendText(" " + App.Version.ToString(3) + "\r\n");
             Log.ScrollToEnd();
         }
 

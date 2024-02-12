@@ -27,17 +27,13 @@ Support for all built-in Portfolio file transfer server features:
 
 PofoManager also supports uploading pre-compiled firmware to a number of different Arduino models.
 
-## Building the Project
+## Download and Install
 
-This project consists of two parts, the **Arduino Firmware** that drives the connections to the Portfolio over the parallel port and the **PofoManager** desktop application that communicates with the Arduino over USB. 
+You can download the latest release installer from here:
 
-#### Building the Arduino Firmware
+* [https://github.com/codaris/PofoManager/releases/download/v1.0.0/PofoManager.msi](PofoManager v1.0.0)
 
-The Arduino firmware is located in the [Arduino](https://github.com/codaris/PofoManager/tree/main/Arduino) directory of the project.  This can be built with the [Arduino IDE](https://www.arduino.cc/en/software) and installed directly onto an Arduino.  For this project, I've chosen an Arduino Nano but most models of Arduino should work without issue.  You can edit the [Porfolio.ino](https://github.com/codaris/PofoManager/blob/main/Arduino/Portfolio.ino) file to change the pin mapping if necessary.
-
-#### Building PofoManager
-
-The desktop component is written in C# for .NET 6.0.  It can be compiled by the community (free) edition of [Visual Studio 2022](https://visualstudio.microsoft.com/vs/community/).  Simply open the main solution file in the [PofoManager](https://github.com/codaris/PofoManager/tree/main/PofoManager) directory of the project and select `Build Solution`.
+Download the above file and open it to install PofoManager on your computer.
 
 ## Arduino Connection Diagram
 
@@ -62,6 +58,18 @@ For compatibiltiy with the Atari Portfolio file transfer server it is only neces
 ## Getting Help
 
 You can get help with this application by using the [Issues](https://github.com/codaris/PofoManager/issues) tab in this project.
+
+## Building the Project
+
+This project consists of two parts, the **Arduino Firmware** that drives the connections to the Portfolio over the parallel port and the **PofoManager** desktop application that communicates with the Arduino over USB. 
+
+#### Building the Arduino Firmware
+
+The Arduino firmware is located in the [Arduino](https://github.com/codaris/PofoManager/tree/main/Arduino) directory of the project.  This can be built with the [Arduino IDE](https://www.arduino.cc/en/software) and installed directly onto an Arduino.  For this project, I've chosen an Arduino Nano but most models of Arduino should work without issue.  You can edit the [Porfolio.ino](https://github.com/codaris/PofoManager/blob/main/Arduino/Portfolio.ino) file to change the pin mapping if necessary.
+
+#### Building PofoManager
+
+The desktop component is written in C# for .NET 6.0.  It can be compiled by the community (free) edition of [Visual Studio 2022](https://visualstudio.microsoft.com/vs/community/).  Simply open the main solution file in the [PofoManager](https://github.com/codaris/PofoManager/tree/main/PofoManager) directory of the project and select `Build Solution`.
 
 ## Acknowledgements
 

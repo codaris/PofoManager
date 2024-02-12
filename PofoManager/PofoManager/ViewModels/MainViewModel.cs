@@ -64,8 +64,12 @@ namespace PofoManager.ViewModels
         /// </summary>
         public bool ShowDebug
         {
-            get => GetProperty(true);
-            set => SetProperty(value);
+            get => GetProperty(Properties.Settings.Default.ShowDebugMessages);
+            set
+            {
+                SetProperty(value);
+                Properties.Settings.Default.ShowDebugMessages = value;
+            }
         }
 
         /// <summary>

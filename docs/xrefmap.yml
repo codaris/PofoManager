@@ -26,6 +26,19 @@ references:
   isSpec: "True"
   fullName: PofoManager.App.RunOnUIThread
   nameWithType: App.RunOnUIThread
+- uid: PofoManager.App.Version
+  name: Version
+  href: api/PofoManager.App.html#PofoManager_App_Version
+  commentId: P:PofoManager.App.Version
+  fullName: PofoManager.App.Version
+  nameWithType: App.Version
+- uid: PofoManager.App.Version*
+  name: Version
+  href: api/PofoManager.App.html#PofoManager_App_Version_
+  commentId: Overload:PofoManager.App.Version
+  isSpec: "True"
+  fullName: PofoManager.App.Version
+  nameWithType: App.Version
 - uid: PofoManager.Arduino
   name: Arduino
   href: api/PofoManager.Arduino.html

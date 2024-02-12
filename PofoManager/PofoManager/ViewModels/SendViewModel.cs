@@ -15,6 +15,11 @@ namespace PofoManager.ViewModels
     public class SendViewModel : TransferViewModel
     {
         /// <summary>
+        /// The default destination path
+        /// </summary>
+        private static string DefaultDestinationPath = "C:\\";
+
+        /// <summary>
         /// Gets the file to send
         /// </summary>
         public string SourcePath { get; }
@@ -54,7 +59,7 @@ namespace PofoManager.ViewModels
         public SendViewModel(Arduino arduino, string filePath) : base(arduino)
         {
             this.SourcePath = filePath;
-            this.DestinationPath = "C:\\" + Path.GetFileNameWithoutExtension(filePath).ToUpper().Truncate(8) + Path.GetExtension(filePath).ToUpper().Truncate(4);
+            this.DestinationPath = DefaultDestinationPath + Path.GetFileNameWithoutExtension(filePath).ToUpper().Truncate(8) + Path.GetExtension(filePath).ToUpper().Truncate(4);
         }
 
         /// <summary>
@@ -74,6 +79,10 @@ namespace PofoManager.ViewModels
                 MessageBox.Show(owner, "Destination file name is not valid.", "Send File", MessageBoxButton.OK, MessageBoxImage.Error);
                 return false;
             }
+
+            // Update default destination path
+            DefaultDestinationPath = Path.GetDirectoryName(DestinationPath) ?? "C:\\";
+
             try
             {
                 IsEnabled = false;

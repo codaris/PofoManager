@@ -23,6 +23,7 @@ namespace PofoManager.Views
         public About()
         {
             InitializeComponent();
+            AppTitle.Text = "Portfolio Manager " + App.Version.ToString(3);
         }
 
         /// <summary>

@@ -7,6 +7,14 @@
     <UseWPF>true</UseWPF>
     <StartupObject>PofoManager.App</StartupObject>
     <ApplicationIcon>PofoManagerAppIcon.ico</ApplicationIcon>
+	<Version>1.0.1</Version>
+	<AssemblyVersion>1.0.1</AssemblyVersion>
+	<FileVersion>1.0.1</FileVersion>
+	<Company>Codaris Computing</Company>
+	<Authors>Wayne Venables</Authors>
+	<Product>PofoManager</Product>
+	<Description>File transfer tool for the Atari Portfolio vintage portable computer.</Description>
+	<Copyright>Copyright © 2024</Copyright>
   </PropertyGroup>
 
   <ItemGroup>

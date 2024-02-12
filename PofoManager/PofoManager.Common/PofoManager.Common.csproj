@@ -5,6 +5,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <RootNamespace>$(MSBuildProjectName.Replace(" ", "_").Replace(".Common", ""))</RootNamespace>
+	<Version>1.0.1</Version>
+	<AssemblyVersion>1.0.1</AssemblyVersion>
+	<FileVersion>1.0.1</FileVersion>
+	<Company>Codaris Computing</Company>
+	<Authors>Wayne Venables</Authors>
+	<Product>PofoManager Library</Product>
+	<Description>File transfer library for the Atari Portfolio vintage portable computer.</Description>
+	<Copyright>Copyright © 2024</Copyright>
   </PropertyGroup>
 
   <ItemGroup>

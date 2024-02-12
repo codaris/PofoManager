@@ -20,15 +20,15 @@ namespace PofoManager
         /// <summary>
         /// The arduino model
         /// </summary>
-        private ArduinoModel arduinoModel;
+        private readonly ArduinoModel arduinoModel;
 
         /// <summary>
         /// The firmware resource filename
         /// </summary>
-        private string firmware;
+        private readonly string firmware;
 
         /// <summary>The arduino hardware list</summary>
-        private static List<ArduinoHardware> arduinoHardwareList = new();
+        private static readonly List<ArduinoHardware> arduinoHardwareList = new();
 
         /// <summary>Gets the supported hardware models.</summary>
         public static IEnumerable<ArduinoHardware> Models => arduinoHardwareList;
@@ -61,7 +61,7 @@ namespace PofoManager
                 ArduinoModel = arduinoModel
             }, new DebugLogTranslator(debugTarget), progress);
 
-            await Task.Run(() => uploader.UploadSketch(ReadHexFirmware("NanoR3")));
+            await Task.Run(() => uploader.UploadSketch(ReadHexFirmware(firmware)));
         }
 
         /// <summary>
@@ -69,13 +69,13 @@ namespace PofoManager
         /// </summary>
         static ArduinoHardware()
         {
-            arduinoHardwareList.Add(new ArduinoHardware("Nano R3", ArduinoModel.NanoR3, "NanoR3.hex"));
-            arduinoHardwareList.Add(new ArduinoHardware("Nano R3 (Old Bootloader)", ArduinoModel.NanoR3Old, "NanoR3.hex"));
-            arduinoHardwareList.Add(new ArduinoHardware("Nano R2", ArduinoModel.NanoR2, "NanoR2.hex"));
-            arduinoHardwareList.Add(new ArduinoHardware("Mega 2560", ArduinoModel.Mega2560, "Mega2560.hex"));
-            arduinoHardwareList.Add(new ArduinoHardware("Mega 1284", ArduinoModel.Mega1284, "Mega1284.hex"));
-            arduinoHardwareList.Add(new ArduinoHardware("Leonardo", ArduinoModel.Leonardo, "Leonardo.hex"));
-            arduinoHardwareList.Add(new ArduinoHardware("Micro", ArduinoModel.Micro, "Micro.hex"));
+            arduinoHardwareList.Add(new ArduinoHardware("Nano R3", ArduinoModel.NanoR3, "NanoR3"));
+            arduinoHardwareList.Add(new ArduinoHardware("Nano R3 (Old Bootloader)", ArduinoModel.NanoR3Old, "NanoR3"));
+            arduinoHardwareList.Add(new ArduinoHardware("Nano R2", ArduinoModel.NanoR2, "NanoR2"));
+            arduinoHardwareList.Add(new ArduinoHardware("Mega 2560", ArduinoModel.Mega2560, "Mega2560"));
+            arduinoHardwareList.Add(new ArduinoHardware("Mega 1284", ArduinoModel.Mega1284, "Mega1284"));
+            arduinoHardwareList.Add(new ArduinoHardware("Leonardo", ArduinoModel.Leonardo, "Leonardo"));
+            arduinoHardwareList.Add(new ArduinoHardware("Micro", ArduinoModel.Micro, "Micro"));
         }
 
         /// <summary>
@@ -85,20 +85,16 @@ namespace PofoManager
         /// <returns></returns>
         private static IEnumerable<string> ReadHexFirmware(string firmwareName)
         {
+            // Get the resource file name
             var assembly = Assembly.GetExecutingAssembly();
             string namespaceName = typeof(Arduino).Namespace!;
             var resourceName = namespaceName + ".Firmware." + firmwareName + ".hex";
-            Stream? stream = assembly.GetManifestResourceStream(resourceName);
-            if (stream == null) throw new Exception($"Arduino firmware {firmwareName} not found");
-            using (stream)
-            using (StreamReader reader = new StreamReader(stream))
-            {
-                string? line;
-                while ((line = reader.ReadLine()) != null)
-                {
-                    yield return line;
-                }
-            }
+
+            // Open the file and read all the lines
+            using Stream stream = assembly.GetManifestResourceStream(resourceName) ?? throw new Exception($"Arduino firmware {firmwareName} not found");
+            using StreamReader reader = new StreamReader(stream);
+            string? line;
+            while ((line = reader.ReadLine()) != null) yield return line;
         }
 
         /// <summary>
@@ -108,7 +104,7 @@ namespace PofoManager
         private class DebugLogTranslator : IArduinoUploaderLogger
         {
             /// <summary>The debug target</summary>
-            private IDebugTarget debugTarget;
+            private readonly IDebugTarget debugTarget;
 
             /// <summary>
             /// Initializes a new instance of the <see cref="DebugLogTranslator"/> class.

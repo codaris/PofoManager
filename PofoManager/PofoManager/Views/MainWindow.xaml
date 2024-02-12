@@ -87,7 +87,7 @@
                 <StatusBarItem Content="{Binding Status}" DockPanel.Dock="Left" />
                 <StatusBarItem />
             </StatusBar>
-            <TextBox x:Name="Log" IsReadOnly="True" IsReadOnlyCaretVisible="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" FontFamily="Consolas" FontSize="14" Background="Black" Foreground="#FF00D866" SelectionBrush="#FFBDD8ED" Text="Portfolio Manager 1.0" PreviewDragOver="Log_PreviewDragOver" />
+            <TextBox x:Name="Log" IsReadOnly="True" IsReadOnlyCaretVisible="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" FontFamily="Consolas" FontSize="14" Background="Black" Foreground="#FF00D866" SelectionBrush="#FFBDD8ED" Text="Portfolio Manager" PreviewDragOver="Log_PreviewDragOver" />
         </DockPanel>
     </Grid>
 </Window>
