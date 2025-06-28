@@ -75,7 +75,7 @@ namespace PofoManager
         private const int VersionHigh = 1;
 
         /// <summary>The low version value</summary>
-        private const int VersionLow = 1;
+        private const int VersionLow = 2;
 
         /// <summary>
         /// Gets a value indicating whether this instance is connected.
@@ -165,6 +165,9 @@ namespace PofoManager
         {
             while (serialStream != null)
             {
+                // Wait for data to be available
+                await serialStream.WaitForDataAvailable();
+
                 // If data is available and not processing a command, check incoming packet
                 if (commandCount == 0 && serialStream.DataAvailable)
                 {
@@ -175,7 +178,6 @@ namespace PofoManager
                     if (data == Ascii.SOH) await ProcessIncomingCommand().ConfigureAwait(false); ;
                     serialStream.WriteNak(ErrorCode.Unexpected);
                 }
-                await Task.Yield();
             }
         }
 
@@ -215,7 +217,7 @@ namespace PofoManager
             int versionLow = await serialStream.ReadByteAsync(1000).ConfigureAwait(false);
             if (versionHigh != VersionHigh || versionLow != VersionLow)
             {
-                throw new DataException($"Unexpected Arduino version (Expected {VersionHigh}.{VersionLow} but received {versionHigh}.{versionLow}");
+                throw new DataException($"Unexpected Arduino firmware version (Expected {VersionHigh}.{VersionLow} but received {versionHigh}.{versionLow})");
             }
             int bufferSize = await serialStream.ReadByteAsync(1000).ConfigureAwait(false);
             if (bufferSize != BufferSize) throw new DataException($"Received buffer size of '{bufferSize}' does not equal '{BufferSize}'.");

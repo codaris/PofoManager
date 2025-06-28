@@ -31,7 +31,7 @@ PofoManager also supports uploading pre-compiled firmware to a number of differe
 
 You can download the latest release installer from here:
 
-* [PofoManager v1.0.1](https://github.com/codaris/PofoManager/releases/download/v1.0.1/PofoManager.msi)
+* [PofoManager v1.0.2](https://github.com/codaris/PofoManager/releases/download/v1.0.2/PofoManager.msi)
 
 Download the above file and open it to install PofoManager on your computer.
 
@@ -71,8 +71,17 @@ The Arduino firmware is located in the [Arduino](https://github.com/codaris/Pofo
 
 The desktop component is written in C# for .NET 6.0.  It can be compiled by the community (free) edition of [Visual Studio 2022](https://visualstudio.microsoft.com/vs/community/).  Simply open the main solution file in the [PofoManager](https://github.com/codaris/PofoManager/tree/main/PofoManager) directory of the project and select `Build Solution`.
 
+## Change log
+
+**Version 1.0.2**
+* Removed serial port polling to decrease CPU Usage
+* Increased timeouts to 2 seconds (needed for some devices)
+
+**Version 1.0.1**
+* Initial release
+
 ## Acknowledgements
 
 * [Transfolio](https://github.com/skudi/transfolio) by Klaus Peichl
 * [PofoDuino](https://github.com/peterstark-code/PofoDuino_Lite) 
-
+* Thomas Gutmeier

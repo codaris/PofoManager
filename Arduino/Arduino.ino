@@ -1,8 +1,27 @@
 #include "Portfolio.h"
 #include "Manager.h"
 
+#ifndef SERIAL_RX_BUFFER_SIZE
+#error "SERIAL_RX_BUFFER_SIZE is not defined."
+#endif
+
+#if SERIAL_RX_BUFFER_SIZE < 64
+#error "Serial RX buffer is too small. Must be at least 64 bytes."
+#endif
+
+#ifndef SERIAL_TX_BUFFER_SIZE
+#error "SERIAL_TX_BUFFER_SIZE is not defined."
+#endif
+
+#if SERIAL_TX_BUFFER_SIZE < 64
+#error "Serial TX buffer is too small. Must be at least 64 bytes."
+#endif
+
+
+// For blinking the LCD while running
 unsigned long ledMillis = 0;        // will store last time LED was updated
 const long ledInterval = 1000;      // LED blink interval
+
 
 /**
  * @brief Setup the Ardunio

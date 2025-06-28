@@ -22,7 +22,7 @@ namespace Portfolio
     const int  PIN_OUTPUT_CLOCK = PIN_DB25_3;       // pin sub D25 pin 3 (Yellow -> Purple)
     const int  PIN_OUTPUT_DATA = PIN_DB25_2;        // pin sub D25 pin 2 (Green -> Blue)
 
-    const int TIMEOUT = 1000;           // 1 second timeout
+    const int TIMEOUT = 2000;           			// 2 second timeout (1.3 seconds required for some Portfolios/Arduinos)
 
     /** @brief The checksum */
     byte checksum = 0;
@@ -59,7 +59,7 @@ namespace Portfolio
     bool WaitForLow(uint8_t pin, int timeout = TIMEOUT) 
     {
         unsigned long startTime = millis();
-        while(digitalRead(PIN_INPUT_CLOCK)) {
+        while(digitalRead(pin)) {
             if ((millis() - startTime) > timeout) return false;
         }
         return true;
@@ -75,7 +75,7 @@ namespace Portfolio
     bool WaitForHigh(uint8_t pin, int timeout = TIMEOUT) 
     {
         unsigned long startTime = millis();
-        while(!digitalRead(PIN_INPUT_CLOCK)) {
+        while(!digitalRead(pin)) {
             if ((millis() - startTime) > timeout) return false;
         }
         return true;
@@ -107,6 +107,7 @@ namespace Portfolio
     /**
      * @brief Send a byte to the Portfolio
      * @param value     The value to send
+     * @return  The status of the transfer
      */
     ResultType SendByte(int value, int timeout = TIMEOUT)
     {
@@ -148,6 +149,7 @@ namespace Portfolio
     /** 
      * @brief Send a byte to the Portfolio and update checksum
      * @param value     The value to send
+     * @return  The status of the transfer
      */
     ResultType SendByteChecksum(int value, int timeout = TIMEOUT) 
     {

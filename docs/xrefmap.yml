@@ -1688,6 +1688,19 @@ references:
   isSpec: "True"
   fullName: PofoManager.SerialPortByteStream.ReadByteAsync
   nameWithType: SerialPortByteStream.ReadByteAsync
+- uid: PofoManager.SerialPortByteStream.WaitForDataAvailable(System.Threading.CancellationToken)
+  name: WaitForDataAvailable(CancellationToken)
+  href: api/PofoManager.SerialPortByteStream.html#PofoManager_SerialPortByteStream_WaitForDataAvailable_System_Threading_CancellationToken_
+  commentId: M:PofoManager.SerialPortByteStream.WaitForDataAvailable(System.Threading.CancellationToken)
+  fullName: PofoManager.SerialPortByteStream.WaitForDataAvailable(System.Threading.CancellationToken)
+  nameWithType: SerialPortByteStream.WaitForDataAvailable(CancellationToken)
+- uid: PofoManager.SerialPortByteStream.WaitForDataAvailable*
+  name: WaitForDataAvailable
+  href: api/PofoManager.SerialPortByteStream.html#PofoManager_SerialPortByteStream_WaitForDataAvailable_
+  commentId: Overload:PofoManager.SerialPortByteStream.WaitForDataAvailable
+  isSpec: "True"
+  fullName: PofoManager.SerialPortByteStream.WaitForDataAvailable
+  nameWithType: SerialPortByteStream.WaitForDataAvailable
 - uid: PofoManager.SerialPortByteStream.WriteByte(System.Byte)
   name: WriteByte(byte)
   href: api/PofoManager.SerialPortByteStream.html#PofoManager_SerialPortByteStream_WriteByte_System_Byte_

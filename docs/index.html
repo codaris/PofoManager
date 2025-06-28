@@ -110,7 +110,7 @@
 <h2 id="download-and-install">Download and Install</h2>
 <p>You can download the latest release installer from here:</p>
 <ul>
-<li><a href="https://github.com/codaris/PofoManager/releases/download/v1.0.1/PofoManager.msi">PofoManager v1.0.1</a></li>
+<li><a href="https://github.com/codaris/PofoManager/releases/download/v1.0.2/PofoManager.msi">PofoManager v1.0.2</a></li>
 </ul>
 <p>Download the above file and open it to install PofoManager on your computer.</p>
 <h2 id="arduino-connection-diagram">Arduino Connection Diagram</h2>
@@ -190,10 +190,21 @@
 <p>The Arduino firmware is located in the <a href="https://github.com/codaris/PofoManager/tree/main/Arduino">Arduino</a> directory of the project.  This can be built with the <a href="https://www.arduino.cc/en/software">Arduino IDE</a> and installed directly onto an Arduino.  For this project, I've chosen an Arduino Nano but most models of Arduino should work without issue.  You can edit the <a href="https://github.com/codaris/PofoManager/blob/main/Arduino/Portfolio.ino">Porfolio.ino</a> file to change the pin mapping if necessary.</p>
 <h4 id="building-pofomanager">Building PofoManager</h4>
 <p>The desktop component is written in C# for .NET 6.0.  It can be compiled by the community (free) edition of <a href="https://visualstudio.microsoft.com/vs/community/">Visual Studio 2022</a>.  Simply open the main solution file in the <a href="https://github.com/codaris/PofoManager/tree/main/PofoManager">PofoManager</a> directory of the project and select <code>Build Solution</code>.</p>
+<h2 id="change-log">Change log</h2>
+<p><strong>Version 1.0.2</strong></p>
+<ul>
+<li>Removed serial port polling to decrease CPU Usage</li>
+<li>Increased timeouts to 2 seconds (needed for some devices)</li>
+</ul>
+<p><strong>Version 1.0.1</strong></p>
+<ul>
+<li>Initial release</li>
+</ul>
 <h2 id="acknowledgements">Acknowledgements</h2>
 <ul>
 <li><a href="https://github.com/skudi/transfolio">Transfolio</a> by Klaus Peichl</li>
 <li><a href="https://github.com/peterstark-code/PofoDuino_Lite">PofoDuino</a></li>
+<li>Thomas Gutmeier</li>
 </ul>
 
 </article>
