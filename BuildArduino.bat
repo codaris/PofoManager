@@ -17,18 +17,18 @@ set DEPLOY_DIR=%~dp0PofoManager\PofoManager.Common\Firmware
 if not exist "%OUTPUT_DIR%" mkdir "%OUTPUT_DIR%"
 
 rem Compile each board
-call :compile "arduino:avr:leonardo"        "Leonardo.hex"
-call :compile "arduino:avr:mega"            "Mega2560.hex"
-call :compile "arduino:avr:micro"           "Micro.hex"
-call :compile "arduino:avr:nano"			"Nano.hex"
-call :compile "arduino:avr:uno"             "Uno.hex"
+call :compile "arduino:avr:leonardo"        Leonardo.hex
+call :compile "arduino:avr:mega"            Mega2560.hex
+call :compile "arduino:avr:micro"           Micro.hex
+call :compile "arduino:avr:nano"			Nano.hex
+call :compile "arduino:avr:uno"             Uno.hex
 
 echo Done.
 pause
 exit /b
 
 :compile
-echo Compiling for %1 -> %2
+echo Compiling for %~1 to %~2
 echo arduino-cli compile --fqbn %1 --output-dir "%OUTPUT_DIR%" "%SKETCH_DIR%"
 arduino-cli compile --fqbn %1 --output-dir "%OUTPUT_DIR%" "%SKETCH_DIR%"
 if %errorlevel% neq 0 (
